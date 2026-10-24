@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "trials": 23040,
+  "checkpoints": 12,
+  "trajectory_splits_disjoint": true,
+  "all_frame_hashes_match": true,
+  "validation_budget_inputs_match": true,
+  "records": [
+    {
+      "file": "outputs/runs/coupled_wire_v1/benchmark_spatial_validation.jsonl",
+      "rows": 7200,
+      "sha256": "acee11c66aa81ed3dca795a6a0cf5ef0a2431b0e8fda70b860d672684c833437"
+    },
+    {
+      "file": "outputs/runs/coupled_wire_v1/benchmark_spatial_pilot.jsonl",
+      "rows": 7200,
+      "sha256": "e0ef76fc7739ff31ac37f46d32cb57ccf98a75511e03f08c3fb4851dd35d9594"
+    },
+    {
+      "file": "outputs/runs/coupled_wire_v1/benchmark_temporal_validation.jsonl",
+      "rows": 4320,
+      "sha256": "a44ca97606b4371ae1ae476e702482e0e00919fed65319b68cb17ca591a6e01c"
+    },
+    {
+      "file": "outputs/runs/coupled_wire_v1/benchmark_temporal_pilot.jsonl",
+      "rows": 4320,
+      "sha256": "fdb61fd5c3ec466a6fd11c37efe9dcef8577df7f8a727cd74062aef5654979d6"
+    }
+  ]
+}

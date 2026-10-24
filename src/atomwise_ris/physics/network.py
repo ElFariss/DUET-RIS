@@ -22,11 +22,10 @@ class CoupledNetwork:
             rr=self.z[:self.n,:self.n];rr[:]=np.diag(np.diag(rr))
         n=self.n;e=self.z[n:,n:]+50*np.eye(6);ei=np.linalg.inv(e)
         self.a=self.z[:n,:n]-self.z[:n,n:]@ei@self.z[n:,:n]
-        self.c=100*(ei@self.z[n:,:n])[-2:]
+        self.c=-100*(ei@self.z[n:,:n])[-2:]
         self.f=(self.z[:n,n:]@ei)[:,:4]
-        self.d=100*ei[-2:,:4]
-        h0=self.channel(np.zeros(n,dtype=np.int8))
-        self.w=precoder(h0) if w is None else w
+        self.d=-100*ei[-2:,:4]
+        self.w=precoder(self.channel(np.zeros(n,dtype=np.int8))) if w is None else w
         self.fw=self.f@self.w;self.dw=self.d@self.w
         self.noise=1.380649e-23*290*1e6*10**(.7)
         self.pairs=np.array(np.triu_indices(n,1)).T

@@ -1,0 +1,126 @@
+{
+  "selected_ms": 10,
+  "validation_feasibility": {
+    "1": {
+      "misses_by_method": {
+        "analytical_ga": 0,
+        "attention_ga": 0,
+        "attention_no_memory_ga": 0,
+        "attention_no_physics_ga": 0,
+        "blind_pair": 0,
+        "greedy": 0,
+        "gru_attention_ga": 108,
+        "gru_mlp_ga": 108,
+        "gru_pair": 108,
+        "linear_pair": 0,
+        "memory_ga": 0,
+        "mlp_ga": 0,
+        "oracle_pair": 0,
+        "pair": 0,
+        "persistence_attention_ga": 0,
+        "persistence_mlp_ga": 0,
+        "persistence_pair": 0,
+        "random": 0
+      },
+      "feasible": false
+    },
+    "5": {
+      "misses_by_method": {
+        "analytical_ga": 0,
+        "attention_ga": 0,
+        "attention_no_memory_ga": 0,
+        "attention_no_physics_ga": 0,
+        "blind_pair": 0,
+        "greedy": 0,
+        "gru_attention_ga": 0,
+        "gru_mlp_ga": 0,
+        "gru_pair": 0,
+        "linear_pair": 0,
+        "memory_ga": 0,
+        "mlp_ga": 0,
+        "oracle_pair": 0,
+        "pair": 0,
+        "persistence_attention_ga": 0,
+        "persistence_mlp_ga": 0,
+        "persistence_pair": 0,
+        "random": 0
+      },
+      "feasible": true
+    },
+    "10": {
+      "misses_by_method": {
+        "analytical_ga": 0,
+        "attention_ga": 0,
+        "attention_no_memory_ga": 0,
+        "attention_no_physics_ga": 0,
+        "blind_pair": 0,
+        "greedy": 0,
+        "gru_attention_ga": 0,
+        "gru_mlp_ga": 0,
+        "gru_pair": 0,
+        "linear_pair": 0,
+        "memory_ga": 0,
+        "mlp_ga": 0,
+        "oracle_pair": 0,
+        "pair": 0,
+        "persistence_attention_ga": 0,
+        "persistence_mlp_ga": 0,
+        "persistence_pair": 0,
+        "random": 0
+      },
+      "feasible": true
+    },
+    "50": {
+      "misses_by_method": {
+        "analytical_ga": 0,
+        "attention_ga": 0,
+        "attention_no_memory_ga": 0,
+        "attention_no_physics_ga": 0,
+        "blind_pair": 0,
+        "greedy": 0,
+        "gru_attention_ga": 0,
+        "gru_mlp_ga": 0,
+        "gru_pair": 0,
+        "linear_pair": 0,
+        "memory_ga": 0,
+        "mlp_ga": 0,
+        "oracle_pair": 0,
+        "pair": 0,
+        "persistence_attention_ga": 0,
+        "persistence_mlp_ga": 0,
+        "persistence_pair": 0,
+        "random": 0
+      },
+      "feasible": true
+    },
+    "100": {
+      "misses_by_method": {
+        "analytical_ga": 0,
+        "attention_ga": 0,
+        "attention_no_memory_ga": 0,
+        "attention_no_physics_ga": 0,
+        "blind_pair": 0,
+        "greedy": 0,
+        "gru_attention_ga": 0,
+        "gru_mlp_ga": 0,
+        "gru_pair": 0,
+        "linear_pair": 0,
+        "memory_ga": 0,
+        "mlp_ga": 0,
+        "oracle_pair": 0,
+        "pair": 0,
+        "persistence_attention_ga": 0,
+        "persistence_mlp_ga": 0,
+        "persistence_pair": 0,
+        "random": 0
+      },
+      "feasible": true
+    }
+  },
+  "input_hashes": {
+    "benchmark_spatial_validation.jsonl": "acee11c66aa81ed3dca795a6a0cf5ef0a2431b0e8fda70b860d672684c833437",
+    "benchmark_temporal_validation.jsonl": "a44ca97606b4371ae1ae476e702482e0e00919fed65319b68cb17ca591a6e01c"
+  },
+  "frozen_utc": "2026-10-24T11:40:52.580221+00:00",
+  "rule": "10 ms then 50 then 100; zero observed misses for every included method; no selection using pilot scores"
+}

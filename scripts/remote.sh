@@ -4,12 +4,13 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 port="${RIS_SSH_PORT:-2002}"
 target="${RIS_SSH_TARGET:-faris@gpu-labkc.ub.ac.id}"
-jump="${RIS_JUMP_HOST:-faris@labkc-comm1}"
+jump="${RIS_JUMP_HOST:-}"
 remote_dir="${RIS_REMOTE_DIR:-projects/atom-wise-ris}"
-transport="ssh -J $jump -p $port"
+transport="ssh -p $port"
+if [[ -n "$jump" ]]; then transport="ssh -J $jump -p $port"; fi
 case "${1:-}" in
   push)
-    rsync -az --exclude .git --exclude .venv --exclude __pycache__ --exclude outputs \
+    rsync -az --exclude .git --exclude '.venv*' --exclude __pycache__ --exclude outputs \
       --exclude archives --exclude data/raw/acquisition --exclude data/raw/deepmimo_scenarios \
       -e "$transport" ./ "$target:$remote_dir/"
     ;;

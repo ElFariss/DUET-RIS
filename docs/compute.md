@@ -2,13 +2,17 @@
 
 The active lab checkout is `~/projects/atom-wise-ris` on port 2002. It has its own Python 3.12 environment and locked dependencies. The historical `~/projects/ris-meta-feasibility` environment remains intact.
 
-Outside the university network:
+On the university network (current route):
 
 ```bash
-ssh faris@labkc-comm1
-ssh -J faris@labkc-comm1 -p 2002 faris@gpu-labkc.ub.ac.id
-ssh -J faris@labkc-comm1 -p 2003 faris@gpu-labkc.ub.ac.id
+ssh -p 2002 faris@gpu-labkc.ub.ac.id
+ssh -p 2003 faris@gpu-labkc.ub.ac.id
 ```
+
+`scripts/remote.sh` defaults to direct SSH. Outside that network, set
+`RIS_JUMP_HOST` to an authorized reachable jump host. Connection routes are
+runtime configuration; no password is saved here. Port 2003 resolves the home
+directory to `/mnt/home/faris`; do not assume `/home/faris` is writable there.
 
 Credentials are managed through SSH, not research artifacts. `scripts/remote.sh` provides source push/result pull with the jump host. These operations synchronize files; they do not launch jobs, stop other workloads or push Git commits.
 

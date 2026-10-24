@@ -1,0 +1,15 @@
+{
+  "args": {
+    "kind": "attention",
+    "seed": 43,
+    "epochs": 25,
+    "device": "cuda"
+  },
+  "parameters": 17665,
+  "best_validation": 3.7815116908815174,
+  "seconds": 4.644999646989163,
+  "training_examples": 2304,
+  "validation_examples": 1152,
+  "torch": "2.9.1+cu128",
+  "cuda": "NVIDIA GeForce RTX 3060"
+}

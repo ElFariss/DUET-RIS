@@ -1,0 +1,57 @@
+{
+  "args": {
+    "split": "validation",
+    "budgets": "10",
+    "seeds": "7",
+    "mode": "temporal",
+    "output": "smoke_temporal.jsonl",
+    "limit": 1
+  },
+  "hostname": "labkc-comm2",
+  "cpu_affinity": [
+    0
+  ],
+  "numpy": "2.2.6",
+  "torch": "2.9.1+cu128",
+  "methods": [
+    "persistence_pair",
+    "linear_pair",
+    "gru_pair",
+    "oracle_pair",
+    "persistence_mlp_ga",
+    "gru_mlp_ga",
+    "persistence_attention_ga",
+    "gru_attention_ga"
+  ],
+  "threads": 1,
+  "seeds": [
+    7
+  ],
+  "budgets": [
+    10.0
+  ],
+  "data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+  "timing_includes": [
+    "forecast/history preprocessing",
+    "passivity projection",
+    "fixed reference precoder",
+    "network contraction",
+    "memory retrieval/rescoring/write",
+    "features",
+    "inference",
+    "candidate evaluation"
+  ],
+  "timing_excludes": [
+    "one-time model load",
+    "train-case warmup",
+    "EM generation",
+    "channel acquisition",
+    "environmental rescore of chosen action",
+    "disk IO"
+  ],
+  "csi_age_s": 0.02,
+  "history_frames": 4,
+  "oracle": "current impedance with shared stale-reference precoder",
+  "incident_source_wave_power_w": 0.1,
+  "pilot_is_development": true
+}

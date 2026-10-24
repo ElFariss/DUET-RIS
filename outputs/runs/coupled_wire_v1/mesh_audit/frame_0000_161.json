@@ -1,0 +1,18 @@
+{
+  "index": 0,
+  "timing": {
+    "seconds": 284.70419959299034,
+    "segments_per_wire": 161,
+    "unknowns": 11270
+  },
+  "diagnostics": {
+    "reciprocity_relative": 9.940222408006514e-09,
+    "minimum_resistance_eigenvalue_ohm": 0.540063097127188,
+    "maximum_scattering_singular_value": 0.9866427450723518,
+    "condition_number": 13.699659525654848
+  },
+  "max_channel_relative_error": 0.006432575954924316,
+  "max_rate_absolute_error": 0.029303158301921428,
+  "patterns": 33,
+  "passed": true
+}

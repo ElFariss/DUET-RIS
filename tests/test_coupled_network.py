@@ -8,7 +8,7 @@ class CoupledTests(unittest.TestCase):
         z=v@v.T+10*np.eye(n+6)+1j*(x+x.T);loads=np.array([1+5j,1-5j]);ev=CoupledNetwork(z,loads)
         for number in range(2**n):
             b=np.array([(number>>i)&1 for i in range(n)],np.int8);state=ev.state(b)
-            full=100*np.linalg.solve(z+np.diag(np.r_[loads[b],np.full(6,50)]),np.eye(n+6)[:,n:n+4])[-2:]
+            full=-100*np.linalg.solve(z+np.diag(np.r_[loads[b],np.full(6,50)]),np.eye(n+6)[:,n:n+4])[-2:]
             np.testing.assert_allclose(ev.channel(b),full,atol=1e-12)
             for ix,score in zip(ev.pairs,ev.moves(state,True)):
                 new=ev.flip(state,ix);direct=ev.state(new.bits)

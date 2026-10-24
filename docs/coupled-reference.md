@@ -2,11 +2,18 @@
 
 ## Status (2026-10-24)
 
-The independent-cell `specular_v5` results are complete and preserved. A new
-3D electromagnetic reference and exact network evaluator are implemented.
-Small-array loaded-solver and mesh checks pass. The 64-element production-mesh
-validation and trajectory generation are running; no new learned-controller
-performance conclusion is available yet.
+The independent-cell `specular_v5` results are complete and preserved. The new
+coupled pilot is also complete: 192 electromagnetic frames, 12 trained checkpoints,
+23,040 validation/pilot controller trials, and a validation-selected 10 ms budget.
+The 64-element reference mesh check and direct loaded-response checks passed.
+The current attention policy did not outperform analytical pair search. For
+moving receivers, linear forecasting plus pair search had the highest mean among
+the causal methods at 10 ms. Numerical rate sensitivity and only three pilot
+trajectories limit the strength of these conclusions.
+
+See [the full report](../outputs/runs/coupled_wire_v1/REPORT.md) and
+[the IEEE-style PDF](../paper/coupled-pilot/main.pdf). No measured hardware
+validation, real PCB calibration or microcontroller result is claimed.
 
 ## What changes physically
 
@@ -84,3 +91,19 @@ OPENBLAS_NUM_THREADS=1 PYTHONPATH=src .venv-em/bin/python \
 The first command preserves coarse-mesh failures. The campaign gate compares
 81 and 161 segments using the selected loads and writes `physics_gate.json`.
 Do not start a training campaign unless its `passed` field is true.
+
+## Reproduce the complete pilot in a separate workspace
+
+```bash
+.venv/bin/python scripts/reproduce_coupled.py \
+  --workspace /absolute/path/to/new-coupled-reproduction \
+  --em-python /absolute/path/to/atom-wise-ris/.venv-em/bin/python \
+  --train-python /absolute/path/to/atom-wise-ris/.venv/bin/python \
+  --workers 2
+```
+
+The destination must not exist. The driver copies source/configuration and runs
+physics checks, generation, labels, all models, validation budget selection, pilot
+benchmarks, mesh audits and reporting. This wrapper is syntax checked; the
+underlying stages were executed separately for the reported run. The archived
+source snapshot identifies the code used before the full benchmark.

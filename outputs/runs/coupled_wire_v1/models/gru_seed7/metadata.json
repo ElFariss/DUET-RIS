@@ -1,0 +1,15 @@
+{
+  "args": {
+    "kind": "gru",
+    "seed": 7,
+    "epochs": 25,
+    "device": "cuda"
+  },
+  "parameters": 1090,
+  "best_validation": 0.06339494348565071,
+  "seconds": 4.168722034999519,
+  "training_examples": 178920,
+  "validation_examples": 89460,
+  "torch": "2.9.1+cu128",
+  "cuda": "NVIDIA GeForce RTX 3060"
+}

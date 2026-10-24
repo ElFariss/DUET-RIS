@@ -4,7 +4,7 @@ Simulation-only feasibility study of **physically conditioned, learned bit edits
 
 **Current evidence:** the completed exact-export pilot favors cached analytical pair/greedy search over learned mutation. At the validation-selected **10 ms** budget, mean worst-user spectral efficiency was **6.14836** for pair search, **6.12007** for the MLP and **6.11687 bit/s/Hz** for attention. All three had zero observed deadline misses at that budget. These are six-trajectory development results, not a final paper test. See the [report](outputs/runs/specular_v5/REPORT.md) and [claim boundaries](docs/claim-evidence.md).
 
-**Coupling extension in progress:** a separate NEC-2 3D wire reference, exact multiport evaluator, mesh checks and moving-receiver generator are now implemented. The new spatial/temporal campaign has no completed controller result yet. See [physical scope and status](docs/coupled-reference.md).
+**Coupled spatial/temporal pilot completed:** 192 NEC-2 frames, 12 checkpoints and 23,040 controller trials. At 10 ms, pair search reached **17.1022** versus attention **16.7650 bit/s/Hz**. With 20 ms stale observations, linear prediction plus pair search reached **5.1270**, GRU plus pair search **4.6664**, and GRU plus attention **5.0682**. These belong to a separate free-space wire surface, not the Munich/OpenSourceRIS model. Fine-mesh rate sensitivity and three pilot trajectories make close rankings provisional. Read the [report](outputs/runs/coupled_wire_v1/REPORT.md), [IEEE-style PDF](paper/coupled-pilot/main.pdf), and [physical scope](docs/coupled-reference.md).
 
 ## Scientific pipeline
 

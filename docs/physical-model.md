@@ -1,6 +1,6 @@
-# Physical model and applicability
+# Historical independent-cell physical model and applicability
 
-This project evaluates optimizer feasibility in a **measurement-informed simulation**. It contains no electromagnetic unit-cell solver and no measured mixed-pattern hardware validation.
+The preserved `specular_v5` pipeline evaluates optimizer feasibility in a **measurement-informed simulation**. That pipeline contains no electromagnetic unit-cell solver or measured mixed-pattern hardware validation. The separate 3D wire-reference extension is documented in [coupled-reference.md](coupled-reference.md).
 
 ## Transfer convention
 
