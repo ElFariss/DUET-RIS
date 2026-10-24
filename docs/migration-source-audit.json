@@ -1,0 +1,422 @@
+{
+  "origin": "/home/parasite/Work/conference/smap2027-paper",
+  "destination": "/home/parasite/Work/conference/atom-wise-ris",
+  "verified_files": 69,
+  "originals_preserved": true,
+  "files": [
+    {
+      "source": "README.md",
+      "target": "archives/historical-siso/README.md",
+      "sha256": "536bc106572763f0d02d2d8e79e165c5e3f52db8cdc88c026e803dba559204fe",
+      "identical": true
+    },
+    {
+      "source": "code/README.md",
+      "target": "archives/historical-siso/code/README.md",
+      "sha256": "536bc106572763f0d02d2d8e79e165c5e3f52db8cdc88c026e803dba559204fe",
+      "identical": true
+    },
+    {
+      "source": "code/run_all.sh",
+      "target": "archives/historical-siso/code/run_all.sh",
+      "sha256": "298bba4fed04c94d659cc039e36c9d736ab89cbda9f02854c59c2e2519ab40b5",
+      "identical": true
+    },
+    {
+      "source": "code/run_all.py",
+      "target": "archives/historical-siso/code/run_all.py",
+      "sha256": "761a3bf71bbb588e1c90596dff1857e7eee499be00b3db0f4078b7c33dd5d24e",
+      "identical": true
+    },
+    {
+      "source": "code/fair_ris.py",
+      "target": "archives/historical-siso/code/fair_ris.py",
+      "sha256": "99d0f84d377c375f62ef384a36fa0e8898ed3e0afea24bed799a9f5c0333b30c",
+      "identical": true
+    },
+    {
+      "source": "code/historical/04_extra.py",
+      "target": "archives/historical-siso/code/historical/04_extra.py",
+      "sha256": "245c48c75be9135aa204e37f66f28bd65de74aa33a51a7d48d94fbd80760bae6",
+      "identical": true
+    },
+    {
+      "source": "code/historical/03_figs.py",
+      "target": "archives/historical-siso/code/historical/03_figs.py",
+      "sha256": "1ec54f62fe90debb7552897fe34600edccaebaecaa4cee04d43f9d7351969e50",
+      "identical": true
+    },
+    {
+      "source": "code/historical/README.md",
+      "target": "archives/historical-siso/code/historical/README.md",
+      "sha256": "0d9097e0e4717c9db0948f1e03079a68b3adbd68063677584b7cd15030c0d51b",
+      "identical": true
+    },
+    {
+      "source": "code/historical/00_link_sim.py",
+      "target": "archives/historical-siso/code/historical/00_link_sim.py",
+      "sha256": "5a233aeaeab6764ce9d88ac74b5379b671f3297b7e71f6e649580b7214bc9af0",
+      "identical": true
+    },
+    {
+      "source": "code/historical/02_size_sweep.py",
+      "target": "archives/historical-siso/code/historical/02_size_sweep.py",
+      "sha256": "6ef9caaf35ceed2f6f7e67f6a1f37c392bb47563ca99aa44cb1812a0189d1c4b",
+      "identical": true
+    },
+    {
+      "source": "code/historical/01_neural_beam.py",
+      "target": "archives/historical-siso/code/historical/01_neural_beam.py",
+      "sha256": "8797e47ddb6a01b05911b297a0ea0d4d5bf6debd6ab080431c5223eb9ff7d967",
+      "identical": true
+    },
+    {
+      "source": "code/historical/05_figs_extra.py",
+      "target": "archives/historical-siso/code/historical/05_figs_extra.py",
+      "sha256": "b0d22871068be047a161fdaf4bda722bb6a012357e98571e7a588e69938c6614",
+      "identical": true
+    },
+    {
+      "source": "paper/main.pdf",
+      "target": "archives/historical-siso/paper/main.pdf",
+      "sha256": "320d2de83bd124cc18a3923b9f67de13cd00732141074cb06b38b9967cf8215a",
+      "identical": true
+    },
+    {
+      "source": "paper/outline.md",
+      "target": "archives/historical-siso/paper/outline.md",
+      "sha256": "7cffd7a8501799b3e97c4f4fcf1de151f39b6a97e3b9b07fc0814108d2943693",
+      "identical": true
+    },
+    {
+      "source": "paper/NeurRIS-1bit_SMAP2027.pdf",
+      "target": "archives/historical-siso/paper/NeurRIS-1bit_SMAP2027.pdf",
+      "sha256": "320d2de83bd124cc18a3923b9f67de13cd00732141074cb06b38b9967cf8215a",
+      "identical": true
+    },
+    {
+      "source": "paper/paper.md",
+      "target": "archives/historical-siso/paper/paper.md",
+      "sha256": "7ee9c6d70f5f02363ea2471b54d3f2e434eaaf8a7c8a256ddbd41b5682770c62",
+      "identical": true
+    },
+    {
+      "source": "paper/main.log",
+      "target": "archives/historical-siso/paper/main.log",
+      "sha256": "18f53799836eea9c4c777ff0d1707c33b88e62fea7695dc70466acb6b7b3512d",
+      "identical": true
+    },
+    {
+      "source": "paper/main.tex",
+      "target": "archives/historical-siso/paper/main.tex",
+      "sha256": "e380d481ae746b9a8caa2793a7d67af38c332c66fec8caf500996fd6c30c78c3",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/measured_results.png",
+      "target": "archives/historical-siso/paper/figs/measured_results.png",
+      "sha256": "bcca80c956f8beb3b05667780a3eafb3feb2b14f7a483fa74ac749fb3bf8987f",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/measured_results.pdf",
+      "target": "archives/historical-siso/paper/figs/measured_results.pdf",
+      "sha256": "2d4eea290e869a36419044c0e885380b7e63effcdcd0f8c32c7185e7bf47d879",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/README.md",
+      "target": "archives/historical-siso/paper/figs/historical/README.md",
+      "sha256": "2ae1267e2d8ffa7cb58364e5d1a72d8fb71f63f6baae5be39d198e73cc281a8a",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig6_se.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig6_se.pdf",
+      "sha256": "06d6c2998624e30913eecf262aebc70a7556a64baf9ba46102c12ec15dce51c5",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig1_system.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig1_system.pdf",
+      "sha256": "d2688a5ef25192e90f56b91c8b4383bceda864d012d4f46172a9dc97e8aead4d",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig4_size.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig4_size.pdf",
+      "sha256": "56997a45e285fb23b60d5c576349f5ec4434ba1820ff6ff38afa51b7395b5a50",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig7_snr.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig7_snr.pdf",
+      "sha256": "9fdca032836e1494d586c42ed1863a44cca37f845f589e1baa512fd768b5d8f3",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig9_mismatch.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig9_mismatch.pdf",
+      "sha256": "f47f3e9521b74d9f80f4f9249becc4b1ac93f6ccf6cc2db9f5498ab14dee1bae",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig2_retention.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig2_retention.pdf",
+      "sha256": "28c044802eeab88b733554043a78be04de9c80702afa529702e2924d095eb789",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig3_timing.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig3_timing.pdf",
+      "sha256": "09821a22f52788747f373c969961fafca9d096fa2c11e7acfc0980763b9da13c",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig5_scaling.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig5_scaling.pdf",
+      "sha256": "3ef4da5e8ff00efb741b320cdf11ee6f9764373882bd28c877d5093aafefdb25",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig10_policies.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig10_policies.pdf",
+      "sha256": "d6961e56d66a30ffa3ca1f5033e8fc07bab9484e68a0a9f5a2000d0129d1eff6",
+      "identical": true
+    },
+    {
+      "source": "paper/figs/historical/fig8_kfac.pdf",
+      "target": "archives/historical-siso/paper/figs/historical/fig8_kfac.pdf",
+      "sha256": "56ad6357ec2de3ccd6b611834cdb1932387cacad743661aab0783417bd438888",
+      "identical": true
+    },
+    {
+      "source": "notes/01_gap_niche.md",
+      "target": "docs/literature/01_gap_niche.md",
+      "sha256": "d1b9cd40bba2e4be96203c5ee2aed8d6b9e60b9457eaba3c05336d7035d4c7c9",
+      "identical": true
+    },
+    {
+      "source": "notes/20261018_ai_controller_research.md",
+      "target": "docs/literature/20261018_ai_controller_research.md",
+      "sha256": "d1c89861123e2d36469ed0c376f4e6dde903e2ea9a2da5c8a2b8d983bac53b57",
+      "identical": true
+    },
+    {
+      "source": "notes/20261018_ai_controller_literature.json",
+      "target": "docs/literature/20261018_ai_controller_literature.json",
+      "sha256": "95b7354cbb98c39eb04495b84724167b278df43ea9db21e91e0d1a659ccf2427",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/main.pdf",
+      "target": "paper/proposal/main.pdf",
+      "sha256": "9d965520124ef9e74687ba746e9e342d24e01e542df1a1248029f4eb7ac0168b",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/README.md",
+      "target": "paper/proposal/README.md",
+      "sha256": "8cccaffd2ff1ae92a0e17fb7d5bd34fbed7fb7dc8c557dc44869556c3a9b19cb",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/ieee-ris-proposal.zip",
+      "target": "paper/proposal/ieee-ris-proposal.zip",
+      "sha256": "f4bbdd259bba2acdc5a59a96af8f54f1abc0239511be6139d6579e5d9ddcc2db",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/validation.json",
+      "target": "paper/proposal/validation.json",
+      "sha256": "9dc14a57310ba0ac50a3d8aed8de9d0901f5291fc7e4612d6b1e2385199d234e",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/references.tex",
+      "target": "paper/proposal/references.tex",
+      "sha256": "7f5bb84cf5ca7260c1f1c808bc01b27ccfd348db70029cf069b7776d509e3cfc",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/source-audit.md",
+      "target": "paper/proposal/source-audit.md",
+      "sha256": "a9747b911a4c034e82847b89d3c3098c8e3dd284361c452ab16751e3ee93fbe8",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/main.log",
+      "target": "paper/proposal/main.log",
+      "sha256": "7bd6cbbcb2739dcc515eb43a1db1f1fbff1a8722bef32b4d285e35146c605c37",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/main.tex",
+      "target": "paper/proposal/main.tex",
+      "sha256": "7d115385d7ebc2d4e7980521e809a40ec35b2dd4c34aa5b4d829a0a1d2493a93",
+      "identical": true
+    },
+    {
+      "source": "proposal-meta-atom/figures/framework.tex",
+      "target": "paper/proposal/figures/framework.tex",
+      "sha256": "010ee9e50de0f33e60fa4aa21ca588326fde5b240054c4da6f28cb46b75f33e0",
+      "identical": true
+    },
+    {
+      "source": "feasibility/README.md",
+      "target": "archives/feasibility-source-before-restructure/README.md",
+      "sha256": "fdb5e7fccca6ca1d41c6e84da05c487c5a1288a4b20793489db1c3ae21f8b582",
+      "identical": true
+    },
+    {
+      "source": "feasibility/pyproject.toml",
+      "target": "archives/feasibility-source-before-restructure/pyproject.toml",
+      "sha256": "72330d4af31581fde72c8f5671ed2f257c688d0d149bc231b86b84c8c68768a2",
+      "identical": true
+    },
+    {
+      "source": "feasibility/requirements-lock.txt",
+      "target": "archives/feasibility-source-before-restructure/requirements-lock.txt",
+      "sha256": "fe1f92a215fd482c38e8c8ae41530ef912fe96bed56f081110068d283c70bbcf",
+      "identical": true
+    },
+    {
+      "source": "feasibility/reports/implementation-decisions.md",
+      "target": "archives/feasibility-source-before-restructure/reports/implementation-decisions.md",
+      "sha256": "75fed91b9a1f83ce5d0d2526157c226fc629ba7c405b9255c6fd78de299216f2",
+      "identical": true
+    },
+    {
+      "source": "feasibility/tests/test_core.py",
+      "target": "archives/feasibility-source-before-restructure/tests/test_core.py",
+      "sha256": "dcf55a80cc734c28507312ebb41e0484fb3b93f2e82b1ab597ca811b8b277d70",
+      "identical": true
+    },
+    {
+      "source": "feasibility/tests/test_learning.py",
+      "target": "archives/feasibility-source-before-restructure/tests/test_learning.py",
+      "sha256": "d3a46c2a55c608846215b19b5ad61e41ff16d6a4fed276cd9f855eb2a7d37bff",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/sensitivity.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/sensitivity.py",
+      "sha256": "5bfc654f12dc69fd9e08a8d009c6ce0b8a989811bb5d976eadb05052780570d6",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/benchmark.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/benchmark.py",
+      "sha256": "79d27769b6e8ae8a2f28864ff3b844dc480b1e01905aacb4822eab59c2e73c58",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/digitize_response.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/digitize_response.py",
+      "sha256": "6991a8f17abd1acb9f503894512a5129c617789888d7f8567aa753de9c3224d6",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/verify_export.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/verify_export.py",
+      "sha256": "e44a062a112a55d9d68d52c8987f00ee25a6226ff3b941eb22f6f2a16e884ed2",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/train.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/train.py",
+      "sha256": "ad973c7543f83a8374d967bc7f1cf12ec1c9f336dd7388fa8d0f5bed15dfdd4a",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/repair_exports.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/repair_exports.py",
+      "sha256": "2c89401d15bc2a4192434242610d4b6fbfa4cf4d439516911da005d96ab69e8b",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/setup.sh",
+      "target": "archives/feasibility-source-before-restructure/scripts/setup.sh",
+      "sha256": "a58cfdea235ab55f5b8d7f73b1bb8883095dfc815497dd8e358d02f25e1b8269",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/convergence.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/convergence.py",
+      "sha256": "7487cf214d45f8b9d44a1c484eefa52e8031598a1eb7cf59a86417e970f8f2ef",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/prepare_experiments.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/prepare_experiments.py",
+      "sha256": "a3ce7fb2270bcf37e76fb220f117e2cd90698d89603ea6ee16761368d5d04f88",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/audit_scenario.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/audit_scenario.py",
+      "sha256": "9618b73894f6a69a7baa54d01cd46ba4a7eb02041a943b104f58e37cc0480761",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/train_campaign.sh",
+      "target": "archives/feasibility-source-before-restructure/scripts/train_campaign.sh",
+      "sha256": "bf3aed0fb973b1cb4f48c85a5cb867b026136faab454a4086acfe1278c10ab5b",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/verify_all_exports.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/verify_all_exports.py",
+      "sha256": "13f060333c5d4b43c5fc60d3270872d913e3c56ad94bad500490b72fb2663c8c",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/analyze.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/analyze.py",
+      "sha256": "3266d66fa8c2ffcb8be4f9818d595793079ee17bed303f7d175188950d425b96",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/remote.sh",
+      "target": "archives/feasibility-source-before-restructure/scripts/remote.sh",
+      "sha256": "21a68259912f34bb69026349e6e23041fc9259b7827187a73627f867d4c41016",
+      "identical": true
+    },
+    {
+      "source": "feasibility/scripts/trace_munich.py",
+      "target": "archives/feasibility-source-before-restructure/scripts/trace_munich.py",
+      "sha256": "ea5c3cbf8a127e6d4ea41348fbec7ad7e3543462c9b658c629209302efb408ff",
+      "identical": true
+    },
+    {
+      "source": "feasibility/configs/pilot.json",
+      "target": "archives/feasibility-source-before-restructure/configs/pilot.json",
+      "sha256": "02d4f67afc684fbb5164501f77f6ccdbc09a6e8eb757f6fa8bda47fe17c693c6",
+      "identical": true
+    },
+    {
+      "source": "feasibility/src/rislab/models.py",
+      "target": "archives/feasibility-source-before-restructure/src/rislab/models.py",
+      "sha256": "7b14bf3f1f7e7245f1f01d7d86fc0361f4735d96a38a5e00425c2b3798f3e53f",
+      "identical": true
+    },
+    {
+      "source": "feasibility/src/rislab/core.py",
+      "target": "archives/feasibility-source-before-restructure/src/rislab/core.py",
+      "sha256": "2a6d2b307010b2627a0bbc3dc1ce5e6f95ba16f15f75b082bc21c317793aafc0",
+      "identical": true
+    },
+    {
+      "source": "feasibility/src/rislab/__init__.py",
+      "target": "archives/feasibility-source-before-restructure/src/rislab/__init__.py",
+      "sha256": "0f4f9a61e69e6e164493ec8f5bcc3255abd7d2e4cb06f818876a6419f36e1aa7",
+      "identical": true
+    },
+    {
+      "source": "feasibility/src/rislab/search.py",
+      "target": "archives/feasibility-source-before-restructure/src/rislab/search.py",
+      "sha256": "e2f1889a555b598a52557d68fd4c5b9d0dfaf9eff900a27082a258fa6907b7d4",
+      "identical": true
+    }
+  ]
+}

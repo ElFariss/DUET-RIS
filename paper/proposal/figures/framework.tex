@@ -1,0 +1,30 @@
+% Original vector diagram; all blocks describe proposed operations.
+\begin{tikzpicture}[
+  box/.style={draw=navy!65,rounded corners=2pt,fill=pale,align=center,font=\small,text width=43mm,minimum height=13mm,inner sep=3mm},
+  flow/.style={-{Stealth[length=2mm]},thick,draw=navy},
+  note/.style={font=\footnotesize,align=center,text=navy}
+]
+\node[box] (prop) at (0,0) {\textbf{Propagation}\\Compatible BS--RIS and RIS--user channels};
+\node[box] (em) at (6.0,0) {\textbf{Physical responses}\\Two-state EM tables; convergence checks};
+\node[note,anchor=west,font=\bfseries\small] at (-2.5,1.35) {OFFLINE: build and validate};
+\node[box,text width=48mm] (eval) at (3,-2.1) {\textbf{Common evaluator}\\Communication objective + declared physical model};
+\draw[flow] (prop.south) |- (eval.west);
+\draw[flow] (em.south) |- (eval.east);
+\node[box] (data) at (0,-4.6) {\textbf{Training search states}\\One-bit gains and evaluated pairs; training split only};
+\node[box] (train) at (6,-4.6) {\textbf{Offline learning}\\Residual attention policy; validation-only selection};
+\draw[flow] (eval.south) -- ++(0,-0.35) -| (data.north);
+\draw[flow] (data) -- (train);
+\draw[navy!40] (-2.6,-5.9) -- (8.6,-5.9);
+\node[note,anchor=west,font=\bfseries\small] at (-2.5,-6.3) {ONLINE: adapt within one shared budget};
+\node[box] (memory) at (0,-7.6) {\textbf{Causal memory}\\Retrieve patterns; reevaluate using current estimates};
+\node[box] (policy) at (6,-7.6) {\textbf{Conditional edit policy}\\Atom features + analytical prior + learned residual};
+\draw[flow] (train.south) -- node[right,note]{fixed weights} (policy.north);
+\draw[flow] (memory) -- node[above,note]{parents} (policy);
+\node[box] (update) at (0,-10.0) {\textbf{Population update}\\Shared selection and archive rules; retain best pattern};
+\node[box] (score) at (6,-10.0) {\textbf{Evaluate offspring}\\Same evaluator for all methods; count all work};
+\draw[flow] (policy) -- node[right,note]{small edit set} (score);
+\draw[flow] (score) -- (update);
+\draw[flow] (update) -- (memory);
+\node[note,text width=105mm] at (3,-11.65) {At deadline: return best fully evaluated configuration.\\Report achieved rate and total software latency.};
+\node[box,dashed,fill=white,text width=103mm,minimum height=9mm] at (3,-13.2) {\textbf{Optional L2 extension:} replace independent responses with a validated coupled operator. Attention alone does not establish coupling.};
+\end{tikzpicture}

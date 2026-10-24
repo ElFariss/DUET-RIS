@@ -1,0 +1,527 @@
+[
+  {
+    "n": 1,
+    "title": "A Universal Framework for Multiport Network Analysis of Reconfigurable Intelligent Surfaces",
+    "authors": [
+      "Matteo Nerini",
+      "Shan-Pu Shen",
+      "Hong-Yu Li",
+      "M. di Renzo",
+      "Bruno Clerckx"
+    ],
+    "year": 2023,
+    "journal": "IEEE Transactions on Wireless Communications",
+    "doi": "10.1109/twc.2024.3416825",
+    "url": "https://consensus.app/papers/a-universal-framework-for-multiport-network-analysis-of-nerini-shen/3aad98c7fefd50cdb1bad5c79ee3dc44/",
+    "snippets": [
+      {
+        "marker": "1.1",
+        "quote": "In this study, we propose a universal framework for the multiport network analysis of RIS-aided systems.",
+        "section": "Body"
+      },
+      {
+        "marker": "1.2",
+        "quote": "With our framework, we model RISaided systems and RIS architectures through impedance, admittance, and scattering parameter analysis.",
+        "section": "Body"
+      },
+      {
+        "marker": "1.3",
+        "quote": "Based on these analyses, three equivalent models are derived accounting for the effects of impedance mismatching and mutual coupling.",
+        "section": "Body"
+      },
+      {
+        "marker": "1.4",
+        "quote": "Based on these analyses, three equivalent models are derived accounting for the effects of impedance mismatching and mutual coupling.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "1.5",
+        "quote": "We discuss the benefits of each analysis in characterizing and optimizing the RIS and how to select the most suitable parameters according to the needs.",
+        "section": "Body"
+      },
+      {
+        "marker": "1.6",
+        "quote": "Such a framework would improve our understanding of different EM-consistent models for RIS-aided systems, and would provide additional tools to perform RIS optimization.",
+        "section": "Body"
+      }
+    ]
+  },
+  {
+    "n": 2,
+    "title": "Physically Consistent Modeling of Wireless Links With Reconfigurable Intelligent Surfaces Using Multiport Network Analysis",
+    "authors": [
+      "J. Nossek",
+      "Dominik Semmler",
+      "M. Joham",
+      "W. Utschick"
+    ],
+    "year": 2023,
+    "journal": "IEEE Wireless Communications Letters",
+    "doi": "10.1109/lwc.2024.3410528",
+    "url": "https://consensus.app/papers/physically-consistent-modeling-of-wireless-links-with-nossek-semmler/8e1fe5f7f6e05945a9a8e11b6e362505/",
+    "snippets": [
+      {
+        "marker": "2.1",
+        "quote": "Nevertheless, the widely employed model is still inconsistent with basic physical laws.",
+        "section": "Body"
+      },
+      {
+        "marker": "2.2",
+        "quote": "We will show that even with a very simple abstract model based on isotropic radiators, ignoring any mismatch, mutual coupling, and losses, each RIS element cannot be modeled to simply reflect the incident signal by manipulating its phase only and letting the amplitude unchanged.",
+        "section": "Body"
+      },
+      {
+        "marker": "2.3",
+        "quote": "Nevertheless, the widely employed model is still inconsistent with basic physical laws.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "title": "Design of Reconfigurable Intelligent Surfaces by Using S-Parameter Multiport Network Theory—Optimization and Full-Wave Validation",
+    "authors": [
+      "A. Abrardo",
+      "A. Toccafondi",
+      "M. di Renzo"
+    ],
+    "year": 2023,
+    "journal": "IEEE Transactions on Wireless Communications",
+    "doi": "10.1109/twc.2024.3450722",
+    "url": "https://consensus.app/papers/design-of-reconfigurable-intelligent-surfaces-by-using-abrardo-toccafondi/8b9323ed893c5b309a7d8b21d2235854/",
+    "snippets": [
+      {
+        "marker": "3.1",
+        "quote": "In the context of multiport network modeling, there exist no prior works in which the structural scattering is mathematically and explicitly formulated, optimization algorithms are developed to mitigate it, and full-wave simulations are used to validate the accuracy of the models and the effectiveness of the optimization algorithms.",
+        "section": "Introduction"
+      },
+      {
+        "marker": "3.2",
+        "quote": "(iv) Finally, we validate the theoretical findings and algorithms with numerical simulations and a commercial full-wave electromagnetic simulator based on the method of moments.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "title": "Mutual Coupling in RIS-Aided Communication: Model Training and Experimental Validation",
+    "authors": [
+      "Pin-Jun Zheng",
+      "Ruiqi Wang",
+      "A. Shamim",
+      "T. Al-Naffouri"
+    ],
+    "year": 2023,
+    "journal": "IEEE Transactions on Wireless Communications",
+    "doi": "10.1109/twc.2024.3451548",
+    "url": "https://consensus.app/papers/mutual-coupling-in-risaided-communication-model-training-zheng-wang/510fdc70258c51babf6695aed4ff590d/",
+    "snippets": [
+      {
+        "marker": "4.1",
+        "quote": "The trained model is validated through both full-wave simulations and experimental measurements on the fabricated RIS prototype.",
+        "section": "Body"
+      },
+      {
+        "marker": "4.2",
+        "quote": "Compared to the conventional communication model that does not account for mutual coupling in RIS, the mutual couplingaware model incorporating trained scattering parameters demonstrates improved prediction accuracy.",
+        "section": "Body"
+      },
+      {
+        "marker": "4.3",
+        "quote": "Benchmarked against the full-wave simulated RIS radiation pattern, the trained model can reduce prediction error by up to approximately 10.7%.",
+        "section": "Body"
+      },
+      {
+        "marker": "4.4",
+        "quote": "Utilizing a fabricated 1-bit quasi-passive RIS prototype operating in the mmWave band, we propose a practical model training approach based on a single 3D fullwave simulation of the RIS radiation pattern, which enables the estimation of the scattering matrix among RIS unit cells.",
+        "section": "Body"
+      },
+      {
+        "marker": "4.5",
+        "quote": "The formulated estimation problem is rigorously convex with a limited number of unknowns un-scaling with RIS size.",
+        "section": "Body"
+      },
+      {
+        "marker": "4.6",
+        "quote": "Meanwhile, the S-parameter between the Tx and Rx antennas is measured, validating that the trained model exhibits closer alignment with the experimental measurements.",
+        "section": "Body"
+      },
+      {
+        "marker": "4.7",
+        "quote": "These results affirm the accuracy of the adopted model and the effectiveness of the proposed model training method.",
+        "section": "Body"
+      },
+      {
+        "marker": "4.8",
+        "quote": "A practical training approach for these scattering parameters is proposed leveraging a single 3D full-wave simulation of the RIS radiation pattern.",
+        "section": "Conclusion"
+      },
+      {
+        "marker": "4.9",
+        "quote": "Both full-wave simulations and experimental measurements are carried out to verify the accuracy of the trained model.",
+        "section": "Conclusion"
+      },
+      {
+        "marker": "4.10",
+        "quote": "Nonetheless, the proposed model training method requires full-wave simulation, which is time-consuming and thus not suitable for online mutual coupling calibration.",
+        "section": "Conclusion"
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "title": "Open Source Reconfigurable Intelligent Surface for the Frequency Range of 5 GHz WiFi",
+    "authors": [
+      "Markus Heinrichs",
+      "A. Sezgin",
+      "R. Kronberger"
+    ],
+    "year": 2023,
+    "journal": "2023 IEEE International Symposium On Antennas And Propagation (ISAP)",
+    "doi": "10.1109/isap57493.2023.10389095",
+    "url": "https://consensus.app/papers/open-source-reconfigurable-intelligent-surface-for-the-heinrichs-sezgin/eecd5fcae1dc5713aa1799b520189722/",
+    "snippets": [
+      {
+        "marker": "5.1",
+        "quote": "To close this gap, a Reconfigurable Intelligent Surface for the frequency range of 5 GHz WiFi is presented in this work.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "5.2",
+        "quote": "We describe the designed unit cell, which is optimized for the full frequency range of 5.15 to 5.875 GHz.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "5.3",
+        "quote": "The measured reflection coefficient of a rectangular RIS prototype with 256 elements is used for RF performance evaluation.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "5.4",
+        "quote": "Fabrication data and firmware source code are made open source, which makes RIS more available in real measurement setups.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 6,
+    "title": "A comprehensive dataset of RIS-based channel measurements in the 5GHz band",
+    "authors": [
+      "Simon Tewes",
+      "Markus Heinrichs",
+      "K. Weinberger",
+      "R. Kronberger",
+      "A. Sezgin"
+    ],
+    "year": 2023,
+    "journal": "2023 IEEE 97th Vehicular Technology Conference (VTC2023-Spring)",
+    "doi": "10.1109/vtc2023-spring57618.2023.10200973",
+    "url": "https://consensus.app/papers/a-comprehensive-dataset-of-risbased-channel-measurements-tewes-heinrichs/4879cd96839852cb8910f43c89d9f638/",
+    "snippets": [
+      {
+        "marker": "6.1",
+        "quote": "By utilizing an RIS prototype system in the 5 GHz band, this paper provides a comprehensive dataset of channel measurements of various geometric arrangements of antennas and RIS.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "6.2",
+        "quote": "The dataset and the in-detail documentation is provided on IEEE DataPort and GitHub, respectively.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "6.3",
+        "quote": "Due to the consistent quality of the measurements that is ensured by the measurement chamber, the provided dataset is also well suited to be used as a basis for machine learning concepts.In order to provide a solid baseline for comparing and validating a wide range of applications in different scenarios, the measurements are taken in stationary scenarios.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 7,
+    "title": "BRISC: A Dataset of Channel Measurements at 5 GHz With a Reflective Intelligent Surface",
+    "authors": [
+      "Mattia Piana",
+      "Giovanni Angelo Alghisi",
+      "A. Guglielmi",
+      "Giovanni Perin",
+      "Francesco Gringoli",
+      "Stefano Tomasin"
+    ],
+    "year": 2026,
+    "journal": null,
+    "doi": "10.48550/arxiv.2602.21102",
+    "url": "https://consensus.app/papers/brisc-a-dataset-of-channel-measurements-at-5-ghz-with-a-piana-alghisi/ad2d5d868ea4550c851704962cd56cee/",
+    "snippets": [
+      {
+        "marker": "7.1",
+        "quote": "53 GHz using a 256element binary-state RIS.",
+        "section": "Body"
+      },
+      {
+        "marker": "7.2",
+        "quote": "This article introduced BRISC, a comprehensive measurement-based dataset for RIS-assisted 80 MHz wireless channels in an indoor environment at 5 .",
+        "section": "Conclusion"
+      },
+      {
+        "marker": "7.3",
+        "quote": "The dataset was shown to be effective both for calibrating and validating state-of-the-art RIS channel models, highlighting the trade-offs between linear and data-driven approaches in terms of accuracy and training requirements.",
+        "section": "Conclusion"
+      },
+      {
+        "marker": "7.4",
+        "quote": "To manage complexity, the RIS elements are grouped into blocks of different sizes, where all elements within a block share the same state.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "7.5",
+        "quote": "Specifically, a linear model with incorporated bias has been shown to perform similarly, if not even better than a neural network for the channel frequency response reconstruction task.",
+        "section": "Conclusion"
+      }
+    ]
+  },
+  {
+    "n": 8,
+    "title": "Open Experimental Measurements of Sub-6GHz Reconfigurable Intelligent Surfaces",
+    "authors": [
+      "M. Rossanese",
+      "P. Mursia",
+      "Andres Garcia-Saavedra",
+      "V. Sciancalepore",
+      "Arash Asadi",
+      "X. Costa-Pérez"
+    ],
+    "year": 2024,
+    "journal": "IEEE Internet Computing",
+    "doi": "10.1109/mic.2024.3376772",
+    "url": "https://consensus.app/papers/open-experimental-measurements-of-sub6ghz-rossanese-mursia/f293e9ddd9d05656b9b7a7953753e425/",
+    "snippets": [
+      {
+        "marker": "8.1",
+        "quote": "Given the novel nature of this technology, publicly available datasets for RISbased systems are rare today.",
+        "section": "Body"
+      },
+      {
+        "marker": "8.2",
+        "quote": "The only publicly accessible dataset derived from real measurements is delineated in [4].",
+        "section": "Body"
+      },
+      {
+        "marker": "8.3",
+        "quote": "Points of difference from our dataset include the absence of clearly delineated radiation patterns for the considered RIS, hindering its utility 1 The datasets and associated documentation are available at https://github.com/marcantonio14/RIS-Power-Measurements-Dataset.",
+        "section": "Body"
+      },
+      {
+        "marker": "8.4",
+        "quote": "in other investigations; the provision of power values with a wider measurement interval; restriction to a single size of RIS elements; and a lack of accompanying use case illustrations for contextualization.",
+        "section": "Body"
+      },
+      {
+        "marker": "8.5",
+        "quote": "Motivated by these considerations, we decided to implement our RIS prototype, which fulfills the aforementioned design points, together with high granularity beam steering, and to make publicly accessible the measurements collected during our tests in an anechoic chamber, in the hope it may be useful to foster the progress of the field.",
+        "section": "Body"
+      },
+      {
+        "marker": "8.6",
+        "quote": "In this article, we present two datasets that we make publicly available for research.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 9,
+    "title": "Spatio-Temporal Neural Network for Channel Prediction in Massive MIMO-OFDM Systems",
+    "authors": [
+      "Guanzhang Liu",
+      "Zhengyang Hu",
+      "Lei Wang",
+      "J. Xue",
+      "Haifan Yin",
+      "D. Gesbert"
+    ],
+    "year": 2022,
+    "journal": "IEEE Transactions on Communications",
+    "doi": "10.1109/tcomm.2022.3215198",
+    "url": "https://consensus.app/papers/spatiotemporal-neural-network-for-channel-prediction-in-liu-hu/2ebbc358079051bb8fc08eb155ff9ea6/",
+    "snippets": [
+      {
+        "marker": "9.1",
+        "quote": "In this paper, we propose a spatio-temporal neural network (STNN) to achieve better performance by carefully taking into account the spatio-temporal characteristics of CSI.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "9.2",
+        "quote": "Specifically, STNN uses its encoder and decoder modules to capture the spatial correlation and temporal dependence of CSI.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "9.3",
+        "quote": "Evaluated on a realistic channel model with enhanced mobility and spherical waves, experimental results show that STNN can effectively improve the accuracy of prediction and perform well with respect to different signal to noise ratios (SNRs).",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 10,
+    "title": "Spectral Temporal Graph Transformer for Massive MIMO CSI Prediction in 5G and Beyond",
+    "authors": [
+      "Aftab Dayer",
+      "Akash",
+      "Saurabh Soni",
+      "S. Singh"
+    ],
+    "year": 2025,
+    "journal": "2025 2nd International Conference on Intelligent Algorithms for Computational Intelligence Systems (IACIS)",
+    "doi": "10.1109/iacis65746.2025.11211349",
+    "url": "https://consensus.app/papers/spectral-temporal-graph-transformer-for-massive-mimo-csi-dayer-akash/e5e87b8485825c54a739e84ed9430752/",
+    "snippets": [
+      {
+        "marker": "10.1",
+        "quote": "We propose a Spectral Temporal Graph Transformer (STGT) that unifies graph-based spatial learning with transformer-based temporal attention to predict compressed CSI.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "10.2",
+        "quote": "The model dynamically constructs data-driven graphs, performs spectral filtering to capture multi-scale spatial dependencies, and leverages self-attention to learn long-range temporal evolution.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "10.3",
+        "quote": "Evaluations on realistic 3GPP TR 38.901 channel models across diverse SNR and mobility regimes show that STGT outperforms RNN/LSTM, vanilla transformers, and STEM-GNN in NMSE and spectral efficiency, while maintaining robustness under high mobility and aggressive compression.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 11,
+    "title": "An ERAN-Based Dynamic Graph Neural Network for CSI Prediction in Massive MIMO Systems",
+    "authors": [
+      "Ravi Kumar",
+      "Manivasakan Rathinam"
+    ],
+    "year": 2025,
+    "journal": "IEEE Wireless Communications Letters",
+    "doi": "10.1109/lwc.2025.3598251",
+    "url": "https://consensus.app/papers/an-eranbased-dynamic-graph-neural-network-for-csi-kumar-rathinam/25b557fc83d85a1b81855e45594c1722/",
+    "snippets": [
+      {
+        "marker": "11.1",
+        "quote": "In this letter, we adapt the evolving relational attention network (ERAN)—a generic spatio-temporal graph neural network (GNN)—for CSI prediction.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "11.2",
+        "quote": "ERAN dynamically learns evolving adjacency matrices using a gated recurrent unit (GRU)-driven evolving graph learning (EGL) module, enabling it to capture dependencies among multiple variables.",
+        "section": "Abstract"
+      },
+      {
+        "marker": "11.3",
+        "quote": "Experiments show that at high mobility ( $\\mu = 120$ km/h), ERAN achieves a 34.93% reduction in root-mean-square error (RMSE) compared to STEM, while incurring only a 5.64% drop in spectral efficiency (SE), in contrast to STEM’s 15.1% degradation—demonstrating nearly three times higher temporal robustness under severe dynamic conditions.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 12,
+    "title": "Spatial-Temporal Cellular Traffic Prediction for 5G and Beyond: A Graph Neural Networks-Based Approach",
+    "authors": [
+      "Z. Wang",
+      "Jia Hu",
+      "Geyong Min",
+      "Zhi-Wei Zhao",
+      "Zheng Chang",
+      "Zhe Wang"
+    ],
+    "year": 2023,
+    "journal": "IEEE Transactions on Industrial Informatics",
+    "doi": "10.1109/tii.2022.3182768",
+    "url": "https://consensus.app/papers/spatialtemporal-cellular-traffic-prediction-for-5g-and-wang-hu/fe9c405396c954229e50d4ea2ffd7945/",
+    "snippets": [
+      {
+        "marker": "12.1",
+        "quote": "The simulation results show that our proposed TSGAN outperforms three classic prediction models based on GNNs or GRU on a real-world cellular network dataset in short-term, mid-term, and long-term prediction scenarios.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 13,
+    "title": "QRIS: A QuaDRiGa-Based Simulation Platform for Reconfigurable Intelligent Surfaces",
+    "authors": [
+      "I. Burtakov",
+      "Aleksey A. Kureev",
+      "A. Tyarin",
+      "Evgeny M. Khorov"
+    ],
+    "year": 2023,
+    "journal": "IEEE Access",
+    "doi": "10.1109/access.2023.3306954",
+    "url": "https://consensus.app/papers/qris-a-quadrigabased-simulation-platform-for-burtakov-kureev/82fec3a8649f554791a1287ab63a279c/",
+    "snippets": [
+      {
+        "marker": "13.1",
+        "quote": "In this paper, we address this problem and present QRIS, an open-source RIS simulation platform that eliminates the drawbacks of existing platforms.",
+        "section": "Body"
+      },
+      {
+        "marker": "13.2",
+        "quote": "QRIS is based on the QUAsi Deterministic Radio channel Gener- ator (QuaDRiGa) [7], which already supports many wellapproved channel models for various wireless technologies and indoor/outdoor scenarios.",
+        "section": "Body"
+      },
+      {
+        "marker": "13.3",
+        "quote": "Its essential features consider such physical effects as shadowing and accurate modeling of spatial consistency, which is important for scenarios with MIMO.",
+        "section": "Body"
+      },
+      {
+        "marker": "13.4",
+        "quote": "This problem is addressed in this paper, where we design a new QRIS model.",
+        "section": "Body"
+      }
+    ]
+  },
+  {
+    "n": 14,
+    "title": "Statistical Multiport-Network Modeling and Efficient Discrete Optimization of RIS",
+    "authors": [
+      "C. Hammami",
+      "L. Le Magoarou",
+      "P. del Hougne"
+    ],
+    "year": 2025,
+    "journal": "IEEE Wireless Communications Letters",
+    "doi": "10.1109/lwc.2026.3652464",
+    "url": "https://consensus.app/papers/statistical-multiportnetwork-modeling-and-efficient-hammami-magoarou/9afad547d28451d38a0c7389e32378c2/",
+    "snippets": [
+      {
+        "marker": "14.1",
+        "quote": "We account for reciprocity, passivity, and coherent backscattering; then, we add a simple hyper-parameter to control the MC strength.",
+        "section": "Body"
+      },
+      {
+        "marker": "14.2",
+        "quote": "We account for reciprocity, passivity, and coherent backscattering; then, we add a simple hyper-parameter to control the MC strength.",
+        "section": "Abstract"
+      }
+    ]
+  },
+  {
+    "n": 15,
+    "title": "A Tutorial on Beyond-Diagonal Reconfigurable Intelligent Surfaces: Modeling, Architectures, System Design and Optimization, and Applications",
+    "authors": [
+      "Hong-Yu Li",
+      "Matteo Nerini",
+      "Shan-Pu Shen",
+      "Bruno Clerckx"
+    ],
+    "year": 2025,
+    "journal": "IEEE Communications Surveys & Tutorials",
+    "doi": "10.1109/comst.2025.3647003",
+    "url": "https://consensus.app/papers/a-tutorial-on-beyonddiagonal-reconfigurable-intelligent-li-nerini/dd150dcc49645969936033912eeb7cea/",
+    "snippets": [
+      {
+        "marker": "15.1",
+        "quote": "In its passive form, <inline-formula> <tex-math notation=\"LaTeX\">$\\boldsymbol {\\Theta }$ </tex-math></inline-formula> satisfies the unitary property <inline-formula> <tex-math notation=\"LaTeX\">$\\boldsymbol {\\Theta }^{\\textsf {H}}\\boldsymbol {\\Theta }=\\mathbf {I}$ </tex-math></inline-formula> (for energy conservation in lossless ideal surfaces) and be either symmetric <inline-formula> <tex-math notation=\"LaTeX\">$\\boldsymbol {\\Theta }=\\boldsymbol {\\Theta }^{\\textsf {T}}$ </tex-math></inline-formula> or asymmetric <inline-formula> <tex-math notation=\"LaTeX\">$\\boldsymbol {\\Theta }\\neq \\boldsymbol {\\Theta }^{\\textsf {T}}$ </tex-math></inline-formula> hence leading to reciprocal or non-reciprocal BD-RIS.",
+        "section": "Abstract"
+      }
+    ]
+  }
+]

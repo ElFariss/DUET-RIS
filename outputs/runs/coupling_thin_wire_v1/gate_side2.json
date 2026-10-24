@@ -1,0 +1,148 @@
+{
+  "geometry": "3D free-space PEC thin-wire MoM; no PCB, substrate, switch or measured calibration",
+  "frequency_hz": 5530000000.0,
+  "radius_m": 1e-05,
+  "side": 2,
+  "loads_real_ohm": [
+    1.0,
+    1.0
+  ],
+  "loads_imag_ohm": [
+    819.5305831711514,
+    859.5305831711514
+  ],
+  "mesh": [
+    {
+      "segments": 11,
+      "seconds": 0.0053871589989284985,
+      "segments_per_wire": 11,
+      "unknowns": 110,
+      "reciprocity_relative": 9.387876145315555e-07,
+      "minimum_resistance_eigenvalue_ohm": 1.1707697731626094,
+      "maximum_scattering_singular_value": 0.9998590587066706,
+      "condition_number": 10.037420868370164
+    },
+    {
+      "segments": 21,
+      "seconds": 0.01183469699753914,
+      "segments_per_wire": 21,
+      "unknowns": 210,
+      "reciprocity_relative": 2.6107437355989415e-07,
+      "minimum_resistance_eigenvalue_ohm": 1.1092155364753378,
+      "maximum_scattering_singular_value": 0.9998582138341674,
+      "condition_number": 9.813302177048616
+    },
+    {
+      "segments": 41,
+      "seconds": 0.04287789900263306,
+      "segments_per_wire": 41,
+      "unknowns": 410,
+      "reciprocity_relative": 7.148116617257437e-08,
+      "minimum_resistance_eigenvalue_ohm": 1.071003406154479,
+      "maximum_scattering_singular_value": 0.9998577283068174,
+      "condition_number": 9.666528789360212
+    },
+    {
+      "segments": 81,
+      "seconds": 0.20203912599390605,
+      "segments_per_wire": 81,
+      "unknowns": 810,
+      "reciprocity_relative": 2.1172232448785168e-08,
+      "minimum_resistance_eigenvalue_ohm": 1.0460580407080582,
+      "maximum_scattering_singular_value": 0.9998574203954609,
+      "condition_number": 9.567936988453688
+    }
+  ],
+  "loaded_solver_validation": [
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "relative_current_error": 4.3699339658804374e-13
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "relative_current_error": 5.009864284389229e-13
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "relative_current_error": 6.979504954761438e-13
+    },
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "relative_current_error": 7.238720875394857e-13
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "relative_current_error": 4.798953321689367e-13
+    }
+  ],
+  "mesh_channel_comparison": [
+    {
+      "meshes": [
+        11,
+        21
+      ],
+      "max_loaded_channel_relative_error": 0.03597991481370739,
+      "pattern_errors": [
+        0.021385031982574684,
+        0.03597991481370739,
+        0.02435616667828358
+      ]
+    },
+    {
+      "meshes": [
+        21,
+        41
+      ],
+      "max_loaded_channel_relative_error": 0.021567120699373367,
+      "pattern_errors": [
+        0.021090123190497526,
+        0.021567120699373367,
+        0.012443740120965016
+      ]
+    },
+    {
+      "meshes": [
+        41,
+        81
+      ],
+      "max_loaded_channel_relative_error": 0.01860139390781782,
+      "pattern_errors": [
+        0.01860139390781782,
+        0.0112421631197701,
+        0.010586053617834866
+      ]
+    }
+  ],
+  "thresholds": {
+    "reciprocity": 1e-07,
+    "passivity_singular": 1.0001,
+    "loaded_solver": 1e-05,
+    "mesh_channel": 0.01
+  },
+  "passed": false
+}

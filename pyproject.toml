@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atom-wise-ris"
+version = "0.1.0"
+description = "Reproducible measurement-informed RIS controller feasibility experiments"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = ["numpy==2.2.6", "scipy==1.15.3", "matplotlib==3.10.8", "pillow>=11,<13"]
+
+[project.optional-dependencies]
+training = ["torch==2.9.1"]
+simulation = ["sionna-rt==2.0.1", "deepmimo==4.0.5", "pandas>=2.2,<3.1", "shapely>=2,<3", "utm==0.9.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128", extra = "training" }

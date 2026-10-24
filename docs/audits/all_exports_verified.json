@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "trace": "bs",
+      "transmitters": 4,
+      "max_relative_l2_error": 0.0013269408680594396
+    },
+    {
+      "trace": "ris_00",
+      "transmitters": 8,
+      "max_relative_l2_error": 0.00015533570102151974
+    },
+    {
+      "trace": "ris_08",
+      "transmitters": 8,
+      "max_relative_l2_error": 0.00015727403883036243
+    },
+    {
+      "trace": "ris_16",
+      "transmitters": 8,
+      "max_relative_l2_error": 0.00015787163490274178
+    },
+    {
+      "trace": "ris_24",
+      "transmitters": 8,
+      "max_relative_l2_error": 0.00015206384364727292
+    },
+    {
+      "trace": "ris_32",
+      "transmitters": 8,
+      "max_relative_l2_error": 0.00015234223540373787
+    },
+    {
+      "trace": "ris_40",
+      "transmitters": 8,
+      "max_relative_l2_error": 0.0001502737708690915
+    },
+    {
+      "trace": "ris_48",
+      "transmitters": 8,
+      "max_relative_l2_error": 0.00014646104570201917
+    },
+    {
+      "trace": "ris_56",
+      "transmitters": 8,
+      "max_relative_l2_error": 0.0001477502190905335
+    }
+  ],
+  "conversion": "Explicit carrier phase from exported interaction phase and delay",
+  "limit_relative_l2": 0.01,
+  "scope": "All four BS and 64 RIS transmitters; raw float32 delays limit phase precision"
+}

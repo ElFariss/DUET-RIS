@@ -1,0 +1,254 @@
+[
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/README.md",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/README.md",
+    "sha256": "00e3f70aec883b70c832f918cdc0fdbfda51cbd0b1247cf5776f72626acddbbe"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/antenna_util.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/antenna_util.py",
+    "sha256": "a182d2548c4acc07988fa68d5cc8cf134d32a137000c85d3d779b797d42472fa"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/basic_usage.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/basic_usage.py",
+    "sha256": "941a9967235a4db0144031f09deaa06f46f3c5a9ea48c833b013231c8f17e6bc"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/context_clean.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/context_clean.py",
+    "sha256": "07fe50ad75d805b43de1229a0831c630dd46074c4d619f0dcc1ace766e5ac61c"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/dipole.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/dipole.py",
+    "sha256": "d1bef3b7853cb5210f78c18e7797202b3447122c75ae4b50f7e81492cf49f479"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/impedance_plot.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/impedance_plot.py",
+    "sha256": "edc5bd3366c4a442c791721d8d2861ce643583a2acc0fccd50bb96e4fe7feeb9"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/logperiodic_opt.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/logperiodic_opt.py",
+    "sha256": "40bf9f2f44c30dbea3fed1e24e0252de81de5a79ee30c3b1543352f1a498a7fb"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/monopole.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/monopole.py",
+    "sha256": "94cc8de3dce7408757259a9cdef31012d4c48bb7b792c35c2ad8fe62c55cca70"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/monopole_realistic_ground_plane.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/monopole_realistic_ground_plane.py",
+    "sha256": "21ceaf72f42908338bcd7094c7dc30c60ac10e2c4351ca495499807f6c2b4870"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/optimized.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/optimized.py",
+    "sha256": "21da561c6394e45780902830195e423c067aa57c752f98cdc453fcd0dd982e6f"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/radiation_pattern.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/radiation_pattern.py",
+    "sha256": "7a2a1837a03ccb430f2c86ee895b61d92692c8275b1e1796c78a0247e188732f"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_ai.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_ai.py",
+    "sha256": "c666d10e0b1a6c8a98f7db631076c2868726f42be770d11948a1ae65f3880df2"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_charge_densities.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_charge_densities.py",
+    "sha256": "55fa8fb8f5a395fb2618428d333ea0e7acf5312f23e077f22d5a9c69f06161a8"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_ne_nh.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_ne_nh.py",
+    "sha256": "0946c6e73f08d466dcb26afaf901573fb3ed940ad143aa3003ecf0c4bded33bd"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_nrp.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_nrp.py",
+    "sha256": "4bc79b2507ab0ad715c22e47b688ecb8fb3b78cf019f35f22b723e0c02529309"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_rp.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_rp.py",
+    "sha256": "16b4e472085988171bf85a2f8d4b5fbd47c6d80576d0f572b77823dd997372a5"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_rp2.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_rp2.py",
+    "sha256": "8e15bbea7753b61e39fb53dea9ffc5b4678b7adc2b1b3184aeaabe743d651ab5"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_se.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_se.py",
+    "sha256": "f25b540847afb39c470213416f378eae04d2a050c0e338159de8c80a0ecd8c94"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_structure_currents.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_structure_currents.py",
+    "sha256": "6490551a20e30b71e228609cba6d6e7ca7e2b5765b6c170a64df1a1aa315afdf"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/example/test_surface_patch_currents.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/example/test_surface_patch_currents.py",
+    "sha256": "8aa15568f00e8d26da25f595ed22c768808d4cb542eefeb79565364101cb0ac0"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/interface_files/nec_structure_currents.i",
+    "path": "data/raw/em_reference/necpp/PyNEC/interface_files/nec_structure_currents.i",
+    "sha256": "28d70e74ddc9422094f5900e2561de8ce2ab95f2cfc5abd3f5a0e688507d3913"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/interface_files/nec_structure_excitation.i",
+    "path": "data/raw/em_reference/necpp/PyNEC/interface_files/nec_structure_excitation.i",
+    "sha256": "599cbc7e53b4f92d8782d98825fd471e0479b8e53f860fccee46498dd9bca841"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/PyNEC/tests/test_examples.py",
+    "path": "data/raw/em_reference/necpp/PyNEC/tests/test_examples.py",
+    "sha256": "192f6839909f5a55490e9bf6f58e9b4feef3b9f116107c5f032e46a2d8a37eb8"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/README.md",
+    "path": "data/raw/em_reference/necpp/README.md",
+    "sha256": "58a6f2323a9b6f8b1957a8565e3ac89e8060b89bdcf00030d4f80eae4481dbd8"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/necpp/example/README.md",
+    "path": "data/raw/em_reference/necpp/necpp/example/README.md",
+    "sha256": "5693dac7c62843870ac70d855a7403fde8d46a74c9b3174337d23a5c0b78a152"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/necpp/example/antenna_util.py",
+    "path": "data/raw/em_reference/necpp/necpp/example/antenna_util.py",
+    "sha256": "dfcb446a86f8bc173b5d6145cf181df7a87a6bc405289d526d9af6894ff8fe9c"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/necpp/example/different_material.py",
+    "path": "data/raw/em_reference/necpp/necpp/example/different_material.py",
+    "sha256": "89f0784d94a5ad861d83a083e2191519efab13072404f32d6e2b7af3723d7e9d"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/necpp/example/impedance_plot.py",
+    "path": "data/raw/em_reference/necpp/necpp/example/impedance_plot.py",
+    "sha256": "edc5bd3366c4a442c791721d8d2861ce643583a2acc0fccd50bb96e4fe7feeb9"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/necpp/example/monopole.py",
+    "path": "data/raw/em_reference/necpp/necpp/example/monopole.py",
+    "sha256": "bb3084ccd6937345fb8bf225f4a41be08824cd6ec5a830248aea46afb9544db3"
+  },
+  {
+    "repository": "tmolteno/python-necpp",
+    "commit": "c1570f575c6f37048e7dd6ab23e99b12b9845e8f",
+    "url": "https://raw.githubusercontent.com/tmolteno/python-necpp/c1570f575c6f37048e7dd6ab23e99b12b9845e8f/necpp/example/optimized.py",
+    "path": "data/raw/em_reference/necpp/necpp/example/optimized.py",
+    "sha256": "0e3c0fdfe157005aa74095b3ef79f6ddef55b0be349d32f7c3b4958b430de78d"
+  },
+  {
+    "repository": "matteonerini/ris-mutual-coupling",
+    "commit": "4d2c766a29499b9fa7bc64f883ada7332b189590",
+    "url": "https://raw.githubusercontent.com/matteonerini/ris-mutual-coupling/4d2c766a29499b9fa7bc64f883ada7332b189590/LICENSE",
+    "path": "data/raw/em_reference/ris-mutual-coupling/LICENSE",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  },
+  {
+    "repository": "matteonerini/ris-mutual-coupling",
+    "commit": "4d2c766a29499b9fa7bc64f883ada7332b189590",
+    "url": "https://raw.githubusercontent.com/matteonerini/ris-mutual-coupling/4d2c766a29499b9fa7bc64f883ada7332b189590/README.md",
+    "path": "data/raw/em_reference/ris-mutual-coupling/README.md",
+    "sha256": "0a06c1d47657fc8489e1d7ab830cf69e297728c79d6e95fd9f94e2bfd7b1380e"
+  },
+  {
+    "repository": "matteonerini/ris-mutual-coupling",
+    "commit": "4d2c766a29499b9fa7bc64f883ada7332b189590",
+    "url": "https://raw.githubusercontent.com/matteonerini/ris-mutual-coupling/4d2c766a29499b9fa7bc64f883ada7332b189590/func_gen_ZII.m",
+    "path": "data/raw/em_reference/ris-mutual-coupling/func_gen_ZII.m",
+    "sha256": "01bc92d282e5112dec72f73627d1438d28002f63690e070660883e1f60ab549b"
+  },
+  {
+    "repository": "matteonerini/ris-mutual-coupling",
+    "commit": "4d2c766a29499b9fa7bc64f883ada7332b189590",
+    "url": "https://raw.githubusercontent.com/matteonerini/ris-mutual-coupling/4d2c766a29499b9fa7bc64f883ada7332b189590/main_gen_ZIIs.m",
+    "path": "data/raw/em_reference/ris-mutual-coupling/main_gen_ZIIs.m",
+    "sha256": "5e781bd39c4c02a3fe5ce9fd1c384dfb205c47b2321dfebce393251449db0c07"
+  },
+  {
+    "repository": "philipp-delhougne/PhysFad",
+    "commit": "2e59737650d3118896531fe33b71b91c89654f19",
+    "url": "https://raw.githubusercontent.com/philipp-delhougne/PhysFad/2e59737650d3118896531fe33b71b91c89654f19/TestChannelMatrix.m",
+    "path": "data/raw/em_reference/PhysFad/TestChannelMatrix.m",
+    "sha256": "63908e6be3fba785d3b6715bc0496b09def9fcda3d4130658fcdfb4da8927028"
+  },
+  {
+    "repository": "philipp-delhougne/PhysFad",
+    "commit": "2e59737650d3118896531fe33b71b91c89654f19",
+    "url": "https://raw.githubusercontent.com/philipp-delhougne/PhysFad/2e59737650d3118896531fe33b71b91c89654f19/getH.m",
+    "path": "data/raw/em_reference/PhysFad/getH.m",
+    "sha256": "6dd59709473f3e6d278363791e3e6f0368bf59ac0a8b2eb33595df1fdb34d6c5"
+  }
+]

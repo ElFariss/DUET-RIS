@@ -1,0 +1,79 @@
+{
+  "arguments": {
+    "scenario": "data/munich_specular_compute_v3/scenario.npz",
+    "run": "runs/specular_v4",
+    "split": "validation",
+    "budgets": "1,5,10,50,100",
+    "seeds": "7,19,43",
+    "output": null,
+    "baselines_only": false,
+    "ablations": false
+  },
+  "cpu_affinity": [
+    0
+  ],
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "hostname": "labkc-comm2",
+  "torch": "2.9.1+cu128",
+  "numpy": "2.2.6",
+  "scenario_sha256": "deeb48a97c9a0280354b131c5c889000e5877e9357b2783a57e3300f3277a4ca",
+  "threads": 1,
+  "methods": [
+    "greedy",
+    "pair",
+    "random",
+    "memory_ga",
+    "analytical_ga",
+    "mlp_ga",
+    "attention_ga"
+  ],
+  "timing_includes": [
+    "channel contraction and cache creation",
+    "memory reset/retrieval/rescoring/write",
+    "features",
+    "CPU inference",
+    "selection and mutation",
+    "candidate evaluation"
+  ],
+  "timing_excludes": [
+    "one-time model load",
+    "one-time train-case warmup",
+    "disk IO",
+    "channel acquisition/ray tracing"
+  ],
+  "precision": "complex128 evaluator, float32 neural inference",
+  "pilot_is_development": true,
+  "precoder": "RZF on all-OFF reference, fixed within episode; includes RIS-only users",
+  "source_sha256": {
+    "configs/pilot.json": "7d598a2e3db3f6e362c1733422d7976eaae97a5c5b7fa1ccad4e83978362488b",
+    "scripts/analyze.py": "ac587d51b72494c81063386f1bf0c8df3c2400143859602644de097ba5ffe9ce",
+    "scripts/audit_scenario.py": "9618b73894f6a69a7baa54d01cd46ba4a7eb02041a943b104f58e37cc0480761",
+    "scripts/benchmark.py": "79d27769b6e8ae8a2f28864ff3b844dc480b1e01905aacb4822eab59c2e73c58",
+    "scripts/convergence.py": "7487cf214d45f8b9d44a1c484eefa52e8031598a1eb7cf59a86417e970f8f2ef",
+    "scripts/digitize_response.py": "6991a8f17abd1acb9f503894512a5129c617789888d7f8567aa753de9c3224d6",
+    "scripts/prepare_experiments.py": "c60ea9167b02467cb43e79b5a746a16726abfc0cdd2710b54e39cbc8e402785f",
+    "scripts/sensitivity.py": "5bfc654f12dc69fd9e08a8d009c6ce0b8a989811bb5d976eadb05052780570d6",
+    "scripts/trace_munich.py": "f0bc1f9ea368cf0cddbcf90b9bc84366f2603db6fb119ece65c5d6fde52b19d9",
+    "scripts/train.py": "97e5d855ef09f57c4884c3f7569451c7386a68d500ecf1dfef945cd720363a92",
+    "scripts/verify_all_exports.py": "13f060333c5d4b43c5fc60d3270872d913e3c56ad94bad500490b72fb2663c8c",
+    "scripts/verify_export.py": "e8e30d381650843c97450a80ec9c9f985f939dd819c7562c23aa74b9a4686242",
+    "src/rislab/__init__.py": "0f4f9a61e69e6e164493ec8f5bcc3255abd7d2e4cb06f818876a6419f36e1aa7",
+    "src/rislab/core.py": "73059e3c6a814abf9bd8639e9a1f191701f01205624a31ab035db6b2e1231527",
+    "src/rislab/models.py": "7b14bf3f1f7e7245f1f01d7d86fc0361f4735d96a38a5e00425c2b3798f3e53f",
+    "src/rislab/search.py": "e2f1889a555b598a52557d68fd4c5b9d0dfaf9eff900a27082a258fa6907b7d4"
+  },
+  "checkpoint_sha256": {
+    "models/attention_no_conditioning_seed19/best.pt": "8dd304e23cbca37f71dfc4434e1c5509b11f6d1d4bcf55598f05452cc1974d23",
+    "models/attention_no_conditioning_seed43/best.pt": "c5f044cbf127871d8ffb444baeb2ff23e40d6a4588852445add6e7bf2c5e0104",
+    "models/attention_no_conditioning_seed7/best.pt": "afdf9ef8edb5af6b0d12c281b3577e518041eb9ad9c25322557f0352cc09311c",
+    "models/attention_no_physics_seed19/best.pt": "b1ba52d1ceb65b09ecae0f71e2f95b68888c4ca09069568a0c62c2cd16c0cc69",
+    "models/attention_no_physics_seed43/best.pt": "a7d9505a62264e361858e432fc60995e4941eaf7d018d2f1b1ba09300c74487c",
+    "models/attention_no_physics_seed7/best.pt": "37c7b2668d7553d8b5bb037d330c98f518159ef03abb74c707d0c9790c8bdcc2",
+    "models/attention_seed19/best.pt": "fd9b21c8335c424b8a78b31c7ff2aca9bc28f65c4a4ea8dac796b96dd5172567",
+    "models/attention_seed43/best.pt": "3d78cc3058aa07b3cee4ecb512a977c08779fdec2d8e0adc824895716f6b995b",
+    "models/attention_seed7/best.pt": "ac72a5b958efe5d6cd0732c1dea5a1ff989a770761c117f146de2ed88ce3a4eb",
+    "models/mlp_seed19/best.pt": "5c0549a8ddb5445efdf1b924dadce75158815ee038f1084636b72490cfe78e3d",
+    "models/mlp_seed43/best.pt": "a7ea54cbeba3de9d6ca640127cd0ff7e76361712402237c896557c489574fc11",
+    "models/mlp_seed7/best.pt": "64a93c72298ed36b52be37dfcf8e3734bf5e06d90cd178e31b13df8a391403f6"
+  }
+}

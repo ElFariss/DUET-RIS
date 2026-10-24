@@ -1,0 +1,20 @@
+{
+  "rows": 1728,
+  "parents_per_snapshot": 24,
+  "pairs_per_parent": 2016,
+  "seed": 20261024,
+  "scenario_sha256": "f0d7d583aba151be7a36d9f4e5448f6b932b99ac7f9c149b146368d1c31142b9",
+  "trajectories": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "label": "Soft completed single/pair gains; original-parent features, first-bit marker for conditional actions",
+  "mutation_counts": {
+    "one": 0.5,
+    "two": 0.5
+  }
+}

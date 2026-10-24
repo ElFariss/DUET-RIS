@@ -1,0 +1,6 @@
+{
+  "analytic_weighted_cross_entropy": 3.981839081065522,
+  "teacher_weighted_entropy": 3.936180929204932,
+  "uniform_weighted_cross_entropy": 4.15363363103696,
+  "validation_rows": 1728
+}

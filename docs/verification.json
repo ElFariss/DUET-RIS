@@ -1,0 +1,27 @@
+{
+  "numerical_tests": {
+    "count": 9,
+    "local": "passed",
+    "lab_python312_torch291": "passed"
+  },
+  "package_build": "sdist and wheel built successfully",
+  "shell_syntax": "setup.sh, remote.sh, train_campaign.sh passed bash -n",
+  "export_parity": {
+    "traces": 9,
+    "transmitters": 68,
+    "maximum_relative_l2_error": 0.0013269408680594396,
+    "threshold": 0.01
+  },
+  "github_actions": "workflow prepared; not run on GitHub",
+  "publication": "not pushed or published",
+  "canonical_campaign": {
+    "run": "specular_v5",
+    "models": 12,
+    "validation_trials": 2520,
+    "pilot_trials": 3600,
+    "source_snapshot_hashes_verified": 32,
+    "dataset_and_checkpoint_identity_verified": true,
+    "primary_budget_ms": 10,
+    "primary_deadline_misses": 0
+  }
+}

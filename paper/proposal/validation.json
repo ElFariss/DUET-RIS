@@ -1,0 +1,19 @@
+{
+  "style": "IEEEtran conference, two columns",
+  "pages": 8,
+  "references": 12,
+  "figures": 1,
+  "compile": "success: Tectonic and desktop compiler",
+  "visual_review": "all 8 final pages inspected; no clipping or overlap observed",
+  "warnings": "Underfull boxes remain; no overfull boxes or unresolved citations",
+  "experiments_run": false,
+  "input_sha256": "83e0b44eb6583cb7fc730fd0a97717351714d72a21d1b961315afe03d0ab7792",
+  "pdf_sha256": "9d965520124ef9e74687ba746e9e342d24e01e542df1a1248029f4eb7ac0168b",
+  "changes": {
+    "original_references": 8,
+    "added_references": 4,
+    "final_references": 12,
+    "substantive_changes": 8
+  },
+  "consensus": "reauthentication failed; user authorized primary-web-source fallback"
+}

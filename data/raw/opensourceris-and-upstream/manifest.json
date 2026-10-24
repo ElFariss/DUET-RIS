@@ -1,0 +1,50 @@
+[
+  {
+    "file": "opensourceris_README.md",
+    "url": "https://raw.githubusercontent.com/mheinri/OpenSourceRIS/7982a576a5edd389edfd81ece9a1f6675c7c545e/README.md",
+    "sha256": "cdab910aa43aeb01f3f872c59496f0e930568e1ace79c28d4f8a89eaed848c0f",
+    "retrieved_utc": "2026-10-23T17:26:11.451056+00:00"
+  },
+  {
+    "file": "deepmimo_pyproject.toml",
+    "url": "https://raw.githubusercontent.com/DeepMIMO/DeepMIMO/45238f9a4c4311b8747dad2eefdebc8c74b1a104/pyproject.toml",
+    "sha256": "5e5777e1eec5f9600472227c1cb83736071f374613b93320a071fda79d69328b",
+    "retrieved_utc": "2026-10-23T17:26:11.611644+00:00"
+  },
+  {
+    "file": "deepmimo_sionna_example.py",
+    "url": "https://raw.githubusercontent.com/DeepMIMO/DeepMIMO/45238f9a4c4311b8747dad2eefdebc8c74b1a104/docs/applications/2_sionna_rt_downstream.py",
+    "sha256": "fd8bb6405ae1eaf8d8b847f4df7746ee0f2a67829683ddae94b064ae5499253c",
+    "retrieved_utc": "2026-10-23T17:26:11.530124+00:00"
+  },
+  {
+    "file": "sionna_rt_pypi.json",
+    "url": "https://pypi.org/pypi/sionna-rt/json",
+    "sha256": "ed3be03904a3f396bac72d41ecf7eb2322d2b4db62c872059cd969246d0b1c38",
+    "retrieved_utc": "2026-10-23T17:26:11.415692+00:00"
+  },
+  {
+    "file": "deepmimo_pypi.json",
+    "url": "https://pypi.org/pypi/deepmimo/json",
+    "sha256": "2179f2e174433d7c7b2bfa9dd3dea03f53e2d7f7fe7bc13516798300ae6e5638",
+    "retrieved_utc": "2026-10-23T17:26:11.458696+00:00"
+  },
+  {
+    "file": "magnitude.png",
+    "url": "https://github.com/mheinri/OpenSourceRIS/assets/122888316/b83f33f8-22d1-485b-8765-e585e8c5e22f",
+    "sha256": "c763ef2d153cd2b177da5610c0a0ccfbf1d360526db617b51ed38f902528be69",
+    "retrieved_utc": "2026-10-23T17:26:28.067870+00:00"
+  },
+  {
+    "file": "phase.png",
+    "url": "https://github.com/mheinri/OpenSourceRIS/assets/122888316/caa335ad-a6ea-4615-8e6b-71c7512155d5",
+    "sha256": "e270958a0d10389efbd4986ac33f695cd43a29918a16619350af16436d55f928",
+    "retrieved_utc": "2026-10-23T17:26:30.038685+00:00"
+  },
+  {
+    "file": "cell.png",
+    "url": "https://github.com/mheinri/OpenSourceRIS/assets/122888316/717799f0-ef0e-4d5b-8a60-6f85ebf67e0f",
+    "sha256": "b59f93e6f8efd55ed82458b94a5309c36485a1f6a39027e2210d46bf28e6922b",
+    "retrieved_utc": "2026-10-23T17:26:31.679149+00:00"
+  }
+]

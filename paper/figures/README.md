@@ -1,0 +1,1 @@
+Generated from `outputs/runs/specular_v5/benchmark_pilot.jsonl` by the frozen `scripts/analyze.py` in that run. PNG/PDF copies are byte-identical to the run artifacts. These development-pilot figures are not final test results.

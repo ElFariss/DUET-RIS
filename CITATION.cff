@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "This is an unpublished research prototype. Cite the repository version and the upstream data sources; no paper-level claim of novelty is established."
+title: "Atom-wise RIS: Measurement-informed Controller Feasibility"
+type: software
+version: 0.1.0
+authors:
+  - name: "Faris"
+repository-code: "https://github.com/ElFariss/atom-wise-ris"
+abstract: "Simulation-only comparisons of analytical and learned binary RIS edits under complete CPU runtime budgets."

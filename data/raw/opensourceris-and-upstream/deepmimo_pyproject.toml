@@ -1,0 +1,267 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DeepMIMO"
+version = "4.0.5"
+authors = [
+    { name = "João Morais" },
+    { name = "Umut Demirhan" },
+    { name = "Ahmed Alkhateeb" },
+]
+description = "DeepMIMO dataset generator library"
+license = "GPL-2.0-or-later"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["MIMO", "ray tracing", "dataset", "DeepMIMO", "raytracing", "wireless"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Telecommunications Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "matplotlib>=3.8.2",
+    "numpy>=1.19.5,<2.3",
+    "scipy>=1.6.2",  # only for .mat and ConvexHulls
+    "tqdm>=4.59.0",
+    "requests",
+]
+
+[tool.setuptools.packages.find]
+include = ["deepmimo*"]
+exclude = ["deepmimo_v3*", "deepmimo_v3.*"]
+
+[tool.setuptools.package-data]
+"deepmimo.exporters" = ["*.m"]
+
+[project.urls]
+Homepage = "https://deepmimo.net/"
+Documentation = "https://deepmimo.net/documentation"
+Repository = "https://github.com/DeepMIMO/DeepMIMO"
+Issues = "https://github.com/DeepMIMO/DeepMIMO/issues"
+Releases = "https://github.com/DeepMIMO/DeepMIMO/releases"
+
+[project.optional-dependencies]
+
+dev = [
+    # Development tools
+    "build",
+    "jupyter",
+    "twine==6.0.1",
+    "ipykernel",
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "nbmake>=1.5.0",
+    "ruff>=0.6.9",
+    "pre-commit>=3.5",
+    "deepmimov3",
+
+    # Documentation
+    "mkdocs>=1.6",
+    "mkdocs-material>=9.7",
+    "mkdocs-jupyter>=0.25",
+    "pymdown-extensions>=10.0",
+    "mkdocs-material-extensions>=1.3",
+    # pygments 2.20 broke mkdocstrings: pymdownx passes filename=None for
+    # untitled code blocks and html.escape(None) raises AttributeError.
+    # Remove upper bound once pymdownx or pygments ships a fix.
+    "pygments>=2.19.2,<2.21",
+
+    # MkDocs API docs
+    "mkdocstrings[python]>=0.25",
+    "mkdocs-autorefs>=1.2",
+    "mkdocs-exclude>=1.0",
+
+    # Jupyter/platformdirs pins to avoid deprecation warnings
+    "jupyter-core>=5.7,<6.0",
+    "jupyter-client>=8.6.3",
+    "platformdirs>=4.3.0",
+
+    # Better nbconvert handling for Colab MIME quirks
+    "nbconvert>=7.16",
+    "nbformat>=5.10",
+
+    # Notebook pre-rendering (convert .py percent-format to .ipynb)
+    "jupytext>=1.16",
+]
+
+aodt = [
+    "pandas",   # to read parquet files
+    "pyarrow",  # backend for pandas parquet reading 
+]
+
+insite = [
+    # Common ray tracing pipeline tools
+    "utm",               # To be replaced by built-in (see geo_utils.py)
+    "lxml",              # To be replaced by built-in (see insite_raytracer.py)
+    "pandas",
+    "shapely",           # Used to create building polygons (see pipeline_csv_gen.py)
+    
+    "bpy==3.6.0; python_version == '3.10'",  # ()
+    "bpy==4.4.0; python_version == '3.11'",  # WARNING - this may not work with >=3.11
+    "numpy==1.26.4; python_version == '3.11'",  # needed because bpy ships with this, and can break ABI
+    # TODO: UPDATE bpy==5.0
+
+    "ipykernel",
+
+    # InSite Specific
+    "plyfile",           # To read blender ply exports for insite_raytracer.py
+
+]
+
+sionna = [
+    # OSM scene pipeline (no Blender needed — uses osm_to_mitsuba.py)
+    "utm",               # GPS ↔ Cartesian conversion (geo_utils.py)
+    "pandas",
+    "shapely",           # Building polygon queries (osm_utils.py, pipeline_csv_gen.py)
+
+    # Sionna 2.x (requires Python 3.11+, PyTorch 2.9+, mitsuba 3.8.0, drjit 1.3.1)
+    "torch>=2.9.0",
+    "sionna-rt>=2.0.1,<3.0.0",    # ray-tracing: PathSolver, Scene, sionna_exporter
+    "sionna-no-rt>=2.0.1,<3.0.0; python_version >= '3.12'", # PHY layer: PUSCH, LDPC, OFDM
+    "mitsuba==3.8.0",
+    "drjit==1.3.1",
+
+    # Development
+    "jupyter",
+]
+
+
+# Combination of [dev], [sionna], [insite] and [aodt]
+all = [
+    # Common pipeline tools
+    "utm",
+    "lxml",
+    "pandas",
+    "shapely",
+
+    # InSite (Blender still required for PLY generation)
+    "bpy==4.4.0; python_version == '3.11'",  # TODO: UPDATE bpy==5.0 for Python 3.12+
+    "ipykernel",
+    "plyfile",
+
+    # Sionna 2.x
+    "torch>=2.9.0",
+    "sionna-rt>=2.0.1,<3.0.0",
+    "sionna-no-rt>=2.0.1,<3.0.0; python_version >= '3.12'",
+    "mitsuba==3.8.0",
+    "drjit==1.3.1",
+
+    # AODT
+    "pyarrow",
+
+    # Development
+    "build",
+    "jupyter",
+    "twine==6.0.1",
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "nbmake>=1.5.0",
+
+    # Documentation
+    "mkdocs>=1.6",
+    "mkdocs-material>=9.7",
+    "mkdocs-jupyter>=0.25",
+    "pymdown-extensions>=10.0",
+    "mkdocs-material-extensions>=1.3",
+    "mkdocstrings[python]>=0.25",
+    "mkdocs-autorefs>=1.2",
+    "mkdocs-exclude>=1.0",
+    "ruff>=0.6.9",
+    "pre-commit>=3.5",
+    "jupyter-core>=5.7,<6.0",
+    "jupyter-client>=8.6.3",
+    "platformdirs>=4.3.0",
+    "nbconvert>=7.16",
+    "nbformat>=5.10",
+]
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+extend-exclude = [
+    "scripts",
+    "docs/**/*.ipynb",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    # Incompatible
+    "D203",    # 1 blank line required before class docstring (incompatible with D211)
+    "D213",    # Multi-line docstring summary should start at the second line (incompatible with D212)
+    "COM812",  # Trailing comma missing (conflicts with formatter)
+
+    # Life quality  
+    "T201",    # Allow "print" in production code
+    "T203",    # Allow pprint in production code
+    
+    # Type annotations - Any is appropriate for dynamic structures  
+    "ANN401",  # Dynamically typed expressions (Any) are fine for dict-like structures
+    
+    # Code comments that look like code but are actually documentation
+    "ERA001",  # Commented-out code (often formulas, examples, or documentation)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "S101",    # Use of assert detected (standard in pytest)
+    "PLR2004", # Magic value used in comparison (acceptable in tests)
+    # Harmless in tests: allow missing annotations
+    "ANN001", "ANN002", "ANN003", "ANN201", "ANN202", "ANN204",
+]
+"docs/tutorials/*.py" = [
+    "N999",    # Allow tutorial names to start with a number
+]
+"docs/applications/*.py" = [
+    "N999",    # Allow application names to start with a number
+]
+"docs/tutorials/manual.py" = [
+    "E402",    # Imports not at top of the file
+    "E501",    # Long lines are okay for tables
+    "S607"     # Allow partial paths in subprocess run
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+norecursedirs = [
+    "tests/webtests",
+    "tests/webtest",
+    "tests/tutorials",
+    "tests/applications",
+    "deepmimo_scenarios",
+    "docs",
+    "scripts",
+    "DeepMIMO.egg-info",
+]
+addopts = "-q"
+markers = [
+    "tutorial: marks tests as tutorial tests (run with 'pytest -m tutorial' or 'pytest tests/tutorials/')",
+    "application: marks tests as application tests (run with 'pytest -m application' or 'pytest tests/applications/')",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+filterwarnings = [
+    "ignore::UserWarning:matplotlib",
+    "ignore:FigureCanvasAgg is non-interactive",
+]
+
+[tool.coverage.run]
+source = ["deepmimo"]
+# Pipelines require external tools (Sionna, Blender, InSite) — exclude from coverage
+omit = [
+    "deepmimo/pipelines/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+]

@@ -1,0 +1,104 @@
+{
+  "geometry": "3D free-space PEC thin-wire MoM; no PCB, substrate, switch or measured calibration",
+  "frequency_hz": 5530000000.0,
+  "radius_m": 5e-05,
+  "side": 2,
+  "loads_real_ohm": [
+    1.0,
+    1.0
+  ],
+  "loads_imag_ohm": [
+    39.20093580760868,
+    79.20093580760869
+  ],
+  "mesh": [
+    {
+      "segments": 81,
+      "seconds": 0.20475660300144227,
+      "segments_per_wire": 81,
+      "unknowns": 810,
+      "reciprocity_relative": 2.1235805838480737e-08,
+      "minimum_resistance_eigenvalue_ohm": 38.88681873292445,
+      "maximum_scattering_singular_value": 0.6858308232370218,
+      "condition_number": 1.7824216460563351
+    },
+    {
+      "segments": 161,
+      "seconds": 1.1791011819950654,
+      "segments_per_wire": 161,
+      "unknowns": 1610,
+      "reciprocity_relative": 3.6979419004420287e-09,
+      "minimum_resistance_eigenvalue_ohm": 38.6525197059471,
+      "maximum_scattering_singular_value": 0.685850860430725,
+      "condition_number": 1.783395532221979
+    }
+  ],
+  "loaded_solver_validation": [
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "relative_current_error": 4.768960470814398e-13
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "relative_current_error": 5.672461139587768e-13
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "relative_current_error": 2.590281931762265e-13
+    },
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "relative_current_error": 3.4370532110577624e-13
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "relative_current_error": 3.1223615721286145e-13
+    }
+  ],
+  "mesh_channel_comparison": [
+    {
+      "meshes": [
+        81,
+        161
+      ],
+      "max_loaded_channel_relative_error": 0.00434766076002456,
+      "pattern_errors": [
+        0.00434006792140181,
+        0.00434766076002456,
+        0.0043350414593886265
+      ]
+    }
+  ],
+  "thresholds": {
+    "reciprocity": 1e-07,
+    "passivity_singular": 1.0001,
+    "loaded_solver": 1e-05,
+    "mesh_channel": 0.01
+  },
+  "passed": true
+}

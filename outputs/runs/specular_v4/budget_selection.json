@@ -1,0 +1,94 @@
+{
+  "selected_ms": 10.0,
+  "validation": [
+    {
+      "budget_ms": 1.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 0.79899475,
+        "attention_ga": 0.4956674,
+        "greedy": 0.77003045,
+        "memory_ga": 0.7405977,
+        "mlp_ga": 0.49960775,
+        "pair": 0.768297,
+        "random": 0.7909245
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 0.0,
+        "mlp_ga": 0.0
+      },
+      "feasible": false
+    },
+    {
+      "budget_ms": 5.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 4.72806185,
+        "attention_ga": 4.4050914,
+        "greedy": 4.74627905,
+        "memory_ga": 4.70646395,
+        "mlp_ga": 4.3145976500000005,
+        "pair": 4.5419744,
+        "random": 4.76369645
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    },
+    {
+      "budget_ms": 10.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 9.71975885,
+        "attention_ga": 9.39768115,
+        "greedy": 9.7467808,
+        "memory_ga": 9.71474845,
+        "mlp_ga": 9.36980395,
+        "pair": 9.5880656,
+        "random": 9.76678195
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    },
+    {
+      "budget_ms": 50.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 49.72487695,
+        "attention_ga": 49.341542700000005,
+        "greedy": 49.74300335,
+        "memory_ga": 49.7103349,
+        "mlp_ga": 49.32497575,
+        "pair": 49.584117400000004,
+        "random": 49.76339995
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    },
+    {
+      "budget_ms": 100.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 99.7217279,
+        "attention_ga": 99.38534655,
+        "greedy": 99.74173499999999,
+        "memory_ga": 99.7089538,
+        "mlp_ga": 99.34811635,
+        "pair": 99.57030435,
+        "random": 99.76704755
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    }
+  ],
+  "rule": "Prefer 10 ms; otherwise smallest listed budget with every main method p95 complete runtime <= budget and neural inference active on >=95% of cases",
+  "frozen_before_pilot": true,
+  "source": "benchmark_validation.jsonl",
+  "hard_real_time_guarantee": false
+}

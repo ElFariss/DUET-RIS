@@ -1,0 +1,14 @@
+{
+  "dataset_config": "configs/datasets/munich_specular.json",
+  "method_config": "configs/methods/bounded_mutation.json",
+  "run": "outputs/runs/specular_v5",
+  "budgets_ms": [
+    1,
+    5,
+    10,
+    50,
+    100
+  ],
+  "preferred_budget_ms": 10,
+  "claim_scope": "Measurement-informed simulation; all pilot cases are development data"
+}

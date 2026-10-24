@@ -1,0 +1,548 @@
+[
+  {
+    "n": 1,
+    "doi": "10.1109/twc.2024.3416825",
+    "title": "A Universal Framework for Multiport Network Analysis of Reconfigurable Intelligent Surfaces",
+    "authors": [
+      "Matteo Nerini",
+      "Shanpu Shen",
+      "Hongyu Li",
+      "Marco Di Renzo",
+      "Bruno Clerckx"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Transactions on Wireless Communications"
+    ],
+    "url": "https://doi.org/10.1109/twc.2024.3416825",
+    "source": "https://api.crossref.org/works/10.1109/twc.2024.3416825"
+  },
+  {
+    "n": 2,
+    "doi": "10.1109/lwc.2024.3410528",
+    "title": "Physically Consistent Modeling of Wireless Links With Reconfigurable Intelligent Surfaces Using Multiport Network Analysis",
+    "authors": [
+      "Josef A. Nossek",
+      "Dominik Semmler",
+      "Michael Joham",
+      "Wolfgang Utschick"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          8
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          8
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Wireless Communications Letters"
+    ],
+    "url": "https://doi.org/10.1109/lwc.2024.3410528",
+    "source": "https://api.crossref.org/works/10.1109/lwc.2024.3410528",
+    "retrieved": "2026-10-24T10:24:41.577784+00:00"
+  },
+  {
+    "n": 3,
+    "doi": "10.1109/twc.2024.3450722",
+    "title": "Design of Reconfigurable Intelligent Surfaces by Using\n                    <i>S</i>\n                    -Parameter Multiport Network Theory\u2014Optimization and Full-Wave Validation",
+    "authors": [
+      "Andrea Abrardo",
+      "Alberto Toccafondi",
+      "Marco Di Renzo"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          11
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Transactions on Wireless Communications"
+    ],
+    "url": "https://doi.org/10.1109/twc.2024.3450722",
+    "source": "https://api.crossref.org/works/10.1109/twc.2024.3450722"
+  },
+  {
+    "n": 4,
+    "doi": "10.1109/twc.2024.3451548",
+    "title": "Mutual Coupling in RIS-Aided Communication: Model Training and Experimental Validation",
+    "authors": [
+      "Pinjun Zheng",
+      "Ruiqi Wang",
+      "Atif Shamim",
+      "Tareq Y. Al-Naffouri"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          11
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Transactions on Wireless Communications"
+    ],
+    "url": "https://doi.org/10.1109/twc.2024.3451548",
+    "source": "https://api.crossref.org/works/10.1109/twc.2024.3451548",
+    "retrieved": "2026-10-24T10:24:41.589157+00:00"
+  },
+  {
+    "n": 5,
+    "doi": "10.1109/isap57493.2023.10389095",
+    "title": "Open Source Reconfigurable Intelligent Surface for the Frequency Range of 5 GHz WiFi",
+    "authors": [
+      "Markus Heinrichs",
+      "Aydin Sezgin",
+      "Rainer Kronberger"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          30
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          30
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "2023 IEEE International Symposium On Antennas And Propagation (ISAP)"
+    ],
+    "url": "https://doi.org/10.1109/isap57493.2023.10389095",
+    "source": "https://api.crossref.org/works/10.1109/isap57493.2023.10389095",
+    "retrieved": "2026-10-24T10:24:42.423497+00:00"
+  },
+  {
+    "n": 6,
+    "doi": "10.1109/vtc2023-spring57618.2023.10200973",
+    "title": "A comprehensive dataset of RIS-based channel measurements in the 5GHz band",
+    "authors": [
+      "Simon Tewes",
+      "Markus Heinrichs",
+      "Kevin Weinberger",
+      "Rainer Kronberger",
+      "Aydin Sezgin"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          6
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          6
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "2023 IEEE 97th Vehicular Technology Conference (VTC2023-Spring)"
+    ],
+    "url": "https://doi.org/10.1109/vtc2023-spring57618.2023.10200973",
+    "source": "https://api.crossref.org/works/10.1109/vtc2023-spring57618.2023.10200973",
+    "retrieved": "2026-10-24T10:24:42.419933+00:00"
+  },
+  {
+    "n": 7,
+    "doi": "10.48550/arxiv.2602.21102",
+    "error": "404 Client Error: Not Found for url: https://api.crossref.org/works/10.48550/arxiv.2602.21102"
+  },
+  {
+    "n": 8,
+    "doi": "10.1109/mic.2024.3376772",
+    "title": "Open Experimental Measurements of Sub-6GHz Reconfigurable Intelligent Surfaces",
+    "authors": [
+      "Marco Rossanese",
+      "Placido Mursia",
+      "Andres Garcia-Saavedra",
+      "Vincenzo Sciancalepore",
+      "Arash Asadi",
+      "Xavier Costa-Perez"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          3
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Internet Computing"
+    ],
+    "url": "https://doi.org/10.1109/mic.2024.3376772",
+    "source": "https://api.crossref.org/works/10.1109/mic.2024.3376772",
+    "retrieved": "2026-10-24T10:24:42.440625+00:00"
+  },
+  {
+    "n": 9,
+    "doi": "10.1109/tcomm.2022.3215198",
+    "title": "Spatio-Temporal Neural Network for Channel Prediction in Massive MIMO-OFDM Systems",
+    "authors": [
+      "Guanzhang Liu",
+      "Zhengyang Hu",
+      "Lei Wang",
+      "Jiang Xue",
+      "Haifan Yin",
+      "David Gesbert"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          12
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          12
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Transactions on Communications"
+    ],
+    "url": "https://doi.org/10.1109/tcomm.2022.3215198",
+    "source": "https://api.crossref.org/works/10.1109/tcomm.2022.3215198",
+    "retrieved": "2026-10-24T10:24:43.268791+00:00"
+  },
+  {
+    "n": 10,
+    "doi": "10.1109/iacis65746.2025.11211349",
+    "title": "Spectral Temporal Graph Transformer for Massive MIMO CSI Prediction in 5G and Beyond",
+    "authors": [
+      "Aftab Dayer",
+      "Akash",
+      "Saurabh Soni",
+      "Sandeep Kumar Singh"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          22
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          22
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "2025 2nd International Conference on Intelligent Algorithms for Computational Intelligence Systems (IACIS)"
+    ],
+    "url": "https://doi.org/10.1109/iacis65746.2025.11211349",
+    "source": "https://api.crossref.org/works/10.1109/iacis65746.2025.11211349",
+    "retrieved": "2026-10-24T10:24:43.276015+00:00"
+  },
+  {
+    "n": 11,
+    "doi": "10.1109/lwc.2025.3598251",
+    "title": "An ERAN-Based Dynamic Graph Neural Network for CSI Prediction in Massive MIMO Systems",
+    "authors": [
+      "Ravi Kumar",
+      "Manivasakan Rathinam"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Wireless Communications Letters"
+    ],
+    "url": "https://doi.org/10.1109/lwc.2025.3598251",
+    "source": "https://api.crossref.org/works/10.1109/lwc.2025.3598251"
+  },
+  {
+    "n": 12,
+    "doi": "10.1109/tii.2022.3182768",
+    "title": "Spatial-Temporal Cellular Traffic Prediction for 5G and Beyond: A Graph Neural Networks-Based Approach",
+    "authors": [
+      "Zi Wang",
+      "Jia Hu",
+      "Geyong Min",
+      "Zhiwei Zhao",
+      "Zheng Chang",
+      "Zhe Wang"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          4
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          4
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Transactions on Industrial Informatics"
+    ],
+    "url": "https://doi.org/10.1109/tii.2022.3182768",
+    "source": "https://api.crossref.org/works/10.1109/tii.2022.3182768",
+    "retrieved": "2026-10-24T10:24:43.608042+00:00"
+  },
+  {
+    "n": 13,
+    "doi": "10.1109/access.2023.3306954",
+    "title": "QRIS: A QuaDRiGa-Based Simulation Platform for Reconfigurable Intelligent Surfaces",
+    "authors": [
+      "Ilya Burtakov",
+      "Aleksey Kureev",
+      "Andrey Tyarin",
+      "Evgeny Khorov"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Access"
+    ],
+    "url": "https://doi.org/10.1109/access.2023.3306954",
+    "source": "https://api.crossref.org/works/10.1109/access.2023.3306954",
+    "retrieved": "2026-10-24T10:24:44.178530+00:00"
+  },
+  {
+    "n": 14,
+    "doi": "10.1109/lwc.2026.3652464",
+    "title": "Statistical Multiport-Network Modeling and Efficient Discrete Optimization of RIS",
+    "authors": [
+      "Cheima Hammami",
+      "Luc Le Magoarou",
+      "Philipp del Hougne"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Wireless Communications Letters"
+    ],
+    "url": "https://doi.org/10.1109/lwc.2026.3652464",
+    "source": "https://api.crossref.org/works/10.1109/lwc.2026.3652464",
+    "retrieved": "2026-10-24T10:24:44.187719+00:00"
+  },
+  {
+    "n": 15,
+    "doi": "10.1109/comst.2025.3647003",
+    "title": "A Tutorial on Beyond-Diagonal Reconfigurable Intelligent Surfaces: Modeling, Architectures, System Design and Optimization, and Applications",
+    "authors": [
+      "Hongyu Li",
+      "Matteo Nerini",
+      "Shanpu Shen",
+      "Bruno Clerckx"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "published-online": null,
+    "journal": [
+      "IEEE Communications Surveys &amp; Tutorials"
+    ],
+    "url": "https://doi.org/10.1109/comst.2025.3647003",
+    "source": "https://api.crossref.org/works/10.1109/comst.2025.3647003",
+    "retrieved": "2026-10-24T10:24:44.201242+00:00"
+  },
+  {
+    "n": 16,
+    "doi": "10.1109/twc.2022.3196834",
+    "title": "PhysFad: Physics-Based End-to-End Channel Modeling of RIS-Parametrized Environments With Adjustable Fading",
+    "authors": [
+      "Rashid Faqiri",
+      "Chloe Saigre-Tardif",
+      "George C. Alexandropoulos",
+      "Nir Shlezinger",
+      "Mohammadreza F. Imani",
+      "Philipp del Hougne"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          1
+        ]
+      ]
+    },
+    "journal": [
+      "IEEE Transactions on Wireless Communications"
+    ],
+    "source": "https://api.crossref.org/works/10.1109/TWC.2022.3196834"
+  },
+  {
+    "n": 17,
+    "doi": "10.1109/twc.2025.3602218",
+    "title": "Global Optimal Closed-Form Solutions for Intelligent Surfaces With Mutual Coupling: Is Mutual Coupling Detrimental or Beneficial?",
+    "authors": [
+      "Matteo Nerini",
+      "Hongyu Li",
+      "Bruno Clerckx"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "journal": [
+      "IEEE Transactions on Wireless Communications"
+    ],
+    "source": "https://api.crossref.org/works/10.1109/TWC.2025.3602218"
+  },
+  {
+    "n": 18,
+    "doi": "10.1109/lcomm.2023.3330527",
+    "title": "Efficient Computation of Physics-Compliant Channel Realizations for (Rich-Scattering) RIS-Parametrized Radio Environments",
+    "authors": [
+      "Hugo Prod\u2019homme",
+      "Philipp del Hougne"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          12
+        ]
+      ]
+    },
+    "journal": [
+      "IEEE Communications Letters"
+    ],
+    "source": "https://api.crossref.org/works/10.1109/lcomm.2023.3330527"
+  }
+]

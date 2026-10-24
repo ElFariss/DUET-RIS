@@ -1,0 +1,12 @@
+{
+  "actual_real": -0.00041846767999231815,
+  "actual_imag": -0.00010485953680472448,
+  "expected_real": -0.00041848155183288896,
+  "expected_imag": -0.00010480420740680718,
+  "relative_complex_error": 0.00013222322126234715,
+  "magnitude_relative_error": 2.5408469217502727e-08,
+  "phase_offset_degrees": 0.007575832493844014,
+  "delay_seconds": [
+    3.335640741397583e-08
+  ]
+}

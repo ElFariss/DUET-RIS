@@ -1,0 +1,386 @@
+{
+  "origin": "/home/parasite/Work/conference/smap2027-paper/feasibility/runs",
+  "verified_files": 76,
+  "files": [
+    {
+      "source": "specular_v4/label_diagnostics.json",
+      "target": "outputs/runs/specular_v4/label_diagnostics.json",
+      "sha256": "b92a0be758fedbc0d08c52374b00f3e4e3397b58c02c7322bc7d4d492e647f44"
+    },
+    {
+      "source": "specular_v4/sensitivity.json",
+      "target": "outputs/runs/specular_v4/sensitivity.json",
+      "sha256": "17a8ebd296587b9252754fc44f4ca7bfe51881d3d2cfc301d036ffc97ada9fbc"
+    },
+    {
+      "source": "specular_v4/summary.json",
+      "target": "outputs/runs/specular_v4/summary.json",
+      "sha256": "df901f4919e3b02286e275f27b7f7bc395da87de3412f6394797ae5cc842298f"
+    },
+    {
+      "source": "specular_v4/sensitivity_summary.json",
+      "target": "outputs/runs/specular_v4/sensitivity_summary.json",
+      "sha256": "5bdc7e3ebcee00e9d0b3d0ac9063b8100bc997c7d93174b8e103da5392277bc1"
+    },
+    {
+      "source": "specular_v4/validation_labels.npz",
+      "target": "outputs/runs/specular_v4/validation_labels.npz",
+      "sha256": "653fc0a8dfcb36755a591ebaa8e391a3d16f72dcfe554ecc725c1f24d0679f5d"
+    },
+    {
+      "source": "specular_v4/validation_labels.json",
+      "target": "outputs/runs/specular_v4/validation_labels.json",
+      "sha256": "e604c7125ada7e02dacdd41144d9433dece02d28c52519b18f17e2fbf74462d6"
+    },
+    {
+      "source": "specular_v4/benchmark_pilot.json",
+      "target": "outputs/runs/specular_v4/benchmark_pilot.json",
+      "sha256": "13bea8aa4121918aebcdd449d40670609f2063c6aac385db6ae1e0a012fbe35c"
+    },
+    {
+      "source": "specular_v4/headroom.json",
+      "target": "outputs/runs/specular_v4/headroom.json",
+      "sha256": "6743322ec32aa92c1464a766b0e0ea36c4b8cd4184ba494acbe6fe1fa4dccbfe"
+    },
+    {
+      "source": "specular_v4/train_labels.json",
+      "target": "outputs/runs/specular_v4/train_labels.json",
+      "sha256": "be1136593c26c61b8ffaf78bf9f253367db824afa14b0d94ee8d1dd306e34bc6"
+    },
+    {
+      "source": "specular_v4/training_link_audit.json",
+      "target": "outputs/runs/specular_v4/training_link_audit.json",
+      "sha256": "bc3eca4d4b6efebcf344836bf83a20ec00a447140964af9c7804e8335f3c03ba"
+    },
+    {
+      "source": "specular_v4/benchmark_validation.json",
+      "target": "outputs/runs/specular_v4/benchmark_validation.json",
+      "sha256": "112589da760516a37b7c739ba7ec4aa63797f4f9dd44d6fce2c16eaee863c75b"
+    },
+    {
+      "source": "specular_v4/benchmark_validation.jsonl",
+      "target": "outputs/runs/specular_v4/benchmark_validation.jsonl",
+      "sha256": "31a4320a33e087dde228f8d6f7a5f3d287e2d37630c5cb9896d89df0ce77b66a"
+    },
+    {
+      "source": "specular_v4/rate_runtime.png",
+      "target": "outputs/runs/specular_v4/rate_runtime.png",
+      "sha256": "4c17984cd27cca70209c20a67cb9e227b6f008bcd1889a0be99e810d6c7ce682"
+    },
+    {
+      "source": "specular_v4/rate_runtime.pdf",
+      "target": "outputs/runs/specular_v4/rate_runtime.pdf",
+      "sha256": "4f0bc822e06ac45faaa357e05b1d6d6fedc9788c4eaa8a7553397c520591143c"
+    },
+    {
+      "source": "specular_v4/train_labels.npz",
+      "target": "outputs/runs/specular_v4/train_labels.npz",
+      "sha256": "c86548c6d6e013c5e477161df10b1b09019be204030b8198d85caacde1efed66"
+    },
+    {
+      "source": "specular_v4/REPORT.md",
+      "target": "outputs/runs/specular_v4/REPORT.md",
+      "sha256": "2e56e48f2fa6f81e8808e1db25dc8c506a20e90ac49d4fd7466e6f9f7ac9e78e"
+    },
+    {
+      "source": "specular_v4/benchmark_pilot.jsonl",
+      "target": "outputs/runs/specular_v4/benchmark_pilot.jsonl",
+      "sha256": "9b05021e67c9eafc5f0f8e55b4565998c9c218af4eae1caecb313c1f3a4be24a"
+    },
+    {
+      "source": "specular_v4/budget_selection.json",
+      "target": "outputs/runs/specular_v4/budget_selection.json",
+      "sha256": "4d2c0a699b267fdf29b34bdd88238a395432f4b6dc17b0915e2832cafa13783f"
+    },
+    {
+      "source": "pilot_v1/validation_labels.npz",
+      "target": "outputs/runs/pilot_v1/validation_labels.npz",
+      "sha256": "35e621be3e4cd1e0006d11bf3578cc450990463b2f45376e4a89d11b7f7bec9e"
+    },
+    {
+      "source": "pilot_v1/validation_labels.json",
+      "target": "outputs/runs/pilot_v1/validation_labels.json",
+      "sha256": "4917378de6d9b2d4a5da51bc3ca2fc479f098e67ffa657d2337d7c939e2a1ac7"
+    },
+    {
+      "source": "pilot_v1/headroom.json",
+      "target": "outputs/runs/pilot_v1/headroom.json",
+      "sha256": "0e9ee632315a6ea011fe5645b436efbc41cbe4cd7e4af41062cff2857981d58c"
+    },
+    {
+      "source": "pilot_v1/train_labels.json",
+      "target": "outputs/runs/pilot_v1/train_labels.json",
+      "sha256": "02ba5cc932b5b43c22bcb59cde882ad4330cd2b5f63573c7a34af0d1ea1c5e4f"
+    },
+    {
+      "source": "pilot_v1/train_labels.npz",
+      "target": "outputs/runs/pilot_v1/train_labels.npz",
+      "sha256": "68bd07cde94a2941d48a983bc84a6ca3ec3cd70fa3ef35a70bbef1d5260f6da5"
+    },
+    {
+      "source": "specular_v3/validation_labels.npz",
+      "target": "outputs/runs/specular_v3/validation_labels.npz",
+      "sha256": "3254cce6d99e61af87b5c38c318c4d07375030c388658d290a5669630ff8c788"
+    },
+    {
+      "source": "specular_v3/validation_labels.json",
+      "target": "outputs/runs/specular_v3/validation_labels.json",
+      "sha256": "e604c7125ada7e02dacdd41144d9433dece02d28c52519b18f17e2fbf74462d6"
+    },
+    {
+      "source": "specular_v3/headroom.json",
+      "target": "outputs/runs/specular_v3/headroom.json",
+      "sha256": "3dbb661156e55fc0d057363df13af4ceede8760110e05b7f636797c7e6cf0c4c"
+    },
+    {
+      "source": "specular_v3/train_labels.json",
+      "target": "outputs/runs/specular_v3/train_labels.json",
+      "sha256": "be1136593c26c61b8ffaf78bf9f253367db824afa14b0d94ee8d1dd306e34bc6"
+    },
+    {
+      "source": "specular_v3/train_labels.npz",
+      "target": "outputs/runs/specular_v3/train_labels.npz",
+      "sha256": "fbdbfdbd32e2ba0da2756d47cdda25dc2b67db13fe3a7093ec726ce9121dce09"
+    },
+    {
+      "source": "specular_v4/logs/attention_43.log",
+      "target": "outputs/runs/specular_v4/logs/attention_43.log",
+      "sha256": "0b672e01b16c81f906ddd21bd9c3dd1890bae2095575e19d51d5be1982b9b459"
+    },
+    {
+      "source": "specular_v4/logs/attention_no_physics_43.log",
+      "target": "outputs/runs/specular_v4/logs/attention_no_physics_43.log",
+      "sha256": "9fc1cb00ad5c442399f047327df4e5e126a9ff994c66f1e7be35fb0d7ce52775"
+    },
+    {
+      "source": "specular_v4/logs/attention_no_physics_19.log",
+      "target": "outputs/runs/specular_v4/logs/attention_no_physics_19.log",
+      "sha256": "8b0107e32b7a34fe8628f4d5c8735aa501cac20ef1d8bbff571888cb4bf75cb1"
+    },
+    {
+      "source": "specular_v4/logs/attention_no_physics_7.log",
+      "target": "outputs/runs/specular_v4/logs/attention_no_physics_7.log",
+      "sha256": "b3d81016c67debbe921a95f851cb25387af874c93a413d620e40b26ce40f18a9"
+    },
+    {
+      "source": "specular_v4/logs/mlp_7.log",
+      "target": "outputs/runs/specular_v4/logs/mlp_7.log",
+      "sha256": "a15b707ac1ada9010f3671d67766701220bddf3a184753214cd049b3d4ebbafe"
+    },
+    {
+      "source": "specular_v4/logs/attention_7.log",
+      "target": "outputs/runs/specular_v4/logs/attention_7.log",
+      "sha256": "f4a40b56a0e0adb46bb1742ab01d72f8c29936b5539798e380bb0ec195726815"
+    },
+    {
+      "source": "specular_v4/logs/attention_no_conditioning_7.log",
+      "target": "outputs/runs/specular_v4/logs/attention_no_conditioning_7.log",
+      "sha256": "065e7e6a855cb96498e83bf20a8ade405cfb88f3a4427f1c2c3be90d0a6afbd4"
+    },
+    {
+      "source": "specular_v4/logs/mlp_19.log",
+      "target": "outputs/runs/specular_v4/logs/mlp_19.log",
+      "sha256": "50a2fef0c86053bcdaec701cf4ac10bb745178118c8e160e5d85cf0ddd17cbdf"
+    },
+    {
+      "source": "specular_v4/logs/mlp_43.log",
+      "target": "outputs/runs/specular_v4/logs/mlp_43.log",
+      "sha256": "c1b561e85d973418abe9785527235f914c0bbd85249932f71381d734aaff5c7a"
+    },
+    {
+      "source": "specular_v4/logs/attention_19.log",
+      "target": "outputs/runs/specular_v4/logs/attention_19.log",
+      "sha256": "f83f89c9fe90f39b83e37babe0b68b0702e3879b6a316982e46bc62f6347d4aa"
+    },
+    {
+      "source": "specular_v4/logs/attention_no_conditioning_43.log",
+      "target": "outputs/runs/specular_v4/logs/attention_no_conditioning_43.log",
+      "sha256": "2d66932f7b908b735b9560d80b56895127d962a9467fc52a2762b40886a2ded5"
+    },
+    {
+      "source": "specular_v4/logs/attention_no_conditioning_19.log",
+      "target": "outputs/runs/specular_v4/logs/attention_no_conditioning_19.log",
+      "sha256": "5e1034c9e5574f2bdc9e88bbdee6b0a3363b9cbd228532272103dde743d00575"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed19/history.json",
+      "target": "outputs/runs/specular_v4/models/mlp_seed19/history.json",
+      "sha256": "2baa4748ad849a1546ede9d9d806653466de6adf0601ce04dbfce420f93be175"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed19/best.pt",
+      "target": "outputs/runs/specular_v4/models/mlp_seed19/best.pt",
+      "sha256": "5c0549a8ddb5445efdf1b924dadce75158815ee038f1084636b72490cfe78e3d"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed19/metadata.json",
+      "target": "outputs/runs/specular_v4/models/mlp_seed19/metadata.json",
+      "sha256": "bd64d2181175609d0babfd2577d6b96da3d08e474529a33f6dec4122aa4627ab"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed7/history.json",
+      "target": "outputs/runs/specular_v4/models/mlp_seed7/history.json",
+      "sha256": "ff080858271cf3359e0ad5955434a538bc417a7f765fb1d9653c8bb6f586512e"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed7/best.pt",
+      "target": "outputs/runs/specular_v4/models/mlp_seed7/best.pt",
+      "sha256": "64a93c72298ed36b52be37dfcf8e3734bf5e06d90cd178e31b13df8a391403f6"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed7/metadata.json",
+      "target": "outputs/runs/specular_v4/models/mlp_seed7/metadata.json",
+      "sha256": "2654c5708d03a11e754005aa9ba6f67edc9915f157f6afdebcdacdb18aa5acfc"
+    },
+    {
+      "source": "specular_v4/models/attention_seed19/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_seed19/history.json",
+      "sha256": "ac2851bfbb101f20490c6b122d36cdb3ef76b76bbe27442550ae2463a86cc047"
+    },
+    {
+      "source": "specular_v4/models/attention_seed19/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_seed19/best.pt",
+      "sha256": "fd9b21c8335c424b8a78b31c7ff2aca9bc28f65c4a4ea8dac796b96dd5172567"
+    },
+    {
+      "source": "specular_v4/models/attention_seed19/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_seed19/metadata.json",
+      "sha256": "8ece47af7d4ce4816afbc853683463c75faa5aabc578f77a3b6e8838bd8991a2"
+    },
+    {
+      "source": "specular_v4/models/attention_seed43/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_seed43/history.json",
+      "sha256": "27cee362a51ac8821ab110535d610f0087ae0955896c74176802f554d4c67e81"
+    },
+    {
+      "source": "specular_v4/models/attention_seed43/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_seed43/best.pt",
+      "sha256": "3d78cc3058aa07b3cee4ecb512a977c08779fdec2d8e0adc824895716f6b995b"
+    },
+    {
+      "source": "specular_v4/models/attention_seed43/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_seed43/metadata.json",
+      "sha256": "000983cda0782ef9926605358f1f951337132bf8e964f52a886550a133adcc1f"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed19/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed19/history.json",
+      "sha256": "ccf608a1b2033ac1cb17c0b8a398bc00f63cea62ffb5b43f0d4f57bf5140cc92"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed19/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed19/best.pt",
+      "sha256": "b1ba52d1ceb65b09ecae0f71e2f95b68888c4ca09069568a0c62c2cd16c0cc69"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed19/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed19/metadata.json",
+      "sha256": "3c3a90e42873ea3a69c4313f32a0d90937428814ac5afb7e2105d0a45542c4a9"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed7/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed7/history.json",
+      "sha256": "f5fc8d5f63d7fff0e78a47c94f1bfa7cbdd583eb7de61f31d6f04f50a0871179"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed7/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed7/best.pt",
+      "sha256": "37c7b2668d7553d8b5bb037d330c98f518159ef03abb74c707d0c9790c8bdcc2"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed7/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed7/metadata.json",
+      "sha256": "bef7ee87f530dfa450009bba9cfa74076ea72db880e2319b2292393ef7b8a00f"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed43/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed43/history.json",
+      "sha256": "f347d9b158783b7a142b35c320c678ddad94cfe416a464b5c0afeef4a6a40f3f"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed43/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed43/best.pt",
+      "sha256": "c5f044cbf127871d8ffb444baeb2ff23e40d6a4588852445add6e7bf2c5e0104"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed43/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed43/metadata.json",
+      "sha256": "43be05756ad727fd0f5cd1ba26ddb7c3cbb2727c200f17a01819c384d0ce50a1"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed7/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed7/history.json",
+      "sha256": "cf1c10ea025cd6b38b99d8332d9fc9f09980b2b7aca7f0af24a3466f7d199c1d"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed7/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed7/best.pt",
+      "sha256": "afdf9ef8edb5af6b0d12c281b3577e518041eb9ad9c25322557f0352cc09311c"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed7/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed7/metadata.json",
+      "sha256": "a5275d1b9d5a9256aa8dcd169ba90a3083fcb83c2375238094773b5bbbbcae5e"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed19/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed19/history.json",
+      "sha256": "6ce4e3a1e39db4113d33f613881931eb72d07183dd754a44cb4b0f50d80a49dc"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed19/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed19/best.pt",
+      "sha256": "8dd304e23cbca37f71dfc4434e1c5509b11f6d1d4bcf55598f05452cc1974d23"
+    },
+    {
+      "source": "specular_v4/models/attention_no_conditioning_seed19/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_conditioning_seed19/metadata.json",
+      "sha256": "71c944c91d2a5e9fe487ad679ea2c6987506dbceeab318bed52afe86d18142c5"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed43/history.json",
+      "target": "outputs/runs/specular_v4/models/mlp_seed43/history.json",
+      "sha256": "55973096f165e33db01028ec57be98901c2858ff93b9e266ab7f52bd379bd525"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed43/best.pt",
+      "target": "outputs/runs/specular_v4/models/mlp_seed43/best.pt",
+      "sha256": "a7ea54cbeba3de9d6ca640127cd0ff7e76361712402237c896557c489574fc11"
+    },
+    {
+      "source": "specular_v4/models/mlp_seed43/metadata.json",
+      "target": "outputs/runs/specular_v4/models/mlp_seed43/metadata.json",
+      "sha256": "c43ef8fe5b2bb808adcaf7f0130425fb71eab851715c4bd9338ef4867b0abd30"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed43/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed43/history.json",
+      "sha256": "dece97c9948c15ee4deb4a00bb6236c35d02954830dfa7d9e07358aa03ec0359"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed43/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed43/best.pt",
+      "sha256": "a7d9505a62264e361858e432fc60995e4941eaf7d018d2f1b1ba09300c74487c"
+    },
+    {
+      "source": "specular_v4/models/attention_no_physics_seed43/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_no_physics_seed43/metadata.json",
+      "sha256": "ffa447c4f00a52245f8941988f62475c941ac63e7ab072f15ddafbcd93e33505"
+    },
+    {
+      "source": "specular_v4/models/attention_seed7/history.json",
+      "target": "outputs/runs/specular_v4/models/attention_seed7/history.json",
+      "sha256": "6f2f309780f1906ac5ee1c4ca06349ea751a7352c4feb027b5af93ec81c99f37"
+    },
+    {
+      "source": "specular_v4/models/attention_seed7/best.pt",
+      "target": "outputs/runs/specular_v4/models/attention_seed7/best.pt",
+      "sha256": "ac72a5b958efe5d6cd0732c1dea5a1ff989a770761c117f146de2ed88ce3a4eb"
+    },
+    {
+      "source": "specular_v4/models/attention_seed7/metadata.json",
+      "target": "outputs/runs/specular_v4/models/attention_seed7/metadata.json",
+      "sha256": "3c1b710a5577b3805a999d0939de1e0415d6c1cbe08607b6a69c7b90293d317d"
+    }
+  ]
+}

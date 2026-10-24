@@ -1,0 +1,20 @@
+{
+  "scenario_sha256": "346feaca8edc6bd1ed511fed229255ad776ab50854cee6d295e99ee4e35abe24",
+  "split_trajectory_counts": {
+    "pilot": 6,
+    "train": 12,
+    "validation": 6
+  },
+  "snapshots": 96,
+  "nonzero_fraction": {
+    "G": 1.0,
+    "H": 1.0,
+    "D": 0.7434895833333334
+  },
+  "cached_field_max_absolute_error": 1.6940788191563684e-21,
+  "front_side_cosine_min": 0.44405319169595003,
+  "front_side_cosine_max": 0.9994824771941669,
+  "rear_side_users": 0,
+  "response_phase_contrast_degrees": 179.69933185,
+  "physical_validity": "Mathematical checks passed; independent-cell/oblique response remains an approximation"
+}

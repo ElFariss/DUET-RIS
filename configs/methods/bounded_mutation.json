@@ -1,0 +1,25 @@
+{
+  "seeds": [
+    7,
+    19,
+    43
+  ],
+  "epochs": 30,
+  "parents_per_snapshot": 24,
+  "variants": [
+    {
+      "kind": "mlp"
+    },
+    {
+      "kind": "attention"
+    },
+    {
+      "kind": "attention",
+      "no_physics": true
+    },
+    {
+      "kind": "attention",
+      "no_conditioning": true
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "source": "https://github.com/mheinri/OpenSourceRIS",
+  "commit": "7982a576a5edd389edfd81ece9a1f6675c7c545e",
+  "measurement": "Uniform 16x16 panel, all OFF/all ON, normal incidence/reflection, metal-plate normalized",
+  "scope": "Measurement-informed independent-cell approximation; mixed patterns and angle response unvalidated",
+  "polarization": "Co-polarized scalar V approximation; cross-polar response not supplied",
+  "cell_width_m": 0.02,
+  "cell_height_m": 0.013,
+  "cell_area_m2": 0.00026,
+  "calibration": {
+    "magnitude_axes_pixels": [
+      128,
+      669,
+      31,
+      480
+    ],
+    "phase_axes_pixels": [
+      142,
+      682,
+      31,
+      480
+    ],
+    "frequency_ghz": [
+      5.1,
+      5.9
+    ],
+    "magnitude_db": [
+      0,
+      -10
+    ],
+    "phase_deg": [
+      180,
+      -180
+    ]
+  },
+  "digitization_bound": {
+    "horizontal_pixels": 2,
+    "vertical_pixels": 2,
+    "frequency_hz": 3000000.0,
+    "magnitude_db": 0.05,
+    "phase_deg": 1.61
+  },
+  "sensitivity_envelope": {
+    "digitization_db": 0.1,
+    "digitization_deg": 2,
+    "model_db": 1,
+    "model_deg": 15,
+    "note": "Model envelope is a stress test, not a measured confidence interval"
+  },
+  "image_sha256": {
+    "magnitude.png": "c763ef2d153cd2b177da5610c0a0ccfbf1d360526db617b51ed38f902528be69",
+    "phase.png": "e270958a0d10389efbd4986ac33f695cd43a29918a16619350af16436d55f928",
+    "cell.png": "b59f93e6f8efd55ed82458b94a5309c36485a1f6a39027e2210d46bf28e6922b"
+  },
+  "phase_reference": "Published metal-reference phase; unknown common registration phase must be stress-tested",
+  "license": "MIT repository; retain attribution; plots attributed to Heinrichs et al."
+}

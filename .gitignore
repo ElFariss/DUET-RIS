@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.cache/
+.env
+.env.*
+*.pem
+*.key
+*.log
+# Large, hash-inventoried artifacts stay in the local/remote workspace.
+data/raw/acquisition/
+data/raw/deepmimo_scenarios/
+data/processed/**/*.npz
+outputs/runs/*/models/*/best.pt
+outputs/runs/*/*_labels.npz
+outputs/runs/*/sensitivity.json
+outputs/runs/*/benchmark_*.jsonl
+# Preserve source/history locally without duplicating it in the initial repository.
+archives/
+paper/**/*.aux
+paper/**/*.out
+paper/**/*.synctex.gz
+paper/**/*.toc
+artifact-manifest.json
+
+# DeepMIMO uses this optional root link for locating existing scenario exports.
+/deepmimo_scenarios
+/build/
+/dist/
+
+.venv-*/
+
+# Downloaded reference implementations remain local; publish provenance only.
+/data/raw/em_reference/*/

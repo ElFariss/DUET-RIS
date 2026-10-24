@@ -1,0 +1,35 @@
+{
+  "arguments": {
+    "run": "runs/specular_v4",
+    "kind": "mlp",
+    "seed": 19,
+    "epochs": 30,
+    "no_physics": false,
+    "no_conditioning": false,
+    "device": "cuda"
+  },
+  "parameters": 18145,
+  "seconds": 2.3993679559935117,
+  "best_validation_cross_entropy": 3.9420160959578223,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "torch": "2.9.1+cu128",
+  "train_sha256": "c86548c6d6e013c5e477161df10b1b09019be204030b8198d85caacde1efed66",
+  "validation_sha256": "653fc0a8dfcb36755a591ebaa8e391a3d16f72dcfe554ecc725c1f24d0679f5d",
+  "source_sha256": {
+    "configs/pilot.json": "7d598a2e3db3f6e362c1733422d7976eaae97a5c5b7fa1ccad4e83978362488b",
+    "scripts/analyze.py": "ac587d51b72494c81063386f1bf0c8df3c2400143859602644de097ba5ffe9ce",
+    "scripts/audit_scenario.py": "9618b73894f6a69a7baa54d01cd46ba4a7eb02041a943b104f58e37cc0480761",
+    "scripts/benchmark.py": "79d27769b6e8ae8a2f28864ff3b844dc480b1e01905aacb4822eab59c2e73c58",
+    "scripts/convergence.py": "7487cf214d45f8b9d44a1c484eefa52e8031598a1eb7cf59a86417e970f8f2ef",
+    "scripts/digitize_response.py": "6991a8f17abd1acb9f503894512a5129c617789888d7f8567aa753de9c3224d6",
+    "scripts/prepare_experiments.py": "c60ea9167b02467cb43e79b5a746a16726abfc0cdd2710b54e39cbc8e402785f",
+    "scripts/sensitivity.py": "5bfc654f12dc69fd9e08a8d009c6ce0b8a989811bb5d976eadb05052780570d6",
+    "scripts/trace_munich.py": "f0bc1f9ea368cf0cddbcf90b9bc84366f2603db6fb119ece65c5d6fde52b19d9",
+    "scripts/train.py": "97e5d855ef09f57c4884c3f7569451c7386a68d500ecf1dfef945cd720363a92",
+    "scripts/verify_export.py": "e8e30d381650843c97450a80ec9c9f985f939dd819c7562c23aa74b9a4686242",
+    "src/rislab/__init__.py": "0f4f9a61e69e6e164493ec8f5bcc3255abd7d2e4cb06f818876a6419f36e1aa7",
+    "src/rislab/core.py": "73059e3c6a814abf9bd8639e9a1f191701f01205624a31ab035db6b2e1231527",
+    "src/rislab/models.py": "7b14bf3f1f7e7245f1f01d7d86fc0361f4735d96a38a5e00425c2b3798f3e53f",
+    "src/rislab/search.py": "e2f1889a555b598a52557d68fd4c5b9d0dfaf9eff900a27082a258fa6907b7d4"
+  }
+}
