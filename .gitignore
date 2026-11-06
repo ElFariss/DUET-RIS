@@ -14,9 +14,25 @@ data/raw/acquisition/
 data/raw/deepmimo_scenarios/
 data/processed/**/*.npz
 outputs/runs/*/models/*/best.pt
+outputs/runs/*/models/*/scaling.npz
+outputs/runs/*/feature_scaling.npz
+outputs/runs/*/mesh_audit/*.npz
 outputs/runs/*/*_labels.npz
 outputs/runs/*/sensitivity.json
 outputs/runs/*/benchmark_*.jsonl
+# Large recovery and improvement-campaign payloads stay local; retain their compact JSON provenance.
+outputs/recovered/**/*.pt
+outputs/recovered/**/*.npz
+outputs/recovered/**/*.npy
+outputs/recovered/**/*.tar.gz
+outputs/recovered/**/*.jsonl
+outputs/campaigns/**/models/**/*.pt
+outputs/campaigns/**/*.npz
+outputs/campaigns/**/*.jsonl
+# 2026-11-06 fresh model runs are nested one level deeper than the legacy outputs/runs rule.
+outputs/runs/*_improvement_remote_20261106/**/models/**/*.pt
+outputs/runs/*_improvement_remote_20261106/**/*.npz
+outputs/runs/*_improvement_remote_20261106/**/*.jsonl
 # Preserve source/history locally without duplicating it in the initial repository.
 archives/
 paper/**/*.aux

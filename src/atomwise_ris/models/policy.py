@@ -3,6 +3,8 @@ import torch
 from torch import nn
 
 class EditPolicy(nn.Module):
+    architecture_version='edit_policy_residual_v1'
+
     def __init__(self,features,kind='attention',physics=True,conditioning=True):
         super().__init__();self.kind=kind;self.physics=physics;self.conditioning=conditioning
         self.features=features
@@ -11,8 +13,12 @@ class EditPolicy(nn.Module):
             layer=nn.TransformerEncoderLayer(32,4,dim_feedforward=64,dropout=0.,batch_first=True,norm_first=False,activation='gelu')
             self.encoder=nn.TransformerEncoder(layer,2,enable_nested_tensor=False)
             self.head=nn.Linear(32,1)
+            # Start from the analytical ranking exactly; learning adds only a
+            # residual supported by the supervised ranking signal.
+            nn.init.zeros_(self.head.weight);nn.init.zeros_(self.head.bias)
         elif kind=='mlp':
             self.mlp=nn.Sequential(nn.Linear(features*3,96),nn.GELU(),nn.Linear(96,96),nn.GELU(),nn.Linear(96,1))
+            nn.init.zeros_(self.mlp[-1].weight);nn.init.zeros_(self.mlp[-1].bias)
         else:raise ValueError(kind)
 
     def forward(self,x,analytical):

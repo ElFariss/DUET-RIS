@@ -1,0 +1,64 @@
+{
+  "args": {
+    "run": "outputs/runs/coupled_wire_v1",
+    "data": "outputs/runs/coupled_wire_v1",
+    "physics_data": "data/processed/coupled_wire_v1/dataset.npz",
+    "out": "outputs/runs/coupled_improvement_remote_20261106",
+    "kinds": [
+      "attention",
+      "mlp"
+    ],
+    "seeds": [
+      7,
+      19,
+      43
+    ],
+    "epochs": 30,
+    "target_temperature": 0.25,
+    "conditional_weight": 0.5,
+    "device": "cuda"
+  },
+  "candidate_label": "coupled_sharp_balanced_conditional_rank_dev",
+  "architecture_version": "coupled_policy_residual_v1",
+  "selected_epoch": 3,
+  "selection_metric": "balanced_top5_target_mass",
+  "selection_value": 0.2589033842086792,
+  "best_validation_ranking": {
+    "first": {
+      "top1_target_mass": 0.07621464878320694,
+      "top5_target_mass": 0.2663170397281647,
+      "soft_target_regret": 0.012562165968120098,
+      "target_mode_accuracy": 0.5546875,
+      "rows": 384
+    },
+    "conditional": {
+      "top1_target_mass": 0.07480292022228241,
+      "top5_target_mass": 0.2514897286891937,
+      "soft_target_regret": 0.1254042536020279,
+      "target_mode_accuracy": 0.35546875,
+      "rows": 768
+    },
+    "balanced_top5_target_mass": 0.2589033842086792
+  },
+  "best_validation_cross_entropy": 3.8481340394355357,
+  "training_examples": 2304,
+  "validation_examples": 1152,
+  "effective_training_weight_by_stage": {
+    "first": 1.0,
+    "conditional": 0.5
+  },
+  "source_label_weight_counts": {
+    "0.25": 1536,
+    "1.0": 768
+  },
+  "stage_recovery": "prepare_coupled.py add(-1,...,1) has no marker; add(first,...,.25) marks and masks exactly first bit",
+  "train_sha256": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+  "validation_sha256": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+  "physics_data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+  "feature_scaling_sha256": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed",
+  "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+  "policy_source_sha256": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+  "trainer_source_sha256": "c5d800f536d99a74302c11ebfbc986bf541a68b3907a665132500ed0db044ebc",
+  "seconds": 4.427277697948739,
+  "device": "NVIDIA GeForce RTX 3060"
+}

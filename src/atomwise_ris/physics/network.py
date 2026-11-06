@@ -36,31 +36,78 @@ class CoupledNetwork:
         return NetworkState(b,inv,self.dw+self.c@inv@self.fw)
     def score(self,fields):
         power=np.abs(fields)**2;signal=np.diagonal(power,axis1=-2,axis2=-1)
-        interference=np.maximum(0.,power.sum(-1)-signal)
+        # Sum interferers directly: total-minus-desired loses weak interference
+        # when desired power is much larger, which biases high-SNR ranking.
+        off=1-np.eye(power.shape[-1])
+        interference=(power*off).sum(axis=-1)
         return np.log2(1+signal/(self.noise+interference)).min(-1)
-    def moves(self,state,pairs=False):
+    def moves(self,state,pairs=False,subset=None):
         t=state.inverse;l=self.c@t;r=t@self.fw
         delta=self.loads[1-state.bits]-self.loads[state.bits]
         den=1/delta+np.diag(t)
         if not pairs:
-            fields=state.field[None]-np.einsum('ki,ij->ikj',l,r)/den[:,None,None]
+            if subset is None:
+                fields=state.field[None]-np.einsum('ki,ij->ikj',l,r)/den[:,None,None]
+            else:
+                idx=np.asarray(subset,dtype=int)
+                fields=state.field[None]-np.einsum('ki,ij->ikj',l[:,idx],r[idx])/den[idx,None,None]
         else:
-            i,j=self.pairs.T
+            if subset is None:
+                i,j=self.pairs.T
+            else:
+                sub=np.asarray(subset,dtype=int)
+                idx_i,idx_j=np.triu_indices(len(sub),1)
+                i,j=sub[idx_i],sub[idx_j]
             det=den[i]*den[j]-t[i,j]*t[j,i]
             ui=(den[j,None]*r[i]-t[i,j,None]*r[j])/det[:,None]
             uj=(den[i,None]*r[j]-t[j,i,None]*r[i])/det[:,None]
             fields=state.field[None]-l[:,i].T[:,:,None]*ui[:,None,:]-l[:,j].T[:,:,None]*uj[:,None,:]
         return np.asarray(self.score(fields))
+    def moves_subspace(self,state,atom_indices):
+        sub=np.asarray(atom_indices,dtype=int)
+        if len(sub)<2:
+            return np.empty(0,dtype=float),np.empty((0,2),dtype=int)
+        idx_i,idx_j=np.triu_indices(len(sub),1)
+        i,j=sub[idx_i],sub[idx_j]
+        pairs=np.column_stack([i,j])
+        t=state.inverse;l=self.c@t;r=t@self.fw
+        delta=self.loads[1-state.bits]-self.loads[state.bits]
+        den=1/delta+np.diag(t)
+        det=den[i]*den[j]-t[i,j]*t[j,i]
+        ui=(den[j,None]*r[i]-t[i,j,None]*r[j])/det[:,None]
+        uj=(den[i,None]*r[j]-t[j,i,None]*r[i])/det[:,None]
+        fields=state.field[None]-l[:,i].T[:,:,None]*ui[:,None,:]-l[:,j].T[:,:,None]*uj[:,None,:]
+        return np.asarray(self.score(fields)),pairs
+    def moves_anchors(self,state,anchor_indices):
+        anc=np.asarray(anchor_indices,dtype=int)
+        if len(anc)==0:
+            return np.empty(0,dtype=float),np.empty((0,2),dtype=int)
+        mask=np.zeros(self.n,dtype=bool);mask[anc]=True
+        pairs=self.pairs[mask[self.pairs[:,0]]|mask[self.pairs[:,1]]]
+        i,j=pairs[:,0],pairs[:,1]
+        t=state.inverse;l=self.c@t;r=t@self.fw
+        delta=self.loads[1-state.bits]-self.loads[state.bits]
+        den=1/delta+np.diag(t)
+        det=den[i]*den[j]-t[i,j]*t[j,i]
+        ui=(den[j,None]*r[i]-t[i,j,None]*r[j])/det[:,None]
+        uj=(den[i,None]*r[j]-t[j,i,None]*r[i])/det[:,None]
+        fields=state.field[None]-l[:,i].T[:,:,None]*ui[:,None,:]-l[:,j].T[:,:,None]*uj[:,None,:]
+        return np.asarray(self.score(fields)),pairs
+    def score_multi_flips(self,state,flip_lists):
+        return np.asarray([float(self.score(self.flip(state,ix).field)) for ix in flip_lists],dtype=float)
     def flip(self,state,indices):
         ix=np.asarray(indices,dtype=int).reshape(-1)
+        if len(ix)==0:return state
         if len(set(ix.tolist()))!=len(ix):raise ValueError('Distinct flips required')
         delta=self.loads[1-state.bits[ix]]-self.loads[state.bits[ix]]
         small=np.diag(1/delta)+state.inverse[np.ix_(ix,ix)]
         inv=state.inverse-state.inverse[:,ix]@np.linalg.solve(small,state.inverse[ix])
         b=state.bits.copy();b[ix]=1-b[ix]
         return NetworkState(b,inv,self.dw+self.c@inv@self.fw)
-    def features(self,state,first=-1):
-        n=self.n;gain=self.moves(state)-self.score(state.field)
+    def features(self,state,first=-1,gains=None):
+        """Return per-cell policy features, reusing caller-scored flip gains when supplied."""
+        n=self.n
+        gain=self.moves(state)-self.score(state.field) if gains is None else np.asarray(gains,dtype=float)
         t=state.inverse;l=self.c@t;r=t@self.fw
         # Analytical full-network score, port interaction and geometry features.
         coords=np.column_stack((np.arange(n)%8,np.arange(n)//8))/7

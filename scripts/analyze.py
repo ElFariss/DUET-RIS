@@ -67,9 +67,9 @@ def report(root,filename):
     ax.legend(fontsize=8,ncol=2);ax.grid(alpha=.2);fig.tight_layout();fig.savefig(root/'rate_runtime.png',dpi=180);fig.savefig(root/'rate_runtime.pdf')
     lines=['# Simulation-only RIS feasibility report','',f'**Decision: {outcome}.**','',
            f'Primary validation-selected budget: **{budget:g} ms**. These are development pilot results, not an untouched paper test.',
-           '', '| Controller | Mean worst-user rate (bit/s/Hz) | p95 complete runtime (ms) | Deadline miss fraction |',
-           '|---|---:|---:|---:|']
-    for m,d in summary.items():lines.append(f"| {m} | {d['mean_rate']:.8f} | {d['p95_elapsed_ms']:.3f} | {d['deadline_miss_fraction']:.3f} |")
+           '', '| Controller | Mean worst-user rate (bit/s/Hz) | p95 complete runtime (ms) | Deadline miss fraction | Mean candidate evaluations |',
+           '|---|---:|---:|---:|---:|']
+    for m,d in summary.items():lines.append(f"| {m} | {d['mean_rate']:.8f} | {d['p95_elapsed_ms']:.3f} | {d['deadline_miss_fraction']:.3f} | {d['mean_evaluations']:.1f} |")
     lines+=['','## Paired trajectory analysis','', '| Controller | Difference versus pair search | 95% trajectory bootstrap interval |', '|---|---:|---|']
     for d in comparisons:lines.append(f"| {d['method']} | {d['paired_difference_vs_pair']:.8g} | {d['trajectory_bootstrap_95_interval']} |")
     lines+=['','## Interpretation limits','',

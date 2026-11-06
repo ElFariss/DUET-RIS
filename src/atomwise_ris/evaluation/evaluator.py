@@ -66,7 +66,31 @@ class Evaluator:
         d=(1-2*np.asarray(bits,dtype=float))[:,None,None]*self.delta
         return u+d[self.pairs[:,0]]+d[self.pairs[:,1]]
 
-    def features(self,bits,u=None,first=-1,memory_frequency=None,recent=None):
+    def subspace_pair_fields(self,bits,u=None,subset=None):
+        """Pair fields for a subset of atom indices, returning (fields, pair_indices)."""
+        if u is None: u=self.field(bits)
+        d=(1-2*np.asarray(bits,dtype=float))[:,None,None]*self.delta
+        if subset is None:
+            return u+d[self.pairs[:,0]]+d[self.pairs[:,1]],self.pairs
+        sub=np.asarray(subset,dtype=np.intp)
+        if len(sub)<2:
+            return np.empty((0,u.shape[-2],u.shape[-1]),dtype=u.dtype),np.empty((0,2),dtype=int)
+        i_idx,j_idx=np.triu_indices(len(sub),1)
+        pairs=np.column_stack([sub[i_idx],sub[j_idx]])
+        return u+d[pairs[:,0]]+d[pairs[:,1]],pairs
+
+    def offspring_fields(self,base_bits,candidates,u=None):
+        """Vectorized evaluation of candidates perturbed from base_bits."""
+        if u is None: u=self.field(base_bits)
+        cand=np.asarray(candidates,dtype=np.int8)
+        if cand.ndim==1:
+            cand=cand[None,:]
+        diff=np.bitwise_xor(cand,np.asarray(base_bits,dtype=np.int8))
+        d=(1-2*np.asarray(base_bits,dtype=float))[:,None,None]*self.delta
+        delta_u=np.tensordot(diff.astype(d.dtype),d,axes=([1],[0]))
+        return u+delta_u
+
+    def features(self,bits,u=None,first=-1,memory_frequency=None,recent=None,gains=None):
         """Shared observation contract for MLP and attention; all CSI is exact here.
 
         Per-state normalization is analytic, never fitted on evaluation data.
@@ -74,8 +98,9 @@ class Evaluator:
         first-marked token allows learning harmful-first but useful joint edits.
         """
         if u is None: u=self.field(bits)
-        score=self.score_field(u)
-        gains=self.score_field(self.flip_fields(bits,u))-score
+        if gains is None:
+            score=self.score_field(u)
+            gains=self.score_field(self.flip_fields(bits,u))-score
         scale=max(float(np.linalg.norm(u)),np.sqrt(self.noise_w))
         c=self.contribution/scale
         d=self.delta/scale

@@ -1,0 +1,504 @@
+{
+  "created_local": "2026-11-06",
+  "status": "coupled_training_complete_online_controller_validation_pending",
+  "scope": "coupled_wire_v1 train and validation labels only; no pilot/test used",
+  "remote_workspace": "/home/faris/projects/atom-wise-ris-improvement-20261106",
+  "device": "node2 NVIDIA GeForce RTX 3060; torch 2.9.1+cu128",
+  "seeds": [
+    7,
+    19,
+    43
+  ],
+  "epochs_requested": 30,
+  "recipe": {
+    "candidate_label": "coupled_sharp_balanced_conditional_rank_dev",
+    "target_temperature": 0.25,
+    "effective_stage_weights": {
+      "first": 1.0,
+      "conditional": 0.5
+    },
+    "checkpoint_selection": "balanced_top5_target_mass, original unsharpened validation targets"
+  },
+  "inputs": {
+    "outputs/runs/coupled_wire_v1/train_labels.npz": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+    "outputs/runs/coupled_wire_v1/validation_labels.npz": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+    "data/processed/coupled_wire_v1/dataset.npz": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+    "outputs/runs/coupled_wire_v1/feature_scaling.npz": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed",
+    "outputs/runs/coupled_wire_v1/physics_gate.json": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f"
+  },
+  "baseline_validation": {
+    "analytical": {
+      "first": {
+        "top1_target_mass": 0.07732804864645004,
+        "top5_target_mass": 0.2715328633785248,
+        "soft_target_regret": 0.011448766104876995,
+        "target_mode_accuracy": 0.671875,
+        "rows": 384
+      },
+      "conditional": {
+        "top1_target_mass": 0.067265085875988,
+        "top5_target_mass": 0.2346288114786148,
+        "soft_target_regret": 0.1329420953989029,
+        "target_mode_accuracy": 0.3697916567325592,
+        "rows": 768
+      },
+      "balanced_top5_target_mass": 0.2530808374285698
+    },
+    "incumbent_attention": [
+      {
+        "seed": 7,
+        "checkpoint": "outputs/runs/coupled_wire_v1/models/attention_seed7/best.pt",
+        "balanced_top5_target_mass": 0.26173293590545654,
+        "validation_ranking": {
+          "first": {
+            "top1_target_mass": 0.07710035890340805,
+            "top5_target_mass": 0.2731052041053772,
+            "soft_target_regret": 0.011676463298499584,
+            "target_mode_accuracy": 0.6276041865348816,
+            "rows": 384
+          },
+          "conditional": {
+            "top1_target_mass": 0.07688980549573898,
+            "top5_target_mass": 0.2503606677055359,
+            "soft_target_regret": 0.12331736832857132,
+            "target_mode_accuracy": 0.3880208432674408,
+            "rows": 768
+          },
+          "balanced_top5_target_mass": 0.26173293590545654
+        }
+      },
+      {
+        "seed": 19,
+        "checkpoint": "outputs/runs/coupled_wire_v1/models/attention_seed19/best.pt",
+        "balanced_top5_target_mass": 0.26207900047302246,
+        "validation_ranking": {
+          "first": {
+            "top1_target_mass": 0.07868317514657974,
+            "top5_target_mass": 0.2726280391216278,
+            "soft_target_regret": 0.010093637742102146,
+            "target_mode_accuracy": 0.6484375,
+            "rows": 384
+          },
+          "conditional": {
+            "top1_target_mass": 0.07983816415071487,
+            "top5_target_mass": 0.2515299618244171,
+            "soft_target_regret": 0.12036900967359543,
+            "target_mode_accuracy": 0.390625,
+            "rows": 768
+          },
+          "balanced_top5_target_mass": 0.26207900047302246
+        }
+      },
+      {
+        "seed": 43,
+        "checkpoint": "outputs/runs/coupled_wire_v1/models/attention_seed43/best.pt",
+        "balanced_top5_target_mass": 0.2640647441148758,
+        "validation_ranking": {
+          "first": {
+            "top1_target_mass": 0.07865694910287857,
+            "top5_target_mass": 0.27465522289276123,
+            "soft_target_regret": 0.010119867511093616,
+            "target_mode_accuracy": 0.6484375,
+            "rows": 384
+          },
+          "conditional": {
+            "top1_target_mass": 0.07965219765901566,
+            "top5_target_mass": 0.25347426533699036,
+            "soft_target_regret": 0.12055496126413345,
+            "target_mode_accuracy": 0.4010416567325592,
+            "rows": 768
+          },
+          "balanced_top5_target_mass": 0.2640647441148758
+        }
+      }
+    ],
+    "incumbent_attention_mean_balanced_top5": 0.2626255601644516,
+    "incumbent_mlp": [
+      {
+        "seed": 7,
+        "checkpoint": "outputs/runs/coupled_wire_v1/models/mlp_seed7/best.pt",
+        "balanced_top5_target_mass": 0.274676576256752,
+        "validation_ranking": {
+          "first": {
+            "top1_target_mass": 0.07871163636445999,
+            "top5_target_mass": 0.2754606008529663,
+            "soft_target_regret": 0.010065185837447643,
+            "target_mode_accuracy": 0.6302083134651184,
+            "rows": 384
+          },
+          "conditional": {
+            "top1_target_mass": 0.08557760715484619,
+            "top5_target_mass": 0.2738925516605377,
+            "soft_target_regret": 0.11462957412004471,
+            "target_mode_accuracy": 0.3919270932674408,
+            "rows": 768
+          },
+          "balanced_top5_target_mass": 0.274676576256752
+        }
+      },
+      {
+        "seed": 19,
+        "checkpoint": "outputs/runs/coupled_wire_v1/models/mlp_seed19/best.pt",
+        "balanced_top5_target_mass": 0.273878276348114,
+        "validation_ranking": {
+          "first": {
+            "top1_target_mass": 0.07859807461500168,
+            "top5_target_mass": 0.276099294424057,
+            "soft_target_regret": 0.010178742930293083,
+            "target_mode_accuracy": 0.640625,
+            "rows": 384
+          },
+          "conditional": {
+            "top1_target_mass": 0.08788329362869263,
+            "top5_target_mass": 0.271657258272171,
+            "soft_target_regret": 0.11232388019561768,
+            "target_mode_accuracy": 0.3880208432674408,
+            "rows": 768
+          },
+          "balanced_top5_target_mass": 0.273878276348114
+        }
+      },
+      {
+        "seed": 43,
+        "checkpoint": "outputs/runs/coupled_wire_v1/models/mlp_seed43/best.pt",
+        "balanced_top5_target_mass": 0.2747467905282974,
+        "validation_ranking": {
+          "first": {
+            "top1_target_mass": 0.07874903082847595,
+            "top5_target_mass": 0.27581340074539185,
+            "soft_target_regret": 0.01002778671681881,
+            "target_mode_accuracy": 0.6276041865348816,
+            "rows": 384
+          },
+          "conditional": {
+            "top1_target_mass": 0.08593437820672989,
+            "top5_target_mass": 0.273680180311203,
+            "soft_target_regret": 0.11427279561758041,
+            "target_mode_accuracy": 0.3854166567325592,
+            "rows": 768
+          },
+          "balanced_top5_target_mass": 0.2747467905282974
+        }
+      }
+    ],
+    "incumbent_mlp_mean_balanced_top5": 0.2744338810443878
+  },
+  "candidates": [
+    {
+      "kind_seed": "attention_seed19",
+      "checkpoint": "outputs/runs/coupled_improvement_remote_20261106/models/attention_seed19/best.pt",
+      "checkpoint_sha256": "3bc575f11f825ac5f7237e6eec6d12cc58db8df3f5525477e9f415ad292aa22a",
+      "metadata": "outputs/runs/coupled_improvement_remote_20261106/models/attention_seed19/metadata.json",
+      "metadata_sha256": "4d0ce6c5e33a234d43d03c4fdb08f9db3a2170647c88f9efbfe0bc3ed4c1070b",
+      "initial_epoch0_ranking": {
+        "first": {
+          "top1_target_mass": 0.07732804864645004,
+          "top5_target_mass": 0.2715328633785248,
+          "soft_target_regret": 0.011448766104876995,
+          "target_mode_accuracy": 0.671875,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.067265085875988,
+          "top5_target_mass": 0.2346288114786148,
+          "soft_target_regret": 0.1329420804977417,
+          "target_mode_accuracy": 0.3697916567325592,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2530808374285698
+      },
+      "selected_epoch": 1,
+      "selected_balanced_top5_target_mass": 0.25813448429107666,
+      "selected_validation_ranking": {
+        "first": {
+          "top1_target_mass": 0.07776602357625961,
+          "top5_target_mass": 0.27467119693756104,
+          "soft_target_regret": 0.011010793037712574,
+          "target_mode_accuracy": 0.6536458134651184,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.06975369900465012,
+          "top5_target_mass": 0.24159777164459229,
+          "soft_target_regret": 0.13045348227024078,
+          "target_mode_accuracy": 0.3697916567325592,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.25813448429107666
+      },
+      "validation_ce_min_over_training": 3.8489193447555103,
+      "seconds": 4.420900112949312,
+      "train_sha256": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+      "validation_sha256": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+      "physics_data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+      "feature_scaling_sha256": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed",
+      "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+      "policy_source_sha256": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+      "trainer_source_sha256": "c5d800f536d99a74302c11ebfbc986bf541a68b3907a665132500ed0db044ebc"
+    },
+    {
+      "kind_seed": "attention_seed43",
+      "checkpoint": "outputs/runs/coupled_improvement_remote_20261106/models/attention_seed43/best.pt",
+      "checkpoint_sha256": "dc4de8c1dceed39bb2f48a5629e417186ae2d2d8c972754480036d025b4e4a77",
+      "metadata": "outputs/runs/coupled_improvement_remote_20261106/models/attention_seed43/metadata.json",
+      "metadata_sha256": "9f4381d029785eddf1adf0e752ad26091f7662df5406d2d77733d49c70de3c4c",
+      "initial_epoch0_ranking": {
+        "first": {
+          "top1_target_mass": 0.07732804864645004,
+          "top5_target_mass": 0.2715328633785248,
+          "soft_target_regret": 0.011448766104876995,
+          "target_mode_accuracy": 0.671875,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.067265085875988,
+          "top5_target_mass": 0.2346288114786148,
+          "soft_target_regret": 0.1329420804977417,
+          "target_mode_accuracy": 0.3697916567325592,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2530808374285698
+      },
+      "selected_epoch": 3,
+      "selected_balanced_top5_target_mass": 0.2589033842086792,
+      "selected_validation_ranking": {
+        "first": {
+          "top1_target_mass": 0.07621464878320694,
+          "top5_target_mass": 0.2663170397281647,
+          "soft_target_regret": 0.012562165968120098,
+          "target_mode_accuracy": 0.5546875,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.07480292022228241,
+          "top5_target_mass": 0.2514897286891937,
+          "soft_target_regret": 0.1254042536020279,
+          "target_mode_accuracy": 0.35546875,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2589033842086792
+      },
+      "validation_ce_min_over_training": 3.8481340394355357,
+      "seconds": 4.427277697948739,
+      "train_sha256": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+      "validation_sha256": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+      "physics_data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+      "feature_scaling_sha256": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed",
+      "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+      "policy_source_sha256": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+      "trainer_source_sha256": "c5d800f536d99a74302c11ebfbc986bf541a68b3907a665132500ed0db044ebc"
+    },
+    {
+      "kind_seed": "attention_seed7",
+      "checkpoint": "outputs/runs/coupled_improvement_remote_20261106/models/attention_seed7/best.pt",
+      "checkpoint_sha256": "aca1645aaa3af16bdf56346a926761aaaff4be6f10f86394c84d9ea512d3e197",
+      "metadata": "outputs/runs/coupled_improvement_remote_20261106/models/attention_seed7/metadata.json",
+      "metadata_sha256": "60c404910b57de7c4137c5911317aa50d09cdbbd0fd8bd1eb62920b093390880",
+      "initial_epoch0_ranking": {
+        "first": {
+          "top1_target_mass": 0.07732804864645004,
+          "top5_target_mass": 0.2715328633785248,
+          "soft_target_regret": 0.011448766104876995,
+          "target_mode_accuracy": 0.671875,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.067265085875988,
+          "top5_target_mass": 0.2346288114786148,
+          "soft_target_regret": 0.1329420804977417,
+          "target_mode_accuracy": 0.3697916567325592,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2530808374285698
+      },
+      "selected_epoch": 4,
+      "selected_balanced_top5_target_mass": 0.25855933129787445,
+      "selected_validation_ranking": {
+        "first": {
+          "top1_target_mass": 0.07576990872621536,
+          "top5_target_mass": 0.26473554968833923,
+          "soft_target_regret": 0.013006907887756824,
+          "target_mode_accuracy": 0.5364583134651184,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.0756370946764946,
+          "top5_target_mass": 0.25238311290740967,
+          "soft_target_regret": 0.12457007169723511,
+          "target_mode_accuracy": 0.3567708432674408,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.25855933129787445
+      },
+      "validation_ce_min_over_training": 3.8494722292137644,
+      "seconds": 4.749226419022307,
+      "train_sha256": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+      "validation_sha256": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+      "physics_data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+      "feature_scaling_sha256": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed",
+      "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+      "policy_source_sha256": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+      "trainer_source_sha256": "c5d800f536d99a74302c11ebfbc986bf541a68b3907a665132500ed0db044ebc"
+    },
+    {
+      "kind_seed": "mlp_seed19",
+      "checkpoint": "outputs/runs/coupled_improvement_remote_20261106/models/mlp_seed19/best.pt",
+      "checkpoint_sha256": "c5294b1a71b65b11d0d2a4bd3b60826e5a635215ea2da4bc4e2ccfa9d0b545df",
+      "metadata": "outputs/runs/coupled_improvement_remote_20261106/models/mlp_seed19/metadata.json",
+      "metadata_sha256": "89bf312983018572d77e27516106c8518ce5efad5a8934769416be4219b6e2b2",
+      "initial_epoch0_ranking": {
+        "first": {
+          "top1_target_mass": 0.07732804864645004,
+          "top5_target_mass": 0.2715328633785248,
+          "soft_target_regret": 0.011448766104876995,
+          "target_mode_accuracy": 0.671875,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.067265085875988,
+          "top5_target_mass": 0.2346288114786148,
+          "soft_target_regret": 0.1329420804977417,
+          "target_mode_accuracy": 0.3697916567325592,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2530808374285698
+      },
+      "selected_epoch": 30,
+      "selected_balanced_top5_target_mass": 0.26021425426006317,
+      "selected_validation_ranking": {
+        "first": {
+          "top1_target_mass": 0.07710439711809158,
+          "top5_target_mass": 0.26745474338531494,
+          "soft_target_regret": 0.01167241483926773,
+          "target_mode_accuracy": 0.5729166865348816,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.07947065681219101,
+          "top5_target_mass": 0.2529737651348114,
+          "soft_target_regret": 0.1207365095615387,
+          "target_mode_accuracy": 0.3294270932674408,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.26021425426006317
+      },
+      "validation_ce_min_over_training": 3.8496376861197255,
+      "seconds": 1.4170092300046235,
+      "train_sha256": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+      "validation_sha256": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+      "physics_data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+      "feature_scaling_sha256": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed",
+      "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+      "policy_source_sha256": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+      "trainer_source_sha256": "c5d800f536d99a74302c11ebfbc986bf541a68b3907a665132500ed0db044ebc"
+    },
+    {
+      "kind_seed": "mlp_seed43",
+      "checkpoint": "outputs/runs/coupled_improvement_remote_20261106/models/mlp_seed43/best.pt",
+      "checkpoint_sha256": "95b448bf0e8f1d06e2637b1c2678d951904e16e4c6408458f858c235e49183db",
+      "metadata": "outputs/runs/coupled_improvement_remote_20261106/models/mlp_seed43/metadata.json",
+      "metadata_sha256": "1e8342d83d354155213bf117b5166888ee7c59a712d22ce96b852f2a87794f17",
+      "initial_epoch0_ranking": {
+        "first": {
+          "top1_target_mass": 0.07732804864645004,
+          "top5_target_mass": 0.2715328633785248,
+          "soft_target_regret": 0.011448766104876995,
+          "target_mode_accuracy": 0.671875,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.067265085875988,
+          "top5_target_mass": 0.2346288114786148,
+          "soft_target_regret": 0.1329420804977417,
+          "target_mode_accuracy": 0.3697916567325592,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2530808374285698
+      },
+      "selected_epoch": 29,
+      "selected_balanced_top5_target_mass": 0.2613636404275894,
+      "selected_validation_ranking": {
+        "first": {
+          "top1_target_mass": 0.07751917839050293,
+          "top5_target_mass": 0.2675667107105255,
+          "soft_target_regret": 0.011257637292146683,
+          "target_mode_accuracy": 0.578125,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.07833563536405563,
+          "top5_target_mass": 0.2551605701446533,
+          "soft_target_regret": 0.12187153100967407,
+          "target_mode_accuracy": 0.3190104067325592,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2613636404275894
+      },
+      "validation_ce_min_over_training": 3.8479423412742713,
+      "seconds": 1.418358824099414,
+      "train_sha256": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+      "validation_sha256": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+      "physics_data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+      "feature_scaling_sha256": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed",
+      "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+      "policy_source_sha256": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+      "trainer_source_sha256": "c5d800f536d99a74302c11ebfbc986bf541a68b3907a665132500ed0db044ebc"
+    },
+    {
+      "kind_seed": "mlp_seed7",
+      "checkpoint": "outputs/runs/coupled_improvement_remote_20261106/models/mlp_seed7/best.pt",
+      "checkpoint_sha256": "c68978061c9fe35e65e12253f1414d8fbd23099248e47e6baaa6459fad3c93f1",
+      "metadata": "outputs/runs/coupled_improvement_remote_20261106/models/mlp_seed7/metadata.json",
+      "metadata_sha256": "fe717db1badf16a9d765122ec9aca46ed458e66a391891379da52bb9fa362236",
+      "initial_epoch0_ranking": {
+        "first": {
+          "top1_target_mass": 0.07732804864645004,
+          "top5_target_mass": 0.2715328633785248,
+          "soft_target_regret": 0.011448766104876995,
+          "target_mode_accuracy": 0.671875,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.067265085875988,
+          "top5_target_mass": 0.2346288114786148,
+          "soft_target_regret": 0.1329420804977417,
+          "target_mode_accuracy": 0.3697916567325592,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2530808374285698
+      },
+      "selected_epoch": 24,
+      "selected_balanced_top5_target_mass": 0.2593511790037155,
+      "selected_validation_ranking": {
+        "first": {
+          "top1_target_mass": 0.07668819278478622,
+          "top5_target_mass": 0.2672460675239563,
+          "soft_target_regret": 0.012088623829185963,
+          "target_mode_accuracy": 0.5494791865348816,
+          "rows": 384
+        },
+        "conditional": {
+          "top1_target_mass": 0.07994507998228073,
+          "top5_target_mass": 0.25145629048347473,
+          "soft_target_regret": 0.12026209384202957,
+          "target_mode_accuracy": 0.3216145932674408,
+          "rows": 768
+        },
+        "balanced_top5_target_mass": 0.2593511790037155
+      },
+      "validation_ce_min_over_training": 3.848835837251196,
+      "seconds": 1.41728699603118,
+      "train_sha256": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+      "validation_sha256": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+      "physics_data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+      "feature_scaling_sha256": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed",
+      "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+      "policy_source_sha256": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+      "trainer_source_sha256": "c5d800f536d99a74302c11ebfbc986bf541a68b3907a665132500ed0db044ebc"
+    }
+  ],
+  "limitations": [
+    "Label ranking is a validation proxy, not physical regret or closed-loop controller performance.",
+    "Selection and reporting use original unsharpened validation targets; sharpened labels are train-only."
+  ]
+}

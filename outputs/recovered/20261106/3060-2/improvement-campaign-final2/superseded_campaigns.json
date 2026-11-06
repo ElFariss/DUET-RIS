@@ -1,0 +1,35 @@
+{
+  "status": "superseded_for_final_comparison",
+  "reason": "The coupled benchmark memory-write path for no-memory ablations was corrected after these campaigns. Although no-memory search calls already received empty memory, the prior benchmark still wrote remembered patterns and timed a memory-write path for those methods. Fresh final2 runs use the corrected code and are the sole source for the final comparison. All original JSONLs and sidecars are preserved unchanged.",
+  "superseded_campaigns": [
+    {
+      "path": "campaigns/specular_incumbent_10ms_20261106",
+      "manifest": "campaign.json"
+    },
+    {
+      "path": "campaigns/specular_newA_10ms_20261106",
+      "manifest": "campaign.json"
+    },
+    {
+      "path": "campaigns/specular_newB_10ms_20261106",
+      "manifest": "campaign.json"
+    },
+    {
+      "path": "campaigns/coupled_incumbent_10ms_20261106",
+      "manifest": "campaign.json"
+    },
+    {
+      "path": "campaigns/coupled_new_10ms_20261106",
+      "manifest": "campaign.json"
+    },
+    {
+      "path": "campaigns/coupled_incumbent_conditional_10ms_20261106",
+      "manifest": "campaign.json"
+    },
+    {
+      "path": "campaigns/coupled_new_conditional_10ms_20261106",
+      "manifest": "campaign.json"
+    }
+  ],
+  "replacement": "The matching *_10ms_final2_20261106 campaigns in this directory use the corrected source snapshot; see provenance_10ms.json."
+}

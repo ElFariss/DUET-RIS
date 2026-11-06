@@ -1,0 +1,65 @@
+{
+  "arguments": {
+    "run": "outputs/runs/specular_v5",
+    "data": "outputs/runs/specular_v5",
+    "out": "outputs/runs/specular_improvement_B_attention",
+    "kind": "attention",
+    "seeds": [
+      7,
+      19,
+      43
+    ],
+    "epochs": 30,
+    "target_temperature": 0.25,
+    "conditional_weight": 0.5,
+    "selection_metric": "balanced_top5_target_mass",
+    "candidate_label": "sharp_balanced_conditional_rank_dev",
+    "device": "cuda"
+  },
+  "seed": 43,
+  "parameters": 18113,
+  "best_validation_cross_entropy": 3.980044536809954,
+  "selected_epoch": 0,
+  "candidate_label": "sharp_balanced_conditional_rank_dev",
+  "architecture_version": "edit_policy_residual_v1",
+  "policy_source_sha256": "a97d2bfff842b44d9ba8d0380542f6b2a71cbb16fc67bbd5fc13365f574936d3",
+  "trainer_source_sha256": "54aa9a3cec40e70ad6f50f3f9239453b674de6c2685c6adc1220807c4a9ac83b",
+  "selection_metric": "balanced_top5_target_mass",
+  "selection_value": 0.2047000452876091,
+  "best_validation_ranking": {
+    "first": {
+      "top1_target_mass": 0.06268537044525146,
+      "soft_target_regret": 0.00010950924479402602,
+      "target_mode_accuracy": 0.9461805820465088,
+      "rows": 576,
+      "top5_target_mass": 0.2079128473997116,
+      "top10_target_mass": 0.33924201130867004
+    },
+    "second": {
+      "top1_target_mass": 0.06077402085065842,
+      "soft_target_regret": 0.0019058515317738056,
+      "target_mode_accuracy": 0.8689236044883728,
+      "rows": 1152,
+      "top5_target_mass": 0.2014872431755066,
+      "top10_target_mass": 0.33433470129966736
+    },
+    "all": {
+      "top1_target_mass": 0.06172969564795494,
+      "soft_target_regret": 0.0010076803155243397,
+      "target_mode_accuracy": 0.9075520634651184,
+      "rows": 1728,
+      "top5_target_mass": 0.2047000527381897,
+      "top10_target_mass": 0.3367883265018463
+    }
+  },
+  "target_temperature": 0.25,
+  "conditional_weight": 0.5,
+  "training_examples": 3456,
+  "validation_examples": 1728,
+  "train_sha256": "c831b0de3cd59084ddb3f48ad9b1bf61c3e6525e9090f1d41ad1c61d65260285",
+  "validation_sha256": "859a163a064030460908d3d0f1183bea40fb22816e3f4cc1579a555d31130d8e",
+  "gate_sha256": "5abfe0c613b668fb830f2196293c9084dbf77dc331520c8edab929ac24f76913",
+  "torch": "2.9.1+cu128",
+  "device": "NVIDIA GeForce RTX 3060",
+  "seconds": 7.673796967952512
+}

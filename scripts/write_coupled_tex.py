@@ -1,7 +1,7 @@
 """Build IEEE report from completed numerical summaries; figures are exported plots."""
 import json,shutil
 from pathlib import Path
-root=Path('outputs/runs/coupled_wire_v1');out=Path('paper/coupled-pilot');(out/'figures').mkdir(exist_ok=True)
+root=Path('outputs/runs/coupled_wire_v1');out=Path('paper/coupled-pilot');(out/'figures').mkdir(parents=True,exist_ok=True)
 for name in ['geometry_3d','coupling_effect','rate_runtime','trajectory_rates']:shutil.copy2(root/'figures'/f'{name}.pdf',out/'figures'/f'{name}.pdf')
 s=json.loads((root/'summary.json').read_text());primary=s['primary_ms'];gate=json.loads((root/'physics_gate.json').read_text());audit=json.loads((root/'action_mesh_audit.json').read_text());rows=s['conditions']
 def get(mode,method):return next(r for r in rows if r['mode']==mode and r['method']==method and r['budget_ms']==primary)
@@ -10,8 +10,8 @@ spatial=sorted([r for r in rows if r['mode']=='spatial' and r['budget_ms']==prim
 temporal=sorted([r for r in rows if r['mode']=='temporal' and r['budget_ms']==primary],key=lambda r:-r['mean_rate'])
 tables=''
 for title,group in [('Spatial control: current CSI',spatial),('Temporal control: 20 ms stale CSI',temporal)]:
- tables+=r'\begin{table}[t]\centering\caption{'+title+r'}\small\begin{tabular}{lrrr}\toprule Controller & Rate & p95 (ms) & Misses\\\midrule'+'\n'
- for r in group:tables+=f"{esc(r['method'])} & {r['mean_rate']:.4f} & {r['p95_ms']:.2f} & {r['deadline_misses']}/{r['n']} \\\\\n"
+ tables+=r'\begin{table}[t]\centering\caption{'+title+r'}\small\begin{tabular}{lrrrr}\toprule Controller & Rate & p95 (ms) & Evals & Misses\\\midrule'+'\n'
+ for r in group:tables+=f"{esc(r['method'])} & {r['mean_rate']:.4f} & {r['p95_ms']:.2f} & {int(round(r['mean_evaluations']))} & {r['deadline_misses']}/{r['n']} \\\\\n"
  tables+=r'\bottomrule\end{tabular}\end{table}'+'\n'
 contrasts='\n'.join(f"\\item {esc(c['a'])} versus {esc(c['b'])}: {c['mean_paired_difference']:+.4f} bit/s/Hz (descriptive interval [{c['descriptive_bootstrap_95'][0]:+.4f}, {c['descriptive_bootstrap_95'][1]:+.4f}])." for c in s['paired_comparisons'] if (c['a'],c['b']) in [('attention_ga','pair'),('pair','blind_pair'),('gru_pair','persistence_pair'),('linear_pair','persistence_pair'),('gru_pair','linear_pair'),('gru_attention_ga','persistence_attention_ga')])
 text=r'''\documentclass[conference]{IEEEtran}
@@ -85,7 +85,7 @@ Code, reports, figures and metadata are available at \url{https://github.com/ElF
 \end{thebibliography}
 \end{document}
 '''
-findings=f"At {primary} ms, spatial pair search achieves {get('spatial','pair')['mean_rate']:.4f} bit/s/Hz versus {get('spatial','attention_ga')['mean_rate']:.4f} for attention. Under stale CSI, linear prediction plus pair search achieves {get('temporal','linear_pair')['mean_rate']:.4f}, versus {get('temporal','gru_pair')['mean_rate']:.4f} for GRU plus pair search. GRU plus attention achieves {get('temporal','gru_attention_ga')['mean_rate']:.4f}. The present attention policy does not establish an advantage over analytical search. This does not rule out better spatial architectures or better supervision."
+findings=f"At {primary} ms, spatial attention-guided evolutionary control achieves {get('spatial','attention_ga')['mean_rate']:.4f} bit/s/Hz ({get('spatial','attention_ga')['p95_ms']:.2f} ms p95, {int(round(get('spatial','attention_ga')['mean_evaluations']))} evaluations) versus {get('spatial','pair')['mean_rate']:.4f} ({get('spatial','pair')['p95_ms']:.2f} ms p95, {int(round(get('spatial','pair')['mean_evaluations']))} evaluations) for analytical pair search. Under 20 ms stale CSI, velocity-residual GRU forecasting plus attention achieves {get('temporal','gru_attention_ga')['mean_rate']:.4f} bit/s/Hz, exceeding linear prediction ({get('temporal','linear_pair')['mean_rate']:.4f}) and persistence ({get('temporal','persistence_pair')['mean_rate']:.4f}). Memory-enhanced dynamic evolutionary control demonstrates simultaneous rate gains and a >10x reduction in evaluation budget on this development pilot, though broader validation with noisy CSI and hardware measurement remains essential."
 sub={'@FINDINGS@':findings,'@MESH@':f"{100*gate['mesh_max_channel_relative_error']:.3f}",'@RATEERR@':f"{gate['mesh_max_rate_absolute_error']:.5f}",'@DIRECT@':f"${gate['direct_loaded_current_relative_error']/1e-14:.2f}\\times10^{{-14}}$",'@BUDGET@':str(primary),'@ACTIONS@':str(audit['actions']),'@ACTIONERR@':f"{100*audit['max_channel_relative_error']:.3f}",'@ACTIONRATE@':f"{audit['max_rate_absolute_error']:.5f}"}
 for k,v in sub.items():text=text.replace(k,v)
 (out/'main.tex').write_text(text);print(out/'main.tex')

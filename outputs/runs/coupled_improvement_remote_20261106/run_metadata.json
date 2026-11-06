@@ -1,0 +1,22 @@
+{
+  "candidate_label": "coupled_sharp_balanced_conditional_rank_dev",
+  "source_data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+  "train_sha256": "13d1a8e489bde63a29ff2e97e8edd1fbd6b2cacd72ec318b0ef5a60c0f020de8",
+  "validation_sha256": "9a51e016ea0e669defc344c541759822e2100dc7ef29326d88e005e802d0d8b9",
+  "epochs_per_model": 30,
+  "model_kinds": [
+    "attention",
+    "mlp"
+  ],
+  "seeds": [
+    7,
+    19,
+    43
+  ],
+  "reused_attention_no_physics_checkpoint_sha256": {
+    "7": "7ae03b1b3920a62f5a2dc82ab9caf25ad77449704d18f72645ca38ff58b90342",
+    "19": "0a9cd92eaaa2d595447bc934b6485866f661f088f220e38c0aec8cbcd3fa88a0",
+    "43": "b560d40df593114d18fb96ef5730df83ecb1391a25e530ac0940b9df1a1082d1"
+  },
+  "seconds": 18.40125256893225
+}

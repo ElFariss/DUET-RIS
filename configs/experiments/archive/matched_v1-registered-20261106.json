@@ -1,0 +1,99 @@
+{
+  "status": "registered 2026-11-06 before any matched-config result or new test frame exists",
+  "purpose": "Compare memory, analytical and learned guidance under one shared search configuration on trajectories never seen during method design",
+  "experiments": {
+    "coupled": {
+      "run": "outputs/runs/matched_coupled_v1",
+      "train_validation_data": "data/processed/coupled_wire_v1 (train and validation splits only)",
+      "test_data": "data/processed/coupled_wire_test_v1",
+      "test_trajectories": 30,
+      "frames_per_trajectory": 16,
+      "test_rng_seed": 20261106,
+      "test_sampling": "continuous uniform over the bounding box of existing user start positions and velocities; same physics, surface and segments (81)"
+    },
+    "specular": {
+      "run": "outputs/runs/matched_specular_v1",
+      "train_validation_data": "data/processed/munich_specular_v3 (train and validation splits only)",
+      "test_data": "data/processed/munich_specular_test_v1",
+      "test_trajectories": 30,
+      "frames_per_trajectory": 4,
+      "test_rng_seed": 20261106,
+      "test_sampling": "new receiver trajectories from the same scene and ray-tracing parameters as munich_specular_v3"
+    }
+  },
+  "excluded_from_claims": "Existing pilot splits informed method design and are development data; they may be benchmarked for continuity only and never reported as the test result",
+  "scope_limit": "Held-out trajectories in the same scene and surface, not a held-out environment. Simulation only. Spatial control only; temporal forecasting is out of scope for this comparison.",
+  "node": "3060-1; all reported timing comes from one node, one pinned core, single thread, with no concurrent job of ours",
+  "seeds": [7, 19, 43, 3, 11, 23, 31, 59, 67, 83],
+  "budgets_ms": [1, 5, 10, 50, 100],
+  "primary_budget_ms": 10,
+  "methods": {
+    "baselines": ["greedy", "pair", "random"],
+    "uniform_ga": "memory on; anchors and hops ranked uniformly at random; lesion control for whether ranking matters",
+    "memory_ga": "memory on; ranking = normalized analytical gain + 0.1 * per-bit std of remembered patterns; no neural network. An adaptation inspired by Zardi et al. 2024, not a reproduction",
+    "analytical_ga": "memory on; ranking = normalized analytical gain",
+    "analytical_no_memory_ga": "as analytical_ga with memory disabled",
+    "mlp_ga": "memory on; ranking = analytical gain plus MLP policy",
+    "attention_ga": "memory on; ranking = analytical gain plus attention policy",
+    "attention_no_memory_ga": "as attention_ga with memory disabled",
+    "attention_no_physics_ga": "as attention_ga with explicit physics features removed; analytical flip gains retained"
+  },
+  "shared_search_config": {
+    "rule": "Every GA variant runs the same step sequence and limits. Variants differ only in the ranking signal and whether memory is enabled. Neural overhead is paid from the same deadline.",
+    "primary": "medium",
+    "selection": "Medium equals the values previously assigned to analytical_ga, fixed here without consulting any matched result",
+    "specular": {
+      "small": {"P0": 4, "P1": 3, "n_starts": 0, "max_pol": 1, "t_cap_fraction_short": 0.45, "t_cap_max_ms_short": 3.2, "t_cap_fraction_long": 0.50},
+      "medium": {"P0": 5, "P1": 4, "n_starts": 1, "max_pol": 2, "t_cap_fraction_short": 0.52, "t_cap_max_ms_short": 3.8, "t_cap_fraction_long": 0.58},
+      "large": {"P0": 6, "P1": 5, "n_starts": 4, "max_pol": 4, "t_cap_fraction_short": 0.65, "t_cap_max_ms_short": 5.4, "t_cap_fraction_long": 0.72}
+    },
+    "coupled": {
+      "small": {"K": 18, "hop_K": 14},
+      "medium": {"K": 20, "hop_K": 16},
+      "large": {"K": 28, "hop_K": 20}
+    },
+    "all_variants": {
+      "hop_idx": [0, 1],
+      "secondary_hops": true,
+      "basin_crossover": true,
+      "neural_residual_weight_coupled": 0.12,
+      "neural_logit_weight_specular": 0.15,
+      "memory_bias_weight": 0.1
+    },
+    "sensitivity": "Small and large run on validation only, to show whether conclusions depend on the configuration. They are not used to change the primary."
+  },
+  "training": "Fresh checkpoints for every seed on 3060-1 from train and validation only; epochs and architectures unchanged",
+  "freeze_order": ["train", "validation benchmark", "freeze budget and code hashes", "test benchmark once", "analysis"],
+  "metrics": {
+    "worst_user_spectral_efficiency": "mean minimum user rate in bit/s/Hz, full-evaluator recomputed",
+    "optimization_latency": {
+      "complete_runtime": "p95 elapsed ms, including preparation, features, inference, memory and evaluation",
+      "time_to_target": "first time within target_margin of the frame reference; median and p95; runs that never reach it count as not reached and the reached fraction is reported",
+      "frame_reference": "best rate found on that frame by any method and seed at any budget",
+      "target_margin_bit_s_hz": 0.015
+    },
+    "computational_budget": {
+      "evaluations": "mean count of candidate configurations scored, same counting rule for all methods; neural inference is not an evaluation and is reported as time",
+      "evaluations_to_target": "evaluations used when time_to_target is reached"
+    },
+    "deadline_misses": "reported per method and budget; never excluded"
+  },
+  "statistics": {
+    "unit": "trajectory, averaging seeds within trajectory",
+    "interval": "paired trajectory bootstrap, 10000 resamples, seed 8251, 95 percent",
+    "multiplicity": "Holm correction across the contrasts below, on the primary budget and rate metric, using bootstrap two-sided p-values",
+    "contrasts": [
+      "attention_ga - memory_ga",
+      "mlp_ga - memory_ga",
+      "analytical_ga - memory_ga",
+      "attention_ga - analytical_ga",
+      "memory_ga - pair",
+      "attention_ga - attention_no_memory_ga",
+      "analytical_ga - analytical_no_memory_ga",
+      "analytical_ga - uniform_ga"
+    ],
+    "practical_margin_bit_s_hz": 0.015,
+    "margin_basis": "Largest rate change observed under mesh doubling in coupled_wire_v1 physics evidence; applied to both experiments",
+    "decision": "Improved only if the corrected interval lies entirely above the margin; equivalent if entirely within plus or minus the margin; otherwise inconclusive"
+  }
+}

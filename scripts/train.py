@@ -11,6 +11,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--run',default='outputs/runs/specular_v5');p.add_argument('--kind',choices=['mlp','attention'],default='attention')
     p.add_argument('--seed',type=int,default=7);p.add_argument('--epochs',type=int,default=30)
     p.add_argument('--no-physics',action='store_true');p.add_argument('--no-conditioning',action='store_true');p.add_argument('--device',default='cuda')
+    p.add_argument('--overwrite',action='store_true')
     a=p.parse_args();root=Path(a.run);gate=json.loads((root/'headroom.json').read_text())['gate']
     if gate['decision']!='bounded_training':raise RuntimeError('Training gate did not pass')
     torch.set_num_threads(1);torch.manual_seed(a.seed);np.random.seed(a.seed)
@@ -25,9 +26,10 @@ def main():
     tr=load('train');va=load('validation')
     model=EditPolicy(tr['x'].shape[-1],a.kind,not a.no_physics,not a.no_conditioning).to(a.device)
     opt=torch.optim.AdamW(model.parameters(),lr=3e-4,weight_decay=1e-3)
+    sched=torch.optim.lr_scheduler.CosineAnnealingLR(opt,T_max=a.epochs,eta_min=1e-5)
     tag=f'{a.kind}'+('_no_physics' if a.no_physics else '')+('_no_conditioning' if a.no_conditioning else '')+f'_seed{a.seed}'
     out=root/'models'/tag;out.mkdir(parents=True,exist_ok=True)
-    if (out/'metadata.json').exists():raise FileExistsError('Completed model exists; choose a new --run to preserve it')
+    if (out/'metadata.json').exists() and not a.overwrite:raise FileExistsError('Completed model exists; choose a new --run or pass --overwrite')
     def loss(data,idx):
         pred=model(data['x'][idx],data['analytical'][idx]);pred=pred.masked_fill(data['mask'][idx],-1e9)
         losses=-(data['target'][idx]*torch.log_softmax(pred,dim=-1)).sum(-1)
@@ -37,6 +39,7 @@ def main():
         model.train();order=torch.randperm(len(tr['x']),device=a.device);train_loss=[]
         for idx in order.split(64):
             opt.zero_grad(set_to_none=True);l=loss(tr,idx);l.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),1.);opt.step();train_loss.append(l.item())
+        sched.step()
         model.eval()
         with torch.inference_mode():
             values=[(loss(va,idx).item(),va['weight'][idx].sum().item()) for idx in torch.arange(len(va['x']),device=a.device).split(128)]

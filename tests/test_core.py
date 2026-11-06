@@ -55,7 +55,7 @@ class Correctness(unittest.TestCase):
         m.enter('b');self.assertEqual(len(m.patterns),0)
         e=fixture();r=search(e,'pair',5,7)
         self.assertAlmostEqual(r.value,float(e.score(r.bits)),places=12)
-        self.assertTrue(all(t<=5 for t,v in r.trace[1:]))
+        self.assertTrue(all(t<=5 for t,v,*_ in r.trace[1:]))
 
     def test_harmful_first_pair(self):
         # Opposite-signed perturbations: either single move harms the useful field,

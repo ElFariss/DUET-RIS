@@ -1,0 +1,36 @@
+{
+  "captured_utc": "2026-11-06T10:37:57.886251+00:00",
+  "purpose": "Exact phase configuration files used by final2 node2 validation; preserve separately from the newer current-local formal protocol.",
+  "node2_stage_root": "/home/faris/projects/atom-wise-ris-improvement-20261106",
+  "archived_configurations": {
+    "matched_protocol": {
+      "path": "source_config/matched_v1.json",
+      "sha256": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+      "campaign_protocol_sha256": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+      "campaign_source_config_sha256": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+      "all_equal": true
+    },
+    "coupled_wire_protocol": {
+      "path": "source_config/coupled_wire_v1.json",
+      "sha256": "f7c4f4f5472774c41e71e77f6bd62f05f07619d0aba67cb6f031877974e145c4",
+      "campaign_source_config_sha256": "f7c4f4f5472774c41e71e77f6bd62f05f07619d0aba67cb6f031877974e145c4",
+      "all_equal": true
+    }
+  },
+  "remote_source_verification": {
+    "against_campaign": "campaigns/specular_incumbent_10ms_final2_20261106/campaign.json",
+    "frozen_code_sha256_entries": 26,
+    "remote_entries_matching_recorded": 26,
+    "campaign_script_matches": true,
+    "selection_helper_matches": true,
+    "node2_frozen_matched_protocol_matches": true
+  },
+  "current_local_workspace_at_archive_time": {
+    "matched_v1_sha256": "a033b2866c154ecf296c495673e810e03d6ddd594d8ab32cd8dbb3c42be1edfe",
+    "matched_v1_differs_from_archived_phase_config": true,
+    "coupled_wire_v1_sha256": "f7c4f4f5472774c41e71e77f6bd62f05f07619d0aba67cb6f031877974e145c4",
+    "benchmark_py_sha256": "44fd62e54025cd9f671f792acf825e5b97fe59230db0762937cfe2aba3c41945",
+    "benchmark_coupled_py_sha256": "01fddc4dbd7e2caa079f5fa49c692bfe5f09c4bb23c6aaecf30af16b04034191",
+    "note": "Current local matched_v1.json has a later formal amendment (a033b286...). Current local benchmark scripts also differ from the phase source recorded in the node2 campaign. No current-local files were overwritten. Node2 remote code was verified 26/26 against the phase manifest before archiving configs."
+  }
+}
