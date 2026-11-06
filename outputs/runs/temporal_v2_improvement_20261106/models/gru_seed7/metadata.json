@@ -1,0 +1,17 @@
+{
+  "args": {
+    "kind": "gru",
+    "seed": 7,
+    "epochs": 25,
+    "device": "cuda",
+    "run": "outputs/runs/temporal_v2_improvement_20261106"
+  },
+  "parameters": 1090,
+  "best_validation": 0.02057562099589402,
+  "seconds": 4.594884832971729,
+  "training_examples": 178920,
+  "validation_examples": 89460,
+  "torch": "2.9.1+cu128",
+  "cuda": "NVIDIA GeForce RTX 3060",
+  "architecture_version": "linear_velocity_residual_v2"
+}

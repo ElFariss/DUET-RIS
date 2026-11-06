@@ -1,0 +1,908 @@
+{
+  "raw_results": "outputs/runs/temporal_v2_improvement_20261106/benchmark_temporal_v2_validation.jsonl",
+  "metadata": "outputs/runs/temporal_v2_improvement_20261106/benchmark_temporal_v2_validation.json",
+  "cluster_unit": "validation trajectory; seed/frame means are averaged within each of three trajectories",
+  "n_clusters": 3,
+  "results": {
+    "5.0": {
+      "persistence": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 3.9637088888888883,
+            "deadline_missed": 0.0,
+            "evaluations": 4856.833333333333,
+            "truth_rate": 2.9407647806197783,
+            "belief_rate": 14.625076583106916,
+            "forecast_mse": 0.013516029718779028,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 4.004904444444445,
+            "deadline_missed": 0.0,
+            "evaluations": 7162.194444444444,
+            "truth_rate": 2.73654168661958,
+            "belief_rate": 14.123571883967848,
+            "forecast_mse": 0.0019520360213329474,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 3.9474623055555558,
+            "deadline_missed": 0.0,
+            "evaluations": 4192.638888888889,
+            "truth_rate": 2.8031904338655034,
+            "belief_rate": 15.092323568901634,
+            "forecast_mse": 0.017017573636250696,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 3.9720252129629627,
+          "deadline_missed": 0.0,
+          "evaluations": 5403.888888888889,
+          "truth_rate": 2.8268323003682867,
+          "belief_rate": 14.613657345325466,
+          "forecast_mse": 0.010828546458787558,
+          "trajectory_sd": {
+            "elapsed_ms": 0.02961031517244241,
+            "deadline_missed": 0.0,
+            "evaluations": 1558.5305210456627,
+            "truth_rate": 0.10414399367968866,
+            "belief_rate": 0.4844767858310076,
+            "forecast_mse": 0.007884131569879854
+          }
+        }
+      },
+      "linear": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 4.078396222222222,
+            "deadline_missed": 0.0,
+            "evaluations": 4605.555555555556,
+            "truth_rate": 3.513843184369472,
+            "belief_rate": 8.6420758327919,
+            "forecast_mse": 0.00613342558295854,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 4.064662388888889,
+            "deadline_missed": 0.0,
+            "evaluations": 6612.666666666667,
+            "truth_rate": 6.081857649213179,
+            "belief_rate": 10.116849914574956,
+            "forecast_mse": 0.00014381005086567904,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 4.013547027777778,
+            "deadline_missed": 0.0,
+            "evaluations": 4868.666666666667,
+            "truth_rate": 4.429763186099847,
+            "belief_rate": 6.02665193906814,
+            "forecast_mse": 0.008734376238668289,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 4.052201879629631,
+          "deadline_missed": 0.0,
+          "evaluations": 5362.2962962962965,
+          "truth_rate": 4.6751546732275,
+          "belief_rate": 8.261859228811666,
+          "forecast_mse": 0.005003870624164169,
+          "trajectory_sd": {
+            "elapsed_ms": 0.03417312867258976,
+            "deadline_missed": 0.0,
+            "evaluations": 1090.8145633069967,
+            "truth_rate": 1.3014750513850304,
+            "belief_rate": 2.071437512735229,
+            "forecast_mse": 0.004405267036225735
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 0.5730784037496939,
+            "belief_rate": -5.983000750315016,
+            "forecast_mse": -0.007382604135820489,
+            "elapsed_ms": 0.11468733333333336,
+            "deadline_missed": 0.0,
+            "evaluations": -251.27777777777737
+          },
+          "6": {
+            "truth_rate": 3.3453159625935984,
+            "belief_rate": -4.006721969392892,
+            "forecast_mse": -0.0018082259704672683,
+            "elapsed_ms": 0.05975794444444471,
+            "deadline_missed": 0.0,
+            "evaluations": -549.5277777777774
+          },
+          "10": {
+            "truth_rate": 1.6265727522343436,
+            "belief_rate": -9.065671629833494,
+            "forecast_mse": -0.008283197397582407,
+            "elapsed_ms": 0.0660847222222225,
+            "deadline_missed": 0.0,
+            "evaluations": 676.0277777777783
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 1.8483223728592122,
+          "belief_rate": -6.351798116513801,
+          "forecast_mse": -0.005824675834623388,
+          "elapsed_ms": 0.08017666666666685,
+          "deadline_missed": 0.0,
+          "evaluations": -41.592592592592155
+        }
+      },
+      "gru": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 4.123285861111112,
+            "deadline_missed": 0.0,
+            "evaluations": 2984.222222222222,
+            "truth_rate": 3.9563172120219425,
+            "belief_rate": 7.388515266401476,
+            "forecast_mse": 0.00392447210834865,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 4.047730638888889,
+            "deadline_missed": 0.0,
+            "evaluations": 5392.222222222223,
+            "truth_rate": 5.932666350265288,
+            "belief_rate": 11.442764291052104,
+            "forecast_mse": 0.001622663472087061,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 4.031114138888889,
+            "deadline_missed": 0.0,
+            "evaluations": 4423.333333333333,
+            "truth_rate": 4.085327859260823,
+            "belief_rate": 6.65772587373518,
+            "forecast_mse": 0.0039041980164863763,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 4.06737687962963,
+          "deadline_missed": 0.0,
+          "evaluations": 4266.592592592592,
+          "truth_rate": 4.658103807182684,
+          "belief_rate": 8.496335143729587,
+          "forecast_mse": 0.0031504445323073623,
+          "trajectory_sd": {
+            "elapsed_ms": 0.049126242231469594,
+            "deadline_missed": 0.0,
+            "evaluations": 1211.6277253579037,
+            "truth_rate": 1.105686752180356,
+            "belief_rate": 2.577711547914577,
+            "forecast_mse": 0.0013231360420138632
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 1.0155524314021642,
+            "belief_rate": -7.23656131670544,
+            "forecast_mse": -0.009591557610430377,
+            "elapsed_ms": 0.159576972222224,
+            "deadline_missed": 0.0,
+            "evaluations": -1872.6111111111109
+          },
+          "6": {
+            "truth_rate": 3.196124663645708,
+            "belief_rate": -2.6808075929157447,
+            "forecast_mse": -0.0003293725492458865,
+            "elapsed_ms": 0.042826194444444354,
+            "deadline_missed": 0.0,
+            "evaluations": -1769.9722222222217
+          },
+          "10": {
+            "truth_rate": 1.2821374253953195,
+            "belief_rate": -8.434597695166453,
+            "forecast_mse": -0.01311337561976432,
+            "elapsed_ms": 0.08365183333333359,
+            "deadline_missed": 0.0,
+            "evaluations": 230.69444444444434
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 1.831271506814397,
+          "belief_rate": -6.117322201595879,
+          "forecast_mse": -0.007678101926480194,
+          "elapsed_ms": 0.09535166666666732,
+          "deadline_missed": 0.0,
+          "evaluations": -1137.296296296296
+        }
+      },
+      "oracle": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 4.056819777777778,
+            "deadline_missed": 0.0,
+            "evaluations": 4882.972222222223,
+            "truth_rate": 11.531175666233848,
+            "belief_rate": 11.531168715021298,
+            "forecast_mse": 1.1547980504574054e-13,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 4.033912777777777,
+            "deadline_missed": 0.0,
+            "evaluations": 6172.666666666667,
+            "truth_rate": 12.07945549740757,
+            "belief_rate": 12.079450497791699,
+            "forecast_mse": 1.1580678387754063e-13,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 4.08624475,
+            "deadline_missed": 0.0,
+            "evaluations": 6201.111111111111,
+            "truth_rate": 7.093969405639986,
+            "belief_rate": 7.093966577767277,
+            "forecast_mse": 1.1407716439070093e-13,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 4.058992435185185,
+          "deadline_missed": 0.0,
+          "evaluations": 5752.25,
+          "truth_rate": 10.234866856427134,
+          "belief_rate": 10.234861930193425,
+          "forecast_mse": 1.151212511046607e-13,
+          "trajectory_sd": {
+            "elapsed_ms": 0.02623355026153217,
+            "deadline_missed": 0.0,
+            "evaluations": 752.950969724219,
+            "truth_rate": 2.7338764219673277,
+            "belief_rate": 2.733874711741305,
+            "forecast_mse": 9.188670136705404e-16
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 8.59041088561407,
+            "belief_rate": -3.0939078680856174,
+            "forecast_mse": -0.013516029718663548,
+            "elapsed_ms": 0.09311088888888985,
+            "deadline_missed": 0.0,
+            "evaluations": 26.138888888889596
+          },
+          "6": {
+            "truth_rate": 9.34291381078799,
+            "belief_rate": -2.0441213861761494,
+            "forecast_mse": -0.0019520360212171405,
+            "elapsed_ms": 0.029008333333332637,
+            "deadline_missed": 0.0,
+            "evaluations": -989.5277777777774
+          },
+          "10": {
+            "truth_rate": 4.290778971774483,
+            "belief_rate": -7.998356991134357,
+            "forecast_mse": -0.017017573636136617,
+            "elapsed_ms": 0.13878244444444388,
+            "deadline_missed": 0.0,
+            "evaluations": 2008.4722222222226
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 7.408034556058848,
+          "belief_rate": -4.378795415132042,
+          "forecast_mse": -0.010828546458672435,
+          "elapsed_ms": 0.08696722222222213,
+          "deadline_missed": 0.0,
+          "evaluations": 348.3611111111116
+        }
+      }
+    },
+    "10.0": {
+      "persistence": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 8.964398111111112,
+            "deadline_missed": 0.0,
+            "evaluations": 13694.638888888889,
+            "truth_rate": 2.952215327949601,
+            "belief_rate": 14.82318770716604,
+            "forecast_mse": 0.013516029718779028,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 8.97965463888889,
+            "deadline_missed": 0.0,
+            "evaluations": 15764.888888888889,
+            "truth_rate": 2.73654168661958,
+            "belief_rate": 14.123571883967848,
+            "forecast_mse": 0.0019520360213329474,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 8.9735765,
+            "deadline_missed": 0.0,
+            "evaluations": 13211.444444444445,
+            "truth_rate": 2.799657912347854,
+            "belief_rate": 15.157693889109444,
+            "forecast_mse": 0.017017573636250696,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 8.972543083333335,
+          "deadline_missed": 0.0,
+          "evaluations": 14223.657407407407,
+          "truth_rate": 2.8294716423056783,
+          "belief_rate": 14.701484493414446,
+          "forecast_mse": 0.010828546458787558,
+          "trajectory_sd": {
+            "elapsed_ms": 0.007680584122560855,
+            "deadline_missed": 0.0,
+            "evaluations": 1356.4346933847182,
+            "truth_rate": 0.11088473186889247,
+            "belief_rate": 0.5276938833809035,
+            "forecast_mse": 0.007884131569879854
+          }
+        }
+      },
+      "linear": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 8.980888611111112,
+            "deadline_missed": 0.0,
+            "evaluations": 13092.611111111111,
+            "truth_rate": 3.4924592079795436,
+            "belief_rate": 9.39899117897997,
+            "forecast_mse": 0.00613342558295854,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 8.996429166666665,
+            "deadline_missed": 0.0,
+            "evaluations": 15433.166666666666,
+            "truth_rate": 6.118439054888209,
+            "belief_rate": 10.448081187080769,
+            "forecast_mse": 0.00014381005086567904,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 8.995304222222222,
+            "deadline_missed": 0.0,
+            "evaluations": 10375.416666666666,
+            "truth_rate": 4.429992998046309,
+            "belief_rate": 6.030330245399281,
+            "forecast_mse": 0.008734376238668289,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 8.990874,
+          "deadline_missed": 0.0,
+          "evaluations": 12967.064814814816,
+          "truth_rate": 4.680297086971354,
+          "belief_rate": 8.625800870486673,
+          "forecast_mse": 0.005003870624164169,
+          "trajectory_sd": {
+            "elapsed_ms": 0.008665873784420821,
+            "deadline_missed": 0.0,
+            "evaluations": 2531.211206124508,
+            "truth_rate": 1.3307635559302269,
+            "belief_rate": 2.3081374061227136,
+            "forecast_mse": 0.004405267036225735
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 0.5402438800299425,
+            "belief_rate": -5.424196528186071,
+            "forecast_mse": -0.007382604135820489,
+            "elapsed_ms": 0.01649049999999974,
+            "deadline_missed": 0.0,
+            "evaluations": -602.0277777777774
+          },
+          "6": {
+            "truth_rate": 3.381897368268629,
+            "belief_rate": -3.6754906968870795,
+            "forecast_mse": -0.0018082259704672683,
+            "elapsed_ms": 0.016774527777775106,
+            "deadline_missed": 0.0,
+            "evaluations": -331.7222222222226
+          },
+          "10": {
+            "truth_rate": 1.630335085698455,
+            "belief_rate": -9.127363643710163,
+            "forecast_mse": -0.008283197397582407,
+            "elapsed_ms": 0.021727722222221857,
+            "deadline_missed": 0.0,
+            "evaluations": -2836.027777777779
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 1.8508254446656753,
+          "belief_rate": -6.075683622927772,
+          "forecast_mse": -0.005824675834623388,
+          "elapsed_ms": 0.01833091666666557,
+          "deadline_missed": 0.0,
+          "evaluations": -1256.592592592593
+        }
+      },
+      "gru": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 8.991171111111111,
+            "deadline_missed": 0.0,
+            "evaluations": 12666.555555555555,
+            "truth_rate": 3.908015193615998,
+            "belief_rate": 8.534200333257173,
+            "forecast_mse": 0.00392447210834865,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 8.991404916666667,
+            "deadline_missed": 0.0,
+            "evaluations": 14535.583333333334,
+            "truth_rate": 6.141086992143005,
+            "belief_rate": 12.409745974802007,
+            "forecast_mse": 0.001622663472087061,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 8.979129861111112,
+            "deadline_missed": 0.0,
+            "evaluations": 10587.777777777777,
+            "truth_rate": 4.064993626507077,
+            "belief_rate": 6.911971021635492,
+            "forecast_mse": 0.0039041980164863763,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 8.987235296296296,
+          "deadline_missed": 0.0,
+          "evaluations": 12596.63888888889,
+          "truth_rate": 4.704698604088693,
+          "belief_rate": 9.285305776564892,
+          "forecast_mse": 0.0031504445323073623,
+          "trajectory_sd": {
+            "elapsed_ms": 0.007020486159474849,
+            "deadline_missed": 0.0,
+            "evaluations": 1974.8312412272503,
+            "truth_rate": 1.246422584078603,
+            "belief_rate": 2.8248012140929726,
+            "forecast_mse": 0.0013231360420138632
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 0.9557998656663971,
+            "belief_rate": -6.288987373908867,
+            "forecast_mse": -0.009591557610430377,
+            "elapsed_ms": 0.026772999999998603,
+            "deadline_missed": 0.0,
+            "evaluations": -1028.083333333334
+          },
+          "6": {
+            "truth_rate": 3.4045453055234245,
+            "belief_rate": -1.7138259091658412,
+            "forecast_mse": -0.0003293725492458865,
+            "elapsed_ms": 0.01175027777777693,
+            "deadline_missed": 0.0,
+            "evaluations": -1229.3055555555547
+          },
+          "10": {
+            "truth_rate": 1.2653357141592227,
+            "belief_rate": -8.245722867473951,
+            "forecast_mse": -0.01311337561976432,
+            "elapsed_ms": 0.005553361111111599,
+            "deadline_missed": 0.0,
+            "evaluations": -2623.666666666668
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 1.8752269617830148,
+          "belief_rate": -5.416178716849553,
+          "forecast_mse": -0.007678101926480194,
+          "elapsed_ms": 0.014692212962962378,
+          "deadline_missed": 0.0,
+          "evaluations": -1627.018518518519
+        }
+      },
+      "oracle": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 9.006410972222222,
+            "deadline_missed": 0.0,
+            "evaluations": 15098.305555555555,
+            "truth_rate": 13.823905859165826,
+            "belief_rate": 13.823924085524288,
+            "forecast_mse": 1.1547980504574054e-13,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 8.990038972222223,
+            "deadline_missed": 0.0,
+            "evaluations": 15373.777777777777,
+            "truth_rate": 12.862068211434952,
+            "belief_rate": 12.862066967552202,
+            "forecast_mse": 1.1580678387754063e-13,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 8.991515388888887,
+            "deadline_missed": 0.0,
+            "evaluations": 13824.138888888889,
+            "truth_rate": 8.01840981025126,
+            "belief_rate": 8.018410673573523,
+            "forecast_mse": 1.1407716439070093e-13,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 8.995988444444443,
+          "deadline_missed": 0.0,
+          "evaluations": 14765.407407407407,
+          "truth_rate": 11.568127960284011,
+          "belief_rate": 11.56813390888334,
+          "forecast_mse": 1.151212511046607e-13,
+          "trajectory_sd": {
+            "elapsed_ms": 0.009056310810827608,
+            "deadline_missed": 0.0,
+            "evaluations": 826.7170339781001,
+            "truth_rate": 3.111536135681551,
+            "belief_rate": 3.1115419914123246,
+            "forecast_mse": 9.188670136705404e-16
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 10.871690531216226,
+            "belief_rate": -0.9992636216417523,
+            "forecast_mse": -0.013516029718663548,
+            "elapsed_ms": 0.042012861111109245,
+            "deadline_missed": 0.0,
+            "evaluations": 1403.666666666666
+          },
+          "6": {
+            "truth_rate": 10.125526524815372,
+            "belief_rate": -1.261504916415646,
+            "forecast_mse": -0.0019520360212171405,
+            "elapsed_ms": 0.010384333333332663,
+            "deadline_missed": 0.0,
+            "evaluations": -391.1111111111113
+          },
+          "10": {
+            "truth_rate": 5.218751897903406,
+            "belief_rate": -7.1392832155359205,
+            "forecast_mse": -0.017017573636136617,
+            "elapsed_ms": 0.01793888888888695,
+            "deadline_missed": 0.0,
+            "evaluations": 612.6944444444434
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 8.738656317978334,
+          "belief_rate": -3.1333505845311063,
+          "forecast_mse": -0.010828546458672435,
+          "elapsed_ms": 0.02344536111110962,
+          "deadline_missed": 0.0,
+          "evaluations": 541.7499999999994
+        }
+      }
+    },
+    "50.0": {
+      "persistence": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 48.97618416666666,
+            "deadline_missed": 0.0,
+            "evaluations": 84176.86111111111,
+            "truth_rate": 2.9023996343171006,
+            "belief_rate": 15.662877663117277,
+            "forecast_mse": 0.013516029718779028,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 48.97072733333332,
+            "deadline_missed": 0.0,
+            "evaluations": 89852.11111111111,
+            "truth_rate": 2.7185763949357944,
+            "belief_rate": 14.484298685318846,
+            "forecast_mse": 0.0019520360213329474,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 48.98530341666666,
+            "deadline_missed": 0.0,
+            "evaluations": 82911.55555555556,
+            "truth_rate": 2.797862307487247,
+            "belief_rate": 15.657035932582229,
+            "forecast_mse": 0.017017573636250696,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 48.97740497222222,
+          "deadline_missed": 0.0,
+          "evaluations": 85646.8425925926,
+          "truth_rate": 2.8062794455800475,
+          "belief_rate": 15.26807076033945,
+          "forecast_mse": 0.010828546458787558,
+          "trajectory_sd": {
+            "elapsed_ms": 0.007364327938682305,
+            "deadline_missed": 0.0,
+            "evaluations": 3696.412047088652,
+            "truth_rate": 0.09220022773515368,
+            "belief_rate": 0.6787728122431607,
+            "forecast_mse": 0.007884131569879854
+          }
+        }
+      },
+      "linear": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 48.988186,
+            "deadline_missed": 0.0,
+            "evaluations": 83492.25,
+            "truth_rate": 3.4680194197804193,
+            "belief_rate": 10.377840302396052,
+            "forecast_mse": 0.00613342558295854,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 48.972629805555556,
+            "deadline_missed": 0.0,
+            "evaluations": 96087.72222222222,
+            "truth_rate": 5.894483608756406,
+            "belief_rate": 11.498499113464206,
+            "forecast_mse": 0.00014381005086567904,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 48.97943283333334,
+            "deadline_missed": 0.0,
+            "evaluations": 62443.555555555555,
+            "truth_rate": 4.516077272193098,
+            "belief_rate": 6.041259442593086,
+            "forecast_mse": 0.008734376238668289,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 48.980082879629634,
+          "deadline_missed": 0.0,
+          "evaluations": 80674.50925925926,
+          "truth_rate": 4.626193433576641,
+          "belief_rate": 9.305866286151115,
+          "forecast_mse": 0.005003870624164169,
+          "trajectory_sd": {
+            "elapsed_ms": 0.007798443212514928,
+            "deadline_missed": 0.0,
+            "evaluations": 16998.15386549768,
+            "truth_rate": 1.2169742363107399,
+            "belief_rate": 2.8822235209921887,
+            "forecast_mse": 0.004405267036225735
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 0.5656197854633187,
+            "belief_rate": -5.285037360721224,
+            "forecast_mse": -0.007382604135820489,
+            "elapsed_ms": 0.012001833333336265,
+            "deadline_missed": 0.0,
+            "evaluations": -684.6111111111095
+          },
+          "6": {
+            "truth_rate": 3.175907213820612,
+            "belief_rate": -2.98579957185464,
+            "forecast_mse": -0.0018082259704672683,
+            "elapsed_ms": 0.0019024722222340529,
+            "deadline_missed": 0.0,
+            "evaluations": 6235.6111111111095
+          },
+          "10": {
+            "truth_rate": 1.7182149647058513,
+            "belief_rate": -9.615776489989143,
+            "forecast_mse": -0.008283197397582407,
+            "elapsed_ms": -0.005870583333319246,
+            "deadline_missed": 0.0,
+            "evaluations": -20468.000000000007
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 1.8199139879965938,
+          "belief_rate": -5.9622044741883355,
+          "forecast_mse": -0.005824675834623388,
+          "elapsed_ms": 0.002677907407417024,
+          "deadline_missed": 0.0,
+          "evaluations": -4972.333333333336
+        }
+      },
+      "gru": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 48.99679413888889,
+            "deadline_missed": 0.0,
+            "evaluations": 82748.94444444444,
+            "truth_rate": 3.86552266891133,
+            "belief_rate": 9.28656941435747,
+            "forecast_mse": 0.00392447210834865,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 48.976214444444444,
+            "deadline_missed": 0.0,
+            "evaluations": 93261.19444444444,
+            "truth_rate": 6.146105420473736,
+            "belief_rate": 14.246716928132656,
+            "forecast_mse": 0.001622663472087061,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 48.98300558333333,
+            "deadline_missed": 0.0,
+            "evaluations": 65180.055555555555,
+            "truth_rate": 4.0213073450527155,
+            "belief_rate": 7.050339721676892,
+            "forecast_mse": 0.0039041980164863763,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 48.98533805555555,
+          "deadline_missed": 0.0,
+          "evaluations": 80396.73148148147,
+          "truth_rate": 4.677645144812594,
+          "belief_rate": 10.194542021389006,
+          "forecast_mse": 0.0031504445323073623,
+          "trajectory_sd": {
+            "elapsed_ms": 0.010486242218127665,
+            "deadline_missed": 0.0,
+            "evaluations": 14187.574482328371,
+            "truth_rate": 1.2741070999826576,
+            "belief_rate": 3.6831062862397483,
+            "forecast_mse": 0.0013231360420138632
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 0.9631230345942292,
+            "belief_rate": -6.376308248759807,
+            "forecast_mse": -0.009591557610430377,
+            "elapsed_ms": 0.020609972222224826,
+            "deadline_missed": 0.0,
+            "evaluations": -1427.9166666666715
+          },
+          "6": {
+            "truth_rate": 3.427529025537942,
+            "belief_rate": -0.2375817571861898,
+            "forecast_mse": -0.0003293725492458865,
+            "elapsed_ms": 0.005487111111122545,
+            "deadline_missed": 0.0,
+            "evaluations": 3409.0833333333285
+          },
+          "10": {
+            "truth_rate": 1.2234450375654684,
+            "belief_rate": -8.606696210905337,
+            "forecast_mse": -0.01311337561976432,
+            "elapsed_ms": -0.0022978333333298906,
+            "deadline_missed": 0.0,
+            "evaluations": -17731.500000000007
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 1.8713656992325465,
+          "belief_rate": -5.073528738950444,
+          "forecast_mse": -0.007678101926480194,
+          "elapsed_ms": 0.00793308333333916,
+          "deadline_missed": 0.0,
+          "evaluations": -5250.111111111117
+        }
+      },
+      "oracle": {
+        "n_trajectories": 3,
+        "n_rows": 108,
+        "per_trajectory": {
+          "2": {
+            "elapsed_ms": 48.979057166666664,
+            "deadline_missed": 0.0,
+            "evaluations": 91371.36111111111,
+            "truth_rate": 15.346457045425373,
+            "belief_rate": 15.346473552689247,
+            "forecast_mse": 1.1547980504574054e-13,
+            "n": 36
+          },
+          "6": {
+            "elapsed_ms": 48.973065055555566,
+            "deadline_missed": 0.0,
+            "evaluations": 94157.58333333333,
+            "truth_rate": 14.33348314237795,
+            "belief_rate": 14.333472543513137,
+            "forecast_mse": 1.1580678387754063e-13,
+            "n": 36
+          },
+          "10": {
+            "elapsed_ms": 48.98957602777778,
+            "deadline_missed": 0.0,
+            "evaluations": 76526.08333333333,
+            "truth_rate": 8.484906189531609,
+            "belief_rate": 8.48489360454778,
+            "forecast_mse": 1.1407716439070093e-13,
+            "n": 36
+          }
+        },
+        "trajectory_macro_mean": {
+          "elapsed_ms": 48.980566083333336,
+          "deadline_missed": 0.0,
+          "evaluations": 87351.67592592591,
+          "truth_rate": 12.721615459111645,
+          "belief_rate": 12.721613233583389,
+          "forecast_mse": 1.151212511046607e-13,
+          "trajectory_sd": {
+            "elapsed_ms": 0.008358269740855651,
+            "deadline_missed": 0.0,
+            "evaluations": 9478.177557078046,
+            "truth_rate": 3.7038909417358425,
+            "belief_rate": 3.703901682339809,
+            "forecast_mse": 9.188670136705404e-16
+          }
+        },
+        "paired_vs_persistence_per_trajectory": {
+          "2": {
+            "truth_rate": 12.444057411108272,
+            "belief_rate": -0.31640411042802974,
+            "forecast_mse": -0.013516029718663548,
+            "elapsed_ms": 0.0028730000000010136,
+            "deadline_missed": 0.0,
+            "evaluations": 7194.5
+          },
+          "6": {
+            "truth_rate": 11.614906747442156,
+            "belief_rate": -0.15082614180570886,
+            "forecast_mse": -0.0019520360212171405,
+            "elapsed_ms": 0.002337722222243599,
+            "deadline_missed": 0.0,
+            "evaluations": 4305.472222222219
+          },
+          "10": {
+            "truth_rate": 5.687043882044362,
+            "belief_rate": -7.1721423280344485,
+            "forecast_mse": -0.017017573636136617,
+            "elapsed_ms": 0.004272611111119318,
+            "deadline_missed": 0.0,
+            "evaluations": -6385.4722222222335
+          }
+        },
+        "paired_vs_persistence_macro_mean": {
+          "truth_rate": 9.915336013531595,
+          "belief_rate": -2.5464575267560625,
+          "forecast_mse": -0.010828546458672435,
+          "elapsed_ms": 0.00316111111112131,
+          "deadline_missed": 0.0,
+          "evaluations": 1704.8333333333285
+        }
+      }
+    }
+  }
+}

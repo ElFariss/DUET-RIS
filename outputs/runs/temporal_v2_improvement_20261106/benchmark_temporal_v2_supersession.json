@@ -1,0 +1,8 @@
+{
+  "metadata": "benchmark_temporal_v2_validation.json",
+  "jsonl": "benchmark_temporal_v2_validation.jsonl",
+  "source_sha256": "710dc48070abb9808f45f0664a2ecdac36cb6d130ff9deb7ad2773f54f7e3962",
+  "rows": 1296,
+  "reason": "Replaced for reporting after hardening oracle wording, checkpoint kind/seed validation, and trainer/network source provenance; original JSONL preserved byte-for-byte.",
+  "superseded_by": "benchmark_temporal_v2_validation_final2.jsonl"
+}

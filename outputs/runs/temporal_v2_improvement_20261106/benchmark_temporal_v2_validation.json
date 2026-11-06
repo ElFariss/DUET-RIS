@@ -1,0 +1,85 @@
+{
+  "purpose": "development-only fresh-v2 causal forecast comparison; not a matched or held-out test",
+  "args": {
+    "run": "outputs/runs/temporal_v2_improvement_20261106",
+    "data": "data/processed/coupled_wire_v1/dataset.npz",
+    "out": "benchmark_temporal_v2_validation.jsonl",
+    "budgets_ms": [
+      5.0,
+      10.0,
+      50.0
+    ],
+    "seeds": [
+      7,
+      19,
+      43
+    ],
+    "expected_frames": 36,
+    "search_config": "medium"
+  },
+  "hostname": "labkc-comm2",
+  "cpu_affinity": [
+    0
+  ],
+  "threads": 1,
+  "torch": "2.9.1+cu128",
+  "numpy": "2.2.6",
+  "data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+  "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+  "architecture_version": "linear_velocity_residual_v2",
+  "model_source_sha256": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+  "forecast_source_sha256": "f31c046649c6bd53a729fc9abec7b04a85f6f7ff2a2618b386c2b67719d2e719",
+  "benchmark_source_sha256": "710dc48070abb9808f45f0664a2ecdac36cb6d130ff9deb7ad2773f54f7e3962",
+  "search_source_sha256": "674c0699861fe8d77d590ecc8b1c30bb81e5b12922e64fbd2daf328d9c731c4d",
+  "search_config_sha256": "77f880fa16c489344b0009b21e1a5ad091fd4530b8c53cb74fc83053f0dc2d88",
+  "checkpoints": {
+    "7": {
+      "checkpoint_sha256": "eddd12a4ad213042bed917c79cd0926971f3cb6082e37694da1ce885f54df694",
+      "scaling_sha256": "56e08a14a7ab3922f3ce5fd2ab80425d4bd8e297db3edae59114a66d0fa6987b",
+      "metadata_sha256": "11ec0c8bc302bf42a97da8a2d1d0118a64cc48f5413041820bfdcddfc87ca917",
+      "architecture_version": "linear_velocity_residual_v2"
+    },
+    "19": {
+      "checkpoint_sha256": "b96e2b494b9d9b71600829dd2a82daa9195f42a93ac2f4306d3e522b53799d45",
+      "scaling_sha256": "56e08a14a7ab3922f3ce5fd2ab80425d4bd8e297db3edae59114a66d0fa6987b",
+      "metadata_sha256": "d950b72c4e59597958ab0dce3cdad331aab435daf927b5e186d7dd8377e207e8",
+      "architecture_version": "linear_velocity_residual_v2"
+    },
+    "43": {
+      "checkpoint_sha256": "a2beadead582979e370e3e0c54714ad830731f86fcb5693d92e7361b619ba6e0",
+      "scaling_sha256": "56e08a14a7ab3922f3ce5fd2ab80425d4bd8e297db3edae59114a66d0fa6987b",
+      "metadata_sha256": "e10e69d6aef195ac1a1f2cde3871a0d769aff3b9b07274ddf0ecf83afa72f728",
+      "architecture_version": "linear_velocity_residual_v2"
+    }
+  },
+  "forecast_methods": [
+    "persistence",
+    "linear",
+    "gru",
+    "oracle"
+  ],
+  "reference_precoder": "all-OFF RZF from z[idx-1], recomputed and timed per method; identical hash checked for every forecast at each frame",
+  "controller": "same matched-medium pair search, no memory, initial all-OFF state",
+  "timing_includes": [
+    "stale-reference network and RZF precoder",
+    "four-frame history slice",
+    "forecast/passivity projection",
+    "belief network setup",
+    "pair search"
+  ],
+  "timing_excludes": [
+    "model loading",
+    "truth-network exact-rate evaluation",
+    "cached-full-score consistency check",
+    "JSONL write"
+  ],
+  "selection": "none; report all validation rows, seeds, and budgets",
+  "oracle": "uses current impedance only as an unavailable upper-reference forecast; never a causal model",
+  "n_validation_frames": 36,
+  "validation_trajectories": [
+    2,
+    6,
+    10
+  ],
+  "wall_seconds": 27.15714020305313
+}

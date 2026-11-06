@@ -1,0 +1,742 @@
+{
+  "status": "fresh_v2_training_and_final2_validation_complete_dev_only",
+  "scope": "train/validation split of coupled_wire_v1 only; no pilot/test data read",
+  "origin_training_workspace": "/home/faris/projects/atom-wise-ris-improvement-20261106 (temporary staging root; training completed before root identified that a new workspace was required)",
+  "current_execution_workspace": "/home/faris/projects/atom-wise-ris-temporal-20261106",
+  "current_run_root": "outputs/runs/temporal_v2_improvement_20261106",
+  "migration": "Only the new v2 GRU checkpoints, per-seed train-only scaling, metadata, physics gate, and training log were copied into the new current-source workspace. Checkpoint bytes match hashes recorded in final2 benchmark metadata. No previous checkpoints or datasets were modified.",
+  "input": {
+    "remote_path": "data/processed/coupled_wire_v1/dataset.npz",
+    "sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+    "validation_trajectories": [
+      2,
+      6,
+      10
+    ],
+    "validation_frames": 36
+  },
+  "train_only_scaling_recomputation": {
+    "verified": true,
+    "checked_retrospectively": true,
+    "method": "Recomputed upper-triangle complex-link mean/std and active mask using only split==train, with train_coupled.py rules; compared exact arrays against all three migrated scaling.npz files."
+  },
+  "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+  "source_hashes_used_in_final2_run": {
+    "scripts/train_coupled.py": "84bfef233aa2a94e3d4c1b13a99dafa369de9a057412f7bbaf10b9d156cac357",
+    "scripts/benchmark_temporal_forecast.py": "4ffacf44e6d2a77b48b066ba484c6c3bfc7c5ef45ae61c9bb8fc6042fbdf1e9b",
+    "src/atomwise_ris/models/coupled_policy.py": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+    "src/atomwise_ris/models/forecast.py": "f31c046649c6bd53a729fc9abec7b04a85f6f7ff2a2618b386c2b67719d2e719",
+    "src/atomwise_ris/core.py": "983a1058179ba49183330d159d70e6272f89cbe509ccee4001f67e462cb2d306",
+    "src/atomwise_ris/optimization/coupled_search.py": "674c0699861fe8d77d590ecc8b1c30bb81e5b12922e64fbd2daf328d9c731c4d",
+    "src/atomwise_ris/optimization/search.py": "a548fa545182cfb635e867617fd36926889189fd543b92d11fe220f1fc3f16c8",
+    "src/atomwise_ris/physics/network.py": "8ec9f010f5682d592cb99b972788a520034981122d1e849d17f122272e0f0d7e",
+    "configs/experiments/matched_v1.json": "77f880fa16c489344b0009b21e1a5ad091fd4530b8c53cb74fc83053f0dc2d88"
+  },
+  "final2_phase_reference_hashes": {
+    "scripts/train_coupled.py": null,
+    "scripts/benchmark_temporal_forecast.py": null,
+    "src/atomwise_ris/models/coupled_policy.py": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+    "src/atomwise_ris/models/forecast.py": "f31c046649c6bd53a729fc9abec7b04a85f6f7ff2a2618b386c2b67719d2e719",
+    "src/atomwise_ris/core.py": "983a1058179ba49183330d159d70e6272f89cbe509ccee4001f67e462cb2d306",
+    "src/atomwise_ris/optimization/coupled_search.py": "674c0699861fe8d77d590ecc8b1c30bb81e5b12922e64fbd2daf328d9c731c4d",
+    "src/atomwise_ris/optimization/search.py": "a548fa545182cfb635e867617fd36926889189fd543b92d11fe220f1fc3f16c8",
+    "src/atomwise_ris/physics/network.py": "8ec9f010f5682d592cb99b972788a520034981122d1e849d17f122272e0f0d7e",
+    "configs/experiments/matched_v1.json": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe"
+  },
+  "source_drift": {
+    "previous_temporary_workspace_values_before_our_stage": {
+      "scripts/train_coupled.py": "dcc3eb3f803bc9e762505e1e87466d6673f148dcf78aa8043e5c515d76b50ccb",
+      "src/atomwise_ris/models/coupled_policy.py": "8feaaa15784ce6c8cbd217867ff078fd7e11018a7fca733b66821aab540667a6",
+      "configs/experiments/matched_v1.json": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+      "scripts/benchmark_temporal_forecast.py": null
+    },
+    "initial_stage_hash_manifest": "outputs/recovered/20261106/3060-2/STAGING_SHA256SUMS",
+    "retained_original_bytes": "No exact tar for the earlier temporary-workspace staged source was found; the final2 source hashes and archived original protocol bytes remain intact; no guessed restoration was performed.",
+    "unchanged_vs_final2": {
+      "scripts/train_coupled.py": false,
+      "scripts/benchmark_temporal_forecast.py": false,
+      "src/atomwise_ris/models/coupled_policy.py": true,
+      "src/atomwise_ris/models/forecast.py": true,
+      "src/atomwise_ris/core.py": true,
+      "src/atomwise_ris/optimization/coupled_search.py": true,
+      "src/atomwise_ris/optimization/search.py": true,
+      "src/atomwise_ris/physics/network.py": true,
+      "configs/experiments/matched_v1.json": false
+    }
+  },
+  "training": {
+    "trainer_source_sha256": "84bfef233aa2a94e3d4c1b13a99dafa369de9a057412f7bbaf10b9d156cac357",
+    "seeds": {
+      "7": {
+        "checkpoint_sha256": "eddd12a4ad213042bed917c79cd0926971f3cb6082e37694da1ce885f54df694",
+        "scaling_sha256": "56e08a14a7ab3922f3ce5fd2ab80425d4bd8e297db3edae59114a66d0fa6987b",
+        "metadata_sha256": "11ec0c8bc302bf42a97da8a2d1d0118a64cc48f5413041820bfdcddfc87ca917",
+        "architecture_version": "linear_velocity_residual_v2",
+        "epochs_requested": 25,
+        "best_validation_weighted_mse": 0.02057562099589402,
+        "seconds": 4.594884832971729,
+        "training_examples": 178920,
+        "validation_examples": 89460,
+        "device": "NVIDIA GeForce RTX 3060",
+        "torch": "2.9.1+cu128"
+      },
+      "19": {
+        "checkpoint_sha256": "b96e2b494b9d9b71600829dd2a82daa9195f42a93ac2f4306d3e522b53799d45",
+        "scaling_sha256": "56e08a14a7ab3922f3ce5fd2ab80425d4bd8e297db3edae59114a66d0fa6987b",
+        "metadata_sha256": "d950b72c4e59597958ab0dce3cdad331aab435daf927b5e186d7dd8377e207e8",
+        "architecture_version": "linear_velocity_residual_v2",
+        "epochs_requested": 25,
+        "best_validation_weighted_mse": 0.01779320648828263,
+        "seconds": 4.60517339897342,
+        "training_examples": 178920,
+        "validation_examples": 89460,
+        "device": "NVIDIA GeForce RTX 3060",
+        "torch": "2.9.1+cu128"
+      },
+      "43": {
+        "checkpoint_sha256": "a2beadead582979e370e3e0c54714ad830731f86fcb5693d92e7361b619ba6e0",
+        "scaling_sha256": "56e08a14a7ab3922f3ce5fd2ab80425d4bd8e297db3edae59114a66d0fa6987b",
+        "metadata_sha256": "e10e69d6aef195ac1a1f2cde3871a0d769aff3b9b07274ddf0ecf83afa72f728",
+        "architecture_version": "linear_velocity_residual_v2",
+        "epochs_requested": 25,
+        "best_validation_weighted_mse": 0.01839087805541042,
+        "seconds": 4.523615541053005,
+        "training_examples": 178920,
+        "validation_examples": 89460,
+        "device": "NVIDIA GeForce RTX 3060",
+        "torch": "2.9.1+cu128"
+      }
+    },
+    "invocation": "scripts/train_coupled.py --kind gru --seed {7,19,43} --epochs 25 --device cuda --run outputs/runs/temporal_v2_improvement_20261106"
+  },
+  "validation": {
+    "benchmark_metadata_sha256": "8ceb7cffbc30d5731f445517236c16292d31f0ad495ef0b02f2ae598a92cd5c8",
+    "raw_jsonl_sha256": "7d8ce1e8e37180884b0e35a8068f0cfc29c0aa5b4cda0f299c0b6219d5848d84",
+    "summary_sha256": "eb75d3559a65579fc9d40377cb2607f0d578f82e9f47ed81afa94d619d18130d",
+    "benchmark_source_sha256": "4ffacf44e6d2a77b48b066ba484c6c3bfc7c5ef45ae61c9bb8fc6042fbdf1e9b",
+    "search_config_sha256": "77f880fa16c489344b0009b21e1a5ad091fd4530b8c53cb74fc83053f0dc2d88",
+    "records": 1296,
+    "forecast_methods": [
+      "persistence",
+      "linear",
+      "gru",
+      "oracle_current_csi_reference"
+    ],
+    "budgets_ms": [
+      5.0,
+      10.0,
+      50.0
+    ],
+    "seeds": [
+      7,
+      19,
+      43
+    ],
+    "search": "same medium pair, memory empty, all-off initial state",
+    "latency_includes": [
+      "stale-reference network and RZF precoder",
+      "four-frame history slice",
+      "forecast/passivity projection",
+      "belief network setup",
+      "pair search"
+    ],
+    "truth_rate_evaluated_after_timing": true,
+    "max_cached_full_score_error": 7.691625114603085e-13,
+    "same_precoder_hash_per_frame": true,
+    "metrics": {
+      "5": {
+        "persistence": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 3.9911492870370373,
+          "elapsed_ms_p95": 4.12181155,
+          "truth_rate_mean_rows": 2.8268323003682876,
+          "belief_rate_mean_rows": 14.613657345325464,
+          "forecast_mse_mean_rows": 0.010828546458787556,
+          "evaluations_mean": 5421.083333333333,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 2.9407647806197783,
+              "belief_rate_mean": 14.625076583106916,
+              "forecast_mse_mean": 0.013516029718779028,
+              "elapsed_ms_mean": 4.001529527777778,
+              "evaluations_mean": 4883.527777777777,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 2.73654168661958,
+              "belief_rate_mean": 14.123571883967848,
+              "forecast_mse_mean": 0.0019520360213329474,
+              "elapsed_ms_mean": 4.015564499999999,
+              "evaluations_mean": 7174.666666666667,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 2.8031904338655034,
+              "belief_rate_mean": 15.092323568901634,
+              "forecast_mse_mean": 0.017017573636250696,
+              "elapsed_ms_mean": 3.9563538333333335,
+              "evaluations_mean": 4205.055555555556,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 2.8268323003682867,
+          "trajectory_sd_truth_rate": 0.10414399367968866,
+          "trajectory_macro_mean_elapsed_ms": 3.9911492870370364
+        },
+        "linear": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 4.048852231481482,
+          "elapsed_ms_p95": 4.1542278,
+          "truth_rate_mean_rows": 4.675154673227498,
+          "belief_rate_mean_rows": 8.261859228811666,
+          "forecast_mse_mean_rows": 0.005003870624164169,
+          "evaluations_mean": 5351.333333333333,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 3.513843184369472,
+              "belief_rate_mean": 8.6420758327919,
+              "forecast_mse_mean": 0.00613342558295854,
+              "elapsed_ms_mean": 4.077103361111111,
+              "evaluations_mean": 4612.666666666667,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 6.081857649213179,
+              "belief_rate_mean": 10.116849914574956,
+              "forecast_mse_mean": 0.00014381005086567904,
+              "elapsed_ms_mean": 4.051405333333333,
+              "evaluations_mean": 6612.666666666667,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 4.429763186099847,
+              "belief_rate_mean": 6.02665193906814,
+              "forecast_mse_mean": 0.008734376238668289,
+              "elapsed_ms_mean": 4.018047999999999,
+              "evaluations_mean": 4828.666666666667,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 4.6751546732275,
+          "trajectory_sd_truth_rate": 1.3014750513850304,
+          "trajectory_macro_mean_elapsed_ms": 4.048852231481482,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 0.5730784037496939,
+            "6": 3.3453159625935984,
+            "10": 1.6265727522343436
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 1.8483223728592122
+        },
+        "gru": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 4.062113648148148,
+          "elapsed_ms_p95": 4.15032695,
+          "truth_rate_mean_rows": 4.6619689708230085,
+          "belief_rate_mean_rows": 8.492217267648368,
+          "forecast_mse_mean_rows": 0.0031504445323073636,
+          "evaluations_mean": 4249.7037037037035,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 3.9563172120219425,
+              "belief_rate_mean": 7.388515266401476,
+              "forecast_mse_mean": 0.00392447210834865,
+              "elapsed_ms_mean": 4.1243365,
+              "evaluations_mean": 2986.0,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 5.944261841186261,
+              "belief_rate_mean": 11.430410662808447,
+              "forecast_mse_mean": 0.001622663472087061,
+              "elapsed_ms_mean": 4.038835861111113,
+              "evaluations_mean": 5339.777777777777,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 4.085327859260823,
+              "belief_rate_mean": 6.65772587373518,
+              "forecast_mse_mean": 0.0039041980164863763,
+              "elapsed_ms_mean": 4.023168583333334,
+              "evaluations_mean": 4423.333333333333,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 4.6619689708230085,
+          "trajectory_sd_truth_rate": 1.1123700781725343,
+          "trajectory_macro_mean_elapsed_ms": 4.062113648148149,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 1.0155524314021642,
+            "6": 3.207720154566681,
+            "10": 1.2821374253953195
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 1.8351366704547214,
+          "paired_truth_rate_delta_vs_linear_by_trajectory": {
+            "2": 0.44247402765247035,
+            "6": -0.1375958080269175,
+            "10": -0.3444353268390241
+          },
+          "paired_truth_rate_delta_vs_linear_macro": -0.013185702404490426,
+          "paired_truth_rate_delta_vs_linear_trajectory_sd": 0.4079399328728345
+        },
+        "oracle": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 4.0607754629629635,
+          "elapsed_ms_p95": 4.15828315,
+          "truth_rate_mean_rows": 10.234866856427132,
+          "belief_rate_mean_rows": 10.234861930193425,
+          "forecast_mse_mean_rows": 1.151212511046607e-13,
+          "evaluations_mean": 5741.287037037037,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 11.531175666233848,
+              "belief_rate_mean": 11.531168715021298,
+              "forecast_mse_mean": 1.1547980504574054e-13,
+              "elapsed_ms_mean": 4.063938,
+              "evaluations_mean": 4891.861111111111,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 12.07945549740757,
+              "belief_rate_mean": 12.079450497791699,
+              "forecast_mse_mean": 1.1580678387754063e-13,
+              "elapsed_ms_mean": 4.031408361111112,
+              "evaluations_mean": 6176.222222222223,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 7.093969405639986,
+              "belief_rate_mean": 7.093966577767277,
+              "forecast_mse_mean": 1.1407716439070093e-13,
+              "elapsed_ms_mean": 4.086980027777778,
+              "evaluations_mean": 6155.777777777777,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 10.234866856427134,
+          "trajectory_sd_truth_rate": 2.7338764219673277,
+          "trajectory_macro_mean_elapsed_ms": 4.060775462962963,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 8.59041088561407,
+            "6": 9.34291381078799,
+            "10": 4.290778971774483
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 7.408034556058848
+        }
+      },
+      "10": {
+        "persistence": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 8.978189564814814,
+          "elapsed_ms_p95": 9.0380678,
+          "truth_rate_mean_rows": 2.829471642305679,
+          "belief_rate_mean_rows": 14.701484493414444,
+          "forecast_mse_mean_rows": 0.010828546458787556,
+          "evaluations_mean": 14301.592592592593,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 2.952215327949601,
+              "belief_rate_mean": 14.82318770716604,
+              "forecast_mse_mean": 0.013516029718779028,
+              "elapsed_ms_mean": 8.978530249999999,
+              "evaluations_mean": 13779.083333333334,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 2.73654168661958,
+              "belief_rate_mean": 14.123571883967848,
+              "forecast_mse_mean": 0.0019520360213329474,
+              "elapsed_ms_mean": 8.98344911111111,
+              "evaluations_mean": 15885.777777777777,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 2.799657912347854,
+              "belief_rate_mean": 15.157693889109444,
+              "forecast_mse_mean": 0.017017573636250696,
+              "elapsed_ms_mean": 8.972589333333334,
+              "evaluations_mean": 13239.916666666666,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 2.8294716423056783,
+          "trajectory_sd_truth_rate": 0.11088473186889247,
+          "trajectory_macro_mean_elapsed_ms": 8.978189564814814
+        },
+        "linear": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 8.988554296296297,
+          "elapsed_ms_p95": 9.0381143,
+          "truth_rate_mean_rows": 4.680297086971353,
+          "belief_rate_mean_rows": 8.625800870486673,
+          "forecast_mse_mean_rows": 0.005003870624164169,
+          "evaluations_mean": 13059.518518518518,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 3.4924592079795436,
+              "belief_rate_mean": 9.39899117897997,
+              "forecast_mse_mean": 0.00613342558295854,
+              "elapsed_ms_mean": 8.990521805555554,
+              "evaluations_mean": 13124.638888888889,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 6.118439054888209,
+              "belief_rate_mean": 10.448081187080769,
+              "forecast_mse_mean": 0.00014381005086567904,
+              "elapsed_ms_mean": 8.992047222222222,
+              "evaluations_mean": 15554.055555555555,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 4.429992998046309,
+              "belief_rate_mean": 6.030330245399281,
+              "forecast_mse_mean": 0.008734376238668289,
+              "elapsed_ms_mean": 8.983093861111112,
+              "evaluations_mean": 10499.861111111111,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 4.680297086971354,
+          "trajectory_sd_truth_rate": 1.3307635559302269,
+          "trajectory_macro_mean_elapsed_ms": 8.988554296296297,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 0.5402438800299425,
+            "6": 3.381897368268629,
+            "10": 1.630335085698455
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 1.8508254446656753
+        },
+        "gru": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 8.989883194444444,
+          "elapsed_ms_p95": 9.0418018,
+          "truth_rate_mean_rows": 4.707689659372442,
+          "belief_rate_mean_rows": 9.286185997739594,
+          "forecast_mse_mean_rows": 0.0031504445323073636,
+          "evaluations_mean": 12663.907407407407,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 3.908015193615998,
+              "belief_rate_mean": 8.534200333257173,
+              "forecast_mse_mean": 0.00392447210834865,
+              "elapsed_ms_mean": 8.995496222222222,
+              "evaluations_mean": 12733.222222222223,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 6.141086992143005,
+              "belief_rate_mean": 12.409745974802007,
+              "forecast_mse_mean": 0.001622663472087061,
+              "elapsed_ms_mean": 8.996855499999999,
+              "evaluations_mean": 14558.722222222223,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 4.073966792358326,
+              "belief_rate_mean": 6.914611685159593,
+              "forecast_mse_mean": 0.0039041980164863763,
+              "elapsed_ms_mean": 8.977297861111111,
+              "evaluations_mean": 10699.777777777777,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 4.707689659372442,
+          "trajectory_sd_truth_rate": 1.2441285779518947,
+          "trajectory_macro_mean_elapsed_ms": 8.989883194444444,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 0.9557998656663971,
+            "6": 3.4045453055234245,
+            "10": 1.274308880010472
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 1.8782180170667646,
+          "paired_truth_rate_delta_vs_linear_by_trajectory": {
+            "2": 0.4155559856364546,
+            "6": 0.022647937254795636,
+            "10": -0.35602620568798304
+          },
+          "paired_truth_rate_delta_vs_linear_macro": 0.027392572401089055,
+          "paired_truth_rate_delta_vs_linear_trajectory_sd": 0.3858129769256846
+        },
+        "oracle": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 8.99371148148148,
+          "elapsed_ms_p95": 9.06033685,
+          "truth_rate_mean_rows": 11.562581108761874,
+          "belief_rate_mean_rows": 11.562587089171513,
+          "forecast_mse_mean_rows": 1.151212511046607e-13,
+          "evaluations_mean": 14786.157407407407,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 13.807265304599406,
+              "belief_rate_mean": 13.807283626388813,
+              "forecast_mse_mean": 1.1547980504574054e-13,
+              "elapsed_ms_mean": 8.999035999999998,
+              "evaluations_mean": 15063.666666666666,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 12.862068211434952,
+              "belief_rate_mean": 12.862066967552202,
+              "forecast_mse_mean": 1.1580678387754063e-13,
+              "elapsed_ms_mean": 8.992032833333333,
+              "evaluations_mean": 15447.555555555555,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 8.01840981025126,
+              "belief_rate_mean": 8.018410673573523,
+              "forecast_mse_mean": 1.1407716439070093e-13,
+              "elapsed_ms_mean": 8.990065611111113,
+              "evaluations_mean": 13847.25,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 11.56258110876187,
+          "trajectory_sd_truth_rate": 3.105513167114484,
+          "trajectory_macro_mean_elapsed_ms": 8.993711481481482,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 10.855049976649806,
+            "6": 10.125526524815372,
+            "10": 5.218751897903406
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 8.733109466456195
+        }
+      },
+      "50": {
+        "persistence": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 48.9777260648148,
+          "elapsed_ms_p95": 49.0365822,
+          "truth_rate_mean_rows": 2.806279445580048,
+          "belief_rate_mean_rows": 15.268070760339453,
+          "forecast_mse_mean_rows": 0.010828546458787556,
+          "evaluations_mean": 86365.49074074074,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 2.9023996343171006,
+              "belief_rate_mean": 15.662877663117277,
+              "forecast_mse_mean": 0.013516029718779028,
+              "elapsed_ms_mean": 48.970927777777774,
+              "evaluations_mean": 84951.30555555556,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 2.7185763949357944,
+              "belief_rate_mean": 14.484298685318846,
+              "forecast_mse_mean": 0.0019520360213329474,
+              "elapsed_ms_mean": 48.98289305555555,
+              "evaluations_mean": 90449.52777777778,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 2.797862307487247,
+              "belief_rate_mean": 15.657035932582229,
+              "forecast_mse_mean": 0.017017573636250696,
+              "elapsed_ms_mean": 48.97935736111111,
+              "evaluations_mean": 83695.63888888889,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 2.8062794455800475,
+          "trajectory_sd_truth_rate": 0.09220022773515368,
+          "trajectory_macro_mean_elapsed_ms": 48.97772606481482
+        },
+        "linear": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 48.98532573148149,
+          "elapsed_ms_p95": 49.0385915,
+          "truth_rate_mean_rows": 4.626193433576642,
+          "belief_rate_mean_rows": 9.305866286151115,
+          "forecast_mse_mean_rows": 0.005003870624164169,
+          "evaluations_mean": 81387.48148148147,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 3.4680194197804193,
+              "belief_rate_mean": 10.377840302396052,
+              "forecast_mse_mean": 0.00613342558295854,
+              "elapsed_ms_mean": 48.98462502777778,
+              "evaluations_mean": 84382.08333333333,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 5.894483608756406,
+              "belief_rate_mean": 11.498499113464206,
+              "forecast_mse_mean": 0.00014381005086567904,
+              "elapsed_ms_mean": 48.99575766666666,
+              "evaluations_mean": 96707.41666666667,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 4.516077272193098,
+              "belief_rate_mean": 6.041259442593086,
+              "forecast_mse_mean": 0.008734376238668289,
+              "elapsed_ms_mean": 48.97559450000001,
+              "evaluations_mean": 63072.944444444445,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 4.626193433576641,
+          "trajectory_sd_truth_rate": 1.2169742363107399,
+          "trajectory_macro_mean_elapsed_ms": 48.98532573148148,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 0.5656197854633187,
+            "6": 3.175907213820612,
+            "10": 1.7182149647058513
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 1.8199139879965938
+        },
+        "gru": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 48.98207722222223,
+          "elapsed_ms_p95": 49.0369554,
+          "truth_rate_mean_rows": 4.677645144812593,
+          "belief_rate_mean_rows": 10.194542021389006,
+          "forecast_mse_mean_rows": 0.0031504445323073636,
+          "evaluations_mean": 81115.01851851853,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 3.86552266891133,
+              "belief_rate_mean": 9.28656941435747,
+              "forecast_mse_mean": 0.00392447210834865,
+              "elapsed_ms_mean": 48.98239308333334,
+              "evaluations_mean": 83373.94444444444,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 6.146105420473736,
+              "belief_rate_mean": 14.246716928132656,
+              "forecast_mse_mean": 0.001622663472087061,
+              "elapsed_ms_mean": 48.981671694444444,
+              "evaluations_mean": 94092.33333333333,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 4.0213073450527155,
+              "belief_rate_mean": 7.050339721676892,
+              "forecast_mse_mean": 0.0039041980164863763,
+              "elapsed_ms_mean": 48.982166888888884,
+              "evaluations_mean": 65878.77777777778,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 4.677645144812594,
+          "trajectory_sd_truth_rate": 1.2741070999826576,
+          "trajectory_macro_mean_elapsed_ms": 48.98207722222222,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 0.9631230345942292,
+            "6": 3.427529025537942,
+            "10": 1.2234450375654684
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 1.8713656992325465,
+          "paired_truth_rate_delta_vs_linear_by_trajectory": {
+            "2": 0.3975032491309105,
+            "6": 0.2516218117173299,
+            "10": -0.4947699271403829
+          },
+          "paired_truth_rate_delta_vs_linear_macro": 0.05145171123595249,
+          "paired_truth_rate_delta_vs_linear_trajectory_sd": 0.4786323297880736
+        },
+        "oracle": {
+          "n_rows": 108,
+          "deadline_misses": 0,
+          "elapsed_ms_mean": 48.98785560185185,
+          "elapsed_ms_p95": 49.04212415,
+          "truth_rate_mean_rows": 12.721615459111645,
+          "belief_rate_mean_rows": 12.721613233583389,
+          "forecast_mse_mean_rows": 1.151212511046607e-13,
+          "evaluations_mean": 88044.51851851853,
+          "per_trajectory": {
+            "2": {
+              "n": 36,
+              "truth_rate_mean": 15.346457045425373,
+              "belief_rate_mean": 15.346473552689247,
+              "forecast_mse_mean": 1.1547980504574054e-13,
+              "elapsed_ms_mean": 48.977813749999996,
+              "evaluations_mean": 92361.63888888889,
+              "deadline_misses": 0
+            },
+            "6": {
+              "n": 36,
+              "truth_rate_mean": 14.33348314237795,
+              "belief_rate_mean": 14.333472543513137,
+              "forecast_mse_mean": 1.1580678387754063e-13,
+              "elapsed_ms_mean": 48.99308627777778,
+              "evaluations_mean": 94742.52777777778,
+              "deadline_misses": 0
+            },
+            "10": {
+              "n": 36,
+              "truth_rate_mean": 8.484906189531609,
+              "belief_rate_mean": 8.48489360454778,
+              "forecast_mse_mean": 1.1407716439070093e-13,
+              "elapsed_ms_mean": 48.99266677777777,
+              "evaluations_mean": 77029.38888888889,
+              "deadline_misses": 0
+            }
+          },
+          "trajectory_macro_mean_truth_rate": 12.721615459111645,
+          "trajectory_sd_truth_rate": 3.7038909417358425,
+          "trajectory_macro_mean_elapsed_ms": 48.987855601851855,
+          "paired_truth_rate_delta_vs_persistence_by_trajectory": {
+            "2": 12.444057411108272,
+            "6": 11.614906747442156,
+            "10": 5.687043882044362
+          },
+          "paired_truth_rate_delta_vs_persistence_macro": 9.915336013531595
+        }
+      }
+    }
+  },
+  "superseded_first_validation": {
+    "metadata": "benchmark_temporal_v2_validation.json",
+    "jsonl": "benchmark_temporal_v2_validation.jsonl",
+    "source_sha256": "710dc48070abb9808f45f0664a2ecdac36cb6d130ff9deb7ad2773f54f7e3962",
+    "rows": 1296,
+    "reason": "Replaced for reporting after hardening oracle wording, checkpoint kind/seed validation, and trainer/network source provenance; original JSONL preserved byte-for-byte.",
+    "superseded_by": "benchmark_temporal_v2_validation_final2.jsonl"
+  }
+}
