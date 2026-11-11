@@ -306,6 +306,11 @@
     },
     "hdf5_bytes": 7917739742,
     "superseded": "channels-natural/superseded_20261111 (118-case Maastricht outputs)",
-    "note": "RETRACE_0073_NOTE_20261111.md"
+    "note": "RETRACE_0073_NOTE_20261111.md",
+    "durable_copy": {
+      "path": "/mnt/home/faris/projects/bench-production-full-20261109/final-outputs/channels-natural",
+      "verified_utc": "2026-11-11T05:28:42Z",
+      "checks": "sha256sum -c output_sha256sums; size+path tree match with source; includes superseded_20261111"
+    }
   }
 }
