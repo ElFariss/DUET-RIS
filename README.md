@@ -67,8 +67,8 @@ PYTHONPATH=src:scripts python -m unittest discover -s tests
 
 ## Git
 
-- The history is the original atom-wise-ris history. The remote is renamed to **`atom-wise-ris-paper1`** (github.com/ElFariss/atom-wise-ris, the published Paper 1 code), so Paper A is never pushed there by accident.
-- Add a new `origin` when Paper A gets its own GitHub repository.
+- `origin` is **github.com/ElFariss/GeoRIS-Physics**.
+- The history is the original atom-wise-ris history. That repository's remote is kept as **`atom-wise-ris-paper1`** (github.com/ElFariss/atom-wise-ris, the published Paper 1 code); push only to `origin`.
 - Files that moved to GeoRIS-Bench or Paper B show as deleted here. The full map is `../workspace-notes/split-manifest-20261112.json`.
 
 No permissive license has been chosen for the original research code (see `LICENSE` and `THIRD_PARTY.md`).
