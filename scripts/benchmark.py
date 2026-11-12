@@ -8,7 +8,7 @@ import time
 import numpy as np
 import torch
 from atomwise_ris.core import Scenario,ResponseModel,Evaluator,write_json,sha256,source_versions
-from atomwise_ris.optimization.search import search,Memory,load_search_config
+from atomwise_ris.optimization.search import search,Memory,load_search_config,ME_GA_METHODS
 from atomwise_ris.models import EditPolicy
 from select_matched_budget import load_protocol,protocol_methods,frozen_code_hashes,checkpoint_hashes,host_state,require_frozen_selection,sha256_file
 from run_improvement_campaign import validate_validation_rows
@@ -55,7 +55,9 @@ def main():
     p.add_argument('--matched',action='store_true',help='run the registered matched protocol (methods, seeds, budgets, shared search config)')
     p.add_argument('--protocol',default='configs/experiments/matched_v1.json');p.add_argument('--search-config',choices=['small','medium','large'],default=None)
     p.add_argument('--test-data',default=None,help='scenario.npz (or its directory) holding the test frames; training/validation data stay in --scenario')
-    p.add_argument('--limit',type=int,default=0);p.add_argument('--conditional-pair-policy',action='store_true');a=p.parse_args()
+    p.add_argument('--limit',type=int,default=0);p.add_argument('--conditional-pair-policy',action='store_true')
+    p.add_argument('--extra-methods',default='',help='comma list from me_ga,ga_risc,me_ga_paper (Zardi et al. reimplementation); appended to the method list, never part of the registered protocol')
+    a=p.parse_args()
     if not a.matched:
         if a.split=='test' or a.test_data or a.search_config or a.conditional_pair_policy:raise SystemExit('--split test, --test-data, --search-config and conditional policy require --matched')
         a.budgets=a.budgets or '1,5,10,50,100';a.seeds=a.seeds or '7,19,43'
@@ -66,6 +68,9 @@ def main():
         raise SystemExit('Test split needs --test-data, the primary (medium) config, the full protocol seeds/budgets and no --limit')
     if a.split=='test' and a.conditional_pair_policy:raise SystemExit('Conditional-pair policy is development-only')
     if a.test_data and a.split!='test':raise SystemExit('--test-data is only for --split test')
+    extras=[m for m in a.extra_methods.split(',') if m]
+    if set(extras)-set(ME_GA_METHODS):raise SystemExit(f'--extra-methods must be among {ME_GA_METHODS}')
+    if extras and (a.split=='test' or not a.output):raise SystemExit('--extra-methods needs an explicit --output and is not allowed for --split test')
     a.run=a.run or (load_protocol(a.protocol)[0]['experiments']['specular']['run'] if a.matched else 'outputs/runs/specular_v5')
     torch.set_num_threads(1);torch.set_num_interop_threads(1)
     cpu=min(os.sched_getaffinity(0));os.sched_setaffinity(0,{cpu})
@@ -101,11 +106,12 @@ def main():
         if not a.baselines_only:methods+=['mlp_ga','attention_ga']
         if a.ablations:methods+=['attention_no_physics_ga','attention_no_conditioning_ga','attention_no_memory_ga']
         seeds=[int(x) for x in a.seeds.split(',')];budgets=[float(x) for x in a.budgets.split(',')]
+    methods=methods+[m for m in extras if m not in methods]
     policies={}
     for seed in seeds:
         for method in methods:
             kind='mlp' if method=='mlp_ga' else 'attention'
-            if method in ['greedy','pair','random','population_ga','memory_ga','analytical_ga','uniform_ga','analytical_no_memory_ga']:continue
+            if method in ['greedy','pair','random','population_ga','memory_ga','analytical_ga','uniform_ga','analytical_no_memory_ga'] or method in ME_GA_METHODS:continue
             policy=load_policy(root,kind,seed,'no_physics' in method,'no_conditioning' in method)
             if policy is None:raise FileNotFoundError(f'Missing checkpoint for {method}, seed {seed}')
             policies[method,seed]=policy
@@ -131,7 +137,7 @@ def main():
             policy.expected_ms=float(np.percentile(ts[3:],90))
     for m in (methods if a.matched else []):   # warm every controller path once on the train case; results discarded
         method_kw={} if m=='population_ga' else kw|({'conditional_pair_policy':True} if a.conditional_pair_policy else {})
-        search(warm,m,10.,1,memory=None if m in {'greedy','pair','random','population_ga'} or 'no_memory' in m else Memory(),policy=next((v for (mm,_),v in policies.items() if mm==m),None),**method_kw)
+        search(warm,m,10.,1,memory=None if m in {'greedy','pair','random','population_ga','ga_risc'} or 'no_memory' in m else Memory(),policy=next((v for (mm,_),v in policies.items() if mm==m),None),**method_kw)
     write_json(dest.with_suffix('.json'),{'arguments':vars(a),'cpu_affinity':[cpu],'platform':platform.platform(),
                'hostname':platform.node(),'torch':torch.__version__,'numpy':np.__version__,
                'scenario_sha256':sha256(a.scenario),'threads':1,'methods':methods,
@@ -159,7 +165,7 @@ def main():
                     # Alternate method order to reduce systematic timing drift.
                     for method in rng.permutation(methods):
                         start=time.perf_counter_ns();ev=Evaluator.from_scenario(frames,int(idx),response)
-                        memory=None if ('no_memory' in method or method in {'greedy','pair','random','population_ga'}) else memories[method]
+                        memory=None if ('no_memory' in method or method in {'greedy','pair','random','population_ga','ga_risc'}) else memories[method]
                         if memory is not None:memory.enter(int(frames.trajectory[idx]))
                         prep=(time.perf_counter_ns()-start)/1e6
                         actual_method=str(method)
@@ -173,9 +179,10 @@ def main():
                         row={'method':str(method),'seed':seed,'budget_ms':budget,'index':int(idx),
                              'trajectory':int(frames.trajectory[idx]),'split':a.split,'search_config':a.search_config,
                              'conditional_pair_policy':bool(a.conditional_pair_policy),'rate':result.value,
-                             'elapsed_ms':elapsed,'deadline_missed':elapsed>budget,'overrun_ms':max(0.,elapsed-budget),
+                             'elapsed_ms':elapsed,'deadline_missed':None if str(method)=='me_ga_paper' else elapsed>budget,'overrun_ms':None if str(method)=='me_ga_paper' else max(0.,elapsed-budget),
                              'evaluations':result.evaluations,'bits':''.join(str(int(x)) for x in result.bits),
                              'breakdown_ms':result.breakdown_ms|{'scenario_preparation':prep},'trace':result.trace}
+                        if str(method)=='me_ga_paper':row['deadline_applicable']=False   # untimed reference: elapsed_ms is its true runtime
                         file.write(json.dumps(row)+'\n');file.flush()
             print('Completed budget',budget,flush=True)
 

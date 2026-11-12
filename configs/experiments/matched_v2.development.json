@@ -1,0 +1,183 @@
+{
+  "protocol_id": "matched_v2.development",
+  "status": "development-only draft; not a preregistration or test freeze",
+  "created_utc": "2026-11-06T16:22:20Z",
+  "purpose": "Develop and evaluate an anytime pair-search improvement against exact pair search and a published-specification ME-GA reimplementation, with physics resolution checked before method selection.",
+  "inheritance_and_limits": {
+    "matched_v1_status": "The local V1 report records a completed one-shot held-out evaluation. V1 results are prior knowledge, not a source for V2 method tuning outcomes.",
+    "legacy_method_naming": "Method IDs ending in _ga in matched_v1 denote ranked ILS hybrids, not population genetic algorithms.",
+    "memory_ga": "A memory-guided ILS adaptation inspired by Zardi et al.; not a faithful reproduction or the published-spec ME-GA comparator.",
+    "novelty": "No novelty claim is authorized by this development config. Recheck the exact frozen combination against current literature before any claim."
+  },
+  "data": {
+    "development": {
+      "path": "data/processed/coupled_wire_dev_v1",
+      "trajectories": 30,
+      "frames_per_trajectory": 16,
+      "segments_per_wire": 81,
+      "use": "All search design, profiling, C1 diagnosis, ablations, budget feasibility and method selection."
+    },
+    "fine_mesh_validation": {
+      "path": "data/processed/coupled_wire_validation_fine161",
+      "segments_per_wire": 161,
+      "use": "Initial mesh-resolution diagnostics only; this existing subset has 3 trajectories and is insufficient by itself to establish a general mesh-error bound."
+    },
+    "held_out_test": {
+      "path": "data/processed/coupled_wire_test_v2",
+      "trajectories": 30,
+      "frames_per_trajectory": 16,
+      "segments_per_wire": 81,
+      "use": "One final evaluation after a separate canonical matched_v2.json, source/checkpoint hashes, contrasts, margin and budget have been frozen.",
+      "prohibited_before_freeze": [
+        "Do not run controllers, score actions, derive labels, or use rates/SNRs/trace outcomes for method, hyperparameter, margin or budget selection.",
+        "Do not reopen the test to retune or select a fallback budget. Report held-out misses at the locked budget as failures."
+      ]
+    },
+    "scope": "Simulation-only coupled two-user, fixed-precoder, worst-user-rate control on the declared NEC-2 multiport model; no held-out environment claim."
+  },
+  "execution": {
+    "node": "3060-1",
+    "cpu_affinity": "core 3; one benchmark process at a time; single-thread numerical libraries",
+    "development_budgets_ms": [1, 5, 10, 50, 100],
+    "primary_budget_ms": null,
+    "budget_selection_rule": "On development data, choose the smallest registered budget with zero deadline misses across every included method, seed and frame. If no listed budget is feasible, do not make a deadline-bounded superiority claim. Record the chosen budget in the canonical frozen protocol before any test outcome is inspected.",
+    "test_miss_rule": "A miss on the held-out test is reported at the frozen budget; it cannot trigger reselection or fallback using test outcomes.",
+    "paired_search_seeds": [7, 19, 43, 3, 11, 23, 31, 59, 67, 83],
+    "seed_policy": "Use the same ten seeds for every method and development trajectory; final test uses the same seed list after freeze. Seeds are repeated stochastic runs, not independent sampling units."
+  },
+  "critical_path": [
+    {
+      "id": "B",
+      "name": "ME-GA baseline and review",
+      "gate": "Implement and independently review me_ga and ga_risc as published-specification reimplementations; document all operator and memory assumptions the paper leaves unspecified. Keep me_ga_paper as a separate full-budget profile, never label it a deadline-matched run."
+    },
+    {
+      "id": "C1",
+      "name": "Physics-resolution gate",
+      "gate": "The validation-only C1 audit is complete and rejects 81-segment scores for V2 optimizer claims: 5,450/5,760 returned actions exceeded 0.015 bit/s/Hz under 81-to-161 refinement, and 14.1466% of non-tied pairwise rankings reversed. Use 161-segment scores as the V2 development reference. The audit covers three validation trajectories and does not establish that 161 segments are converged. Specify a separate mesh-convergence criterion and engineering margin before any improvement claim; do not inherit 0.015 bit/s/Hz as a general mesh bound."
+    },
+    {
+      "id": "L1-L6",
+      "name": "Incremental anytime pair-search ladder",
+      "gate": "Implement one step at a time after C1; compare each step with its immediate predecessor on the 30 development trajectories using paired trajectory-level outcomes. Do not advance a component that fails the predeclared development criterion."
+    },
+    {
+      "id": "E",
+      "name": "Freeze and one-shot V2 test",
+      "gate": "After the ladder and fine-mesh gate, freeze the exact method, configuration, checkpoint/source/data hashes, contrast family, practical margin and feasible budget in a new canonical matched_v2.json. Then run the 30-trajectory test once and audit all returned primary-budget actions on the preselected fine-mesh evaluator."
+    }
+  ],
+  "methods": {
+    "development_controls": [
+      "pair",
+      "greedy",
+      "me_ga",
+      "ga_risc",
+      "mlp_ga"
+    ],
+    "candidate_ladder": [
+      "pair_plus_L1_anytime_ils",
+      "pair_plus_L2_screened_restarts",
+      "pair_plus_L3_restart_distribution",
+      "pair_plus_L4_all_off_escape",
+      "pair_plus_L5_elite_recombination",
+      "pair_plus_L6_cross_frame_memory"
+    ],
+    "separate_reporting": [
+      "me_ga_paper: full published Gamma-by-V workload and actual elapsed time; not a matched-deadline contrast",
+      "geometry-informed binary RIS method: include only if its objective assumptions transfer; otherwise document why it is inapplicable, not as a baseline"
+    ],
+    "final_primary_contrasts_proposed": [
+      "selected_pair_plus - pair",
+      "selected_pair_plus - me_ga",
+      "selected_pair_plus - ga_risc",
+      "selected_pair_plus - mlp_ga"
+    ],
+    "scope_notes": "The exact frozen method IDs and final contrast family remain unresolved until implementation and development gates pass. Keep single-flip and diagonal-Z rescoring as separate diagnostic/physics contrasts."
+  },
+  "ladder": [
+    {
+      "step": "L1",
+      "change": "Anytime ILS: continue ranked variants until the deadline rather than stopping after a short fixed search.",
+      "testable_reason": "Existing V1 validation traces suggest ranked variants can stop well before their allotted budget; quantify this before making an efficiency claim."
+    },
+    {
+      "step": "L2",
+      "change": "Screened restarts: perform inexpensive single-flip descent first and spend full pair-scan work only on promising basins.",
+      "testable_reason": "Measure restarts completed, scoring cost and final rate; no gain is assumed."
+    },
+    {
+      "step": "L3",
+      "change": "Compare uniform, prespecified density-based and elite-derived restart distributions.",
+      "testable_reason": "Use development trajectories only; tune distribution parameters inside the development split and freeze them before test."
+    },
+    {
+      "step": "L4",
+      "change": "Add a deterministic escape from the all-OFF two-opt trap, such as tabu or best non-improving pair moves with a fixed tie-break.",
+      "testable_reason": "Measure all-OFF return frequency and rate without selecting the rule from test outcomes."
+    },
+    {
+      "step": "L5",
+      "change": "Add one elite recombination method (crossover or path relinking), selected on development evidence.",
+      "testable_reason": "Charge construction and scoring to the complete deadline; retain only if it improves the preceding frozen step."
+    },
+    {
+      "step": "L6",
+      "change": "Add cross-frame elite memory with exact rescoring and Woodbury updates.",
+      "testable_reason": "Reset memory at trajectory boundaries; compare with identical inputs and runtime accounting."
+    }
+  ],
+  "physics_gate": {
+    "status": "81-segment coarse objective rejected for V2 method claims; use 161-segment reference; convergence pending",
+    "coarse_segments_per_wire": 81,
+    "fine_segments_per_wire": 161,
+    "required_v2_reference_segments_per_wire": 161,
+    "c1_validation_evidence": {
+      "path": "outputs/audits/v2-20261106/c1_spatial_validation_mesh161.attempt2.json",
+      "sha256": "a2dbf145a3f933312f8b3529ed473fb72d9510249ece683d3e074dfcbbc14e20",
+      "split": "validation",
+      "actions": 5760,
+      "independent_trajectory_clusters": 3,
+      "absolute_rate_shift_max_bit_s_hz": 3.16315956,
+      "absolute_rate_shift_p95_bit_s_hz": 0.669577,
+      "actions_above_0_015_bit_s_hz": 5450,
+      "non_tied_pairwise_rank_reversals": 1976,
+      "non_tied_pairwise_comparisons": 13968,
+      "pairwise_rank_reversal_fraction": 0.141466,
+      "conclusion": "The 81-segment objective is numerically unresolved for V2 optimizer claims. Use 161-segment scores as the V2 development reference; 161-segment convergence itself remains unestablished. This is validation-only sensitivity evidence, not a held-out test audit or universal mesh bound."
+    },
+    "practical_margin_bit_s_hz": null,
+    "numerical_resolution_criterion_bit_s_hz": null,
+    "margin_rule": "Do not inherit 0.015 bit/s/Hz as a general mesh bound or V2 margin. C1 shows the 81-segment objective is numerically unresolved; use 161-segment scores as the V2 development reference. The 161-segment convergence criterion and any practical decision margin remain pending a separate predeclared convergence/engineering design. Withhold an improvement claim until that design supports it.",
+    "test_action_audit": "Preselect the fine-mesh rule before scoring test actions; audit every primary-budget returned action from every included method, seed, frame and held-out trajectory. Record action count, mesh hashes, maximum absolute rate shift and criterion result."
+  },
+  "outcomes": {
+    "primary": "Mean worst-user spectral efficiency in bit/s/Hz at the frozen feasible primary budget, after full objective recomputation; paired method differences are averaged within trajectory.",
+    "secondary": [
+      "p95 complete runtime, including preparation, feature extraction, inference, memory operations and objective scoring",
+      "deadline-miss count and rate, retaining misses in the report",
+      "objective-candidate evaluations and time-to-target; descriptive only unless separately frozen",
+      "best-known gap and component profiling on development trajectories"
+    ],
+    "counting": "Count each actual objective candidate score once. Do not count neural inference as an objective evaluation; include its time in complete runtime."
+  },
+  "statistics": {
+    "independent_unit": "trajectory; average paired seeds and frames within trajectory before resampling",
+    "development_trajectory_count": 30,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 8251,
+    "intervals": "Paired trajectory bootstrap; Bonferroni simultaneous percentile intervals across the frozen contrast family. The ladder-stage family and final confirmatory family must be enumerated before their respective decisions.",
+    "p_values": "If reported, use a centered paired-bootstrap zero-null test and Holm-adjust p-values separately; do not derive intervals from Holm-adjusted p-values.",
+    "limits": "Development decisions are exploratory. Small independent trajectory counts, exchangeability assumptions and trajectory-specific generalization limit inference; seeds and frames do not inflate n.",
+    "decision_margin": null,
+    "decision_rule": "No numerical improved/equivalent/deteriorated classification until the margin and final contrast family are frozen after C1."
+  },
+  "freeze_checklist": [
+    "C1 fine-mesh diagnostics reviewed; margin and resolution criterion numeric and source-backed",
+    "L1-L6 development ladder complete or stopped by its predeclared rule",
+    "ME-GA reimplementation and GA-RISC assumptions reviewed independently",
+    "Exact final method, step sequence, search config, training inputs and checkpoint hashes fixed",
+    "All 10 paired seeds, 30 test trajectories, primary budget, contrast family, metrics and mesh audit rules frozen in canonical matched_v2.json",
+    "V2 test remains unscored and unopened for outcome-based decisions before freeze"
+  ]
+}

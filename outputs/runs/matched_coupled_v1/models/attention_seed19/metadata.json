@@ -1,0 +1,17 @@
+{
+  "args": {
+    "kind": "attention",
+    "seed": 19,
+    "epochs": 25,
+    "device": "cuda",
+    "run": "outputs/runs/matched_coupled_v1"
+  },
+  "parameters": 17665,
+  "best_validation": 3.779870722028944,
+  "seconds": 4.991892475984059,
+  "training_examples": 2304,
+  "validation_examples": 1152,
+  "torch": "2.9.1+cu128",
+  "cuda": "NVIDIA GeForce RTX 3060",
+  "architecture_version": "coupled_policy_residual_v1"
+}

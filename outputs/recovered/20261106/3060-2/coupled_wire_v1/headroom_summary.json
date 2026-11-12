@@ -1,0 +1,7 @@
+{
+  "parents": 1152,
+  "beneficial_pairs_at_single_local_optima": 524,
+  "train": 768,
+  "validation": 384,
+  "pilot_used_for_labels": false
+}

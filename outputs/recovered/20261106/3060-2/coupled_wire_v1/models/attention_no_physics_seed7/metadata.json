@@ -1,0 +1,15 @@
+{
+  "args": {
+    "kind": "attention_no_physics",
+    "seed": 7,
+    "epochs": 25,
+    "device": "cuda"
+  },
+  "parameters": 17665,
+  "best_validation": 3.761747121810913,
+  "seconds": 4.63200832309667,
+  "training_examples": 2304,
+  "validation_examples": 1152,
+  "torch": "2.9.1+cu128",
+  "cuda": "NVIDIA GeForce RTX 3060"
+}

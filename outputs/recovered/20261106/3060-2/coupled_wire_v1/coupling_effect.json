@@ -1,0 +1,8 @@
+{
+  "frame": 0,
+  "patterns": 250,
+  "full_mean": 1.8332821064868796,
+  "blind_mean": 1.7175665833807157,
+  "mean_absolute_rate_prediction_error": 0.23396300228775727,
+  "note": "Train-frame model-mismatch diagnostic, not held-out controller performance"
+}

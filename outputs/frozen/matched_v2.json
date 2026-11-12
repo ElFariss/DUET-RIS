@@ -1,0 +1,109 @@
+{
+  "protocol_id": "matched_v2",
+  "status": "frozen",
+  "frozen_utc": "2026-11-07T12:49:41Z",
+  "approved_by": "User approved these values in the plan of 2026-11-07 (primary budget, miss rule, mesh rule, contrast family).",
+  "purpose": "Single held-out test of Paper 1: restart density + elite recombination (pair_plus_b35) against exact pair search, its components, ME-GA and single-flip search, on the free-space coupled NEC-2 RIS under full-runtime deadlines.",
+  "development_evidence": "docs/ladder-v2-nol2-results-20261107.md, docs/ladder-v2-fixed-l2-results-20261107.md, docs/ladder-v2-combined-results-20261107.md (coupled_wire_dev_fine161 only). b35 was chosen after the no-L2 round on the same development data.",
+  "deviations_from_development_draft": [
+    "matched_v2.development.json proposed the smallest budget with zero misses. On 3060-3 every budget, including 1 ms, had zero misses, so that rule would select 1 ms, where no component can act. The primary budget is instead 50 ms, the matched_v1 locked budget, chosen for reasons independent of the v2 results.",
+    "No numeric practical margin. Instead a contrast must exclude zero on both the 161- and 81-segment meshes, and the mean mesh shift is reported beside each gain. 241 segments is excluded because it falls below the NEC-2 extended thin-wire kernel validity ratio (docs/hybrid-audit-20261106.md)."
+  ],
+  "data": {
+    "held_out_test": {
+      "coarse_path": "data/processed/coupled_wire_test_v2",
+      "coarse_scenario_sha256": "de08a1495d295946bcc7b39b952c3523efd006e90527a3802252375f5147bb58",
+      "fine_path": "data/processed/coupled_wire_test_v2_fine161",
+      "fine_generation": "scripts/generate_coupled_test.py --out data/processed/coupled_wire_test_v2_fine161 --fine-from data/processed/coupled_wire_test_v2 --fine-split test --segments 161; generated after this freeze, physics matrices only",
+      "trajectories": 30,
+      "frames": 480,
+      "seed": 20261108
+    }
+  },
+  "run": {
+    "node": "3060-3 (labkc-comm3), CPU 5 pinned, SMT sibling 11 logged; one process; single-thread numerical libraries",
+    "methods": [
+      "greedy",
+      "pair",
+      "me_ga",
+      "pair_plus_b3",
+      "pair_plus_b5",
+      "pair_plus_b35"
+    ],
+    "budgets_ms": [
+      5,
+      10,
+      50,
+      100
+    ],
+    "primary_budget_ms": 50,
+    "seeds": [
+      7,
+      19,
+      43,
+      3,
+      11,
+      23,
+      31,
+      59,
+      67,
+      83
+    ],
+    "physics_gate": "outputs/runs/coupled_wire_v1/physics_gate.json",
+    "search_config_protocol": "configs/experiments/matched_v1.json",
+    "runner": "scripts/run_matched_v2_test.py",
+    "not_run": "me_ga_paper (full population, no deadline) is not part of this test; it is reported only from development runs, if at all."
+  },
+  "statistics": {
+    "unit": "trajectory (frames and seeds averaged within a trajectory); paired across methods",
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 8251,
+    "alpha": 0.05,
+    "correction": "Bonferroni over the contrast family within each budget",
+    "contrasts": [
+      [
+        "pair_plus_b35",
+        "pair"
+      ],
+      [
+        "pair_plus_b35",
+        "pair_plus_b3"
+      ],
+      [
+        "pair_plus_b35",
+        "pair_plus_b5"
+      ],
+      [
+        "pair_plus_b35",
+        "me_ga"
+      ],
+      [
+        "pair",
+        "greedy"
+      ]
+    ],
+    "decision_rule": "A contrast is supported only if its interval lies above zero on both the 161-segment rate and the 81-segment rescored rate, and neither method is excluded by the miss rule at that budget. The 50 ms results are confirmatory; 5, 10 and 100 ms are secondary and reported in full.",
+    "max_miss_fraction": 0.005,
+    "miss_rule": "Every miss is reported. A method whose miss fraction at a budget exceeds 0.5% is excluded from that budget's contrasts. Misses cannot trigger a budget change or a rerun.",
+    "analysis": "scripts/analyze_matched_v2_test.py"
+  },
+  "one_shot": "The test is run once. A failure of the infrastructure (crash, node loss) may be resumed only from a fresh output with identical code and data, and is reported. No result can trigger retuning.",
+  "frozen_source_sha256": {
+    "src/atomwise_ris/optimization/pair_plus.py": "f292db2a3a6d2dbe4af3960609fa21a1a9e0a7e6c6a0d4426e9ddb16bcedf170",
+    "src/atomwise_ris/optimization/coupled_search.py": "0b4d863c7a34009e91ed3769156b96040c5e9b042ba926c583c85aaf61874423",
+    "src/atomwise_ris/optimization/search.py": "7bc38bb183a50b267e118cab57bcc41f46a26b7bb7ca39296f1d34d55a5ad633",
+    "src/atomwise_ris/optimization/me_ga.py": "7858402e81f9c89b78aaabd4ce94c7d8e830282e1bd49e0c5af947d59094ed48",
+    "src/atomwise_ris/physics/network.py": "8ec9f010f5682d592cb99b972788a520034981122d1e849d17f122272e0f0d7e",
+    "src/atomwise_ris/physics/nec.py": "d982356599afa2e561db0303d7ac28fe004698f16aea68a85c5442c85fe29876",
+    "src/atomwise_ris/channels/precoding.py": "e2cc2d985581b58a71350561db4286e4081453aba4199a5754601de1943ba09f",
+    "scripts/run_matched_v2_test.py": "a2544652805b5f02932b97091da9c3d11af62df30b9587b86a4362914b446434",
+    "scripts/analyze_matched_v2_test.py": "a2ea83947bf248cee53f95ce6fa338c25e7d84cc67f9f64278652ce3b45518ab",
+    "scripts/generate_coupled_test.py": "78b63f879f65354526fee47d509b7102fa1b2cc133a5531d0c7bb0870d93a4a1",
+    "scripts/generate_coupled_reference.py": "d2a9ed1ef11b12b6de04a9926759b6983df0e157ff9f932fbaedce0baf6b4074",
+    "outputs/runs/coupled_wire_v1/physics_gate.json": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+    "configs/experiments/matched_v1.json": "77f880fa16c489344b0009b21e1a5ad091fd4530b8c53cb74fc83053f0dc2d88"
+  },
+  "frozen_source_location": "3060-3 /mnt/home/faris/projects/atom-wise-ris-ladder-20261107 (run there); byte copies in outputs/frozen/matched_v2_src/. The local working tree has since diverged in pair_plus.py and network.py (Track 3 selector work).",
+  "known_baseline_behaviour": "me_ga (published-spec reimplementation, random initial population, no all-OFF seed) scored 5.39 bit/s/Hz at 50 ms on development data, below the all-OFF state; me_ga_paper without deadline scored 9.67. b35-me_ga is therefore expected to be large and is reported as a comparison with a published-specification method, not as a contest between strong methods.",
+  "smoke_check": "--smoke-dev on 2 development frames on 3060-3 CPU 5 before freezing: runner, 81-segment rescoring and all six methods ran; no test data read."
+}

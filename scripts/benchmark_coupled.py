@@ -7,12 +7,13 @@ from atomwise_ris.physics.network import CoupledNetwork
 from atomwise_ris.models.coupled_policy import CoupledPolicy,LinkGRU
 from atomwise_ris.models.forecast import predict,require_forecast_checkpoint
 from atomwise_ris.optimization.coupled_search import search
-from atomwise_ris.optimization.search import load_search_config
+from atomwise_ris.optimization.search import load_search_config,Memory,ME_GA_METHODS
 from select_matched_budget import load_protocol,protocol_methods,frozen_code_hashes,checkpoint_hashes,host_state,require_frozen_selection,sha256_file
 from run_improvement_campaign import validate_validation_rows
 
 def should_store_memory(method):
- return method not in {'greedy','pair','random','blind_pair','population_ga'} and 'no_memory' not in method
+ # ME-GA family keeps its own memory Psi inside the controller (timed there); no post-hoc overwrite
+ return method not in {'greedy','pair','random','blind_pair','population_ga','ga_risc','me_ga','me_ga_paper'} and 'no_memory' not in method
 
 def validate_primary_selection(selection,protocol,protocol_hash,root,dataset,data_path,gate_path):
  path=root/'benchmark_spatial_validation.jsonl'
@@ -38,6 +39,7 @@ def validate_primary_selection(selection,protocol,protocol_hash,root,dataset,dat
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--split',choices=['validation','pilot','test'],required=True);p.add_argument('--budgets',default=None);p.add_argument('--seeds',default=None);p.add_argument('--mode',choices=['spatial','temporal'],required=True);p.add_argument('--output');p.add_argument('--limit',type=int,default=0);p.add_argument('--conditional-pair-policy',action='store_true')
+ p.add_argument('--extra-methods',default='',help='comma list from me_ga,ga_risc,me_ga_paper (Zardi et al. reimplementation); spatial mode only, never part of the registered protocol')
  p.add_argument('--run',default=None,help='default: outputs/runs/coupled_wire_v1; with --matched the protocol run');p.add_argument('--data',default='data/processed/coupled_wire_v1/dataset.npz',help='train/validation (and legacy pilot) dataset')
  p.add_argument('--matched',action='store_true',help='run the registered matched protocol (methods, seeds, budgets, shared search config)')
  p.add_argument('--protocol',default='configs/experiments/matched_v1.json');p.add_argument('--search-config',choices=['small','medium','large'],default=None)
@@ -52,6 +54,9 @@ def main():
  if a.split=='test' and (not a.test_data or a.search_config!='medium' or a.limit or a.budgets or a.seeds):raise SystemExit('Test split needs --test-data, the primary (medium) config, the full protocol seeds/budgets and no --limit')
  if a.split=='test' and a.conditional_pair_policy:raise SystemExit('Conditional-pair policy is development-only')
  if a.test_data and a.split!='test':raise SystemExit('--test-data is only for --split test')
+ extras=[m for m in a.extra_methods.split(',') if m]
+ if set(extras)-set(ME_GA_METHODS):raise SystemExit(f'--extra-methods must be among {ME_GA_METHODS}')
+ if extras and (a.split=='test' or not a.output or a.mode!='spatial'):raise SystemExit('--extra-methods needs --mode spatial, an explicit --output and is not allowed for --split test')
  a.run=a.run or (load_protocol(a.protocol)[0]['experiments']['coupled']['run'] if a.matched else 'outputs/runs/coupled_wire_v1')
  torch.set_num_threads(1);torch.set_num_interop_threads(1);cpu=min(os.sched_getaffinity(0));os.sched_setaffinity(0,{cpu})
  root=Path(a.run);root.mkdir(parents=True,exist_ok=True)
@@ -93,6 +98,7 @@ def main():
    base=root/'models'/f'gru_seed{seed}';ck=torch.load(base/'best.pt',map_location='cpu',weights_only=True);require_forecast_checkpoint(ck);m=LinkGRU();m.load_state_dict(ck['state_dict']);m.eval();sc=np.load(base/'scaling.npz');act=sc['active_mask'] if 'active_mask' in sc else None;forecasters[seed]=(m,(sc['mean'],sc['scale'],sc['upper'],act))
  if a.matched:methods=protocol_methods(protocol)
  else:methods=['greedy','pair','blind_pair','random','population_ga','memory_ga','analytical_ga','mlp_ga','attention_ga','attention_no_physics_ga','attention_no_memory_ga'] if a.mode=='spatial' else ['persistence_pair','linear_pair','gru_pair','oracle_pair','persistence_mlp_ga','gru_mlp_ga','persistence_attention_ga','gru_attention_ga']
+ methods=methods+[m for m in extras if m not in methods]
  if a.test_data and not np.any(fs['split']==a.split):indices=np.arange(len(fz));frame_rule='all frames of the test dataset'
  else:indices=np.flatnonzero((fs['split']==a.split)&((fs['step']>=4) if a.mode=='temporal' else True))
  if a.limit:indices=indices[:a.limit]
@@ -124,10 +130,10 @@ def main():
  with dest.open('w') as f:
   for budget in budgets:
    for seed in seeds:
-    memory={m:[] for m in methods};last_tr=None
+    memory={m:(Memory() if m in ME_GA_METHODS else []) for m in methods};last_tr=None
     for idx in indices:
      trajectory=int(fs['trajectory'][idx])
-     if trajectory!=last_tr:memory={m:[] for m in methods};last_tr=trajectory
+     if trajectory!=last_tr:memory={m:(Memory() if m in ME_GA_METHODS else []) for m in methods};last_tr=trajectory
      for method in order.permutation(methods):
       start=time.perf_counter_ns();deadline=start+int(budget*1e6);mname=str(method);prediction_ms=0.
       if a.mode=='temporal':
@@ -148,7 +154,7 @@ def main():
       kind=controller.removesuffix('_ga');kind='attention' if kind=='attention_no_memory' else kind
       policy=policies.get((kind,seed));actual=controller
       trace=[]
-      baseline_no_memory=mname in {'greedy','pair','random','blind_pair','population_ga'}
+      baseline_no_memory=mname in {'greedy','pair','random','blind_pair','population_ga','ga_risc'}
       method_kw={} if actual=='population_ga' else skw|({'conditional_pair_policy':True} if a.conditional_pair_policy else {})
       bits,value,evaluations,breakdown=search(ev,actual,deadline,seed*10000+int(idx),memory=() if ('no_memory' in controller or baseline_no_memory) else memory[mname],policy=policy,scaling=feature_scale,trace=trace,**method_kw)
       mt=time.perf_counter_ns()
@@ -158,7 +164,8 @@ def main():
       full=float(ev.score(ev.channel(bits)@w))
       if abs(full-value)>1e-7:raise AssertionError('Cached and full channel disagree')
       truth=CoupledNetwork(fz[idx],loads,w=w);rate=float(truth.score(truth.channel(bits)@w))
-      row={'mode':a.mode,'split':a.split,'method':mname,'seed':seed,'budget_ms':budget,'index':int(idx),'trajectory':trajectory,'step':int(fs['step'][idx]),'search_config':a.search_config,'conditional_pair_policy':bool(a.conditional_pair_policy),'rate':rate,'belief_rate':value,'elapsed_ms':elapsed,'deadline_missed':elapsed>budget,'evaluations':evaluations,'trace':trace,'bits':bits.tolist(),'breakdown_ms':breakdown|{'preparation_ms':prep_ms,'forecast_ms':prediction_ms,'memory_write_ms':memory_ms}}
+      row={'mode':a.mode,'split':a.split,'method':mname,'seed':seed,'budget_ms':budget,'index':int(idx),'trajectory':trajectory,'step':int(fs['step'][idx]),'search_config':a.search_config,'conditional_pair_policy':bool(a.conditional_pair_policy),'rate':rate,'belief_rate':value,'elapsed_ms':elapsed,'deadline_missed':None if mname=='me_ga_paper' else elapsed>budget,'evaluations':evaluations,'trace':trace,'bits':bits.tolist(),'breakdown_ms':breakdown|{'preparation_ms':prep_ms,'forecast_ms':prediction_ms,'memory_write_ms':memory_ms}}
+      if mname=='me_ga_paper':row['deadline_applicable']=False   # untimed reference: elapsed_ms is its true runtime
       f.write(json.dumps(row)+'\n');f.flush()
    print(a.mode,a.split,'completed',budget,flush=True)
 if __name__=='__main__':main()

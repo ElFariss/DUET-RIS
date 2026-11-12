@@ -1,0 +1,30 @@
+{
+  "index": 342,
+  "trajectory": 21,
+  "step": 6,
+  "time_s": 0.12,
+  "split": "test",
+  "users_m": [
+    [
+      -0.3779634077186473,
+      0.23949941072680148,
+      0.9759406214848249
+    ],
+    [
+      -0.5525127901873853,
+      0.39716842138513636,
+      1.0488714492045046
+    ]
+  ],
+  "seconds": 40.93405067699496,
+  "segments_per_wire": 81,
+  "unknowns": 5670,
+  "reciprocity_relative": 5.600956227645509e-08,
+  "minimum_resistance_eigenvalue_ohm": 0.5420876011455018,
+  "maximum_scattering_singular_value": 0.9866328228166548,
+  "condition_number": 13.625869219847349,
+  "hostname": "labkc1-amd",
+  "frequency_hz": 5530000000.0,
+  "radius_m": 5e-05,
+  "sha256": "d327d1f15dd5057f1a73fbaba68798aadaab2449e5ad7365523648d803bf19ca"
+}

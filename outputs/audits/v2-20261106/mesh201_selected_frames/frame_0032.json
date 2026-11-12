@@ -1,0 +1,44 @@
+{
+  "condition_number": 13.665667248670994,
+  "frequency_hz": 5530000000.0,
+  "generation_identity": {
+    "generator_sha256": "3687b11c8897a3a0d87e49c3685af2347c8b8b27c453f82cccbdf480d2ca71ef",
+    "numpy_version": "2.2.6",
+    "physics_kernel_sha256": "d982356599afa2e561db0303d7ac28fe004698f16aea68a85c5442c85fe29876",
+    "protocol_sha256": "d93023a89c0e13e4afec058b917b7bcfff0c3e9a6e1e14140c513a58b11ea11b",
+    "pynec_module_path": "/mnt/home/faris/projects/atom-wise-ris-v2-20261106/.venv/lib/python3.12/site-packages/PyNEC.py",
+    "pynec_module_sha256": "68defe0e152a67a6173476c76456ce3309964f150234c188ffb4cf1aa5d5e05a",
+    "python_version": "3.12.3",
+    "reference_generator_sha256": "d2a9ed1ef11b12b6de04a9926759b6983df0e157ff9f932fbaedce0baf6b4074",
+    "segments": 201,
+    "set_name": "coupled_wire_validation_refinement201",
+    "source_scenario_sha256": "5880584639bdeea45dca0e0c37fe82fb9ac69d4f891050d136c5a654c8e0ea21"
+  },
+  "generation_identity_sha256": "fd9bb9e6fcedde440202608485ce9fe0fa9940f9f5d56bdeefbe7ce10eff74d0",
+  "hostname": "labkc-comm3",
+  "index": 32,
+  "maximum_scattering_singular_value": 0.9866666344660922,
+  "minimum_resistance_eigenvalue_ohm": 0.5393558636466445,
+  "radius_m": 5e-05,
+  "reciprocity_relative": 4.796928521034237e-09,
+  "seconds": 585.0440789760323,
+  "segments_per_wire": 201,
+  "sha256": "d69753be04413727edd2e29d5f1d28175e3ef7132bc91a8ce3d177ad68ae732a",
+  "split": "validation",
+  "step": 0,
+  "time_s": 0.0,
+  "trajectory": 2,
+  "unknowns": 14070,
+  "users_m": [
+    [
+      -0.43,
+      0.2054557845609541,
+      0.98
+    ],
+    [
+      -0.56,
+      0.27454421543904595,
+      1.05
+    ]
+  ]
+}

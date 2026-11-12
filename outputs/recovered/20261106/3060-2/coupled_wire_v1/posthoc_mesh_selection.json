@@ -1,0 +1,5 @@
+{
+  "index": 190,
+  "coarse_pair_minus_attention": 4.4431607085820914,
+  "selection": "Post-hoc adversarial numerical audit: largest mean pair-minus-attention gap at 10 ms on development pilot; not used for training or budget selection"
+}

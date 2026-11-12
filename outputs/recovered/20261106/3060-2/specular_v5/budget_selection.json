@@ -1,0 +1,109 @@
+{
+  "selected_ms": 10.0,
+  "validation": [
+    {
+      "budget_ms": 1.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 0.3000375,
+        "attention_ga": 0.7877681,
+        "attention_no_conditioning_ga": 0.79443445,
+        "attention_no_memory_ga": 0.7506403500000001,
+        "attention_no_physics_ga": 0.8779667000000001,
+        "greedy": 0.59270845,
+        "memory_ga": 0.3024289,
+        "mlp_ga": 0.5857156,
+        "pair": 0.5898407999999999,
+        "random": 0.6198804
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    },
+    {
+      "budget_ms": 5.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 3.56903585,
+        "attention_ga": 4.13540745,
+        "attention_no_conditioning_ga": 3.7113042000000003,
+        "attention_no_memory_ga": 3.4168925,
+        "attention_no_physics_ga": 3.67937985,
+        "greedy": 4.36009675,
+        "memory_ga": 2.9250647499999998,
+        "mlp_ga": 3.7913133,
+        "pair": 4.03414175,
+        "random": 4.3778614000000005
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    },
+    {
+      "budget_ms": 10.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 4.527361650000001,
+        "attention_ga": 6.3115492,
+        "attention_no_conditioning_ga": 4.63071255,
+        "attention_no_memory_ga": 4.40431445,
+        "attention_no_physics_ga": 4.6342596,
+        "greedy": 9.15419025,
+        "memory_ga": 3.222902350000001,
+        "mlp_ga": 5.33996355,
+        "pair": 8.8237174,
+        "random": 9.1731968
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    },
+    {
+      "budget_ms": 50.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 7.0315233500000005,
+        "attention_ga": 11.26779385,
+        "attention_no_conditioning_ga": 7.623565100000001,
+        "attention_no_memory_ga": 7.551213850000001,
+        "attention_no_physics_ga": 7.612241700000001,
+        "greedy": 48.8422667,
+        "memory_ga": 5.80105965,
+        "mlp_ga": 8.51088915,
+        "pair": 48.5137888,
+        "random": 48.86336685
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    },
+    {
+      "budget_ms": 100.0,
+      "p95_elapsed_ms": {
+        "analytical_ga": 7.063674000000001,
+        "attention_ga": 11.34252035,
+        "attention_no_conditioning_ga": 7.638878100000001,
+        "attention_no_memory_ga": 7.594331200000001,
+        "attention_no_physics_ga": 7.641179500000001,
+        "greedy": 98.84627335,
+        "memory_ga": 5.8338829,
+        "mlp_ga": 8.539367050000001,
+        "pair": 98.50747625,
+        "random": 98.855407
+      },
+      "neural_inference_fraction": {
+        "attention_ga": 1.0,
+        "mlp_ga": 1.0
+      },
+      "feasible": true
+    }
+  ],
+  "rule": "Prefer 10 ms; otherwise smallest listed budget with every main method p95 complete runtime <= budget and neural inference active on >=95% of cases",
+  "frozen_before_pilot": true,
+  "source": "benchmark_validation.jsonl",
+  "hard_real_time_guarantee": false
+}

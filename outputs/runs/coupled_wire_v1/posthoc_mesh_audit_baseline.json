@@ -1,0 +1,190 @@
+{
+  "index": 190,
+  "coarse_pair_minus_attention": 4.4431607085820914,
+  "selection": "Post-hoc adversarial numerical audit: largest mean pair-minus-attention gap at 10 ms on development pilot; not used for training or budget selection",
+  "records": [
+    {
+      "method": "blind_pair",
+      "seed": 7,
+      "coarse_rate": 3.7101920805844015,
+      "fine_rate": 3.7175965372211777
+    },
+    {
+      "method": "attention_no_physics_ga",
+      "seed": 7,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "random",
+      "seed": 7,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "pair",
+      "seed": 7,
+      "coarse_rate": 16.207257525400998,
+      "fine_rate": 15.07136087591972
+    },
+    {
+      "method": "attention_no_memory_ga",
+      "seed": 7,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "greedy",
+      "seed": 7,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "mlp_ga",
+      "seed": 7,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "memory_ga",
+      "seed": 7,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "analytical_ga",
+      "seed": 7,
+      "coarse_rate": 15.399980283308356,
+      "fine_rate": 15.556600388130335
+    },
+    {
+      "method": "attention_ga",
+      "seed": 7,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "mlp_ga",
+      "seed": 19,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "greedy",
+      "seed": 19,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "random",
+      "seed": 19,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "blind_pair",
+      "seed": 19,
+      "coarse_rate": 4.455035856435453,
+      "fine_rate": 4.486395308526082
+    },
+    {
+      "method": "attention_ga",
+      "seed": 19,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "memory_ga",
+      "seed": 19,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "attention_no_physics_ga",
+      "seed": 19,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "pair",
+      "seed": 19,
+      "coarse_rate": 16.207257525400998,
+      "fine_rate": 15.07136087591972
+    },
+    {
+      "method": "analytical_ga",
+      "seed": 19,
+      "coarse_rate": 15.399980283308356,
+      "fine_rate": 15.556600388130335
+    },
+    {
+      "method": "attention_no_memory_ga",
+      "seed": 19,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "blind_pair",
+      "seed": 43,
+      "coarse_rate": 3.662211563622815,
+      "fine_rate": 3.691372191358917
+    },
+    {
+      "method": "attention_no_memory_ga",
+      "seed": 43,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "analytical_ga",
+      "seed": 43,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "memory_ga",
+      "seed": 43,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "pair",
+      "seed": 43,
+      "coarse_rate": 16.207257525400998,
+      "fine_rate": 15.07136087591972
+    },
+    {
+      "method": "attention_ga",
+      "seed": 43,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "attention_no_physics_ga",
+      "seed": 43,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "random",
+      "seed": 43,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "greedy",
+      "seed": 43,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    },
+    {
+      "method": "mlp_ga",
+      "seed": 43,
+      "coarse_rate": 11.764096816818906,
+      "fine_rate": 11.713702642785824
+    }
+  ],
+  "fine_pair_minus_attention": 3.3576582331338933,
+  "fine_pair_rate": 15.071360875919718,
+  "fine_attention_rate": 11.713702642785824
+}

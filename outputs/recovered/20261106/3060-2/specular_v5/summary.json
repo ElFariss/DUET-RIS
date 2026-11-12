@@ -1,0 +1,179 @@
+{
+  "budget_ms": 10.0,
+  "methods": {
+    "mlp_ga": {
+      "mean_rate": 6.148365077200519,
+      "median_rate": 5.9438650514745515,
+      "p95_elapsed_ms": 5.60273775,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 6608.055555555556
+    },
+    "attention_no_physics_ga": {
+      "mean_rate": 6.148363169988737,
+      "median_rate": 5.9438650514745515,
+      "p95_elapsed_ms": 5.0533205,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 5848.319444444444
+    },
+    "attention_ga": {
+      "mean_rate": 6.148366041213573,
+      "median_rate": 5.9438650514745515,
+      "p95_elapsed_ms": 6.66969745,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 7683.416666666667
+    },
+    "memory_ga": {
+      "mean_rate": 6.148361894392058,
+      "median_rate": 5.9438650514745515,
+      "p95_elapsed_ms": 3.399902,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 4410.958333333333
+    },
+    "attention_no_conditioning_ga": {
+      "mean_rate": 6.14836380222267,
+      "median_rate": 5.9438650514745515,
+      "p95_elapsed_ms": 5.02205985,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 5864.958333333333
+    },
+    "attention_no_memory_ga": {
+      "mean_rate": 6.1483622537566225,
+      "median_rate": 5.9438650514745515,
+      "p95_elapsed_ms": 4.70663135,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 5254.736111111111
+    },
+    "analytical_ga": {
+      "mean_rate": 6.148364000418902,
+      "median_rate": 5.9438650514745515,
+      "p95_elapsed_ms": 4.754340750000001,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 5818.125
+    },
+    "random": {
+      "mean_rate": 6.125289365880511,
+      "median_rate": 5.915491213845165,
+      "p95_elapsed_ms": 9.1737864,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 2648.777777777778
+    },
+    "pair": {
+      "mean_rate": 6.14835755991697,
+      "median_rate": 5.943865051474552,
+      "p95_elapsed_ms": 8.82322005,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 35307.88888888889
+    },
+    "greedy": {
+      "mean_rate": 6.148116310084756,
+      "median_rate": 5.943865051474552,
+      "p95_elapsed_ms": 9.153355000000001,
+      "deadline_miss_fraction": 0.0,
+      "mean_evaluations": 19892.319444444445
+    }
+  },
+  "paired_comparisons": [
+    {
+      "method": "analytical_ga",
+      "paired_difference_vs_pair": 6.4405019321157735e-06,
+      "trajectory_bootstrap_95_interval": [
+        -1.4769144774446412e-05,
+        3.675343220603071e-05
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "attention_ga",
+      "paired_difference_vs_pair": 8.481296602204217e-06,
+      "trajectory_bootstrap_95_interval": [
+        -8.803617683147044e-06,
+        3.7177268168018004e-05
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "attention_no_conditioning_ga",
+      "paired_difference_vs_pair": 6.242305699739111e-06,
+      "trajectory_bootstrap_95_interval": [
+        -1.4249082504481773e-05,
+        3.6753432205919687e-05
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "attention_no_memory_ga",
+      "paired_difference_vs_pair": 4.693839652976837e-06,
+      "trajectory_bootstrap_95_interval": [
+        -1.8894480644770138e-05,
+        3.675343220591968e-05
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "attention_no_physics_ga",
+      "paired_difference_vs_pair": 5.610071766113143e-06,
+      "trajectory_bootstrap_95_interval": [
+        -1.6145784305335e-05,
+        3.675343220598136e-05
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "greedy",
+      "paired_difference_vs_pair": -0.00024124983221354083,
+      "trajectory_bootstrap_95_interval": [
+        -0.0005529289172684631,
+        -3.9109932661300174e-05
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "memory_ga",
+      "paired_difference_vs_pair": 4.334475087605958e-06,
+      "trajectory_bootstrap_95_interval": [
+        -1.925064678246059e-05,
+        3.67534322060307e-05
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "mlp_ga",
+      "paired_difference_vs_pair": 7.517283548789481e-06,
+      "trajectory_bootstrap_95_interval": [
+        -1.2191745579185712e-05,
+        3.7177268168049466e-05
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "pair",
+      "paired_difference_vs_pair": 0.0,
+      "trajectory_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "independent_trajectories": 6
+    },
+    {
+      "method": "random",
+      "paired_difference_vs_pair": -0.023068194036458545,
+      "trajectory_bootstrap_95_interval": [
+        -0.03864674579883302,
+        -0.00862874330642462
+      ],
+      "independent_trajectories": 6
+    }
+  ],
+  "decision": "Keep the simpler controller",
+  "pilot_is_development": true,
+  "headroom_gate": {
+    "decision": "bounded_training",
+    "reason": "Completed pair gain >1e-6 bit/s/Hz after single-bit local optimum on training trajectories",
+    "useful_train_states": 15,
+    "train_states": 48,
+    "median_positive_pair_gain": 3.513131445889825e-05,
+    "note": "This gate establishes pair opportunity, NOT superiority over timed pair search or restarts",
+    "scenario_sha256": "346feaca8edc6bd1ed511fed229255ad776ab50854cee6d295e99ee4e35abe24",
+    "audit_seconds": 0.18102840700157685
+  }
+}

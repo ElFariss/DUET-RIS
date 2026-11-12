@@ -1,0 +1,59 @@
+{
+  "artifact": "frame_0109_alloff_161.nec",
+  "purpose": "Xnec2c geometry and single-source inspection snapshot",
+  "frame": 109,
+  "split": "dev",
+  "trajectory": 6,
+  "step": 13,
+  "scenario_seed": 20261107,
+  "segments_per_wire": 161,
+  "wire_count": 70,
+  "ris_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+  "bit_mapping": {
+    "0": "all-OFF registered load state 0",
+    "1": "all-ON registered load state 1"
+  },
+  "load_states_ohm": [
+    [
+      1.0,
+      -10.79906419239132
+    ],
+    [
+      1.0,
+      129.2009358076087
+    ]
+  ],
+  "frequency_hz": 5530000000.0,
+  "wire_radius_m": 5e-05,
+  "source": {
+    "tag": 65,
+    "segment": 81,
+    "voltage_v": [
+      1,
+      0
+    ]
+  },
+  "matched_50ohm_loads_on_tags": [
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "source_geometry_npz": "/home/parasite/Work/conference/atom-wise-ris/data/processed/coupled_wire_dev_v1/frame_0109.npz",
+  "source_sidecar": "/home/parasite/Work/conference/atom-wise-ris/data/processed/coupled_wire_dev_v1/frame_0109.json",
+  "input_sha256": {
+    "frame_npz": "7a0b4038c526d732db1d5ab5ddff1703d98f3c7a30b9e5a9b5c8e7b2a3dc5043",
+    "frame_sidecar": "bb68cfd9638d02ab5b37b7e5d4667a47f77bd07ed888581a4facfab426cc7d3f",
+    "scenario": "e78ddb7f5c551133efb271e968f2c49c5742391f43ba8178cbb0334fc43426cf",
+    "physics_gate": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f"
+  },
+  "limitations": [
+    "One single-excitation NEC snapshot, not a 70-port impedance-matrix extraction.",
+    "Not demonstrated numerically equal to the PyNEC multi-excitation evaluator.",
+    "Free-space PEC thin wires; excludes RIS substrate, diode package, conductors, and radiation calibration.",
+    "Mesh segmentation is set to the requested view mesh and is not a convergence claim."
+  ],
+  "deck_sha256": "715f018c34ff4c50fd4822fee0e94b68d4294a5cf58ef0a009044d1e3c83d9f8"
+}

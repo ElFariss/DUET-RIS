@@ -1,0 +1,164 @@
+{
+  "args": {
+    "split": "validation",
+    "budgets": "50",
+    "seeds": "43",
+    "mode": "spatial",
+    "output": "/home/faris/projects/atom-wise-ris-improvement-20261106/outputs/campaigns/coupled_new_5_50_final2_20261106/coupled_validation_medium_b50_s43.jsonl",
+    "limit": 0,
+    "conditional_pair_policy": false,
+    "run": "outputs/runs/eval_coupled_new_20261106",
+    "data": "data/processed/coupled_wire_v1/dataset.npz",
+    "matched": true,
+    "protocol": "configs/experiments/matched_v1.json",
+    "search_config": "medium",
+    "test_data": null,
+    "physics_gate": null
+  },
+  "hostname": "labkc-comm2",
+  "cpu_affinity": [
+    0
+  ],
+  "numpy": "2.2.6",
+  "torch": "2.9.1+cu128",
+  "methods": [
+    "greedy",
+    "pair",
+    "random",
+    "population_ga",
+    "uniform_ga",
+    "memory_ga",
+    "analytical_ga",
+    "analytical_no_memory_ga",
+    "mlp_ga",
+    "attention_ga",
+    "attention_no_memory_ga",
+    "attention_no_physics_ga"
+  ],
+  "threads": 1,
+  "seeds": [
+    43
+  ],
+  "budgets": [
+    50.0
+  ],
+  "data_sha256": "08e2c39ef25547fd05ca60ccd7aaa3110889d743e0751ecd12ef85fe5dbea39d",
+  "timing_includes": [
+    "forecast/history preprocessing",
+    "passivity projection",
+    "fixed reference precoder",
+    "network contraction",
+    "memory retrieval/rescoring/write",
+    "features",
+    "inference",
+    "candidate evaluation"
+  ],
+  "timing_excludes": [
+    "one-time model load",
+    "train-case warmup",
+    "EM generation",
+    "channel acquisition",
+    "environmental rescore of chosen action",
+    "disk IO"
+  ],
+  "csi_age_s": 0,
+  "history_frames": 0,
+  "oracle": null,
+  "incident_source_wave_power_w": 0.1,
+  "pilot_is_development": true,
+  "policy_expected_ms": {
+    "mlp_seed43": 0.317488,
+    "attention_seed43": 0.5335831,
+    "attention_no_physics_seed43": 0.5379681000000001
+  },
+  "matched": true,
+  "conditional_pair_policy": false,
+  "frame_rule": "split==validation",
+  "n_frames": 48,
+  "physics_gate": "outputs/runs/eval_coupled_new_20261106/physics_gate.json",
+  "physics_gate_sha256": "e913067fafb4da9c6bbf85c91d201f9cc21f4d5185ad83568e5ac66a1502bb1f",
+  "selection_helper_sha256": "b118f4abe3385707392797860c03a0555120b8e5e4f9e1e4e0daa8bab704600e",
+  "campaign_script_sha256": "a5c1d2f3ed41999026b74579ee358574ab490bf4123cb857ac9b84ad0a643505",
+  "run": "outputs/runs/eval_coupled_new_20261106",
+  "protocol_sha256": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+  "search_config": "medium",
+  "search_config_values": {
+    "specular": {
+      "P0": 5,
+      "P1": 4,
+      "n_starts": 1,
+      "max_pol": 2,
+      "t_cap_fraction_short": 0.52,
+      "t_cap_max_ms_short": 3.8,
+      "t_cap_fraction_long": 0.58
+    },
+    "coupled": {
+      "K": 20,
+      "hop_K": 16
+    },
+    "all_variants": {
+      "hop_idx": [
+        0,
+        1
+      ],
+      "secondary_hops": true,
+      "basin_crossover": true,
+      "neural_residual_weight_coupled": 0.12,
+      "neural_logit_weight_specular": 0.15,
+      "memory_bias_weight": 0.1
+    }
+  },
+  "frozen_code_sha256": {
+    "configs/experiments/coupled_wire_v1.json": "f7c4f4f5472774c41e71e77f6bd62f05f07619d0aba67cb6f031877974e145c4",
+    "configs/experiments/matched_v1.json": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+    "scripts/benchmark.py": "10610255bca6b8acaa01d9bd0a1c7651397d4538b67918ad2c10f14b2cc7090d",
+    "scripts/benchmark_coupled.py": "5dbfa248c3e49cbb842b2c0ec168071064e76b666caf032b3db2f44abbc18bd1",
+    "src/atomwise_ris/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/channels/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/channels/precoding.py": "e2cc2d985581b58a71350561db4286e4081453aba4199a5754601de1943ba09f",
+    "src/atomwise_ris/core.py": "983a1058179ba49183330d159d70e6272f89cbe509ccee4001f67e462cb2d306",
+    "src/atomwise_ris/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/data/scenario.py": "84f68f255f1814ad960fec950bba44540d5764c17021ff2fff68a4ec26f38219",
+    "src/atomwise_ris/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/evaluation/evaluator.py": "5b4e445c9deef396142bafbe017abd2a7fcf1b85cf1e9da65a274189bc0e91b9",
+    "src/atomwise_ris/models/__init__.py": "2feeb057e6614e32cf86b9cbfbffe6a967e2bcd6e8923f578048ea07a7251827",
+    "src/atomwise_ris/models/coupled_policy.py": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+    "src/atomwise_ris/models/forecast.py": "f31c046649c6bd53a729fc9abec7b04a85f6f7ff2a2618b386c2b67719d2e719",
+    "src/atomwise_ris/models/policy.py": "a97d2bfff842b44d9ba8d0380542f6b2a71cbb16fc67bbd5fc13365f574936d3",
+    "src/atomwise_ris/optimization/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/optimization/coupled_search.py": "674c0699861fe8d77d590ecc8b1c30bb81e5b12922e64fbd2daf328d9c731c4d",
+    "src/atomwise_ris/optimization/search.py": "a548fa545182cfb635e867617fd36926889189fd543b92d11fe220f1fc3f16c8",
+    "src/atomwise_ris/physics/__init__.py": "34a67299a6ec7181175e1b2f16d129026daad6affa88a53f41a12b11ea6c4364",
+    "src/atomwise_ris/physics/nec.py": "d982356599afa2e561db0303d7ac28fe004698f16aea68a85c5442c85fe29876",
+    "src/atomwise_ris/physics/network.py": "8ec9f010f5682d592cb99b972788a520034981122d1e849d17f122272e0f0d7e",
+    "src/atomwise_ris/responses/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/responses/model.py": "a086bc4db60edd1630c5095934fc110c1b7766a4aaa4a6ca2bf173714b375d77",
+    "src/atomwise_ris/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/utils/provenance.py": "b88f04b66ceb9cdd67c71cb0ded0124566d5007e8f8060403231550605113ae0"
+  },
+  "checkpoint_sha256": {
+    "models/attention_no_physics_seed19/best.pt": "0a9cd92eaaa2d595447bc934b6485866f661f088f220e38c0aec8cbcd3fa88a0",
+    "models/attention_no_physics_seed43/best.pt": "b560d40df593114d18fb96ef5730df83ecb1391a25e530ac0940b9df1a1082d1",
+    "models/attention_no_physics_seed7/best.pt": "7ae03b1b3920a62f5a2dc82ab9caf25ad77449704d18f72645ca38ff58b90342",
+    "models/attention_seed19/best.pt": "3bc575f11f825ac5f7237e6eec6d12cc58db8df3f5525477e9f415ad292aa22a",
+    "models/attention_seed43/best.pt": "dc4de8c1dceed39bb2f48a5629e417186ae2d2d8c972754480036d025b4e4a77",
+    "models/attention_seed7/best.pt": "aca1645aaa3af16bdf56346a926761aaaff4be6f10f86394c84d9ea512d3e197",
+    "models/gru_seed19/best.pt": "b5e0b472f1db93534edcb6a91730b47ac38e44abcedddb6577ba6ec6a7e3dd82",
+    "models/gru_seed43/best.pt": "a4b415fa678162ec098a4b74b20638cc2091427f7291832114372a1144a4ea82",
+    "models/gru_seed7/best.pt": "f83181af6f1cc8dd2b21c40488bb8c0f1931db97cfd81ce0b14e0e2e2a0808e2",
+    "models/mlp_seed19/best.pt": "c5294b1a71b65b11d0d2a4bd3b60826e5a635215ea2da4bc4e2ccfa9d0b545df",
+    "models/mlp_seed43/best.pt": "95b448bf0e8f1d06e2637b1c2678d951904e16e4c6408458f858c235e49183db",
+    "models/mlp_seed7/best.pt": "c68978061c9fe35e65e12253f1414d8fbd23099248e47e6baaa6459fad3c93f1",
+    "models/gru_seed19/scaling.npz": "c812f7b709a32b91fc7854164ce31af4e47355728164fa7b094432ae9297be84",
+    "models/gru_seed43/scaling.npz": "c812f7b709a32b91fc7854164ce31af4e47355728164fa7b094432ae9297be84",
+    "models/gru_seed7/scaling.npz": "c812f7b709a32b91fc7854164ce31af4e47355728164fa7b094432ae9297be84",
+    "feature_scaling.npz": "cb3687dfd4db251f486b6c8eca817b6bd5101aecce0a5901c4d06de8165111ed"
+  },
+  "test_data_sha256": null,
+  "budget_selection": null,
+  "loadavg_1_5_15": [
+    1.00146484375,
+    0.7724609375,
+    0.4375
+  ]
+}

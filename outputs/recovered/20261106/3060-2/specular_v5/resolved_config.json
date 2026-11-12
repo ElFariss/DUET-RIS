@@ -1,0 +1,72 @@
+{
+  "experiment": {
+    "dataset_config": "configs/datasets/munich_specular.json",
+    "method_config": "configs/methods/bounded_mutation.json",
+    "run": "outputs/runs/specular_v5",
+    "budgets_ms": [
+      1,
+      5,
+      10,
+      50,
+      100
+    ],
+    "preferred_budget_ms": 10,
+    "claim_scope": "Measurement-informed simulation; all pilot cases are development data"
+  },
+  "dataset": {
+    "scenario": "data/processed/munich_specular_v3/scenario.npz",
+    "scenario_sha256": "346feaca8edc6bd1ed511fed229255ad776ab50854cee6d295e99ee4e35abe24",
+    "response": "data/processed/responses/opensourceris_v1.csv",
+    "response_sha256": "b0e41cb728849b11e085ad58471fabe91b400fde55a78ffa976c3c9c2bf269c5",
+    "frequency_hz": 5530000000,
+    "elements": 64,
+    "bs_antennas": 4,
+    "users": 2,
+    "trajectory_count": 24,
+    "steps_per_trajectory": 4,
+    "split_trajectories": {
+      "train": 12,
+      "validation": 6,
+      "pilot": 6
+    },
+    "ray_tracing": {
+      "rays_per_source": 5000000,
+      "path_capacity_per_source": 1000000,
+      "max_depth": 3,
+      "los": true,
+      "specular_reflection": true,
+      "diffraction": false,
+      "diffuse_reflection": false,
+      "refraction": false
+    },
+    "coefficient_origin": "Sionna CIR from the exact run exported and verified in data/raw/acquisition/munich_specular_v3",
+    "metadata_note": "Original acquisition metadata names an obsolete direct-only precoder; the evaluator uses reference all-OFF RZF."
+  },
+  "method": {
+    "seeds": [
+      7,
+      19,
+      43
+    ],
+    "epochs": 30,
+    "parents_per_snapshot": 24,
+    "variants": [
+      {
+        "kind": "mlp"
+      },
+      {
+        "kind": "attention"
+      },
+      {
+        "kind": "attention",
+        "no_physics": true
+      },
+      {
+        "kind": "attention",
+        "no_conditioning": true
+      }
+    ]
+  },
+  "run": "outputs/runs/specular_v5",
+  "device": "cuda"
+}

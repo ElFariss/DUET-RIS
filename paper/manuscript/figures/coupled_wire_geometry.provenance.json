@@ -1,0 +1,24 @@
+{
+  "status": "development-frame geometry visualization; not a channel or performance result",
+  "split": "dev",
+  "frame_index": 109,
+  "trajectory": 6,
+  "step": 13,
+  "input_sha256": {
+    "frame_0109.npz": "7a0b4038c526d732db1d5ab5ddff1703d98f3c7a30b9e5a9b5c8e7b2a3dc5043",
+    "frame_0109.json": "bb68cfd9638d02ab5b37b7e5d4667a47f77bd07ed888581a4facfab426cc7d3f",
+    "scenario.json": "e78ddb7f5c551133efb271e968f2c49c5742391f43ba8178cbb0334fc43426cf"
+  },
+  "output_sha256": {
+    "dev_frame_0109_geometry.png": "cc9b0048fe5a1e8a5344cdffe1ad11af9676c41674dad17757d73fb67d97ec09",
+    "dev_frame_0109_geometry.pdf": "90fe711daeb77f90b8cf27fa219047228d026342c6b203c0c5041819660ee82a"
+  },
+  "mesh_context": "81 segments/wire coarse; 161 segments/wire fine audit; plotted centerline geometry is the same physical layout",
+  "c1_audit": {
+    "path": "outputs/audits/v2-20261106/c1_spatial_validation_mesh161.attempt2.json",
+    "sha256": "a2dbf145a3f933312f8b3529ed473fb72d9510249ece683d3e074dfcbbc14e20",
+    "png_sha256": "7084f4e6a57bb19845a0724d09f2cbc3efb1c90b932af75346593ec295025249",
+    "pdf_sha256": "d04ee31f4b3ed2b45929e7184c4ba2e1db52848582b2f5df31a50bc326aeaa36",
+    "status": "descriptive validation sensitivity; 3 independent trajectory clusters; not a convergence result"
+  }
+}

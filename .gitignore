@@ -50,3 +50,5 @@ artifact-manifest.json
 
 # Downloaded reference implementations remain local; publish provenance only.
 /data/raw/em_reference/*/
+# Raw per-trial benchmark records (75-195 MB each) stay in the workspace; their hashes are in the run manifests.
+outputs/runs/**/*.jsonl

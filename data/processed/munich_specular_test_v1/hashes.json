@@ -1,0 +1,40 @@
+{
+  "scenario.npz": "2f19e70d216610cd2d1aef7249f2c4811bf7637c57c26b62a685bf3fc1f4c7e4",
+  "scenario.json": "654591e0c7468d987172a701ebea34cc5abab52255437015fee1839c969a818c",
+  "layout.json": "23b339457ce3a4ece029ca5f0393c7bac132c4cafae13d2f9f2f781546d0b264",
+  "arrays_sha256_note": "sha256 of the saved scenario.npz file",
+  "raw": {
+    "raw/channels.npz": "2486b50908dc372023c46df76a4c25c94c3b31b0f19287f2e09e8adeabe76b28",
+    "raw/layout.json": "23b339457ce3a4ece029ca5f0393c7bac132c4cafae13d2f9f2f781546d0b264",
+    "raw/trace_summary.json": "52e7abc852940166caf5832443e89576cedd22fc7ff837df257dda01dc8caf2f"
+  },
+  "integrity": {
+    "finite": true,
+    "shapes": {
+      "G": [
+        64,
+        4
+      ],
+      "H": [
+        120,
+        2,
+        64
+      ],
+      "D": [
+        120,
+        2,
+        4
+      ]
+    },
+    "nonzero_fraction": {
+      "G": 1.0,
+      "H": 1.0,
+      "D": 1.0
+    },
+    "G_equals_v3_G_max_abs": 7.999404263634331e-07,
+    "front_side_cosine_min": 0.28335557671973943,
+    "rear_side_users": 0
+  },
+  "raw/check_traj0/integrity_check_traj0.json": "f82e6e1683addf42aec8a72a532197df73c60fe30cfed978f413197a1147f144",
+  "raw/check_traj-1/integrity_check_traj-1.json": "9e1070cedbca39f8bd9e002efc5f223a747966366946a08b47bec04cf2b5cae2"
+}

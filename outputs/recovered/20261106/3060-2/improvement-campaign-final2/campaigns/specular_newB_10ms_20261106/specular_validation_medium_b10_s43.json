@@ -1,0 +1,191 @@
+{
+  "arguments": {
+    "scenario": "data/processed/munich_specular_v3/scenario.npz",
+    "run": "outputs/runs/eval_specular_newB_20261106",
+    "split": "validation",
+    "budgets": "10",
+    "seeds": "43",
+    "output": "/home/faris/projects/atom-wise-ris-improvement-20261106/outputs/campaigns/specular_newB_10ms_20261106/specular_validation_medium_b10_s43.jsonl",
+    "baselines_only": false,
+    "ablations": false,
+    "response": "data/processed/responses/opensourceris_v1.csv",
+    "matched": true,
+    "protocol": "configs/experiments/matched_v1.json",
+    "search_config": "medium",
+    "test_data": null,
+    "limit": 0,
+    "conditional_pair_policy": false
+  },
+  "cpu_affinity": [
+    0
+  ],
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "hostname": "labkc-comm2",
+  "torch": "2.9.1+cu128",
+  "numpy": "2.2.6",
+  "scenario_sha256": "346feaca8edc6bd1ed511fed229255ad776ab50854cee6d295e99ee4e35abe24",
+  "threads": 1,
+  "methods": [
+    "greedy",
+    "pair",
+    "random",
+    "population_ga",
+    "uniform_ga",
+    "memory_ga",
+    "analytical_ga",
+    "analytical_no_memory_ga",
+    "mlp_ga",
+    "attention_ga",
+    "attention_no_memory_ga",
+    "attention_no_physics_ga"
+  ],
+  "timing_includes": [
+    "channel contraction and cache creation",
+    "memory reset/retrieval/rescoring/write",
+    "features",
+    "CPU inference",
+    "selection and mutation",
+    "candidate evaluation"
+  ],
+  "timing_excludes": [
+    "one-time model load",
+    "one-time train-case warmup",
+    "disk IO",
+    "channel acquisition/ray tracing"
+  ],
+  "precision": "complex128 evaluator, float32 neural inference",
+  "pilot_is_development": true,
+  "precoder": "RZF on all-OFF reference, fixed within episode; includes RIS-only users",
+  "source_sha256": {
+    "configs/datasets/munich_specular.json": "488373c79665c85e24750602c559da1d988c1906168d42145d8e1468d0a1bd9a",
+    "configs/experiments/archive/matched_v1-registered-20261106.json": "2e2fc77e8fcb8472fc25c5b2b76d612dd29b1adebe53354527485110e5dc7514",
+    "configs/experiments/coupled_wire_v1.json": "f7c4f4f5472774c41e71e77f6bd62f05f07619d0aba67cb6f031877974e145c4",
+    "configs/experiments/matched_v1.json": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+    "configs/experiments/pilot.json": "c4c272144ef9d400125192e5b70cb128d0ada8860ccbd426054058ac224a6740",
+    "configs/methods/bounded_mutation.json": "3f56e86455a6c4bc038eac0dce832a3e923ce74058b7ec558f8e0247e44e9ded",
+    "scripts/benchmark.py": "10610255bca6b8acaa01d9bd0a1c7651397d4538b67918ad2c10f14b2cc7090d",
+    "scripts/benchmark_coupled.py": "691e1eeec5d5bfa064702ad5509380afbaae4149df5c94d21f9bca87ca38b509",
+    "scripts/run_improvement_campaign.py": "a5c1d2f3ed41999026b74579ee358574ab490bf4123cb857ac9b84ad0a643505",
+    "scripts/select_matched_budget.py": "b118f4abe3385707392797860c03a0555120b8e5e4f9e1e4e0daa8bab704600e",
+    "scripts/train_coupled_improvement.py": "c5d800f536d99a74302c11ebfbc986bf541a68b3907a665132500ed0db044ebc",
+    "scripts/train_improvement.py": "54aa9a3cec40e70ad6f50f3f9239453b674de6c2685c6adc1220807c4a9ac83b",
+    "src/atomwise_ris/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/channels/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/channels/precoding.py": "e2cc2d985581b58a71350561db4286e4081453aba4199a5754601de1943ba09f",
+    "src/atomwise_ris/core.py": "983a1058179ba49183330d159d70e6272f89cbe509ccee4001f67e462cb2d306",
+    "src/atomwise_ris/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/data/scenario.py": "84f68f255f1814ad960fec950bba44540d5764c17021ff2fff68a4ec26f38219",
+    "src/atomwise_ris/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/evaluation/evaluator.py": "5b4e445c9deef396142bafbe017abd2a7fcf1b85cf1e9da65a274189bc0e91b9",
+    "src/atomwise_ris/models/__init__.py": "2feeb057e6614e32cf86b9cbfbffe6a967e2bcd6e8923f578048ea07a7251827",
+    "src/atomwise_ris/models/coupled_policy.py": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+    "src/atomwise_ris/models/forecast.py": "f31c046649c6bd53a729fc9abec7b04a85f6f7ff2a2618b386c2b67719d2e719",
+    "src/atomwise_ris/models/policy.py": "a97d2bfff842b44d9ba8d0380542f6b2a71cbb16fc67bbd5fc13365f574936d3",
+    "src/atomwise_ris/optimization/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/optimization/coupled_search.py": "674c0699861fe8d77d590ecc8b1c30bb81e5b12922e64fbd2daf328d9c731c4d",
+    "src/atomwise_ris/optimization/search.py": "a548fa545182cfb635e867617fd36926889189fd543b92d11fe220f1fc3f16c8",
+    "src/atomwise_ris/physics/__init__.py": "34a67299a6ec7181175e1b2f16d129026daad6affa88a53f41a12b11ea6c4364",
+    "src/atomwise_ris/physics/nec.py": "d982356599afa2e561db0303d7ac28fe004698f16aea68a85c5442c85fe29876",
+    "src/atomwise_ris/physics/network.py": "8ec9f010f5682d592cb99b972788a520034981122d1e849d17f122272e0f0d7e",
+    "src/atomwise_ris/responses/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/responses/model.py": "a086bc4db60edd1630c5095934fc110c1b7766a4aaa4a6ca2bf173714b375d77",
+    "src/atomwise_ris/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/utils/provenance.py": "b88f04b66ceb9cdd67c71cb0ded0124566d5007e8f8060403231550605113ae0"
+  },
+  "response_sha256": "b0e41cb728849b11e085ad58471fabe91b400fde55a78ffa976c3c9c2bf269c5",
+  "conditional_pair_policy": false,
+  "selection_helper_sha256": "b118f4abe3385707392797860c03a0555120b8e5e4f9e1e4e0daa8bab704600e",
+  "campaign_script_sha256": "a5c1d2f3ed41999026b74579ee358574ab490bf4123cb857ac9b84ad0a643505",
+  "checkpoint_sha256": {
+    "models/attention_no_conditioning_seed19/best.pt": "291ecd3b26bee17dfe76d129a6f67a2fcd309275632b3480e883fd0cbe5a22de",
+    "models/attention_no_conditioning_seed43/best.pt": "0a2b04911f8f54b5533eb0f86401fcfbef056901a06469b3f2b9b812ca4cc913",
+    "models/attention_no_conditioning_seed7/best.pt": "cb60b8dfe4d2fd145d2be0322f5032e09e79e3c5b02dda17b328abda7e42b1b4",
+    "models/attention_no_physics_seed19/best.pt": "f8836a382ca76d114ece540f1d838426d0ae4ae2c3cafa7a11c433e239fd4d11",
+    "models/attention_no_physics_seed43/best.pt": "fe09e779f8078ceb3a557a1287412319473fcf1fb0a28c5630e58b0a97ae53c6",
+    "models/attention_no_physics_seed7/best.pt": "04accd1c72262f939821c2362694293b14d8dd99be9e4f641a347e140f6dc732",
+    "models/attention_seed19/best.pt": "eb6a0930c5448f3571032f64c55d5a6dea3bfba4b19be0088db9385efe182ca5",
+    "models/attention_seed43/best.pt": "bc9cd43e13b59d6c5f1c1c0cb36bb0422f24707340feda3a53ee15a61c6b35ed",
+    "models/attention_seed7/best.pt": "b32dcab3c6f6cf1ab19c601e67301b0fec850e2abfb80a6cb11088bf3a4e871b",
+    "models/mlp_seed19/best.pt": "1ce9d4751f40f8c0e8617b8ba404d2c6e677c80c5de4518e89c10c7e82135b17",
+    "models/mlp_seed43/best.pt": "24ff11e6b2496f0bdce9e850bde0d813a86222d4e5b3f42542be0a7e3268ebde",
+    "models/mlp_seed7/best.pt": "4d7d396acbc9da90381657302e1c03a80bdf5622bf35986df29daf8711121649"
+  },
+  "policy_expected_ms": {
+    "mlp_ga_seed43": 0.3176314,
+    "attention_ga_seed43": 0.5267276,
+    "attention_no_memory_ga_seed43": 0.523302,
+    "attention_no_physics_ga_seed43": 0.5310362000000001
+  },
+  "matched": true,
+  "frame_rule": "split==validation",
+  "n_frames": 24,
+  "protocol_sha256": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+  "search_config": "medium",
+  "search_config_values": {
+    "specular": {
+      "P0": 5,
+      "P1": 4,
+      "n_starts": 1,
+      "max_pol": 2,
+      "t_cap_fraction_short": 0.52,
+      "t_cap_max_ms_short": 3.8,
+      "t_cap_fraction_long": 0.58
+    },
+    "coupled": {
+      "K": 20,
+      "hop_K": 16
+    },
+    "all_variants": {
+      "hop_idx": [
+        0,
+        1
+      ],
+      "secondary_hops": true,
+      "basin_crossover": true,
+      "neural_residual_weight_coupled": 0.12,
+      "neural_logit_weight_specular": 0.15,
+      "memory_bias_weight": 0.1
+    }
+  },
+  "frozen_code_sha256": {
+    "configs/experiments/coupled_wire_v1.json": "f7c4f4f5472774c41e71e77f6bd62f05f07619d0aba67cb6f031877974e145c4",
+    "configs/experiments/matched_v1.json": "ffc1a771622acaa2114c11e2941c62bbb22a844cbeaee84580ede1fc214974fe",
+    "scripts/benchmark.py": "10610255bca6b8acaa01d9bd0a1c7651397d4538b67918ad2c10f14b2cc7090d",
+    "scripts/benchmark_coupled.py": "691e1eeec5d5bfa064702ad5509380afbaae4149df5c94d21f9bca87ca38b509",
+    "src/atomwise_ris/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/channels/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/channels/precoding.py": "e2cc2d985581b58a71350561db4286e4081453aba4199a5754601de1943ba09f",
+    "src/atomwise_ris/core.py": "983a1058179ba49183330d159d70e6272f89cbe509ccee4001f67e462cb2d306",
+    "src/atomwise_ris/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/data/scenario.py": "84f68f255f1814ad960fec950bba44540d5764c17021ff2fff68a4ec26f38219",
+    "src/atomwise_ris/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/evaluation/evaluator.py": "5b4e445c9deef396142bafbe017abd2a7fcf1b85cf1e9da65a274189bc0e91b9",
+    "src/atomwise_ris/models/__init__.py": "2feeb057e6614e32cf86b9cbfbffe6a967e2bcd6e8923f578048ea07a7251827",
+    "src/atomwise_ris/models/coupled_policy.py": "666cfe29b11e53da79e341beca0f1230fcbb2e5abb2510710d4e0fdbd4e339ee",
+    "src/atomwise_ris/models/forecast.py": "f31c046649c6bd53a729fc9abec7b04a85f6f7ff2a2618b386c2b67719d2e719",
+    "src/atomwise_ris/models/policy.py": "a97d2bfff842b44d9ba8d0380542f6b2a71cbb16fc67bbd5fc13365f574936d3",
+    "src/atomwise_ris/optimization/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/optimization/coupled_search.py": "674c0699861fe8d77d590ecc8b1c30bb81e5b12922e64fbd2daf328d9c731c4d",
+    "src/atomwise_ris/optimization/search.py": "a548fa545182cfb635e867617fd36926889189fd543b92d11fe220f1fc3f16c8",
+    "src/atomwise_ris/physics/__init__.py": "34a67299a6ec7181175e1b2f16d129026daad6affa88a53f41a12b11ea6c4364",
+    "src/atomwise_ris/physics/nec.py": "d982356599afa2e561db0303d7ac28fe004698f16aea68a85c5442c85fe29876",
+    "src/atomwise_ris/physics/network.py": "8ec9f010f5682d592cb99b972788a520034981122d1e849d17f122272e0f0d7e",
+    "src/atomwise_ris/responses/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/responses/model.py": "a086bc4db60edd1630c5095934fc110c1b7766a4aaa4a6ca2bf173714b375d77",
+    "src/atomwise_ris/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/atomwise_ris/utils/provenance.py": "b88f04b66ceb9cdd67c71cb0ded0124566d5007e8f8060403231550605113ae0"
+  },
+  "test_scenario_sha256": null,
+  "budget_selection": null,
+  "seeds": [
+    43
+  ],
+  "budgets_ms": [
+    10.0
+  ],
+  "loadavg_1_5_15": [
+    0.25048828125,
+    0.0986328125,
+    0.07177734375
+  ]
+}

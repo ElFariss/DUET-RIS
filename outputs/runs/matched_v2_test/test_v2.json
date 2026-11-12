@@ -1,0 +1,50 @@
+{
+  "budgets_ms": [
+    5,
+    10,
+    50,
+    100
+  ],
+  "cpu_affinity": [
+    5
+  ],
+  "created_utc": "2026-11-07T21:36:30Z",
+  "data_manifest_sha256": "c58cd33389bc4fef264a97de058cd9d1310bdf56c91916f2a9f07fe822477a48",
+  "frames": 480,
+  "hostname": "labkc-comm3",
+  "methods": [
+    "greedy",
+    "pair",
+    "me_ga",
+    "pair_plus_b3",
+    "pair_plus_b5",
+    "pair_plus_b35"
+  ],
+  "numpy": "2.2.6",
+  "protocol_sha256": "d9ed1a21e4d1568b63ab083918a9a5c9fc6d7b6f386f221dfd353cde7505e468",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "seeds": [
+    7,
+    19,
+    43,
+    3,
+    11,
+    23,
+    31,
+    59,
+    67,
+    83
+  ],
+  "split": "test",
+  "timing_excludes": [
+    "data loading",
+    "warm-up pass",
+    "81-segment rescoring",
+    "disk writes"
+  ],
+  "timing_includes": [
+    "CoupledNetwork construction",
+    "search",
+    "returned-action full verification"
+  ]
+}

@@ -1,83 +1,74 @@
-# Atom-wise RIS
+# Paper A: physics of coupled binary RIS control
 
-Simulation-only feasibility study of **physically conditioned, learned bit edits** for a 1-bit reconfigurable intelligent surface. The controller tries to improve the weakest user's rate within a complete CPU runtime budget.
+How do blockage, user motion, an unseen city, mutual coupling and array size (64/128/256) change the worst-user rate, and the value of pair moves, for a 1-bit RIS? The channels are calibrated hybrid ray-tracing + NEC-2 channels from [GeoRIS-Bench](../GeoRIS-Bench/README.md).
 
-**Current evidence:** the completed exact-export pilot favors cached analytical pair/greedy search over learned mutation. At the validation-selected **10 ms** budget, mean worst-user spectral efficiency was **6.14836** for pair search, **6.12007** for the MLP and **6.11687 bit/s/Hz** for attention. All three had zero observed deadline misses at that budget. These are six-trajectory development results, not a final paper test. See the [report](outputs/runs/specular_v5/REPORT.md) and [claim boundaries](docs/claim-evidence.md).
+This repository continues the original **atom-wise-ris** project. Its finished free-space b35 study (Paper 1) becomes one section of Paper A.
 
-**Coupled spatial/temporal pilot completed:** 192 NEC-2 frames, 12 checkpoints and 23,040 controller trials. At 10 ms, pair search reached **17.1022** versus attention **16.7650 bit/s/Hz**. With 20 ms stale observations, linear prediction plus pair search reached **5.1270**, GRU plus pair search **4.6664**, and GRU plus attention **5.0682**. These belong to a separate free-space wire surface, not the Munich/OpenSourceRIS model. Fine-mesh rate sensitivity and three pilot trajectories make close rankings provisional. Read the [report](outputs/runs/coupled_wire_v1/REPORT.md), [IEEE-style PDF](paper/coupled-pilot/main.pdf), and [physical scope](docs/coupled-reference.md).
+## Part 1, finished and frozen: free-space b35 study (Paper 1)
 
-## Scientific pipeline
+- **Setup:** a thin-wire RIS bench in free space (NEC-2, 81- and 161-segment meshes), with 2 users, 4 base-station antennas and a fixed precoder.
+- **Held-out test:** the single run of the frozen protocol `configs/experiments/matched_v2.json` on `coupled_wire_test_v2`: 30 trajectories, 480 frames, CPU 5 pinned. Results are in `docs/matched-v2-test-results-20261108.md`.
+- **Result at the 50 ms primary budget:**
+  - b35 beats pair by **+0.085 bit/s/Hz** [+0.047, +0.128] on 161 segments, winning 27 of 30 trajectories.
+  - b35 also beats b3, b5 and ME-GA. All four contrasts are supported on both meshes.
+- **Scope:** it holds only for that setup, a 1 m bench with no obstacles where users always see the base station.
+- **Earlier pilots** (Munich specular measurement-informed pilot `specular_v5`, coupled spatial/temporal pilot `coupled_wire_v1`, ladder v2) are kept with their reports in `outputs/runs/` and `docs/`. The manuscript is in `paper/`.
 
-Munich geometry → Sionna propagation at nominal 5.53 GHz → verified DeepMIMO path export → measured-surface-informed binary response → fixed-precoder evaluator → timed RIS controller.
+**Frozen files** (do not edit): `outputs/frozen/`, `configs/experiments/matched_v2.json`, `configs/experiments/matched_v1.json`.
 
-- 64 cells, 4 BS antennas, 2 users; 24 spatially split trajectories, 4 snapshots each.
-- Train / validation / development pilot: 12 / 6 / 6 whole trajectories.
-- Objective: minimum user spectral efficiency with interference and thermal noise.
-- Shared MLP, compact two-layer attention, five analytical/stochastic baselines, and three ablations.
-- Three seeds, 1/5/10/50/100 ms CPU budgets. Validation selects the primary feasible budget before pilot evaluation.
-- Surface measurements are extrapolated to independent mixed-state cells. This is **measurement-informed simulation**, not a calibrated EM model or hardware validation.
+## Part 2, in progress: physics study on GeoRIS-Bench
+
+The questions:
+1. a user blocked by a building;
+2. a moving user;
+3. an unseen city (leave one map out);
+4. whether coupling matters in a real scene (optimize with full vs diagonal Z, rescore with full Z);
+5. array size 64/128/256.
+
+Secondary: RIS placement, and more or closer users. The methods are no RIS, all OFF, greedy, exact pair, b35, ME-GA and geometric phase-gradient steering.
+
+**First evidence (2026-11-12, natural-scope validation frames only).** It is in Paper B's `docs/bench-ris-leverage-diagnostic-20261112.md`:
+- A 0.2–0.45 m facade RIS about 112 m from the base station changes the worst-user rate by a median of under 0.05 bit/s/Hz.
+- Its path is 40–60 dB below the base station's own paths.
+- About half of the frames have a served user with no traced path.
+
+So in this deployment geometry the RIS barely matters. That is a Paper A finding in its own right. It also motivates a RIS-relevant scope, with the RIS near the base station or near the users.
 
 ## Layout
 
 ```text
-configs/                  dataset identity, method jobs, experiment protocol
-src/atomwise_ris/
-  data/                   scenario interface and split checks
-  responses/              complex ON/OFF response and provenance
-  channels/               fixed reference precoder
-  evaluation/             physical channel combination and cached exact scores
-  optimization/           timed search and causal configuration memory
-  models/                 shared MLP and compact attention edit policies
-  physics/                NEC-2 reference and exact coupled-network updates
-  utils/                  hashes and provenance
-scripts/                  acquisition, audits, training, evaluation, reproduction
-experiments/              hypotheses and matched comparison definitions
-data/raw/                source figures, ray paths, DeepMIMO exports
-data/processed/          frozen channel arrays and digitized response tables
-outputs/runs/<run>/        configs, checkpoints, histories, timings, reports, figures
-paper/                    existing IEEE proposal archive and generated figures
-docs/                    assumptions, evidence, provenance, repository decisions
-tests/                   numerical, leakage, and policy checks
-archives/                 preserved historical code and pre-migration source
+src/atomwise_ris/   core.py, data/, models/ (MLP, attention, forecast), responses/, utils/
+                    (the physics, channel and solver modules come from GeoRIS-Bench)
+scripts/            Paper 1 pipeline: prepare, train, benchmark*, analyze*, reproduce*, ladder and matched runs
+configs/            datasets, methods, experiment protocols (matched_v1, matched_v2)
+experiments/        hypotheses and matched comparison definitions
+data/               free-space wire bench (coupled_wire_*), Munich specular arrays, responses, raw sources
+outputs/            runs (reports, checkpoints, timings), frozen protocol, figures, audits
+paper/              manuscripts and figures
+docs/               protocols, results, evidence and limitations
+archives/           preserved historical code
+tests/              numerical, leakage and protocol checks
 ```
 
-Each run keeps its checkpoints and evidence together. `responses/` contains the historical independent-cell approximation. `physics/` contains the separate thin-wire electromagnetic reference; it does not calibrate the OpenSourceRIS PCB.
+The test splits `coupled_wire_test_v1`, `coupled_wire_test_v2` and `coupled_wire_test_v2_fine161` are **sealed**: Paper 1's single test run used them, and they are not for design.
 
-## Install and numerical checks
+## Setup and tests
 
-Python 3.12 is the reference environment. With [uv](https://docs.astral.sh/uv/):
+This repository expects `../GeoRIS-Bench` next to it. Use the shared workspace venv, or install both into your own:
 
 ```bash
-uv sync --frozen --extra training
-uv run --frozen --extra training python -m unittest discover -s tests -v
+pip install -e ../GeoRIS-Bench[dataset] -e .[training]
+PYTHONPATH=src:scripts python -m unittest discover -s tests
 ```
 
-For ray tracing and DeepMIMO conversion, include `--extra simulation`. The training lock uses PyTorch 2.9.1/CUDA 12.8; GPU training needs a compatible NVIDIA driver. CPU-only CI installs the same PyTorch version from the CPU index. `requirements-lock.txt` records the original remote environment; `uv.lock` is the dependency-resolution lock for this repository.
+**Known failure:** `test_matched…test_memory_ga_ranking_uses_pattern_spread` fails. It failed before the 2026-11-12 split too.
 
-## Reproduce from frozen channels
+`uv.lock` and `pyproject.toml` still describe the old single repository. They have not been re-locked since the split.
 
-Large channel arrays, raw paths, checkpoints, and individual timing records are retained in the workspace and lab mirror, excluded from normal Git. Read [data/README.md](data/README.md) before trying a fresh clone. This is not yet a publicly released dataset.
+## Git
 
-```bash
-.venv/bin/python scripts/reproduce.py --run outputs/runs/my_reproduction --device cuda
-```
+- The history is the original atom-wise-ris history. The remote is renamed to **`atom-wise-ris-paper1`** (github.com/ElFariss/atom-wise-ris, the published Paper 1 code), so Paper A is never pushed there by accident.
+- Add a new `origin` when Paper A gets its own GitHub repository.
+- Files that moved to GeoRIS-Bench or Paper B show as deleted here. The full map is `../workspace-notes/split-manifest-20261112.json`.
 
-This checks input hashes, snapshots source/configuration/environment, audits the scenario, computes pair headroom, trains only if the gate passes, benchmarks validation, freezes the budget, evaluates the development pilot, and writes sensitivity analysis/report/figures. It refuses to overwrite completed experiment artifacts. `--stage prepare|train|validate|pilot|report` supports separated execution of stages; use the same configuration and source for an existing run. Failed-stage logs are preserved; inspect them before choosing a new run.
-
-For postprocessing an existing completed run:
-
-```bash
-.venv/bin/python scripts/analyze.py --run outputs/runs/specular_v5
-```
-
-The models are small. One GPU is sufficient for this bounded campaign; CPU timing must run alone on a quiet CPU, not alongside training. The harness binds to one available core and sets Torch/BLAS thread counts to one. CPU-specific latency must not be presented as microcontroller performance.
-
-## Regenerate propagation
-
-The frozen arrays are required for exact dataset identity. Re-tracing the scene is an independent simulation and is not bitwise repeatable across devices. Follow [data/README.md](data/README.md) for acquisition commands, the exporter path-cap repair, carrier phase, coordinate matching, and convergence limitations.
-
-## Evidence and limitations
-
-The later paper still needs an untouched final evaluation set, a stronger physical-response validation, and substantially more independent trajectories/seeds. Adding attention or combining data sources alone does not establish novelty. See [docs/physical-model.md](docs/physical-model.md), [experiments/README.md](experiments/README.md), and [THIRD_PARTY.md](THIRD_PARTY.md).
-
-No permissive license has been selected for original research code. Third-party material retains its own terms; see [LICENSE](LICENSE). `CITATION.cff` describes an unpublished repository, not an accepted paper.
+No permissive license has been chosen for the original research code (see `LICENSE` and `THIRD_PARTY.md`).
