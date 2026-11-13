@@ -1,0 +1,749 @@
+{
+ "pending": [
+  [
+   "vRateGreedyFive64",
+   "M1 greedy 5 ms 64"
+  ],
+  [
+   "vRateGreedyTen64",
+   "M1 greedy 10 ms 64"
+  ],
+  [
+   "vRateGreedyFifty64",
+   "M1 greedy 50 ms 64"
+  ],
+  [
+   "vRateGreedyHundred64",
+   "M1 greedy 100 ms 64"
+  ],
+  [
+   "vLatGreedy64",
+   "M2 mean greedy 50 ms 64"
+  ],
+  [
+   "vLatPGreedy64",
+   "M2 p95 greedy 50 ms 64"
+  ],
+  [
+   "vEvalsGreedy64",
+   "M3 evals greedy 50 ms 64"
+  ],
+  [
+   "vMissGreedy64",
+   "miss % greedy 50 ms 64"
+  ],
+  [
+   "vRatePairFive64",
+   "M1 pair 5 ms 64"
+  ],
+  [
+   "vRatePairTen64",
+   "M1 pair 10 ms 64"
+  ],
+  [
+   "vRatePairFifty64",
+   "M1 pair 50 ms 64"
+  ],
+  [
+   "vRatePairHundred64",
+   "M1 pair 100 ms 64"
+  ],
+  [
+   "vLatPair64",
+   "M2 mean pair 50 ms 64"
+  ],
+  [
+   "vLatPPair64",
+   "M2 p95 pair 50 ms 64"
+  ],
+  [
+   "vEvalsPair64",
+   "M3 evals pair 50 ms 64"
+  ],
+  [
+   "vMissPair64",
+   "miss % pair 50 ms 64"
+  ],
+  [
+   "vRateBthreeFive64",
+   "M1 pair_plus_b3 5 ms 64"
+  ],
+  [
+   "vRateBthreeTen64",
+   "M1 pair_plus_b3 10 ms 64"
+  ],
+  [
+   "vRateBthreeFifty64",
+   "M1 pair_plus_b3 50 ms 64"
+  ],
+  [
+   "vRateBthreeHundred64",
+   "M1 pair_plus_b3 100 ms 64"
+  ],
+  [
+   "vLatBthree64",
+   "M2 mean pair_plus_b3 50 ms 64"
+  ],
+  [
+   "vLatPBthree64",
+   "M2 p95 pair_plus_b3 50 ms 64"
+  ],
+  [
+   "vEvalsBthree64",
+   "M3 evals pair_plus_b3 50 ms 64"
+  ],
+  [
+   "vMissBthree64",
+   "miss % pair_plus_b3 50 ms 64"
+  ],
+  [
+   "vRateBfiveFive64",
+   "M1 pair_plus_b5 5 ms 64"
+  ],
+  [
+   "vRateBfiveTen64",
+   "M1 pair_plus_b5 10 ms 64"
+  ],
+  [
+   "vRateBfiveFifty64",
+   "M1 pair_plus_b5 50 ms 64"
+  ],
+  [
+   "vRateBfiveHundred64",
+   "M1 pair_plus_b5 100 ms 64"
+  ],
+  [
+   "vLatBfive64",
+   "M2 mean pair_plus_b5 50 ms 64"
+  ],
+  [
+   "vLatPBfive64",
+   "M2 p95 pair_plus_b5 50 ms 64"
+  ],
+  [
+   "vEvalsBfive64",
+   "M3 evals pair_plus_b5 50 ms 64"
+  ],
+  [
+   "vMissBfive64",
+   "miss % pair_plus_b5 50 ms 64"
+  ],
+  [
+   "vRateBtsFive64",
+   "M1 pair_plus_b35 5 ms 64"
+  ],
+  [
+   "vRateBtsTen64",
+   "M1 pair_plus_b35 10 ms 64"
+  ],
+  [
+   "vRateBtsFifty64",
+   "M1 pair_plus_b35 50 ms 64"
+  ],
+  [
+   "vRateBtsHundred64",
+   "M1 pair_plus_b35 100 ms 64"
+  ],
+  [
+   "vLatBts64",
+   "M2 mean pair_plus_b35 50 ms 64"
+  ],
+  [
+   "vLatPBts64",
+   "M2 p95 pair_plus_b35 50 ms 64"
+  ],
+  [
+   "vEvalsBts64",
+   "M3 evals pair_plus_b35 50 ms 64"
+  ],
+  [
+   "vMissBts64",
+   "miss % pair_plus_b35 50 ms 64"
+  ],
+  [
+   "vRateMegaFive64",
+   "M1 me_ga 5 ms 64"
+  ],
+  [
+   "vRateMegaTen64",
+   "M1 me_ga 10 ms 64"
+  ],
+  [
+   "vRateMegaFifty64",
+   "M1 me_ga 50 ms 64"
+  ],
+  [
+   "vRateMegaHundred64",
+   "M1 me_ga 100 ms 64"
+  ],
+  [
+   "vLatMega64",
+   "M2 mean me_ga 50 ms 64"
+  ],
+  [
+   "vLatPMega64",
+   "M2 p95 me_ga 50 ms 64"
+  ],
+  [
+   "vEvalsMega64",
+   "M3 evals me_ga 50 ms 64"
+  ],
+  [
+   "vMissMega64",
+   "miss % me_ga 50 ms 64"
+  ],
+  [
+   "vRateNsgaFive64",
+   "M1 nsga2 5 ms 64"
+  ],
+  [
+   "vRateNsgaTen64",
+   "M1 nsga2 10 ms 64"
+  ],
+  [
+   "vRateNsgaFifty64",
+   "M1 nsga2 50 ms 64"
+  ],
+  [
+   "vRateNsgaHundred64",
+   "M1 nsga2 100 ms 64"
+  ],
+  [
+   "vLatNsga64",
+   "M2 mean nsga2 50 ms 64"
+  ],
+  [
+   "vLatPNsga64",
+   "M2 p95 nsga2 50 ms 64"
+  ],
+  [
+   "vEvalsNsga64",
+   "M3 evals nsga2 50 ms 64"
+  ],
+  [
+   "vMissNsga64",
+   "miss % nsga2 50 ms 64"
+  ],
+  [
+   "vHOne64",
+   "H1 diff [CI] 64"
+  ],
+  [
+   "vHOneVerdict64",
+   "H1 verdict 64"
+  ],
+  [
+   "vHTwo64",
+   "H2 diff [CI] 64"
+  ],
+  [
+   "vHTwoVerdict64",
+   "H2 verdict 64"
+  ],
+  [
+   "vHFive64",
+   "H5 diff [CI] 64"
+  ],
+  [
+   "vHFiveVerdict64",
+   "H5 verdict 64"
+  ],
+  [
+   "vRateGreedyFive128",
+   "M1 greedy 5 ms 128"
+  ],
+  [
+   "vRateGreedyTen128",
+   "M1 greedy 10 ms 128"
+  ],
+  [
+   "vRateGreedyFifty128",
+   "M1 greedy 50 ms 128"
+  ],
+  [
+   "vRateGreedyHundred128",
+   "M1 greedy 100 ms 128"
+  ],
+  [
+   "vLatGreedy128",
+   "M2 mean greedy 50 ms 128"
+  ],
+  [
+   "vLatPGreedy128",
+   "M2 p95 greedy 50 ms 128"
+  ],
+  [
+   "vEvalsGreedy128",
+   "M3 evals greedy 50 ms 128"
+  ],
+  [
+   "vMissGreedy128",
+   "miss % greedy 50 ms 128"
+  ],
+  [
+   "vRatePairFive128",
+   "M1 pair 5 ms 128"
+  ],
+  [
+   "vRatePairTen128",
+   "M1 pair 10 ms 128"
+  ],
+  [
+   "vRatePairFifty128",
+   "M1 pair 50 ms 128"
+  ],
+  [
+   "vRatePairHundred128",
+   "M1 pair 100 ms 128"
+  ],
+  [
+   "vLatPair128",
+   "M2 mean pair 50 ms 128"
+  ],
+  [
+   "vLatPPair128",
+   "M2 p95 pair 50 ms 128"
+  ],
+  [
+   "vEvalsPair128",
+   "M3 evals pair 50 ms 128"
+  ],
+  [
+   "vMissPair128",
+   "miss % pair 50 ms 128"
+  ],
+  [
+   "vRateBthreeFive128",
+   "M1 pair_plus_b3 5 ms 128"
+  ],
+  [
+   "vRateBthreeTen128",
+   "M1 pair_plus_b3 10 ms 128"
+  ],
+  [
+   "vRateBthreeFifty128",
+   "M1 pair_plus_b3 50 ms 128"
+  ],
+  [
+   "vRateBthreeHundred128",
+   "M1 pair_plus_b3 100 ms 128"
+  ],
+  [
+   "vLatBthree128",
+   "M2 mean pair_plus_b3 50 ms 128"
+  ],
+  [
+   "vLatPBthree128",
+   "M2 p95 pair_plus_b3 50 ms 128"
+  ],
+  [
+   "vEvalsBthree128",
+   "M3 evals pair_plus_b3 50 ms 128"
+  ],
+  [
+   "vMissBthree128",
+   "miss % pair_plus_b3 50 ms 128"
+  ],
+  [
+   "vRateBfiveFive128",
+   "M1 pair_plus_b5 5 ms 128"
+  ],
+  [
+   "vRateBfiveTen128",
+   "M1 pair_plus_b5 10 ms 128"
+  ],
+  [
+   "vRateBfiveFifty128",
+   "M1 pair_plus_b5 50 ms 128"
+  ],
+  [
+   "vRateBfiveHundred128",
+   "M1 pair_plus_b5 100 ms 128"
+  ],
+  [
+   "vLatBfive128",
+   "M2 mean pair_plus_b5 50 ms 128"
+  ],
+  [
+   "vLatPBfive128",
+   "M2 p95 pair_plus_b5 50 ms 128"
+  ],
+  [
+   "vEvalsBfive128",
+   "M3 evals pair_plus_b5 50 ms 128"
+  ],
+  [
+   "vMissBfive128",
+   "miss % pair_plus_b5 50 ms 128"
+  ],
+  [
+   "vRateBtsFive128",
+   "M1 pair_plus_b35 5 ms 128"
+  ],
+  [
+   "vRateBtsTen128",
+   "M1 pair_plus_b35 10 ms 128"
+  ],
+  [
+   "vRateBtsFifty128",
+   "M1 pair_plus_b35 50 ms 128"
+  ],
+  [
+   "vRateBtsHundred128",
+   "M1 pair_plus_b35 100 ms 128"
+  ],
+  [
+   "vLatBts128",
+   "M2 mean pair_plus_b35 50 ms 128"
+  ],
+  [
+   "vLatPBts128",
+   "M2 p95 pair_plus_b35 50 ms 128"
+  ],
+  [
+   "vEvalsBts128",
+   "M3 evals pair_plus_b35 50 ms 128"
+  ],
+  [
+   "vMissBts128",
+   "miss % pair_plus_b35 50 ms 128"
+  ],
+  [
+   "vRateMegaFive128",
+   "M1 me_ga 5 ms 128"
+  ],
+  [
+   "vRateMegaTen128",
+   "M1 me_ga 10 ms 128"
+  ],
+  [
+   "vRateMegaFifty128",
+   "M1 me_ga 50 ms 128"
+  ],
+  [
+   "vRateMegaHundred128",
+   "M1 me_ga 100 ms 128"
+  ],
+  [
+   "vLatMega128",
+   "M2 mean me_ga 50 ms 128"
+  ],
+  [
+   "vLatPMega128",
+   "M2 p95 me_ga 50 ms 128"
+  ],
+  [
+   "vEvalsMega128",
+   "M3 evals me_ga 50 ms 128"
+  ],
+  [
+   "vMissMega128",
+   "miss % me_ga 50 ms 128"
+  ],
+  [
+   "vRateNsgaFive128",
+   "M1 nsga2 5 ms 128"
+  ],
+  [
+   "vRateNsgaTen128",
+   "M1 nsga2 10 ms 128"
+  ],
+  [
+   "vRateNsgaFifty128",
+   "M1 nsga2 50 ms 128"
+  ],
+  [
+   "vRateNsgaHundred128",
+   "M1 nsga2 100 ms 128"
+  ],
+  [
+   "vLatNsga128",
+   "M2 mean nsga2 50 ms 128"
+  ],
+  [
+   "vLatPNsga128",
+   "M2 p95 nsga2 50 ms 128"
+  ],
+  [
+   "vEvalsNsga128",
+   "M3 evals nsga2 50 ms 128"
+  ],
+  [
+   "vMissNsga128",
+   "miss % nsga2 50 ms 128"
+  ],
+  [
+   "vHOne128",
+   "H1 diff [CI] 128"
+  ],
+  [
+   "vHOneVerdict128",
+   "H1 verdict 128"
+  ],
+  [
+   "vHTwo128",
+   "H2 diff [CI] 128"
+  ],
+  [
+   "vHTwoVerdict128",
+   "H2 verdict 128"
+  ],
+  [
+   "vHFive128",
+   "H5 diff [CI] 128"
+  ],
+  [
+   "vHFiveVerdict128",
+   "H5 verdict 128"
+  ],
+  [
+   "vRateGreedyFive256",
+   "M1 greedy 5 ms 256"
+  ],
+  [
+   "vRateGreedyTen256",
+   "M1 greedy 10 ms 256"
+  ],
+  [
+   "vRateGreedyFifty256",
+   "M1 greedy 50 ms 256"
+  ],
+  [
+   "vRateGreedyHundred256",
+   "M1 greedy 100 ms 256"
+  ],
+  [
+   "vLatGreedy256",
+   "M2 mean greedy 50 ms 256"
+  ],
+  [
+   "vLatPGreedy256",
+   "M2 p95 greedy 50 ms 256"
+  ],
+  [
+   "vEvalsGreedy256",
+   "M3 evals greedy 50 ms 256"
+  ],
+  [
+   "vMissGreedy256",
+   "miss % greedy 50 ms 256"
+  ],
+  [
+   "vRatePairFive256",
+   "M1 pair 5 ms 256"
+  ],
+  [
+   "vRatePairTen256",
+   "M1 pair 10 ms 256"
+  ],
+  [
+   "vRatePairFifty256",
+   "M1 pair 50 ms 256"
+  ],
+  [
+   "vRatePairHundred256",
+   "M1 pair 100 ms 256"
+  ],
+  [
+   "vLatPair256",
+   "M2 mean pair 50 ms 256"
+  ],
+  [
+   "vLatPPair256",
+   "M2 p95 pair 50 ms 256"
+  ],
+  [
+   "vEvalsPair256",
+   "M3 evals pair 50 ms 256"
+  ],
+  [
+   "vMissPair256",
+   "miss % pair 50 ms 256"
+  ],
+  [
+   "vRateBthreeFive256",
+   "M1 pair_plus_b3 5 ms 256"
+  ],
+  [
+   "vRateBthreeTen256",
+   "M1 pair_plus_b3 10 ms 256"
+  ],
+  [
+   "vRateBthreeFifty256",
+   "M1 pair_plus_b3 50 ms 256"
+  ],
+  [
+   "vRateBthreeHundred256",
+   "M1 pair_plus_b3 100 ms 256"
+  ],
+  [
+   "vLatBthree256",
+   "M2 mean pair_plus_b3 50 ms 256"
+  ],
+  [
+   "vLatPBthree256",
+   "M2 p95 pair_plus_b3 50 ms 256"
+  ],
+  [
+   "vEvalsBthree256",
+   "M3 evals pair_plus_b3 50 ms 256"
+  ],
+  [
+   "vMissBthree256",
+   "miss % pair_plus_b3 50 ms 256"
+  ],
+  [
+   "vRateBfiveFive256",
+   "M1 pair_plus_b5 5 ms 256"
+  ],
+  [
+   "vRateBfiveTen256",
+   "M1 pair_plus_b5 10 ms 256"
+  ],
+  [
+   "vRateBfiveFifty256",
+   "M1 pair_plus_b5 50 ms 256"
+  ],
+  [
+   "vRateBfiveHundred256",
+   "M1 pair_plus_b5 100 ms 256"
+  ],
+  [
+   "vLatBfive256",
+   "M2 mean pair_plus_b5 50 ms 256"
+  ],
+  [
+   "vLatPBfive256",
+   "M2 p95 pair_plus_b5 50 ms 256"
+  ],
+  [
+   "vEvalsBfive256",
+   "M3 evals pair_plus_b5 50 ms 256"
+  ],
+  [
+   "vMissBfive256",
+   "miss % pair_plus_b5 50 ms 256"
+  ],
+  [
+   "vRateBtsFive256",
+   "M1 pair_plus_b35 5 ms 256"
+  ],
+  [
+   "vRateBtsTen256",
+   "M1 pair_plus_b35 10 ms 256"
+  ],
+  [
+   "vRateBtsFifty256",
+   "M1 pair_plus_b35 50 ms 256"
+  ],
+  [
+   "vRateBtsHundred256",
+   "M1 pair_plus_b35 100 ms 256"
+  ],
+  [
+   "vLatBts256",
+   "M2 mean pair_plus_b35 50 ms 256"
+  ],
+  [
+   "vLatPBts256",
+   "M2 p95 pair_plus_b35 50 ms 256"
+  ],
+  [
+   "vEvalsBts256",
+   "M3 evals pair_plus_b35 50 ms 256"
+  ],
+  [
+   "vMissBts256",
+   "miss % pair_plus_b35 50 ms 256"
+  ],
+  [
+   "vRateMegaFive256",
+   "M1 me_ga 5 ms 256"
+  ],
+  [
+   "vRateMegaTen256",
+   "M1 me_ga 10 ms 256"
+  ],
+  [
+   "vRateMegaFifty256",
+   "M1 me_ga 50 ms 256"
+  ],
+  [
+   "vRateMegaHundred256",
+   "M1 me_ga 100 ms 256"
+  ],
+  [
+   "vLatMega256",
+   "M2 mean me_ga 50 ms 256"
+  ],
+  [
+   "vLatPMega256",
+   "M2 p95 me_ga 50 ms 256"
+  ],
+  [
+   "vEvalsMega256",
+   "M3 evals me_ga 50 ms 256"
+  ],
+  [
+   "vMissMega256",
+   "miss % me_ga 50 ms 256"
+  ],
+  [
+   "vRateNsgaFive256",
+   "M1 nsga2 5 ms 256"
+  ],
+  [
+   "vRateNsgaTen256",
+   "M1 nsga2 10 ms 256"
+  ],
+  [
+   "vRateNsgaFifty256",
+   "M1 nsga2 50 ms 256"
+  ],
+  [
+   "vRateNsgaHundred256",
+   "M1 nsga2 100 ms 256"
+  ],
+  [
+   "vLatNsga256",
+   "M2 mean nsga2 50 ms 256"
+  ],
+  [
+   "vLatPNsga256",
+   "M2 p95 nsga2 50 ms 256"
+  ],
+  [
+   "vEvalsNsga256",
+   "M3 evals nsga2 50 ms 256"
+  ],
+  [
+   "vMissNsga256",
+   "miss % nsga2 50 ms 256"
+  ],
+  [
+   "vHOne256",
+   "H1 diff [CI] 256"
+  ],
+  [
+   "vHOneVerdict256",
+   "H1 verdict 256"
+  ],
+  [
+   "vHTwo256",
+   "H2 diff [CI] 256"
+  ],
+  [
+   "vHTwoVerdict256",
+   "H2 verdict 256"
+  ],
+  [
+   "vHFive256",
+   "H5 diff [CI] 256"
+  ],
+  [
+   "vHFiveVerdict256",
+   "H5 verdict 256"
+  ]
+ ],
+ "n_values": 205
+}
