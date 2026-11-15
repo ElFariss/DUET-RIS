@@ -1,0 +1,76 @@
+{
+  "city": "munich",
+  "scope": "ris_relevant_v3x",
+  "declaration": "GeoRIS-Bench/docs/bench-ris-relevant-v3-crosscity-20261114.md",
+  "leverage_gate_basis": "munich/check/leverage_gate_v2_urban_canyon.json",
+  "package_path": "/mnt/home/faris/atomwise-bench-ris-relevant-v3x-20261114/munich/channels/package",
+  "split_file": "/mnt/home/faris/atomwise-bench-ris-relevant-v3x-20261114/munich/ris_relevant_split.json",
+  "check_split": "0000-0011",
+  "test_split": "0012-0047 SEALED",
+  "production_gate": "pass",
+  "check_per_array": {
+    "64": {
+      "verdict": "PASS",
+      "L1a": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L1b": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L2": {
+        "value": 0.02955116608530206,
+        "mean": 0.25920254816007904,
+        "p90": 0.8109886852336747,
+        "share_gt_0p10": 0.2760416666666667,
+        "pass": true
+      }
+    },
+    "128": {
+      "verdict": "PASS",
+      "L1a": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L1b": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L2": {
+        "value": 0.05145849818696124,
+        "mean": 0.395418853829127,
+        "p90": 1.2778347203060927,
+        "share_gt_0p10": 0.296875,
+        "pass": true
+      }
+    },
+    "256": {
+      "verdict": "PASS",
+      "L1a": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L1b": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L2": {
+        "value": 0.04957723088782151,
+        "mean": 0.4993582668974885,
+        "p90": 1.5118443933149832,
+        "share_gt_0p10": 0.3020833333333333,
+        "pass": true
+      }
+    }
+  },
+  "package_size_bytes": 1203371748,
+  "package_budget_bytes": 1600000000,
+  "ready_arrays": [
+    64,
+    128,
+    256
+  ],
+  "city_status": "ready",
+  "written_utc": "2026-11-15T00:59:17Z"
+}

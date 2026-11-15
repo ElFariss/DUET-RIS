@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "run_scope": "ris_relevant_v3x",
+  "checks": {
+    "complete_hdf5_schema": true,
+    "finite": true,
+    "loader_dense_1e_10": true,
+    "los_geometry_agreement": true,
+    "bs_ris_link_los": true,
+    "mesh_preflight_all_passed": true,
+    "stop_rule_not_exceeded": true,
+    "provenance_and_splits_valid": true,
+    "no_failing_cases": true
+  },
+  "per_map": {
+    "berlin": {
+      "total_cases": 48,
+      "included_cases": 48,
+      "failed_cases_count": 0,
+      "stop_rule_exceeded": false,
+      "los_geometry_matches": 11418,
+      "los_geometry_total": 11520,
+      "los_geometry_agreement": 0.9911458333333333,
+      "bs_ris_los": true,
+      "mesh_preflight_all_passed": true
+    }
+  },
+  "failing_cases": {},
+  "rate_max_abs_error": 0.0
+}

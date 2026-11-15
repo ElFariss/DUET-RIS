@@ -1,74 +1,38 @@
-# Paper A: physics of coupled binary RIS control
+# DUET: Efficient Pairwise Search for Electromagnetically Coupled Meta-Atoms in Reconfigurable Intelligent Surfaces
 
-How do blockage, user motion, an unseen city, mutual coupling and array size (64/128/256) change the worst-user rate, and the value of pair moves, for a 1-bit RIS? The channels are calibrated hybrid ray-tracing + NEC-2 channels from [GeoRIS-Bench](../GeoRIS-Bench/README.md).
+Experiment scripts, pre-declared analysis plans, run records and manuscript source for the ACIIDS 2027 submission by M. F. El Hakim, A. D. H. Fadhlurrohman and W. Yahya (Universitas Brawijaya).
 
-This repository continues the original **atom-wise-ris** project. Its finished free-space b35 study (Paper 1) becomes one section of Paper A.
+**DUET** (Deadline-bounded Updates for Exact Two-flip search) configures a mutually coupled 1-bit RIS to maximise the worst user's rate under a hard CPU deadline. It scores every single flip and every pair flip exactly with rank-one and rank-two updates of the coupled multiport network, so it evaluates 62–445 times more candidates per deadline than ME-GA or NSGA-II.
 
-## Part 1, finished and frozen: free-space b35 study (Paper 1)
+| Paper name | Code name | Description |
+|---|---|---|
+| DUET | `pair` | exact single + pair moves, uniform restarts |
+| DUET-D | `b3` | DUET with two ON-density restarts |
+| DUET-E | `b5` | DUET with elite recombination |
+| DUET-M | `pair_plus_b35` | both rules (memetic) |
+| DUET-M-SL | `pair_plus_b35_m0_k128` | DUET-M with an analytic top-128 pair shortlist |
+| greedy, ME-GA, NSGA-II | `greedy`, `me_ga`, `nsga2` | baselines |
 
-- **Setup:** a thin-wire RIS bench in free space (NEC-2, 81- and 161-segment meshes), with 2 users, 4 base-station antennas and a fixed precoder.
-- **Held-out test:** the single run of the frozen protocol `configs/experiments/matched_v2.json` on `coupled_wire_test_v2`: 30 trajectories, 480 frames, CPU 5 pinned. Results are in `docs/matched-v2-test-results-20261108.md`.
-- **Result at the 50 ms primary budget:**
-  - b35 beats pair by **+0.085 bit/s/Hz** [+0.047, +0.128] on 161 segments, winning 27 of 30 trajectories.
-  - b35 also beats b3, b5 and ME-GA. All four contrasts are supported on both meshes.
-- **Scope:** it holds only for that setup, a 1 m bench with no obstacles where users always see the base station.
-- **Earlier pilots** (Munich specular measurement-informed pilot `specular_v5`, coupled spatial/temporal pilot `coupled_wire_v1`, ladder v2) are kept with their reports in `outputs/runs/` and `docs/`. The manuscript is in `paper/`.
+The search methods and baselines are implemented in [GeoRIS-Bench](https://github.com/ElFariss/GeoRIS-Bench) (`src/atomwise_ris/optimization/`: `coupled_search.py`, `pair_plus.py`, `me_ga.py`, `nsga2.py`). The dataset is GeoRIS-Bench 1.0 on Mendeley Data, https://doi.org/10.17632/td3w4cwbg5.1.
 
-**Frozen files** (do not edit): `outputs/frozen/`, `configs/experiments/matched_v2.json`, `configs/experiments/matched_v1.json`.
+## Where things are
 
-## Part 2, in progress: physics study on GeoRIS-Bench
+| What | Path |
+|---|---|
+| Manuscript (LNCS, Overleaf-ready) | `paper/aciids2027-overleaf-final/` (zip: `paper/paper-a-aciids2027-overleaf-final.zip`) |
+| Rotterdam sealed-test results (Tables 3–5) | `outputs/runs/bench_ris_relevant_v3_search_20261113/rr3_test_summary.{json,md}` |
+| Cross-city results reported in the paper (Maastricht + Utrecht, N = 72; Table 7) | `outputs/runs/crosscity_20261114/audit_20261115/pooled_2city_maastricht_utrecht_20261115/` and `crosscity_{maastricht,utrecht}_summary.*` |
+| Cross-city analysis plan (frozen before the test) | `docs/crosscity-search-declaration-20261114.md` (+ `.freeze.sha256`) |
+| Rotterdam analysis plan (frozen) | [GeoRIS-NeuralPair](https://github.com/ElFariss/GeoRIS-NeuralPair) `docs/bench-ris-relevant-v3-search-declaration-20261113.md` |
+| Cross-city runner and analysis scripts | `scripts/run_bench_search_crosscity.py`, `scripts/cc_*_20261114.*`, `scripts/verdicts_crosscity.py`, `scripts/collect_crosscity_20261114.py` |
+| Per-city data checks | `outputs/runs/dataset_5city_audit_20261115/` |
 
-The questions:
-1. a user blocked by a building;
-2. a moving user;
-3. an unseen city (leave one map out);
-4. whether coupling matters in a real scene (optimize with full vs diagonal Z, rescore with full Z);
-5. array size 64/128/256.
+Internal identifiers in these records (`ris_relevant_v3`, `rotterdam-rr3-NNNN`, `<city>-rx3-NNNN`) map to the public GeoRIS-Bench 1.0 names (`georis_bench_1.0`, `<city>-NNNN`); see GeoRIS-Bench `docs/dataset-release-20261115.md`.
 
-Secondary: RIS placement, and more or closer users. The methods are no RIS, all OFF, greedy, exact pair, b35, ME-GA and geometric phase-gradient steering.
+## Note on the cross-city records
 
-**First evidence (2026-11-12, natural-scope validation frames only).** It is in Paper B's `docs/bench-ris-leverage-diagnostic-20261112.md`:
-- A 0.2–0.45 m facade RIS about 112 m from the base station changes the worst-user rate by a median of under 0.05 bit/s/Hz.
-- Its path is 40–60 dB below the base station's own paths.
-- About half of the frames have a served user with no traced path.
+The frozen cross-city plan covered four held-out cities. The records of all four are kept here for transparency. Munich failed its pre-declared RIS-leverage check at every array size, and Berlin failed it at 256 elements; the later relabelling files `leverage_gate_v2_*.json` were written after the check and are not used. The paper reports the two cities that pass every check at every array size (Maastricht and Utrecht). The verdicts are the same in the declared three-city pool (`pooled_3city_excluding_munich_audit_20261115/`) and in the original four-city pool (`pooled/`).
 
-So in this deployment geometry the RIS barely matters. That is a Paper A finding in its own right. It also motivates a RIS-relevant scope, with the RIS near the base station or near the users.
+## Earlier work in this repository
 
-## Layout
-
-```text
-src/atomwise_ris/   core.py, data/, models/ (MLP, attention, forecast), responses/, utils/
-                    (the physics, channel and solver modules come from GeoRIS-Bench)
-scripts/            Paper 1 pipeline: prepare, train, benchmark*, analyze*, reproduce*, ladder and matched runs
-configs/            datasets, methods, experiment protocols (matched_v1, matched_v2)
-experiments/        hypotheses and matched comparison definitions
-data/               free-space wire bench (coupled_wire_*), Munich specular arrays, responses, raw sources
-outputs/            runs (reports, checkpoints, timings), frozen protocol, figures, audits
-paper/              manuscripts and figures
-docs/               protocols, results, evidence and limitations
-archives/           preserved historical code
-tests/              numerical, leakage and protocol checks
-```
-
-The test splits `coupled_wire_test_v1`, `coupled_wire_test_v2` and `coupled_wire_test_v2_fine161` are **sealed**: Paper 1's single test run used them, and they are not for design.
-
-## Setup and tests
-
-This repository expects `../GeoRIS-Bench` next to it. Use the shared workspace venv, or install both into your own:
-
-```bash
-pip install -e ../GeoRIS-Bench[dataset] -e .[training]
-PYTHONPATH=src:scripts python -m unittest discover -s tests
-```
-
-**Known failure:** `test_matched…test_memory_ga_ranking_uses_pattern_spread` fails. It failed before the 2026-11-12 split too.
-
-`uv.lock` and `pyproject.toml` still describe the old single repository. They have not been re-locked since the split.
-
-## Git
-
-- `origin` is **github.com/ElFariss/GeoRIS-Physics**.
-- The history is the original atom-wise-ris history. That repository's remote is kept as **`atom-wise-ris-paper1`** (github.com/ElFariss/atom-wise-ris, the published Paper 1 code); push only to `origin`.
-- Files that moved to GeoRIS-Bench or Paper B show as deleted here. The full map is `../workspace-notes/split-manifest-20261112.json`.
-
-No permissive license has been chosen for the original research code (see `LICENSE` and `THIRD_PARTY.md`).
+The repository started as the free-space thin-wire study ("Paper 1", `docs/matched-v2-test-results-20261108.md`). Its files are frozen and must not be edited: `outputs/frozen/`, `configs/experiments/matched_v1.json`, `configs/experiments/matched_v2.json`. Older pilots are kept in `outputs/runs/` and `docs/`.

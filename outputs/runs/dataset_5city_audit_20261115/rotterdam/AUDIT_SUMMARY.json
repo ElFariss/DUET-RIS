@@ -1,0 +1,61 @@
+{
+  "case_id": "rotterdam-rr3-recovery-seed2026111502-i0069",
+  "checked_utc": "2026-11-14T22:53:33.531981+00:00",
+  "expected_frames": [
+    0,
+    23,
+    47,
+    70,
+    93,
+    116,
+    140,
+    163,
+    186,
+    209,
+    233,
+    256,
+    279,
+    302,
+    326,
+    349
+  ],
+  "external_wire_collisions": 0,
+  "g6_note": "H_direct includes load-independent structural scattering; H_direct_uncorrected is separate",
+  "geometry_agreement_matches": 288,
+  "geometry_agreement_ratio": 1.0,
+  "geometry_agreement_total": 288,
+  "h_direct_uncorrected_256_max_rel_diff": 0.004145280299763333,
+  "h_direct_uncorrected_64_128_max_abs_diff": 0.0,
+  "h_direct_vs_uncorrected_rel_range": [
+    0.6203545611984456,
+    1.6711732555061836
+  ],
+  "max_dense_check_error": 1.1546319456101628e-14,
+  "max_loader_rate_error": 1.7763568394002505e-15,
+  "original_case_exclusion_preserved": "rotterdam-rr3-0069",
+  "pathless_served_users": 0,
+  "per_array": {
+    "128": {
+      "datasets": 160,
+      "groups": 16,
+      "h5_sha256": "fe4ccc079ebdfa203a6d801586ffa94680d515d4386d5a438e279434cea7bda7",
+      "ris_archive_sha256": "c89280f3487ac48a9de95ce040f7442f88429529dcc39dcc2c1309ee8d812afb"
+    },
+    "256": {
+      "datasets": 160,
+      "groups": 16,
+      "h5_sha256": "806adc35c2a00fc02c0f81238b207d65930564ef23f9261f1e8102805a086f53",
+      "ris_archive_sha256": "3ec59f5eb1af3ba7542e6b1d99f377d18bb7fa96092ff9e9a217514766d4a657"
+    },
+    "64": {
+      "datasets": 160,
+      "groups": 16,
+      "h5_sha256": "9066a0110dc58839d0bff47ceb58663fe2aafaded1d54d5e26a68e68a42f1ca3",
+      "ris_archive_sha256": "bcb059ba507a2a6a579a81bef95fa8aacd90ac19180570da402125ba750b38a3"
+    }
+  },
+  "seed_word": 2026111502,
+  "split": "train",
+  "status": "pass",
+  "trajectory_index": 69
+}

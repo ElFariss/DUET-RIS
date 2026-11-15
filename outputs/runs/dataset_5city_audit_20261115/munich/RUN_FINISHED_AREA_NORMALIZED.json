@@ -1,0 +1,67 @@
+{
+  "actual_command_line": ".venv/bin/python -u recover_expanded_geometry_area_normalized.py --run",
+  "checks": {
+    "R1_m": [
+      5,
+      20
+    ],
+    "R2_m": [
+      5,
+      25
+    ],
+    "check_indices": [
+      0,
+      11
+    ],
+    "frames_per_trajectory": 16,
+    "front_angle_deg": 80,
+    "radius_m": 40,
+    "site_draws": 8,
+    "sites_min": 6,
+    "test_indices": [
+      12,
+      47
+    ],
+    "test_performance_access": false,
+    "trajectory_count": 48
+  },
+  "command": "taskset -c 1,2,3,6,7,8,9 .venv/bin/python recover_expanded_geometry.py --run",
+  "cpu_affinity": [
+    3
+  ],
+  "finished_utc": "2026-11-14T23:03:49.479688+00:00",
+  "inputs": {
+    "corrected_osm_manifest_sha256": "0f17bedb5599dd9e12ccf56870318e358258ab1da98197ff38a188b4590ffb3e",
+    "correction_sha256": "bb9df33ed269926302f474c0af2781f9ac98d52bf358ae274b254fc48703fbfe",
+    "coverage_sha256": "e1453cbf7488b62a5e94b6007529b67ae8a15cab57335ff2b6427d51288a1380",
+    "declaration_sha256": "507bc830ecbb1892b04c04b530a8f44d5833ee7cfe00dc69b6dc8a6cfd9a51a8",
+    "raw_sha256": {
+      "691_5334.tif": "ddfed9fdbe2e69e8f8143acb7f5a483f49e07b381b9f6fe4b9d52a40e02f381c",
+      "691_5335.tif": "9ef6238670aed93b1927d99082f0e772ac987878201f3db89d254894e10da4ea",
+      "692_5334.tif": "c4c639a7f04ee4712fb11c92ea01ffd3b7f7f85a45fddb04d912ecd253f28812",
+      "692_5335.tif": "31b90921b7567df700c63487786df38cc6f2decf197448e83bf41e9bee2753ea",
+      "LoD2_32_690_5334_2_BY.gml": "232c75a398ec7ee81736aeb72f7eda374f88b9431f8c35cdbee18a51ff029e87",
+      "LoD2_32_692_5334_2_BY.gml": "b3b028ad9df43108351172fa1920b8aa1296f603126d45c422d9b7a66a2a6510",
+      "munich-expanded-padded.osm": "1a9c2e0eb5b1fdf267020cb7dda706ca4e77bdb7c34e558b20a58483a1a3d641"
+    },
+    "source_manifest_sha256": "a63b17e6709bd26076c0d531ee73f771ac89bda6d718f1ce983e7411e4c839a9"
+  },
+  "maximum_runtime_seconds": 28800,
+  "pid": 223945,
+  "proc_start_ticks": "6658692",
+  "result": {
+    "cases": 48,
+    "geometry_gate": "/mnt/home/faris/atomwise-recovery-20261115/munich-expanded/geometry-area-normalized/geometry_gate.json",
+    "geometry_gate_sha256": "5d268e725486bb434d88cf0d5758dd2714c66eaffcd73d0877203f01b40fb71d",
+    "ground_fill_disposition": "approved_interpolation",
+    "ground_fill_holdout_pass": true,
+    "site_rule": "R1",
+    "test_performance_access": false
+  },
+  "run_id": "atomwise-recovery-20261115-munich-expanded-geometry-area-normalized",
+  "scope": "geometry-only; exactly one declared 1000 m crop; one predetermined seed; 48 cases; no channel tracing",
+  "start_ticks": "6658692",
+  "started_utc": "2026-11-14T22:58:40.967745+00:00",
+  "state": "geometry_pass_no_trace",
+  "variant_root": "/mnt/home/faris/atomwise-recovery-20261115/munich-expanded"
+}

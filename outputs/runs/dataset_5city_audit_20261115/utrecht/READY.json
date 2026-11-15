@@ -1,0 +1,66 @@
+{
+  "city": "utrecht",
+  "scope": "ris_relevant_v3x",
+  "declaration": "GeoRIS-Bench/docs/bench-ris-relevant-v3-crosscity-20261114.md",
+  "package_path": "/mnt/home/faris/atomwise-bench-ris-relevant-v3x-20261114/utrecht/channels/package",
+  "split_file": "/mnt/home/faris/atomwise-bench-ris-relevant-v3x-20261114/utrecht/ris_relevant_split.json",
+  "check_split": "0000-0011",
+  "test_split": "0012-0047 SEALED",
+  "production_gate": "pass",
+  "check_per_array": {
+    "64": {
+      "verdict": "PASS",
+      "L1a": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L1b": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L2": {
+        "value": 0.1302568384333762,
+        "pass": true
+      }
+    },
+    "128": {
+      "verdict": "PASS",
+      "L1a": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L1b": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L2": {
+        "value": 0.41729229731974193,
+        "pass": true
+      }
+    },
+    "256": {
+      "verdict": "PASS",
+      "L1a": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L1b": {
+        "value": 0.0,
+        "pass": true
+      },
+      "L2": {
+        "value": 0.2926237773003848,
+        "pass": true
+      }
+    }
+  },
+  "package_size_bytes": 1211984423,
+  "package_budget_bytes": 1600000000,
+  "ready_arrays": [
+    64,
+    128,
+    256
+  ],
+  "city_status": "ready",
+  "written_utc": "2026-11-14T17:16:40Z"
+}

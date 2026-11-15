@@ -1,0 +1,12 @@
+{
+ "array": 128,
+ "cutoff_utc": "2026-11-15T02:00:00Z",
+ "cities": [
+  "munich",
+  "maastricht",
+  "utrecht",
+  "berlin"
+ ],
+ "not_completed": [],
+ "pooled_utc": "2026-11-15T01:31:59Z"
+}

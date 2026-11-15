@@ -1,0 +1,119 @@
+{
+  "audited_count": 48,
+  "city": "maastricht",
+  "complete": true,
+  "dataset": "v3x",
+  "declared_failed_count": 0,
+  "declared_failed_ids": [],
+  "expected_count": 48,
+  "expected_split_counts": {
+    "check": 12,
+    "test": 36
+  },
+  "failed_count": 0,
+  "generated_count": 48,
+  "geometry_agreement": {
+    "frozen_threshold": 0.75,
+    "matches": 12666,
+    "observations": 12672,
+    "ratio": 0.9995265151515151
+  },
+  "integrity_scope": "structural and numerical data integrity; not physical validation",
+  "issues": [
+    {
+      "check": "source_provenance",
+      "level": "warn",
+      "message": "raw development-map source files are outside this run root"
+    },
+    {
+      "array": 64,
+      "case_id": "maastricht-rx3-0007",
+      "check": "channel_json_geometry",
+      "frame": 427,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "maastricht-rx3-0007",
+      "check": "channel_json_geometry",
+      "frame": 427,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "maastricht-rx3-0007",
+      "check": "channel_json_geometry",
+      "frame": 427,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "maastricht-rx3-0037",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    },
+    {
+      "array": 128,
+      "case_id": "maastricht-rx3-0037",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    },
+    {
+      "array": 256,
+      "case_id": "maastricht-rx3-0037",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    }
+  ],
+  "known_non_integrity_caveats": [
+    "H_direct includes RIS structural scattering and is not a no-panel channel; H_direct_uncorrected is a separate field.",
+    "Source licensing remains unresolved; do not publish until OSM/3DBAG/Berlin source obligations are resolved.",
+    "Repository links are private and release metadata contains lab absolute paths; sanitize or disclose before publication.",
+    "Natural359 legacy scope and v1/v2 attempts are inventory-only nonrelease data; do not merge into this release."
+  ],
+  "manifest_count": 48,
+  "pass": true,
+  "pending_count": 0,
+  "release_blockers": [
+    "source licensing and attribution obligations unresolved",
+    "repository links are private",
+    "absolute lab paths remain in provenance/package metadata",
+    "physical validation remains unestablished; known modeling limitations remain"
+  ],
+  "release_ready": false,
+  "source_provenance": {
+    "reason": "development map; source identity checked via declared manifest and frame hashes",
+    "status": "warn"
+  },
+  "split_counts": {
+    "check": 12,
+    "test": 36,
+    "train": 0,
+    "validation": 0
+  },
+  "status": "pass",
+  "test_metric_boundary": "TEST channel and trace artifacts receive structural/numerical integrity checks only; stored labels and rate fields are unopened, and no optimization/SE/headroom/selection metrics are computed.",
+  "valid_count": 48,
+  "written_utc": "2026-11-14T12:29:43Z"
+}

@@ -1,0 +1,1095 @@
+{
+  "audited_count": 48,
+  "city": "berlin",
+  "complete": true,
+  "dataset": "v3x",
+  "declared_failed_count": 0,
+  "declared_failed_ids": [],
+  "expected_count": 48,
+  "expected_split_counts": {
+    "check": 12,
+    "test": 36
+  },
+  "failed_count": 0,
+  "generated_count": 48,
+  "geometry_agreement": {
+    "frozen_threshold": 0.75,
+    "matches": 11418,
+    "observations": 11520,
+    "ratio": 0.9911458333333333
+  },
+  "integrity_scope": "structural and numerical data integrity; not physical validation",
+  "issues": [
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 38,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 76,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 114,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 152,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 190,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 228,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 266,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 304,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 342,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 380,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 418,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 456,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 494,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 532,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 570,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 38,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 76,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 114,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 152,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 190,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 228,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 266,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 304,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 342,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 380,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 418,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 456,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 494,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 532,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 570,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 38,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 76,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 114,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 152,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 190,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 228,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 266,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 304,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 342,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 380,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 418,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 456,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 494,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 532,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0005",
+      "check": "channel_json_geometry",
+      "frame": 570,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 4
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0028",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0028",
+      "check": "channel_json_geometry",
+      "frame": 30,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0028",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0028",
+      "check": "channel_json_geometry",
+      "frame": 30,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0028",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0028",
+      "check": "channel_json_geometry",
+      "frame": 30,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 6
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 31,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 63,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 94,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 126,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 157,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 188,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 220,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 251,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 283,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 314,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 345,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 377,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 408,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 440,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 64,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 471,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 31,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 63,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 94,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 126,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 157,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 188,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 220,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 251,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 283,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 314,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 345,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 377,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 408,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 440,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 128,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 471,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 0,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 31,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 63,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 94,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 126,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 157,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 188,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 220,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 251,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 283,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 314,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 345,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 377,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 408,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 440,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    },
+    {
+      "array": 256,
+      "case_id": "berlin-rx3-0040",
+      "check": "channel_json_geometry",
+      "frame": 471,
+      "level": "warn",
+      "message": "geometry-agreement booleans include LOS-label mismatches",
+      "mismatches": 1,
+      "observations": 8
+    }
+  ],
+  "known_non_integrity_caveats": [
+    "H_direct includes RIS structural scattering and is not a no-panel channel; H_direct_uncorrected is a separate field.",
+    "Source licensing remains unresolved; do not publish until OSM/3DBAG/Berlin source obligations are resolved.",
+    "Repository links are private and release metadata contains lab absolute paths; sanitize or disclose before publication.",
+    "Natural359 legacy scope and v1/v2 attempts are inventory-only nonrelease data; do not merge into this release."
+  ],
+  "manifest_count": 48,
+  "pass": true,
+  "pending_count": 0,
+  "release_blockers": [
+    "source licensing and attribution obligations unresolved",
+    "repository links are private",
+    "absolute lab paths remain in provenance/package metadata",
+    "physical validation remains unestablished; known modeling limitations remain"
+  ],
+  "release_ready": false,
+  "source_provenance": {
+    "consumed_files": [
+      {
+        "actual_sha256": "043745cda749028a01039bed044e4047eff748f16e3e8b5c80733fc043a2241b",
+        "expected_sha256": "043745cda749028a01039bed044e4047eff748f16e3e8b5c80733fc043a2241b",
+        "name": "berlin_lod2_merged.gml",
+        "status": "pass"
+      },
+      {
+        "actual_sha256": "2ee64b2256c2c2c45a80c4e6c62a809d0ee6918b1717bfb6989cc9e792731e94",
+        "expected_sha256": "2ee64b2256c2c2c45a80c4e6c62a809d0ee6918b1717bfb6989cc9e792731e94",
+        "name": "berlin.tif",
+        "status": "pass"
+      },
+      {
+        "actual_sha256": "34c837b374a031719e37c4d4c1313ec9c4c96b6ffbc16b40edf96d05849e09a9",
+        "expected_sha256": "34c837b374a031719e37c4d4c1313ec9c4c96b6ffbc16b40edf96d05849e09a9",
+        "name": "berlin.osm",
+        "status": "pass"
+      }
+    ],
+    "manifest": "/mnt/home/faris/atomwise-bench-ris-relevant-v3x-20261114/outputs/runs/bench_ris_relevant_v3x_20261114/heldout_inputs/source-manifest.json",
+    "status": "pass",
+    "upstream_archive_hashes_recorded": true
+  },
+  "split_counts": {
+    "check": 12,
+    "test": 36,
+    "train": 0,
+    "validation": 0
+  },
+  "status": "pass",
+  "test_metric_boundary": "TEST channel and trace artifacts receive structural/numerical integrity checks only; stored labels and rate fields are unopened, and no optimization/SE/headroom/selection metrics are computed.",
+  "valid_count": 48,
+  "written_utc": "2026-11-14T19:07:04Z"
+}

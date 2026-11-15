@@ -1,0 +1,273 @@
+{
+ "family_size": 5,
+ "bonferroni_alpha": 0.01,
+ "trajectories": 72,
+ "verdicts": [
+  {
+   "array": 64,
+   "budget_ms": 10.0,
+   "primary": false,
+   "H1": {
+    "contrast": "pair_plus_b35 - pair",
+    "diff": -0.0032,
+    "ci": [
+     -0.0059,
+     -0.0014
+    ],
+    "wlt": [
+     2,
+     65,
+     5
+    ],
+    "n": 72,
+    "verdict": "FAIL (below 0)",
+    "excluded": {
+     "pair_plus_b35": false,
+     "pair": false
+    }
+   },
+   "H2": {
+    "contrast": "pair_plus_b35 - me_ga",
+    "diff": 0.2676,
+    "ci": [
+     0.1637,
+     0.4047
+    ],
+    "wlt": [
+     72,
+     0,
+     0
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair_plus_b35": false,
+     "me_ga": false
+    }
+   },
+   "H5": {
+    "contrast": "pair_plus_b35 - nsga2",
+    "diff": 0.1672,
+    "ci": [
+     0.1023,
+     0.2513
+    ],
+    "wlt": [
+     72,
+     0,
+     0
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair_plus_b35": false,
+     "nsga2": false
+    }
+   },
+   "C6": {
+    "contrast": "pair - nsga2",
+    "diff": 0.1704,
+    "ci": [
+     0.1042,
+     0.2555
+    ],
+    "wlt": [
+     72,
+     0,
+     0
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair": false,
+     "nsga2": false
+    }
+   },
+   "C7": {
+    "contrast": "pair - me_ga",
+    "diff": 0.2709,
+    "ci": [
+     0.1657,
+     0.409
+    ],
+    "wlt": [
+     72,
+     0,
+     0
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair": false,
+     "me_ga": false
+    }
+   }
+  },
+  {
+   "array": 64,
+   "budget_ms": 50.0,
+   "primary": true,
+   "H1": {
+    "contrast": "pair_plus_b35 - pair",
+    "diff": 0.0004,
+    "ci": [
+     0.0001,
+     0.0009
+    ],
+    "wlt": [
+     42,
+     28,
+     2
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair_plus_b35": false,
+     "pair": false
+    }
+   },
+   "H2": {
+    "contrast": "pair_plus_b35 - me_ga",
+    "diff": 0.1379,
+    "ci": [
+     0.0842,
+     0.2041
+    ],
+    "wlt": [
+     72,
+     0,
+     0
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair_plus_b35": false,
+     "me_ga": false
+    }
+   },
+   "H5": {
+    "contrast": "pair_plus_b35 - nsga2",
+    "diff": 0.0645,
+    "ci": [
+     0.0367,
+     0.0997
+    ],
+    "wlt": [
+     72,
+     0,
+     0
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair_plus_b35": false,
+     "nsga2": false
+    }
+   },
+   "C6": {
+    "contrast": "pair - nsga2",
+    "diff": 0.0641,
+    "ci": [
+     0.0366,
+     0.0989
+    ],
+    "wlt": [
+     72,
+     0,
+     0
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair": false,
+     "nsga2": false
+    }
+   },
+   "C7": {
+    "contrast": "pair - me_ga",
+    "diff": 0.1375,
+    "ci": [
+     0.084,
+     0.2033
+    ],
+    "wlt": [
+     72,
+     0,
+     0
+    ],
+    "n": 72,
+    "verdict": "PASS",
+    "excluded": {
+     "pair": false,
+     "me_ga": false
+    }
+   }
+  }
+ ],
+ "descriptive_contrasts_95": [
+  {
+   "subset": "pooled",
+   "array": 64,
+   "budget_ms": 10.0,
+   "method_a": "pair_plus_b35",
+   "method_b": "greedy",
+   "n_trajectories": 72,
+   "diff": 0.0321,
+   "ci_lo": 0.021,
+   "ci_hi": 0.0449,
+   "wins": 68,
+   "losses": 4,
+   "ties": 0,
+   "status": "supported",
+   "excluded": false
+  },
+  {
+   "subset": "pooled",
+   "array": 64,
+   "budget_ms": 10.0,
+   "method_a": "pair",
+   "method_b": "greedy",
+   "n_trajectories": 72,
+   "diff": 0.0353,
+   "ci_lo": 0.0229,
+   "ci_hi": 0.0499,
+   "wins": 69,
+   "losses": 3,
+   "ties": 0,
+   "status": "supported",
+   "excluded": false
+  },
+  {
+   "subset": "pooled",
+   "array": 64,
+   "budget_ms": 50.0,
+   "method_a": "pair_plus_b35",
+   "method_b": "greedy",
+   "n_trajectories": 72,
+   "diff": 0.0295,
+   "ci_lo": 0.0191,
+   "ci_hi": 0.0415,
+   "wins": 68,
+   "losses": 3,
+   "ties": 1,
+   "status": "supported",
+   "excluded": false
+  },
+  {
+   "subset": "pooled",
+   "array": 64,
+   "budget_ms": 50.0,
+   "method_a": "pair",
+   "method_b": "greedy",
+   "n_trajectories": 72,
+   "diff": 0.029,
+   "ci_lo": 0.0188,
+   "ci_hi": 0.0408,
+   "wins": 69,
+   "losses": 2,
+   "ties": 1,
+   "status": "supported",
+   "excluded": false
+  }
+ ]
+}

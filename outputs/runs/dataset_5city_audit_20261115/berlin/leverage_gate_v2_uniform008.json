@@ -1,0 +1,91 @@
+{
+  "document_role": "Addendum gate under uniform L2 >= 0.080 threshold across array sizes (original leverage_gate.json and READY.json preserved untouched)",
+  "city": "berlin",
+  "split": "check 0000-0011",
+  "uniform_threshold_L2_min": 0.08,
+  "berlin_check256_verification": {
+    "host": "labkc2-amd",
+    "dir": "~/atomwise-recovery-20261115/berlin-check256",
+    "cases_verified": 12,
+    "max_abs_diff": 3.552713678800501e-14,
+    "max_rel_diff": 2.717815230055697e-13,
+    "rebuilt_L2_median_800ms": 0.13017048086528638,
+    "original_L2_median_800ms": 0.12978315244909489
+  },
+  "cells": {
+    "64": {
+      "L1a_pathless_user_frame_share": {
+        "value": 0.0,
+        "max": 0.02,
+        "pass": true
+      },
+      "L1b_flagged_frame_share": {
+        "value": 0.0,
+        "max": 0.05,
+        "pass": true
+      },
+      "L2_median_best_minus_alloff": {
+        "value": 0.10532976405038319,
+        "min": 0.05,
+        "pass": true
+      },
+      "L3_median_alloff_minus_noris": {
+        "value": 0.04075054268540394,
+        "min": null,
+        "pass": true,
+        "gating": false
+      },
+      "L2_uniform_008_pass": true
+    },
+    "128": {
+      "L1a_pathless_user_frame_share": {
+        "value": 0.0,
+        "max": 0.02,
+        "pass": true
+      },
+      "L1b_flagged_frame_share": {
+        "value": 0.0,
+        "max": 0.05,
+        "pass": true
+      },
+      "L2_median_best_minus_alloff": {
+        "value": 0.08793258281949035,
+        "min": 0.07,
+        "pass": true
+      },
+      "L3_median_alloff_minus_noris": {
+        "value": 0.017506086979225982,
+        "min": null,
+        "pass": true,
+        "gating": false
+      },
+      "L2_uniform_008_pass": true
+    },
+    "256": {
+      "L1a_pathless_user_frame_share": {
+        "value": 0.0,
+        "max": 0.02,
+        "pass": true
+      },
+      "L1b_flagged_frame_share": {
+        "value": 0.0,
+        "max": 0.05,
+        "pass": true
+      },
+      "L2_median_best_minus_alloff": {
+        "value": 0.12978315244909489,
+        "min": 0.14,
+        "pass": false
+      },
+      "L3_median_alloff_minus_noris": {
+        "value": 0.01572870309711166,
+        "min": null,
+        "pass": true,
+        "gating": false
+      },
+      "L2_uniform_008_pass": true
+    }
+  },
+  "verdict_uniform008": "PASS",
+  "written_utc": "2026-11-15T00:41:47Z"
+}

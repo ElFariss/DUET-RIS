@@ -1,0 +1,149 @@
+{
+  "created_utc": "2026-11-14T12:30:30Z",
+  "hostname": "labkc-comm3",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "numpy": "2.2.6",
+  "cpu_affinity": [
+    4
+  ],
+  "args": {
+    "channel_file": "/mnt/home/faris/atomwise-bench-ris-relevant-v3x-20261114/maastricht/channels/package/channels/channel_realizations.h5",
+    "sums_file": "/mnt/home/faris/atomwise-bench-ris-relevant-v3x-20261114/maastricht/channels/output_sha256sums",
+    "city": "maastricht",
+    "split": "test",
+    "nsga2_ready": "/mnt/home/faris/atomwise-crosscity-search-20261114/runs/NSGA2_READY.json",
+    "arrays": [
+      128
+    ],
+    "methods": [
+      "greedy",
+      "pair",
+      "me_ga",
+      "nsga2",
+      "pair_plus_b35"
+    ],
+    "budgets_ms": [
+      10.0,
+      50.0
+    ],
+    "seeds": [
+      7,
+      19,
+      43,
+      3,
+      11,
+      23,
+      31,
+      59,
+      67,
+      83
+    ],
+    "cpu": 4,
+    "trajectories": null,
+    "frames": null,
+    "head_lock": null,
+    "head_root": null
+  },
+  "channel_file_sha256": "c4a49024a5fc4ce39f60da1b62151c56f47f9aea564679953dcac597d9504d24",
+  "split_file_sha256": "b39e16fd9bb2764b2e3fd94d017c7b6dcf51a6d5a0b0aaabdf8a7fdaaedb84bb",
+  "sums_file_sha256": "b39e16fd9bb2764b2e3fd94d017c7b6dcf51a6d5a0b0aaabdf8a7fdaaedb84bb",
+  "trajectories_used": 36,
+  "missing_indices": [],
+  "declaration_sha256_now": "48e8a7769b86b06bc3413e0f109a39a45422be55c13803e76a03455a5e9de24b",
+  "freeze_token": "48e8a7769b86b06bc3413e0f109a39a45422be55c13803e76a03455a5e9de24b",
+  "nsga2_ready": {
+    "method": "nsga2",
+    "status": "ready",
+    "written_utc": "2026-11-13T01:21:53Z",
+    "module": "atomwise_ris.optimization.nsga2",
+    "module_path": "/var/tmp/atomwise-bench-ris-relevant-search-20261113/src/atomwise_ris/optimization/nsga2.py",
+    "sha256": "fec0a3d7321c2f3287ffc562271b0f448cfeed2db3310fe86480895be9337260",
+    "copy_in_ready_dir": "/var/tmp/atomwise-bench-ris-relevant-20261112/nsga2/nsga2.py",
+    "entry_point": "atomwise_ris.bench.search_adapter_nsga2.run_search(ev, 'nsga2', deadline_ns, seed) == atomwise_ris.optimization.nsga2.search_coupled(ev, 'nsga2', deadline_ns, seed); returns (bits, value, evaluations, breakdown) like me_ga.search_coupled; memoryless per frame (pass no memory); params default = nsga2.CHOSEN_PARAMS",
+    "hyper_parameters": {
+      "population": 20,
+      "crossover_prob": 0.9,
+      "crossover": "uniform",
+      "mutation_rate": "1/N",
+      "initial_population": "all-OFF + 19 random",
+      "dedup": true,
+      "chunk": 25,
+      "woodbury_max_m": 24,
+      "woodbury_min_children": 12
+    },
+    "rule": "GeoRIS-Bench/docs/nsga2-baseline-20261113.md s.3: feasible by 0.5% miss rule (all 12 cells, else the 50 ms cells), max mean M1 at 50 ms over arrays 64/128/256, ties <0.002 -> mean over 12 cells -> smaller P -> larger pc; grid P {20,50,100} x pc {0.7,0.9}; tuned on ris_relevant v1 TRAIN 0000-0033 only, seeds 7,19",
+    "rule_outcome": {
+      "chosen": "nsga2_p20_pc0.9",
+      "feasibility_tier": "50ms_cells",
+      "steps": [
+        "max S",
+        "S tie among ['nsga2_p20_pc0.9', 'nsga2_p20_pc0.7']: mean12",
+        "mean12 tie among ['nsga2_p20_pc0.9', 'nsga2_p20_pc0.7']: smaller P, then larger pc"
+      ],
+      "S_by_config": {
+        "nsga2_p100_pc0.7": 6.396423514400504,
+        "nsga2_p100_pc0.9": 6.397981288119953,
+        "nsga2_p20_pc0.7": 6.419683034801646,
+        "nsga2_p20_pc0.9": 6.420307490637961,
+        "nsga2_p50_pc0.7": 6.4070416324150825,
+        "nsga2_p50_pc0.9": 6.408678813802299
+      }
+    },
+    "declaration": "/var/tmp/atomwise-bench-ris-relevant-20261112/nsga2/nsga2-baseline-20261113.md",
+    "declaration_sha256_now": "19e15f7ab989a113158998062a79df3ce41c4bd1e8041c61a12838390db6b12c",
+    "declaration_prerun_sha256": "d7b3d34dfdcfbb6522dd6926e39a46da95767be365ccf1071ec390d71d7ec817",
+    "amendments": [
+      "A1 (deadline guard, after tuning) failed R3",
+      "A2 (conservative chunk estimate + guarded base inverse, end reserve max(0.3 ms, 1%)) = this module"
+    ],
+    "readiness": {
+      "R1_unit_tests_comm3": "14/14 OK",
+      "R2_tuning_rescore_errors": 0,
+      "R3prime_train_miss_rule_all_cells": true,
+      "R3prime_failing_cells": []
+    },
+    "files_added_to_benchmark_tree": [
+      "/var/tmp/atomwise-bench-ris-relevant-search-20261113/src/atomwise_ris/optimization/nsga2.py",
+      "/var/tmp/atomwise-bench-ris-relevant-search-20261113/src/atomwise_ris/optimization/reference_methods.py",
+      "/var/tmp/atomwise-bench-ris-relevant-search-20261113/src/atomwise_ris/bench/search_adapter_nsga2.py"
+    ],
+    "files_already_identical": [],
+    "other_files_sha256": {
+      "src/atomwise_ris/optimization/nsga2.py": "fec0a3d7321c2f3287ffc562271b0f448cfeed2db3310fe86480895be9337260",
+      "src/atomwise_ris/optimization/reference_methods.py": "997308c24c72ebbd7f542b0db50a508e4d5a3d13823f87a47c9ee61584cad2d8",
+      "src/atomwise_ris/bench/search_adapter_nsga2.py": "3d6c16b1cda33922c9140431847e4c657152834533ecd733869a2231428b62d8",
+      "scripts/run_nsga2_ris_relevant.py": "307aa8334a6cc05752a900823ee7cf013c49ca0aa8be164b43db9b2b3191ca56",
+      "scripts/summarize_nsga2_ris_relevant.py": "c92312a144a6bca9496d80b9a5410f5d27ae28a06163abe247e3913a3215e448",
+      "tests/test_nsga2.py": "ccd7552ea07f197428581c07b237559ee52664485bbacc9ff0e0f63f476bb11f",
+      "docs/nsga2-baseline-20261113.md": "19e15f7ab989a113158998062a79df3ce41c4bd1e8041c61a12838390db6b12c"
+    },
+    "not_touched": "no existing file in the benchmark tree or the pilot workspace was modified; CPU 5/11 never used"
+  },
+  "check_passed_arrays": [
+    64,
+    128,
+    256
+  ],
+  "cpu_model": "AMD Ryzen 5 5600 6-Core Processor",
+  "ready_file": "/mnt/home/faris/atomwise-bench-ris-relevant-v3x-20261114/maastricht/READY.json",
+  "ready_file_sha256": "a14c1e0511d1bd19cb401fc58938b33dc0414ac0ff8cfddbdd4313f0c95cb8d6",
+  "search_config_protocol_sha256": "77f880fa16c489344b0009b21e1a5ad091fd4530b8c53cb74fc83053f0dc2d88",
+  "source_files_sha256": {
+    "src/atomwise_ris/optimization/coupled_search.py": "0b4d863c7a34009e91ed3769156b96040c5e9b042ba926c583c85aaf61874423",
+    "src/atomwise_ris/optimization/search.py": "7bc38bb183a50b267e118cab57bcc41f46a26b7bb7ca39296f1d34d55a5ad633",
+    "src/atomwise_ris/optimization/me_ga.py": "7858402e81f9c89b78aaabd4ce94c7d8e830282e1bd49e0c5af947d59094ed48",
+    "src/atomwise_ris/optimization/pair_plus.py": "a8de796614a379874001bbcbc9b3c9d491fd4cf8a0e4ebdc2c76e79250a4d2d6",
+    "src/atomwise_ris/optimization/pair_select.py": "a957d94332ad61722709d9ef4fee495b214a89b37dea987f80f4a764d2b7db37",
+    "src/atomwise_ris/hybrid/operator.py": "d0e3485065a1dfa27bcd89172a60f349b282eefe036f3b7cc72051afbf4c7e13",
+    "src/atomwise_ris/bench/search_adapter.py": "af5f51217801527ace1d319bfaf08969860938e38829c33bd9f443aee1900886",
+    "src/atomwise_ris/optimization/nsga2.py": "fec0a3d7321c2f3287ffc562271b0f448cfeed2db3310fe86480895be9337260",
+    "src/atomwise_ris/bench/search_adapter_nsga2.py": "3d6c16b1cda33922c9140431847e4c657152834533ecd733869a2231428b62d8",
+    "src/atomwise_ris/bench/search_adapter_crosscity.py": "8773c950c880849c54b2aaa17d6ef49685a4889dbc3fc3d5f161e632f3874702",
+    "scripts/run_bench_search_crosscity.py": "3f1cc244ea21227ccc02c25e7e60c89a30022c8807b13290db127f9478436040"
+  },
+  "heads": {},
+  "head_report": {
+    "lock": null
+  },
+  "resumes": []
+}
